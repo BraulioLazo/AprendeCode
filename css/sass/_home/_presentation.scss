@@ -1,0 +1,85 @@
+.section-presentation {
+    position: relative;
+    height: 100vh;
+    background-image: url("/assets/hero/presentation-image.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 50% 50% / 0 0 40% 40%;
+
+    .background-changer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        transition: var(--transition-short);
+        cursor: pointer;
+        z-index: 3;
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .background-changer:hover {
+        background-color: var(--color-secondary);
+    }
+
+    .button-prev {
+        left: 30px;
+
+        img {
+            transform: rotateZ(180deg);
+        }
+    }
+
+    .button-next {
+        right: 30px;
+    }
+
+
+    .presentation-container {
+        width: var(--width-main);
+        z-index: 2;
+
+        .text-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .headline,
+            .subheadline {
+                width: 100%;
+                color: var(--color-text-white);
+            }
+        }
+    }
+}
+
+.section-presentation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 50% 50% / 0 0 40% 40%;
+    border-bottom: 20px solid var(--color-primary);
+    background-color: #25599e5b;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+}
+
+/*------------------------------------------------*/
+
+@media screen and (max-width: 1650px) {
+    .section-presentation {
+        .presentation-container {
+            .text-container {
+                padding-left: 90px;
+            }
+        }
+    }
+}
