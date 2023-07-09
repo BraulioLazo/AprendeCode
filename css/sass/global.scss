@@ -31,11 +31,17 @@ h6 {
 
 h1 {
     font-size: 60px;
+    line-height: 65px;
+}
+
+h2{
+    font-size: 50px;
+    line-height: 55px;
 }
 
 p {
     font-size: 16px;
-    color: #777777;
+    color: var(--color-text-dark);
 }
 
 a {
