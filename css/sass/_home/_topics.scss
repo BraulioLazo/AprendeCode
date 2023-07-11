@@ -1,4 +1,3 @@
-
 .topics-section {
     .topics-section-container {
         .topics-container {
@@ -41,10 +40,11 @@
                         transition: var(--transition-long);
                         transform-style: preserve-3d;
 
-                        img{
+                        img {
                             width: 80px;
                             transform: translateZ(50px);
                         }
+
                         h3,
                         p {
                             width: 100%;
@@ -65,23 +65,70 @@
                         transform-style: preserve-3d;
                     }
 
-                    .topic-back-rotate-x{
+                    .topic-back-rotate-x {
                         transform: rotateY(180deg) rotateZ(180deg);
 
                     }
 
                 }
-                
+
             }
 
-            .topic-card-container:hover .rotate-y-transition{
+            .topic-card-container:hover .rotate-y-transition {
                 transform: rotateY(180deg);
             }
 
-            .topic-card-container:hover .rotate-x-transition{
+            .topic-card-container:hover .rotate-x-transition {
                 transform: rotateX(180deg);
             }
         }
     }
 }
 
+/* Media Queries -----------------------------*/
+
+@media screen and (max-width: 1310px) {
+    .topics-section {
+        .topics-section-container {
+            .topics-container {
+
+                .topic-card-container {
+                    height: 340px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .topics-section {
+        .topics-section-container {
+            .topics-container {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .topic-card-container {
+                    width: 33.333%;
+                    min-width: 300px;
+                    height: 280px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .topics-section {
+        .topics-section-container {
+            .topics-container {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .topic-card-container {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
