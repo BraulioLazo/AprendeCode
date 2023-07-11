@@ -349,7 +349,7 @@ button {
   }
   .topics-section .topics-section-container .topics-container .topic-card-container {
     width: 33.333%;
-    min-width: 300px;
+    min-width: 320px;
     height: 280px;
   }
 }
@@ -368,19 +368,21 @@ button {
 .benefits-section__container {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .benefits-section__container .benefits-section__image-container {
   display: flex;
   align-items: center;
   max-width: 500px;
-  width: 50%;
+  width: 45%;
+  overflow: hidden;
 }
 .benefits-section__container .benefits-section__image-container .benefits-section__image {
   width: 100%;
   animation: infinite-rotate 20s linear infinite;
 }
 .benefits-section__container .benefits-section__content {
-  width: 50%;
+  width: 55%;
 }
 .benefits-section__container .benefits-section__content .benefits-section__text-container p.benefits-section__description {
   padding-top: 20px;
@@ -398,6 +400,7 @@ button {
   flex-wrap: wrap;
   flex: 1;
   gap: 15px;
+  width: 100%;
   padding: 20px;
   border-radius: var(--radius-main);
   text-align: center;
@@ -468,6 +471,37 @@ button {
 @keyframes infinite-rotate {
   100% {
     transform: rotateZ(360deg);
+  }
+}
+/* Media Queries -----------------------------*/
+@media screen and (max-width: 980px) {
+  .benefits-section__container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .benefits-section__container .benefits-section__image-container {
+    width: 100%;
+  }
+  .benefits-section__container .benefits-section__content {
+    width: 100%;
+  }
+  .benefits-section__container .benefits-section__content h2,
+  .benefits-section__container .benefits-section__content p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .benefits-section {
+    padding-bottom: 0;
+  }
+  .benefits-section__container .benefits-section__content .benefits-section__cards-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .benefits-section__container .benefits-section__content .benefits-section__cards-container .benefits-card {
+    width: 100%;
+    min-width: 300px;
+    max-width: 450px;
   }
 }
 .latest-entries-frontend,

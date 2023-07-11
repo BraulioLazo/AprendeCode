@@ -1,14 +1,17 @@
 .benefits-section {
-    padding: 0  30px 100px 30px;
+    padding: 0 30px 100px 30px;
+
     &__container {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
 
         .benefits-section__image-container {
             display: flex;
             align-items: center;
             max-width: 500px;
-            width: 50%;
+            width: 45%;
+            overflow: hidden;
 
             .benefits-section__image {
                 width: 100%;
@@ -17,7 +20,7 @@
         }
 
         .benefits-section__content {
-            width: 50%;
+            width: 55%;
 
             .benefits-section__text-container {
                 p.benefits-section__description {
@@ -39,6 +42,7 @@
                 flex-wrap: wrap;
                 flex: 1;
                 gap: 15px;
+                width: 100%;
                 padding: 20px;
                 border-radius: var(--radius-main);
                 text-align: center;
@@ -113,10 +117,10 @@
                 color: var(--color-text-white);
             }
 
-           
+
         }
 
-        .benefits-btn-container{
+        .benefits-btn-container {
             display: flex;
             justify-content: center;
             padding: 20px;
@@ -130,5 +134,50 @@
 @keyframes infinite-rotate {
     100% {
         transform: rotateZ(360deg);
+    }
+}
+
+/* Media Queries -----------------------------*/
+@media screen and (max-width: 980px) {
+    .benefits-section {
+
+        &__container {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .benefits-section__image-container {
+                width: 100%;
+            }
+
+            .benefits-section__content {
+                width: 100%;
+
+                h2,
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .benefits-section {
+        padding-bottom: 0;
+        &__container {
+            .benefits-section__content {
+                .benefits-section__cards-container {
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .benefits-card {
+                       width: 100%;
+                       min-width: 300px;
+                       max-width: 450px;
+                    }
+                }
+            }
+
+        }
     }
 }
