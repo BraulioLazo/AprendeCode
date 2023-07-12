@@ -850,5 +850,81 @@ button {
     max-width: 450px;
   }
 }
+.about-section {
+  background-color: var(--color-primary);
+}
+.about-section .about-section__container {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.about-section .about-section__container .about__header {
+  width: 100%;
+}
+.about-section .about-section__container .about__header h2,
+.about-section .about-section__container .about__header p {
+  color: var(--color-text-white);
+  text-align: center;
+}
+.about-section .about-section__container .about__image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid transparent;
+  transition: var(--transition-medium);
+}
+.about-section .about-section__container .about__image-container .line-animation {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  box-shadow: 0 0 150px rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: var(--transition-medium);
+  opacity: 0;
+}
+.about-section .about-section__container .about__image-container .line-animation-two {
+  transform: rotateZ(60deg);
+}
+.about-section .about-section__container .about__image-container .line-animation-three {
+  transform: rotateZ(120deg);
+}
+.about-section .about-section__container .about__image-container .line-animation-four {
+  transform: rotateZ(90deg);
+}
+.about-section .about-section__container .about__image-container .line-animation-five {
+  transform: rotateZ(150deg);
+}
+.about-section .about-section__container .about__image-container .line-animation-six {
+  transform: rotateZ(210deg);
+}
+.about-section .about-section__container .about__image-container img {
+  width: 100%;
+  border-radius: 50%;
+}
+.about-section .about-section__container .about__image-container:hover {
+  border: 4px solid white;
+}
+.about-section .about-section__container .about__image-container:hover .line-animation {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.about-section .about-section__container .about__description {
+  width: 100%;
+}
+.about-section .about-section__container .about__description h3,
+.about-section .about-section__container .about__description p {
+  text-align: center;
+  color: var(--color-text-white);
+}
+.about-section .about-section__container .about__description p {
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */
