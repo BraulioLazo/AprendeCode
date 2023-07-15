@@ -34,24 +34,51 @@ h1 {
     line-height: 60px;
 }
 
-h2{
+h2 {
     font-size: 40px;
     line-height: 45px;
 }
 
-h3{
+h3 {
     font-size: 22px;
     line-height: 27px;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--color-text-dark);
+}
+
+span.skill-counter {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--color-primary);
 }
 
 a {
     text-decoration: none;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--color-background-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+}
+
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) var(--color-background-white);
+}
+
 
 section {
     display: flex;
@@ -171,20 +198,23 @@ button {
 
 /*----------------------------------------*/
 
-@media screen and (max-width: 1024px){
-    h1{
+@media screen and (max-width: 1024px) {
+    h1 {
         font-size: 45px;
         line-height: 50px;
     }
 
-    h2{
+    h2 {
         font-size: 35px;
         line-height: 40px;
     }
-    
-    h3{
+
+    h3 {
         font-size: 20px;
         line-height: 25px;
     }
-}
 
+    span.skill-counter {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,79 @@
+.offered-skills-section {
+
+    .offered-skills-section__container {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .offered-skills__header {
+            width: 100%;
+            padding-bottom: 20px;
+
+            h2,
+            p {
+                text-align: center;
+            }
+        }
+
+        .offered-skills__container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+
+            .skill {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+
+
+                span,
+                h3,
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .offered-skills-section {
+
+        .offered-skills-section__container {
+    
+           
+    
+            .offered-skills__container {
+                flex-wrap: wrap;
+    
+                .skill {
+                    width: calc(50% - 10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .offered-skills-section {
+
+        .offered-skills-section__container {
+    
+           
+    
+            .offered-skills__container {
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .skill {
+                    width: 100%;
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}
