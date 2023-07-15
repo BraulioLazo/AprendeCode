@@ -8,7 +8,7 @@
             .topic-card-container {
                 position: relative;
                 width: 25%;
-                height: 280px;
+                height: 300px;
                 perspective: 1000px;
                 transition: var(--transition-long);
 
@@ -87,7 +87,7 @@
 
 /* Media Queries -----------------------------*/
 
-@media screen and (max-width: 1310px) {
+@media screen and (max-width: 1380px) {
     .topics-section {
         .topics-section-container {
             .topics-container {
@@ -111,7 +111,7 @@
                 .topic-card-container {
                     width: 33.333%;
                     min-width: 320px;
-                    height: 280px;
+                    height: 300px;
                 }
             }
         }
