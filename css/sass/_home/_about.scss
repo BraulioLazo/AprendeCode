@@ -44,12 +44,15 @@
             .line-animation-three {
                 transform: rotateZ(120deg);
             }
+
             .line-animation-four {
                 transform: rotateZ(90deg);
             }
+
             .line-animation-five {
                 transform: rotateZ(150deg);
             }
+
             .line-animation-six {
                 transform: rotateZ(210deg);
             }
@@ -60,7 +63,7 @@
             }
         }
 
-        .about__image-container:hover{
+        .about__image-container:hover {
             border: 4px solid white;
         }
 
@@ -69,6 +72,7 @@
             height: 100%;
             opacity: 1;
         }
+
         .about__description {
             width: 100%;
 
@@ -78,10 +82,27 @@
                 color: var(--color-text-white);
             }
 
-            p{
+            p {
                 max-width: 750px;
                 margin: 0 auto;
                 padding-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-section {
+        .about-section__container {
+            .about__image-container {
+
+                .line-animation {
+                    display: none;
+                }
+            }
+
+            .about__image-container:hover {
+                border: 4px solid transparent;
             }
         }
     }

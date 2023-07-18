@@ -170,7 +170,6 @@
             .latest-entries-frontend__cards-container,
             .latest-entries-arduino__cards-container{
                 flex-wrap: wrap;
-                justify-content: center;
                 .entry-card{
                     flex: none;
                     width: calc(50% - 10px);

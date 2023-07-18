@@ -834,7 +834,6 @@ button {
   .latest-entries-arduino .latest-entries-arduino__container .latest-entries-frontend__cards-container,
   .latest-entries-arduino .latest-entries-arduino__container .latest-entries-arduino__cards-container {
     flex-wrap: wrap;
-    justify-content: center;
   }
   .latest-entries-frontend .latest-entries-frontend__container .latest-entries-frontend__cards-container .entry-card,
   .latest-entries-frontend .latest-entries-frontend__container .latest-entries-arduino__cards-container .entry-card,
@@ -953,6 +952,14 @@ button {
   padding-top: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .about-section .about-section__container .about__image-container .line-animation {
+    display: none;
+  }
+  .about-section .about-section__container .about__image-container:hover {
+    border: 4px solid transparent;
+  }
+}
 .offered-skills-section .offered-skills-section__container {
   flex-wrap: wrap;
   justify-content: center;
