@@ -17,8 +17,37 @@
 /* Footer brand container styles */
 .footer__brand {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     color: var(--color-text-white);
+}
+
+.branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.branding .logo-container {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.branding .logo-container img {
+    width: 100%;
+    filter: brightness(0) invert(1);
+}
+
+.logo-text-container p,
+.logo-text-container h3 {
+    color: var(--color-text-white);
+}
+
+.logo-text-container p{
+    font-size: 16px;
 }
 
 .footer__brand-text {
@@ -171,21 +200,22 @@
     right: 0;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
+
     .footer__brand,
     .footer__about,
-    .footer__contact{
+    .footer__contact {
         width: 100%;
         flex: none;
     }
 
-    .footer__contact{
+    .footer__contact {
         display: flex;
         justify-content: center;
     }
 
-    .contact-item{
+    .contact-item {
         align-items: center;
-       max-width: 300px;
+        max-width: 300px;
     }
 }
