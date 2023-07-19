@@ -9,6 +9,7 @@
 :root {
   --color-primary: #1590ca;
   --color-secondary: #25599E;
+  --color-secondary-half: #25599e5b;
   --color-text-white: #ffffff;
   --radius-main: 7px;
   --color-background-white: #ffffff;
@@ -262,7 +263,7 @@ button {
   left: 0;
   border-radius: 0 0 50% 50%/0 0 40% 40%;
   border-bottom: 20px solid var(--color-primary);
-  background-color: rgba(37, 89, 158, 0.3568627451);
+  background-color: var(--color-secondary-half);
   backdrop-filter: blur(4px);
   z-index: 1;
 }
@@ -1008,6 +1009,125 @@ button {
   .offered-skills-section .offered-skills-section__container .offered-skills__container .skill {
     width: 100%;
     max-width: 400px;
+  }
+}
+.header-contact-section {
+  background-image: url(/assets/global/global-header-aprendecode.jpg);
+}
+
+.header-section {
+  position: relative;
+  height: 450px;
+  background-size: cover;
+  background-position: left center;
+}
+.header-section .header-container {
+  justify-content: center;
+  padding-top: 70px;
+  z-index: 2;
+}
+.header-section .header-container .header-title {
+  color: var(--color-text-white);
+}
+
+.header-section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background-color: var(--color-secondary-half);
+  z-index: 1;
+}
+
+.contact-section .contact-container {
+  flex-wrap: wrap;
+}
+.contact-section .contact-container .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+.contact-section .contact-container .contact-info .contact-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 300px;
+}
+.contact-section .contact-container .contact-info .contact-card .contact-card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-main);
+  background-color: var(--color-primary);
+}
+.contact-section .contact-container .contact-info .contact-card .contact-card__icon img {
+  width: 70%;
+}
+.contact-section .contact-container .contact-info .contact-card .contact-card__info h3.contact-card__label,
+.contact-section .contact-container .contact-info .contact-card .contact-card__info p.contact-card__content {
+  width: 100%;
+  min-width: 300px;
+  max-width: none;
+  text-align: center;
+}
+.contact-section .contact-container .contact-form-container {
+  width: 100%;
+}
+.contact-section .contact-container .contact-form-container .contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  padding-top: 40px;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form__group {
+  width: calc(50% - 15px);
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form__group input {
+  width: 100%;
+  padding: 20px 20px;
+  border: none;
+  border-bottom: 5px solid var(--color-primary);
+  outline: none;
+  background-color: var(--color-background-white);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-main);
+  font-size: 18px;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form__group ::placeholder {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+}
+.contact-section .contact-container .contact-form-container .contact-form #contact-form__textarea-group {
+  width: 100%;
+}
+.contact-section .contact-container .contact-form-container .contact-form #contact-form__textarea-group textarea {
+  width: 100%;
+  min-height: 300px;
+  resize: vertical;
+  padding: 20px 20px;
+  border: none;
+  border-bottom: 5px solid var(--color-primary);
+  outline: none;
+  background-color: var(--color-background-white);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-main);
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section .contact-container .contact-info {
+    flex-wrap: wrap;
+  }
+  .contact-section .contact-container .contact-form-container .contact-form .contact-form__group {
+    width: 100%;
   }
 }
 

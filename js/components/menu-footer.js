@@ -6,11 +6,12 @@ class MyFooter extends HTMLElement {
 
     updateFooterYear() {
         const currentYear = new Date().getFullYear();
-        this.shadowRoot.getElementById("copyright__year").textContent = currentYear;
+        this.shadowRoot.getElementById("copyright__year").textContent = `${currentYear}`;
     }
-
+    
     connectedCallback() {
         this.render();
+        this.updateFooterYear();
     }
 
     render() {
@@ -470,9 +471,8 @@ button {
 
             <div class="footer__copyright">
 
-                <small class="copyright__text"><span id="copyright__year" id="year">2023 </span> AprendeCode - All
+                <small class="copyright__text"><span id="copyright__year"></span>&nbsp; AprendeCode - All
                     Rights Reserved</small>
-
             </div>
         </div>
     </footer>

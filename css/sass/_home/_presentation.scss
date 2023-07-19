@@ -68,7 +68,7 @@
     left: 0;
     border-radius: 0 0 50% 50% / 0 0 40% 40%;
     border-bottom: 20px solid var(--color-primary);
-    background-color: #25599e5b;
+    background-color: var(--color-secondary-half);
     backdrop-filter: blur(4px);
     z-index: 1;
 }
