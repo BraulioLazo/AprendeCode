@@ -20,3 +20,16 @@ function toggleNavigationMenu() {
 }
 
 toggleNavigationMenu();
+
+
+const adjustNavOnResize = () => {
+    const navLinksElement = document.querySelector(".nav-links");
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth > 1024) {
+        navLinksElement.style.transform = "translateX(0)";
+    }
+};
+
+window.addEventListener('resize', adjustNavOnResize);
+
