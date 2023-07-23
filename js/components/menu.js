@@ -6,6 +6,30 @@ class myMenu extends HTMLElement {
         this.adjustNavOnResize = this.adjustNavOnResize.bind(this);
     }
 
+    generateMenu() {
+        const currentPath = window.location.pathname;
+        const directoryLavel = (currentPath.match(/\//g) || []).length;
+
+        const menuLinks = [
+            { name: "Inicio", href: 'index.html', linkClass: "nav-link-home" },
+            { name: 'Contacto', href: 'contacto/', linkClass: "nav-link-snippets" },
+        ];
+
+        let menuHTML = '';
+
+        for (let link of menuLinks) {
+            let relativePath = '';
+            if (directoryLavel > 1) {
+                for (let i = 1; i < directoryLavel; i++) {
+                    relativePath += "../";
+                }
+            }
+            menuHTML += `<li class="nav-item"><a href="${relativePath}${link.href}" class="nav-link ${link.linkClass}">${link.name}</a></li>`;
+        }
+
+        return menuHTML;
+    }
+
     toggleNavigationMenu() {
         const menuIcon = this.shadowRoot.querySelector(".menu-icon");
         const menuLines = this.shadowRoot.querySelectorAll(".menu-icon__line");
@@ -58,11 +82,19 @@ class myMenu extends HTMLElement {
     }
 
     render() {
+        const menuItems = this.generateMenu();
+
         this.shadowRoot.innerHTML = `
         
         <style>
         /* Estilos comunes */
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        } 
+
         a{
             text-decoration: none;
         }
@@ -131,13 +163,6 @@ class myMenu extends HTMLElement {
             overflow: hidden;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-        } 
-
         .main-header {
             position: fixed;
             top: 0;
@@ -174,7 +199,7 @@ class myMenu extends HTMLElement {
         .nav-links ul li .nav-link {
             position: relative;
             color: var(--color-text-dark);
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             transition: var(--transition-short);
         }
@@ -283,12 +308,9 @@ class myMenu extends HTMLElement {
 
 
             <nav class="nav-links">
-                <ul>
-                    <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
-                </ul>
+              <ul class="nav-list">
+                 ${menuItems}
+              </ul>
             </nav>
 
             <div class="logo-menu-container">

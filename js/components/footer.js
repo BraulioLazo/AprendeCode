@@ -37,7 +37,7 @@ h3 {
 }
 
 p{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 a{
@@ -457,7 +457,7 @@ button {
                     </div>
                 </div>
             
-                <a href="" class="contact-item contact-item__link">
+                <a href="/contacto/" class="contact-item contact-item__link">
                     <div class="contact-item__img-container">
                         <img class="contact-item__img" src="/assets/global/contacto-icono.png" alt="icono formulario">
                     </div>
