@@ -12,7 +12,9 @@ class myMenu extends HTMLElement {
 
         const menuLinks = [
             { name: "Inicio", href: 'index.html', linkClass: "nav-link-home" },
-            { name: 'Contacto', href: 'contacto/', linkClass: "nav-link-snippets" },
+            { name: 'Blog', href: 'blog/', linkClass: "nav-link-blog" },
+            { name: 'Nosotros', href: 'nosotros/', linkClass: "nav-link-about" },
+            { name: 'Contacto', href: 'contacto/', linkClass: "nav-link-contact" }
         ];
 
         let menuHTML = '';
@@ -159,6 +161,7 @@ class myMenu extends HTMLElement {
             color: var(--color-text-white);
             background-color: var(--color-primary);
             border: none;
+            outline: none;
             border-radius: var(--radius-main);
             overflow: hidden;
         }

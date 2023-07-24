@@ -1,25 +1,23 @@
-.header-contact-section{
-background-image: url(/assets/global/global-header-aprendecode.jpg);
-}
 
-.header-section{
+.header-section {
     position: relative;
-    height: 450px;
+    height: 400px;
+    background-image: url(/assets/global/global-header-aprendecode.jpg);
     background-size: cover;
     background-position: left center;
 
-    .header-container{
+    .header-container {
         justify-content: center;
         padding-top: 70px;
         z-index: 2;
 
-        .header-title{
+        .header-title {
             color: var(--color-text-white);
         }
     }
 }
 
-.header-section::before{
+.header-section::before {
     position: absolute;
     top: 0;
     right: 0;
