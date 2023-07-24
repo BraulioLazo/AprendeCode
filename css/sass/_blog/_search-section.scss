@@ -1,0 +1,99 @@
+.search-section {
+    position: relative;
+    padding: 40px;
+
+    .search-section-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        z-index: 1;
+
+
+        h2,
+        .form-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            max-width: 900px;
+        }
+
+        .form-container {
+            padding-top: 30px;
+
+            #search-form {
+                display: flex;
+                gap: 8px;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 8px;
+                border-radius: 100px;
+                border: 1px solid var(--color-primary);
+                background-color: var(--background-color-white);
+
+                input {
+                    width: 100%;
+                    border-radius: 100px;
+                    border: none;
+                    outline: none;
+                    font-size: 18px;
+                    color: var(--text-color-dark);
+                }
+
+                .btn-search {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 120px;
+                    font-size: 18px;
+                    border-radius: 100px;
+                }
+
+                ::placeholder {
+                    font-size: 16px;
+                    color: var(--color-text-placeholder);
+                }
+            }
+
+            #search-buttons{
+                display: flex;
+                justify-content: center;
+                gap: 12px;
+                padding-top: 30px;
+
+                button{
+                    padding: 10px 30px;
+                    background-color: var(--background-color-white);
+                    color: var(--text-color-dark);
+                    border: 1px solid var(--color-primary);
+                    transition: var(--transition-short);
+                    cursor: pointer;
+                }
+
+
+                button:hover{
+                  transform: translateY(-10px);
+                  color: var(--color-text-white);
+                  background-color: var(--color-primary);
+                  box-shadow: 5px 5px 12px rgba($color: #000000, $alpha: 0.3);
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-section {
+        .search-section-container {
+            .form-container {
+
+                #search-buttons {
+            
+                }
+            }
+        }
+    }
+
+}

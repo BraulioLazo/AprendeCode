@@ -8,12 +8,14 @@
 
 :root {
   --color-primary: #1590ca;
+  --color-primary-half: #1591ca8c;
   --color-secondary: #25599E;
   --color-secondary-half: #25599e5b;
   --color-text-white: #ffffff;
   --radius-main: 7px;
   --color-background-white: #ffffff;
   --color-text-dark: #181818;
+  --color-text-placeholder: #777777d2;
   --transition-short: .3s ease;
   --transition-medium: .5s ease;
   --transition-long: 1s ease;
@@ -1125,6 +1127,81 @@ button {
   .contact-section .contact-container .contact-form-container .contact-form .contact-form__group {
     width: 100%;
   }
+}
+.search-section {
+  position: relative;
+  padding: 40px;
+}
+.search-section .search-section-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+.search-section .search-section-container h2,
+.search-section .search-section-container .form-container {
+  width: 100%;
+  text-align: center;
+}
+.search-section .search-section-container p {
+  text-align: center;
+  max-width: 900px;
+}
+.search-section .search-section-container .form-container {
+  padding-top: 30px;
+}
+.search-section .search-section-container .form-container #search-form {
+  display: flex;
+  gap: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 100px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--background-color-white);
+}
+.search-section .search-section-container .form-container #search-form input {
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: var(--text-color-dark);
+}
+.search-section .search-section-container .form-container #search-form .btn-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  font-size: 18px;
+  border-radius: 100px;
+}
+.search-section .search-section-container .form-container #search-form ::placeholder {
+  font-size: 16px;
+  color: var(--color-text-placeholder);
+}
+.search-section .search-section-container .form-container #search-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 30px;
+}
+.search-section .search-section-container .form-container #search-buttons button {
+  padding: 10px 30px;
+  background-color: var(--background-color-white);
+  color: var(--text-color-dark);
+  border: 1px solid var(--color-primary);
+  transition: var(--transition-short);
+  cursor: pointer;
+}
+.search-section .search-section-container .form-container #search-buttons button:hover {
+  transform: translateY(-10px);
+  color: var(--color-text-white);
+  background-color: var(--color-primary);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-section {
+  padding-top: 0;
 }
 .card-section .card-section-container {
   gap: 30px;
