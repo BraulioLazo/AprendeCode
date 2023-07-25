@@ -1,0 +1,23 @@
+.about-section-about-page {
+    background-color: var(--color-background-light);
+
+    .about-section__container {
+        .about__header {
+
+            .about__title,
+            .about__tagline {
+                color: var(--color-text-dark);
+            }
+        }
+
+        .about__description {
+
+            h3,
+            p {
+                color: var(--color-text-dark);
+            }
+        }
+    }
+
+
+}

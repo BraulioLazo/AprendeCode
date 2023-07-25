@@ -12,10 +12,11 @@
   --color-secondary: #25599E;
   --color-secondary-half: #25599e5b;
   --color-text-white: #ffffff;
-  --radius-main: 7px;
-  --color-background-white: #ffffff;
   --color-text-dark: #181818;
   --color-text-placeholder: #777777d2;
+  --radius-main: 7px;
+  --color-background-white: #ffffff;
+  --color-background-light: #FBFBFB;
   --transition-short: .3s ease;
   --transition-medium: .5s ease;
   --transition-long: 1s ease;
@@ -82,7 +83,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 30px;
+  padding: 50px 30px;
 }
 
 .section-container {
@@ -1245,6 +1246,63 @@ button {
   .card-section .card-section-container .cards .card {
     width: 100%;
   }
+}
+.about-intro-section .about-section-container {
+  align-items: center;
+  gap: 40px;
+}
+.about-intro-section .about-section-container .image-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.about-intro-section .about-section-container .image-container img {
+  width: 100%;
+}
+.about-intro-section .about-section-container .text-container {
+  width: 50%;
+}
+.about-intro-section .about-section-container .text-container .section-title {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-intro-section .about-section-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .about-intro-section .about-section-container .image-container {
+    width: 90%;
+  }
+  .about-intro-section .about-section-container .text-container {
+    width: 90%;
+  }
+  .about-intro-section .about-section-container .text-container .section-title {
+    text-align: center;
+  }
+  .about-intro-section .about-section-container .text-container p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-intro-section .about-section-container .image-container {
+    width: 100%;
+  }
+  .about-intro-section .about-section-container .text-container {
+    width: 100%;
+  }
+}
+.about-section-about-page {
+  background-color: var(--color-background-light);
+}
+.about-section-about-page .about-section__container .about__header .about__title,
+.about-section-about-page .about-section__container .about__header .about__tagline {
+  color: var(--color-text-dark);
+}
+.about-section-about-page .about-section__container .about__description h3,
+.about-section-about-page .about-section__container .about__description p {
+  color: var(--color-text-dark);
 }
 
 /*# sourceMappingURL=style.css.map */

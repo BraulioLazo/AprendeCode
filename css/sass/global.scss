@@ -11,12 +11,16 @@
 
     --color-secondary: #25599E;
     --color-secondary-half: #25599e5b;
-    --color-text-white: #ffffff;
-    --radius-main: 7px;
-    --color-background-white: #ffffff;
-    --color-text-dark: #181818;
 
+    --color-text-white: #ffffff;
+    --color-text-dark: #181818;
     --color-text-placeholder: #777777d2;
+
+    --radius-main: 7px;
+
+    --color-background-white: #ffffff;
+    --color-background-light: #FBFBFB;
+    
 
     --transition-short: .3s ease;
     --transition-medium: .5s ease;
@@ -89,7 +93,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 30px;
+    padding: 50px 30px;
 }
 
 .section-container {
@@ -99,7 +103,7 @@ section {
 
 .btn-link-container {
     display: flex;
-    
+
 }
 
 .btn-link {
