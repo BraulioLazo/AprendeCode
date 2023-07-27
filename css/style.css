@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-background-white);
 }
 
 :root {
@@ -17,6 +19,7 @@
   --radius-main: 7px;
   --color-background-white: #ffffff;
   --color-background-light: #FBFBFB;
+  --color-background-snippet: #F5F2F0;
   --transition-short: .3s ease;
   --transition-medium: .5s ease;
   --transition-long: 1s ease;
@@ -72,11 +75,6 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-secondary);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-secondary) var(--color-background-white);
 }
 
 section {
@@ -1300,9 +1298,96 @@ button {
 .about-section-about-page .about-section__container .about__header .about__tagline {
   color: var(--color-text-dark);
 }
-.about-section-about-page .about-section__container .about__description h3,
 .about-section-about-page .about-section__container .about__description p {
+  max-width: none;
+  text-align: left;
   color: var(--color-text-dark);
+  column-count: 2;
+  column-gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .about-section-about-page .about-section__container .about__description p {
+    column-count: 1;
+    text-align: center;
+  }
+}
+.blog-content-section .blog-content-section-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-content-section .blog-content-section-container p {
+  width: 100%;
+}
+.blog-content-section .blog-content-section-container .snippets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding-top: 20px;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet {
+  position: relative;
+  width: calc(50% - 10px);
+  border-radius: 5px;
+  background-color: var(--color-background-snippet);
+}
+.blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar {
+  width: 12px;
+  height: 14px;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar-track {
+  background: var(--color-background-snippet);
+}
+.blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+}
+.blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar-corner {
+  background: var(--color-background-snippet);
+}
+.blog-content-section .blog-content-section-container .snippets .snippet .copy-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  color: var(--color-text-dark);
+  font-size: 14px;
+  background-color: var(--color-background-snippet);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  cursor: pointer;
+  transition: var(--transition-short);
+}
+.blog-content-section .blog-content-section-container .snippets .snippet pre {
+  display: flex;
+  min-height: 320px;
+  max-height: 320px;
+  width: 100%;
+  font-size: 15px;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet:hover .copy-button {
+  opacity: 0.5;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet .copy-button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog-content-section .blog-content-section-container .snippets .snippet pre {
+    min-height: 250px;
+    max-height: 250px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog-content-section .blog-content-section-container .snippets .snippet {
+    width: 100%;
+  }
+  .blog-content-section .blog-content-section-container .snippets .snippet pre {
+    min-height: 250px;
+    max-height: 250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

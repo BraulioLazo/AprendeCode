@@ -11,13 +11,29 @@
         }
 
         .about__description {
-
-            h3,
             p {
+                max-width: none;
+                text-align: left;
                 color: var(--color-text-dark);
+                column-count: 2;
+                column-gap: 20px;
+                
             }
         }
     }
+}
 
-
+@media screen and (max-width: 700px){
+    .about-section-about-page {
+    
+        .about-section__container {
+            
+            .about__description {
+                p {
+                    column-count: 1;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
