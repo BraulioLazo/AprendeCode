@@ -6,12 +6,12 @@ function copyToClipboard() {
 
             navigator.clipboard.writeText(target.textContent)
                 .then(() => {
-                    button.textContent = "Copied"; 
+                    button.textContent = "Copiado"; 
                 })
                 .catch(err => console.log('Error copying to clipboard', err));
 
             setTimeout(() => {
-                button.textContent = "Copy"; 
+                button.textContent = "Copiar"; 
             }, 3000);  
         });
     });
