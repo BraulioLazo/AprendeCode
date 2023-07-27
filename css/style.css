@@ -1313,9 +1313,9 @@ button {
   }
 }
 .blog-content-section .blog-content-section-container {
-  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .blog-content-section .blog-content-section-container p {
   width: 100%;
@@ -1323,11 +1323,13 @@ button {
 .blog-content-section .blog-content-section-container .snippets {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   width: 100%;
+  max-width: var(--width-main);
   padding-top: 20px;
+  gap: 20px;
 }
 .blog-content-section .blog-content-section-container .snippets .snippet {
+  display: flex;
   position: relative;
   width: calc(50% - 10px);
   border-radius: 5px;
@@ -1362,10 +1364,13 @@ button {
 }
 .blog-content-section .blog-content-section-container .snippets .snippet pre {
   display: flex;
+  width: 100%;
   min-height: 320px;
   max-height: 320px;
-  width: 100%;
   font-size: 15px;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet pre code {
+  width: 100%;
 }
 .blog-content-section .blog-content-section-container .snippets .snippet:hover .copy-button {
   opacity: 0.5;
@@ -1375,18 +1380,26 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  .blog-content-section .blog-content-section-container .snippets {
+    display: flex;
+  }
   .blog-content-section .blog-content-section-container .snippets .snippet pre {
     min-height: 250px;
     max-height: 250px;
+    max-width: 500px;
   }
 }
 @media screen and (max-width: 768px) {
+  .blog-content-section .blog-content-section-container {
+    width: 100%;
+  }
   .blog-content-section .blog-content-section-container .snippets .snippet {
     width: 100%;
   }
   .blog-content-section .blog-content-section-container .snippets .snippet pre {
     min-height: 250px;
     max-height: 250px;
+    max-width: 768px;
   }
 }
 
