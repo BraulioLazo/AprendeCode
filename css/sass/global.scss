@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary) var(--color-background-white);
 }
 
 :root {
@@ -20,6 +22,7 @@
 
     --color-background-white: #ffffff;
     --color-background-light: #FBFBFB;
+    --color-background-snippet: #F5F2F0;
     
 
     --transition-short: .3s ease;
@@ -80,14 +83,6 @@ a {
 ::-webkit-scrollbar-thumb {
     background: var(--color-secondary);
 }
-
-
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-secondary) var(--color-background-white);
-}
-
 
 section {
     display: flex;
