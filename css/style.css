@@ -1329,6 +1329,12 @@ button {
   text-indent: 15px;
   padding-top: var(--entries-p-pad-top);
 }
+.blog-content-section .blog-content-section-container .image-container {
+  width: 100%;
+}
+.blog-content-section .blog-content-section-container .image-container img {
+  width: 100%;
+}
 .blog-content-section .blog-content-section-container .snippets {
   display: flex;
   flex-wrap: wrap;

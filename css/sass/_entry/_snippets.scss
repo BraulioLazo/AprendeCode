@@ -14,6 +14,15 @@
             padding-top: var(--entries-p-pad-top)
         }
 
+        .image-container {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
         .snippets {
             display: flex;
             flex-wrap: wrap;
