@@ -17,9 +17,9 @@
     <main>
         <section class="header-section header-blog-entry-section">
             <div class="header-container section-container">
-                <h2 class="header-title">
-                    ¿Esta es una entrada?
-                </h2>
+                <h1 class="header-title">
+                    ¿Cómo Hacer Una Caja Flexible O FlexBox?
+                </h1>
             </div>
         </section>
 
@@ -27,25 +27,19 @@
             <div class="blog-content-section-container section-container">
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum beatae consequatur esse incidunt iusto sapiente
-                    accusantium, at, deserunt necessitatibus ipsa minima, rem
-                    asperiores accusamus! Obcaecati odit laborum aut repudiandae amet!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum beatae consequatur esse incidunt iusto sapiente
-                    accusantium, at, deserunt necessitatibus ipsa minima, rem
-                    asperiores accusamus! Obcaecati odit laborum aut repudiandae amet!
+                    Todos sabemos que una página web se construye a partir de cajas, estas son el esqueleto que da
+                    estructura a nuestro diseño. En la creación de esta estructura, tenemos a nuestra disposición varias
+                    herramientas. Hoy te mostraré cómo trabajar con las "cajas flexibles" para construir eficientemente
+                    tu diseño. Pero antes de sumergirnos en eso, permíteme mostrarte algunos ejemplos de otras técnicas
+                    para que puedas apreciar la gran diferencia entre ellas.
                 </p>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum beatae consequatur esse incidunt iusto sapiente
-                    accusantium, at, deserunt necessitatibus ipsa minima, rem
-                    asperiores accusamus! Obcaecati odit laborum aut repudiandae amet!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsum beatae consequatur esse incidunt iusto sapiente
-                    accusantium, at, deserunt necessitatibus ipsa minima, rem
-                    asperiores accusamus! Obcaecati odit laborum aut repudiandae amet!
+                <p class="pad-top">
+                    La propiedad position es muy conocida para estructurar nuestras cajas. Con position: relative en la
+                    caja padre y position: absolute en las cajas hijo, todas las cajas hijo quedan ubicadas dentro del
+                    contenedor padre. Pero, ¿qué sucede cuando reducimos el tamaño de la ventana del navegador? Verás
+                    que nuestra estructura cuidadosamente construida se derrumba. Aquí te dejo un ejemplo de código para
+                    que puedas experimentar por ti mismo lo que sucede.
                 </p>
 
                 <div class="snippets">
@@ -65,8 +59,115 @@
                     </div>
                 </div>
 
+                <h2>
+                    ¿Cómo declarar la caja padre Flexible?
+                </h2>
 
+                <p>
+                    Para evitar el colapso que acabas de observar, vamos a utilizar el valor flex. Con flex, las cajas
+                    se colocan automáticamente una al lado de la otra, de manera sencilla. En este ejemplo, cambiaré un
+                    poco las dimensiones en comparación con el ejemplo anterior, pero recuerda, estas son solo
+                    sugerencias. A continuación, te dejo el código para que puedas seguir con mayor facilidad.
+                </p>
 
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    El primer paso para trabajar con las cajas flexibles es declarar el contenedor (la caja padre) con
+                    la propiedad display y el valor flex (display: flex;). Sin display: flex; en la caja padre, las
+                    cajas hijo simplemente se apilarían una sobre otra, como es común en la interpretación estándar del
+                    HTML por el navegador. Luego, puedes utilizar justify-content: center; para centrar el contenido de
+                    las cajas hijo. Como puedes ver, estas son las únicas dos propiedades que necesitamos para esta
+                    estructura.
+                </p>
+
+                <h2>
+                    ¿Cómo hacer que las Cajas hijos también sean Flexibles?
+                </h2>
+
+                <p>
+                    Quiero mostrarte otro ejemplo con las cajas flexibles. Esta vez, no solo ajustaremos el contenedor,
+                    sino que también permitiremos que el contenido se redimensione a medida que cambiamos el tamaño de
+                    la ventana del navegador. Aquí te dejo el código y te lo explico mientras lo revisas.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Como puedes observar en la imagen de arriba, el único cambio en el código CSS con respecto al
+                    ejemplo anterior, es que a las cajas hijo no le hemos asignado un valor para el ancho (width). En su
+                    lugar, utilizamos la propiedad flex. Esta propiedad flex es la que permite que las cajas hijo se
+                    redimensionen de acuerdo con el espacio disponible.
+                </p>
+
+                <p>
+                    Ahora, ¿qué pasa si quisieras que la caja del medio tenga el doble de ancho que las otras? Ahí es
+                    donde flex: 2; entra en juego. Ajustar el valor de flex permite controlar la proporción del espacio
+                    que cada caja hijo debe ocupar.
+                </p>
+
+                <p>
+                    Si sumamos los valores de flex de las tres cajas, obtenemos un total de cuatro. Para calcular el
+                    ancho de la caja-1 y caja-3, sería 95% dividido entre 1/4, lo que da como resultado 23.75%. Para la
+                    caja-2, calculamos 95% dividido entre 2/4 (ya que le asignamos dos de las cuatro partes existentes),
+                    lo que da como resultado 47.5%. No quería sobrecargar este blog con código, pero te dejaré este
+                    ejemplo final para que puedas experimentar por ti mismo
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Y con esto, hemos llegado al final de este SuperBlog. Ha sido una lectura larga, pero esencial para
+                    abarcar todos los aspectos de las cajas flexibles. Por ahora, te dejo con un ciber-abrazo. Recuerda,
+                    mi nombre es Braulio y estás leyendo AprendeCode. Espero que te hayas sentido inspirado para probar
+                    estos conceptos por ti mismo. No dudes en dejar tus comentarios y preguntas, ¡estoy aquí para
+                    ayudarte en tu camino hacia el dominio del front-end!
+                </p>
 
             </div>
         </section>

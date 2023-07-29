@@ -4,8 +4,14 @@
         flex-wrap: wrap;
         justify-content: center;
 
+        h2 {
+            padding-top: var(--entries-h2-pad-top);
+        }
+
         p {
             width: 100%;
+            text-indent: 15px;
+            padding-top: var(--entries-p-pad-top)
         }
 
         .snippets {
@@ -27,16 +33,16 @@
                     width: 12px;
                     height: 14px;
                 }
-                
+
                 ::-webkit-scrollbar-track {
                     background: var(--color-background-snippet);
                 }
-                
+
                 ::-webkit-scrollbar-thumb {
                     background: var(--color-secondary);
                 }
 
-                ::-webkit-scrollbar-corner{
+                ::-webkit-scrollbar-corner {
                     background: var(--color-background-snippet);
                 }
 
@@ -62,32 +68,34 @@
                     max-height: 320px;
                     font-size: 15px;
 
-                    code{
+                    code {
                         width: 100%;
                     }
                 }
             }
 
-            .snippet:hover .copy-button{
+            .snippet:hover .copy-button {
                 opacity: 0.5;
             }
 
-            .snippet .copy-button:hover{
-                opacity: 1;;
+            .snippet .copy-button:hover {
+                opacity: 1;
+                ;
             }
         }
     }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .blog-content-section {
         .blog-content-section-container {
-            .snippets { 
+            .snippets {
                 display: flex;
+
                 .snippet {
                     pre {
                         min-height: 250px;
-                        max-height: 250px; 
+                        max-height: 250px;
                         max-width: 500px;
                     }
                 }
@@ -96,11 +104,12 @@
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .blog-content-section {
         .blog-content-section-container {
             width: 100%;
-            .snippets { 
+
+            .snippets {
                 .snippet {
                     width: 100%;
 

@@ -1,56 +1,40 @@
-* {
-    margin: 0px;
-    padding: 0px;
+*{
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-size: 70px;
-    font-weight: 900;
+    padding: 0px;
+    margin: 0px;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.contenedor {
+#caja-padre{
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: white;
+    width: 95%;
+    height: 600px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+    margin-top: 120px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.contenedor__texto {
-    display: flex;
-    align-items: center;
-    width: 700px;
-    z-index: 1;
+#caja-padre div{
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    width: 280px;
+    height: 350px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
 }
 
-h1 {
-    margin-right: 20px;
+#caja-1{
+    top: 40px;
+    left: 300px;
 }
 
-.barra__escritura {
-    width: 3px;
-    height: 70px;
-    margin-left: 5px;
-    background-color: #181818;
-    transform: rotateZ(10deg);
-    animation: barra-animacion 1s ease infinite;
+#caja-2{
+    top: 90px;
+    left: 670px;
 }
 
-.contenedor__texto__animacion {
-    display: flex;
-}
-
-
-/* Barra de escritura animation ---------------------------------------------*/
-
-@keyframes barra-animacion {
-    50% {
-        height: 20px;
-    }
+#caja-3{
+    top: 40px;
+    right: 300px;
 }

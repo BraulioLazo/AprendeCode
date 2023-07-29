@@ -16,6 +16,7 @@
 
     --color-text-white: #ffffff;
     --color-text-dark: #181818;
+    --color-text-medium: #444444;
     --color-text-placeholder: #777777d2;
 
     --radius-main: 7px;
@@ -30,6 +31,9 @@
     --transition-long: 1s ease;
 
     --width-main: 1400px;
+
+    --entries-h2-pad-top: 40px;
+    --entries-p-pad-top: 15px;
 }
 
 h1,
@@ -57,8 +61,8 @@ h3 {
 }
 
 p {
-    font-size: 16px;
-    color: var(--color-text-dark);
+    font-size: 18px;
+    color: var(--color-text-medium);
 }
 
 span.skill-counter {
