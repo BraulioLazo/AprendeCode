@@ -197,7 +197,7 @@ button {
 }
 
 .branding .logo-container {
-    width: 100px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +395,7 @@ button {
             <div class="footer__brand">
                 <div class="branding">
                     <div class="logo-container">
-                        <img class="footer__logo" src="/assets/logo/logo.png" alt="Logo de AprendeCode">
+                        <img class="footer__logo" src="/assets/logo/android-chrome-512x512.png" alt="Logo de AprendeCode">
                     </div>
                     <div class="logo-text-container">
                         <h3 class="brand-name">AprendeCode</h3>

@@ -103,7 +103,6 @@ class myMenu extends HTMLElement {
 
         .btn-link-container {
             overflow: hidden;
-            border: 1px solid red;
         }
         
         .btn-link {
@@ -187,6 +186,19 @@ class myMenu extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             width: 1400px;
+        }
+
+        .logo-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .logo-image{
+            width: 100%;
         }
 
         .nav-links {
@@ -305,10 +317,8 @@ class myMenu extends HTMLElement {
         <div class="menu-container">
 
             <div class="logo-container">
-                <img src="/assets/logo/logo.png" alt="Logo" class="logo-image" width="80px">
+                <img src="/assets/logo/android-chrome-512x512.png" alt="Logo" class="logo-image">
             </div>
-
-
 
             <nav class="nav-links">
               <ul class="nav-list">
