@@ -12,7 +12,7 @@
   --color-primary: #1590ca;
   --color-primary-half: #1591ca8c;
   --color-secondary: #25599E;
-  --color-secondary-half: #25599e5b;
+  --color-secondary-half: #25599e8a;
   --color-text-white: #ffffff;
   --color-text-dark: #181818;
   --color-text-medium: #444444;
@@ -69,7 +69,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1040,6 +1040,7 @@ button {
   content: "";
   background-color: var(--color-secondary-half);
   z-index: 1;
+  backdrop-filter: blur(2px);
 }
 
 .contact-section .contact-container {
@@ -1323,6 +1324,7 @@ button {
 }
 .blog-content-section .blog-content-section-container h2 {
   padding-top: var(--entries-h2-pad-top);
+  text-align: center;
 }
 .blog-content-section .blog-content-section-container p {
   width: 100%;
@@ -1355,8 +1357,8 @@ button {
   background-color: var(--color-background-snippet);
 }
 .blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar {
-  width: 12px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
 }
 .blog-content-section .blog-content-section-container .snippets .snippet ::-webkit-scrollbar-track {
   background: var(--color-background-snippet);

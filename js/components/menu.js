@@ -174,6 +174,7 @@ class myMenu extends HTMLElement {
             justify-content: center;
             padding: 10px 20px;
             background-color: var(--color-background-white);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             z-index: 999;
         }
 

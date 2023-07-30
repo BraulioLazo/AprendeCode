@@ -6,6 +6,7 @@
 
         h2 {
             padding-top: var(--entries-h2-pad-top);
+            text-align: center;
         }
 
         p {
@@ -44,8 +45,8 @@
                 background-color: var(--color-background-snippet);
 
                 ::-webkit-scrollbar {
-                    width: 12px;
-                    height: 14px;
+                    width: 10px;
+                    height: 10px;
                 }
 
                 ::-webkit-scrollbar-track {
