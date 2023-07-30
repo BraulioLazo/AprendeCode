@@ -53,6 +53,15 @@ class myMenu extends HTMLElement {
         });
     }
 
+    closeMenuOnClickOutside() {
+        const menuContainer = this.shadowRoot.querySelector(".nav-links");
+        menuContainer.addEventListener("click", (event) => {
+            if (event.target === menuContainer && menuContainer.classList.contains("menu-open")) {
+                this.toggleNavigationMenu();
+            }
+        });
+    }
+
     adjustNavOnResize() {
         const menuLines = this.shadowRoot.querySelectorAll(".menu-icon__line");
         const navLinksElement = this.shadowRoot.querySelector(".nav-links");
@@ -80,6 +89,7 @@ class myMenu extends HTMLElement {
     connectedCallback() {
         this.render();
         this.toggleNavigationMenu();
+        this.closeMenuOnClickOutside();
         window.addEventListener("resize", this.adjustNavOnResize);
     }
 
