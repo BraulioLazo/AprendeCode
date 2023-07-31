@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende cómo utilizar cajas flotantes para crear diseños flexibles y responsivos en tu sitio web. Descubre técnicas avanzadas para adaptar tus diseños a diferentes dispositivos y resoluciones de pantalla.">
+    <meta name="keywords" content="cajas flotantes, diseño web, diseño responsivo, maquetación web, CSS, diseño flexible, técnicas avanzadas">
+    <meta name="author" content="Braulio de AprendeCode">
+    <meta property="og:title" content="Cajas Flotantes: Un Vistazo a su Versatilidad en el Diseño Web">
+    <meta property="og:description" content="Aprende cómo utilizar cajas flotantes para crear diseños flexibles y responsivos en tu sitio web. Descubre técnicas avanzadas para adaptar tus diseños a diferentes dispositivos y resoluciones de pantalla.">
+    <meta property="og:image" content="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/Diseno-Responsivo-Con-Cajas-Flotantes.jpg">
+    <meta property="og:url" content="https://www.aprendecode.com/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Cajas Flotantes: Un Vistazo a su Versatilidad en el Diseño Web</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Cajas Flotantes: Un Vistazo a su Versatilidad en el Diseño Web
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Como seguramente ya sabes, el navegador interpreta el código HTML en orden secuencial, lo que puede
+                    ser útil en ciertos casos, como al centrar una caja. Sin embargo, en muchas ocasiones necesitamos
+                    colocar cajas una al lado de la otra. Aquí es donde las Cajas Flotantes demuestran su increíble
+                    utilidad en la estructura de una página web. En este artículo, te mostraré un ejemplo basado en la
+                    página de inicio de nuestro sitio web. Aunque las Cajas Flotantes no son tan flexibles como las
+                    Cajas Flexibles (Flex Box), en este caso, podemos lograr el mismo resultado, ya que el ancho de las
+                    cajas hijas está en píxeles y no cambia con el tamaño del navegador.
+                </p>
+
+                <h2>
+                    Técnicas para Lograr que las Cajas Floten en tu Diseño Web
+                </h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/cajas-flotantes-ejemplo.jpg"
+                         alt="Ejemplo de Cajas Flotantes en el Diseño Web">
+                </div>                
+
+                <p>
+                    Solo copia el código y pégalo en tu editor para ver la imagen de arriba. Como puedes observar,
+                    simplemente al utilizar la propiedad "float" con los valores "left" o "right" para que las cajas
+                    floten, logramos el efecto deseado. Además, al achicar la ventana del navegador, las cajas se apilan
+                    una debajo de la otra. En este artículo, trabajaremos con un ejemplo de estructura de cajas
+                    flotantes que se encuentra en la página de inicio.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/cajas-flotantes-ejemplo2.jpg"
+                        alt="Ejemplo de Cajas Flotantes en el Diseño Web" loading="lazy">
+                </div>
+
+                <p>
+                    Si copiaste el código en tu editor, verás que la estructura se rompe cuando achicas la ventana del
+                    navegador y las cajas se colocan una debajo de la otra. Para resolver este inconveniente,
+                    simplemente crea otra caja hija dentro de la caja padre que contenga las tres cajas más pequeñas. De
+                    esta manera, las tres cajas estarán siempre centradas sin importar el tamaño del navegador. Puedes
+                    añadir un borde a la caja hija para visualizarla mejor, pero no es necesario, ya que solo la
+                    usaremos como contenedor sin aportar valor visual.
+                </p>
+
+                <h2>
+                    Manteniendo las Cajas Flotantes Siempre Centradas en tu Diseño Web
+                </h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/cajas-flotantes-ejemplo3.jpg"
+                        alt="Ejemplo de Cajas Flotantes en el Diseño Web" loading="lazy">
+                </div>
+
+                <p>
+                    En el código CSS, agregamos un "margin auto" a la caja hija tanto a la derecha como a la izquierda
+                    para mantener las tres cajas internas siempre centradas. Es importante tener en cuenta el ancho y
+                    alto de la caja hija, considerando el borde. En nuestro caso, el width es de 980px (sumando el ancho
+                    de las tres cajas internas y el margen) y el height es de 420px (sumando el margin-top de 70px y el
+                    alto de la caja). Si no añades el ancho y alto adecuados, las cajas internas se desbordarán.
+                </p>
+
+                <h2>
+                    ¡Logrando una Estructura Final Perfectamente Centrada con Cajas Flotantes!
+                </h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/cajas-flotantes-ejemplo4.jpg"
+                        alt="Ejemplo de Cajas Flotantes en el Diseño Web" loading="lazy">
+                </div>
+
+                <p>
+                    La imagen de arriba se mostrará si copias el código en tu editor. Observarás cómo la estructura
+                    permanece centrada al achicar la ventana del navegador. Si te interesó este modelo de cajas, te
+                    invitamos a explorar el blog de las Cajas Flexibles o Flex Box. Estas son una herramienta poderosa y
+                    versátil para trabajar en el diseño web. Esperamos que este artículo te haya sido útil y que hayas
+                    aprendido algo nuevo. Recuerda que la programación es como un lenguaje, y cada día puedes aprender
+                    palabras nuevas y poner en práctica tus ideas. ¡Un abrazo desde AprendeCode! <br>
+                    <br>
+                    Con esta revisión, el artículo es más claro y atractivo para los lectores. Si necesitas más ayuda o
+                    tienes alguna otra pregunta, ¡no dudes en decírmelo!
+                </p>
+
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/blog/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/snippetLoader.js"></script>
+    <script src="/js/entries.js"></script>
+</body>
+
+</html>

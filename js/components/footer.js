@@ -8,7 +8,7 @@ class MyFooter extends HTMLElement {
         const currentYear = new Date().getFullYear();
         this.shadowRoot.getElementById("copyright__year").textContent = `${currentYear}`;
     }
-    
+
     connectedCallback() {
         this.render();
         this.updateFooterYear();
@@ -390,92 +390,81 @@ button {
 </style>
 
 <footer class="footer">
-        <div class="footer__container section-container">
+    <div class="footer__container section-container">
 
-            <div class="footer__brand">
-                <div class="branding">
-                    <div class="logo-container">
-                        <img class="footer__logo" src="/assets/logo/android-chrome-512x512.png" alt="Logo de AprendeCode">
-                    </div>
-                    <div class="logo-text-container">
-                        <h3 class="brand-name">AprendeCode</h3>
-                        <p class="brand-focus">Arduino & Frontend</p>
-                    </div>
+        <div class="footer__brand">
+            <div class="branding">
+               <div class="logo-container">
+                  <img class="footer__logo" src="/assets/logo/android-chrome-512x512.png" alt="Logo de AprendeCode - AprendeCode esquina" loading="lazy">
                 </div>
-                
-                <p class="footer__brand-text">Encendiendo el fuego de la curiosidad, avivando la llama de la pasión por
-                    la tecnología.</p>
-                <div class="social-links">
-                    <div class="social-link">
-                        <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="red social">
-                    </div>
-                    <div class="social-link">
-                        <img class="social-link__img" src="/assets/global/blog-icono.png" alt="red social">
-                    </div>
+                <div class="logo-text-container">
+                    <h3 class="brand-name">AprendeCode</h3>
+                    <p class="brand-focus">Arduino & Frontend</p>
                 </div>
             </div>
-
-            <div class="footer__about">
-                <h2 class="footer__about-title">Transformando Pensamientos, Vidas y el Mundo a través de la Tecnología
-                </h2>
-                <p class="footer__about-text">
-                    Creemos en el inmenso poder de la tecnología como fuerza 
-                    transformadora. Un cambio en la percepción sobre la programación 
-                    puede abrirnos a nuevos modos de enfrentar retos, generando 
-                    una evolución en nuestras vidas y entornos. Tanto en el desarrollo 
-                    frontend como en la exploración con Arduino, cada línea de código 
-                    es un paso valioso en este camino de cambio. Si también sientes 
-                    esta pasión por el mundo tecnológico, bienvenido a este espacio. 
-                    Aquí celebramos la curiosidad y la pasión por la creación. Y si 
-                    alguna vez necesitas un empujón para descubrir por dónde empezar, 
-                    estamos aquí, listos para apoyarte en cada etapa de tu 
-                    aventura tecnológica.
-                </p>
-                <div class="footer-about-link-container">
-                    <a href="" class="btn-link footer__about-link"><span>Contáctanos</span></a>
-                </div>
-            </div>
-
-            <div class="footer__contact">
-                <div class="contact-item">
-                    <div class="contact-item__img-container">
-                        <img class="contact-item__img" src="/assets/global/email-icono.png" alt="icono correo">
-                    </div>
-                    <div class="contact-item__details">
-                        <p class="contact-item__type">Correo electrónico</p>
-                        <span class="contact-item__value">info@aprendecode.com</span>
-                    </div>
-                </div>
             
-                <div class="contact-item">
-                    <div class="contact-item__img-container">
-                        <img class="contact-item__img" src="/assets/global/atencion-icono.png" alt="icono horario">
-                    </div>
-                    <div class="contact-item__details">
-                        <p class="contact-item__type">Horario de atención</p>
-                        <span class="contact-item__value">Siéntete libre de escribirnos en cualquier momento.</span>
-                    </div>
+            <p class="footer__brand-text">Encendiendo el fuego de la curiosidad, avivando la llama de la pasión por la tecnología.</p>
+            <div class="social-links">
+                <div class="social-link">
+                    <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="Logo de YouTube de AprendeCode" loading="lazy">
                 </div>
-            
-                <a href="/contacto/" class="contact-item contact-item__link">
-                    <div class="contact-item__img-container">
-                        <img class="contact-item__img" src="/assets/global/contacto-icono.png" alt="icono formulario">
-                    </div>
-                    <div class="contact-item__details">
-                        <p class="contact-item__type">Formulario de contacto</p>
-                        <p class="contact-item__type-description">¿Tienes una pregunta? Nuestro formulario de contacto está aquí para ayudarte.</p>
-                    </div>
-                </a>
-            </div>
-            
-
-            <div class="footer__copyright">
-
-                <small class="copyright__text"><span id="copyright__year"></span>&nbsp; AprendeCode - All
-                    Rights Reserved</small>
+                <div class="social-link">
+                    <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
+                </div>
             </div>
         </div>
-    </footer>
+
+        <div class="footer__about">
+            <h2 class="footer__about-title">Transformando Pensamientos, Vidas y el Mundo a través de la Tecnología</h2>
+            <p class="footer__about-text">
+                Creemos en el inmenso poder de la tecnología como fuerza transformadora. Un cambio en la percepción sobre la programación puede abrirnos a nuevos modos de enfrentar retos, generando una evolución en nuestras vidas y entornos. Tanto en el desarrollo frontend como en la exploración con Arduino, cada línea de código es un paso valioso en este camino de cambio. Si también sientes esta pasión por el mundo tecnológico, bienvenido a este espacio. Aquí celebramos la curiosidad y la pasión por la creación. Y si alguna vez necesitas un empujón para descubrir por dónde empezar, estamos aquí, listos para apoyarte en cada etapa de tu aventura tecnológica.
+            </p>
+            <div class="footer-about-link-container">
+                <a href="" class="btn-link footer__about-link"><span>Contáctanos</span></a>
+            </div>
+        </div>
+
+        <div class="footer__contact">
+            <div class="contact-item">
+                <div class="contact-item__img-container">
+                    <img class="contact-item__img" src="/assets/global/email-icono.png" alt="Icono de correo electrónico" loading="lazy">
+                </div>
+                <div class="contact-item__details">
+                    <p class="contact-item__type">Correo electrónico</p>
+                    <span class="contact-item__value">info@aprendecode.com</span>
+                </div>
+            </div>
+        
+            <div class="contact-item">
+                <div class="contact-item__img-container">
+                    <img class="contact-item__img" src="/assets/global/atencion-icono.png" alt="Icono de horario" loading="lazy">
+                </div>
+                <div class="contact-item__details">
+                    <p class="contact-item__type">Horario de atención</p>
+                    <span class="contact-item__value">Siéntete libre de escribirnos en cualquier momento.</span>
+                </div>
+            </div>
+        
+            <a href="/contacto/" class="contact-item contact-item__link">
+                <div class="contact-item__img-container">
+                    <img class="contact-item__img" src="/assets/global/contacto-icono.png" alt="Icono del formulario de contacto" loading="lazy">
+                </div>
+                <div class="contact-item__details">
+                    <p class="contact-item__type">Formulario de contacto</p>
+                    <p class="contact-item__type-description">¿Tienes una pregunta? Nuestro formulario de contacto está aquí para ayudarte.</p>
+                </div>
+            </a>
+        </div>
+        
+
+        <div class="footer__copyright">
+            <small class="copyright__text">
+                <span id="copyright__year"></span>&nbsp; AprendeCode - All Rights Reserved
+            </small>
+        </div>
+    </div>
+</footer>
+
         `;
     }
 }
