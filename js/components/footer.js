@@ -405,12 +405,16 @@ button {
             
             <p class="footer__brand-text">Encendiendo el fuego de la curiosidad, avivando la llama de la pasión por la tecnología.</p>
             <div class="social-links">
-                <div class="social-link">
-                    <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="Logo de YouTube de AprendeCode" loading="lazy">
-                </div>
-                <div class="social-link">
-                    <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
-                </div>
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_black">
+                   <div class="social-link">
+                       <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="Logo de YouTube de AprendeCode" loading="lazy">
+                   </div>
+                </a>
+                <a href="https://www.aprendecode.com/blog/">
+                   <div class="social-link">
+                       <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
+                   </div>
+                </a.
             </div>
         </div>
 
@@ -420,7 +424,7 @@ button {
                 Creemos en el inmenso poder de la tecnología como fuerza transformadora. Un cambio en la percepción sobre la programación puede abrirnos a nuevos modos de enfrentar retos, generando una evolución en nuestras vidas y entornos. Tanto en el desarrollo frontend como en la exploración con Arduino, cada línea de código es un paso valioso en este camino de cambio. Si también sientes esta pasión por el mundo tecnológico, bienvenido a este espacio. Aquí celebramos la curiosidad y la pasión por la creación. Y si alguna vez necesitas un empujón para descubrir por dónde empezar, estamos aquí, listos para apoyarte en cada etapa de tu aventura tecnológica.
             </p>
             <div class="footer-about-link-container">
-                <a href="" class="btn-link footer__about-link"><span>Contáctanos</span></a>
+                <a href="/contacto/" class="btn-link footer__about-link"><span>Contáctanos</span></a>
             </div>
         </div>
 
