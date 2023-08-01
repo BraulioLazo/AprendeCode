@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre cómo crear contenedores y elementos flexibles con Flexbox. Aprende a organizar y distribuir el contenido de manera flexible para lograr diseños adaptativos y responsivos. Expande tus habilidades en diseño web con este tutorial sobre Flexbox y contenido flexible.">
-    <meta name="keywords" content="Flexbox, contenido flexible, diseño web, diseños adaptativos, responsivos, tutorial, CSS, diseño responsivo">
+    <meta name="description"
+        content="Descubre cómo crear contenedores y elementos flexibles con Flexbox. Aprende a organizar y distribuir el contenido de manera flexible para lograr diseños adaptativos y responsivos. Expande tus habilidades en diseño web con este tutorial sobre Flexbox y contenido flexible.">
+    <meta name="keywords"
+        content="Flexbox, contenido flexible, diseño web, diseños adaptativos, responsivos, tutorial, CSS, diseño responsivo">
     <meta name="author" content="Braulio de AprendeCode">
-    
+
+    <meta property="og:title" content="Convierte tu Web en un Espacio Dinámico con Flexbox!">
+    <meta property="og:description" content="Descubre cómo crear contenedores y elementos flexibles con Flexbox. Aprende a organizar y distribuir el contenido de manera flexible para lograr diseños adaptativos y responsivos. Expande tus habilidades en diseño web con este tutorial sobre Flexbox y contenido flexible.">
+    <meta property="og:image" content="/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/Flexbox-Maquetado-Responsivo.jpg">
+    <meta property="og:url" content="https://www.aprendecode.com/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/">
+    <meta property="og:type" content="article">
+
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
@@ -16,7 +24,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-    
+
     <title>Blog - Flexbox y Contenido Flexible</title>
 </head>
 
@@ -29,7 +37,7 @@
         <section class="header-section header-blog-entry-section">
             <div class="header-container section-container">
                 <h1 class="header-title">
-                    ¡Técnicas Avanzadas para la Creación de Diseños Flexibles con Flexbox!
+                    ¡Convierte tu Web en un Espacio Dinámico con Flexbox!
                 </h1>
             </div>
         </section>
@@ -57,10 +65,11 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/blog/tecnicas-avanzadas-para-la-creacion-de-disenos-flexibles-con-flexbox/images/imagen1.png" loading="lazy"
+                    <img src="/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/imagen1.png"
+                        loading="lazy"
                         alt="Ejemplo de estructura con position:relative y position:absolute que colapsa al reducir el tamaño del navegador. Aprende cómo mejorar el diseño con cajas flexibles en Flexbox.">
                 </div>
-                
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -147,10 +156,11 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/blog/tecnicas-avanzadas-para-la-creacion-de-disenos-flexibles-con-flexbox/images/imagen2.jpg" loading="lazy"
+                    <img src="/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/imagen2.jpg"
+                        loading="lazy"
                         alt="Ejemplo de diseño flexible con cajas flexibles en Flexbox. Permite que el contenido se redimensione al cambiar el tamaño del navegador para lograr un diseño adaptativo.">
                 </div>
-                
+
                 <p>
                     Como puedes observar en la imagen de arriba, el único cambio en el código CSS con respecto al
                     ejemplo anterior, es que a las cajas hijo no le hemos asignado un valor para el ancho (width). En su
@@ -173,10 +183,11 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/blog/tecnicas-avanzadas-para-la-creacion-de-disenos-flexibles-con-flexbox/images/imagen3.jpg" loading="lazy"
+                    <img src="/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/imagen3.jpg"
+                        loading="lazy"
                         alt="Ejemplo de diseño flexible con cajas flexibles en Flexbox. Controla la proporción del espacio que cada caja hijo debe ocupar con la propiedad flex. Experimenta con las proporciones para lograr diseños personalizados.">
                 </div>
-                
+
                 <div class="snippets">
                     <div class="snippet">
                         <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
@@ -213,8 +224,12 @@
 
     <script src="/js/components/menu.js"></script>
     <script src="/js/components/footer.js"></script>
-    <script src="/blog/tecnicas-avanzadas-para-la-creacion-de-disenos-flexibles-con-flexbox/snippetLoader.js"></script>
     <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'convierte-tu-web-en-un-espacio-dinamico-con-flexbox/';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
 
 </body>
 
