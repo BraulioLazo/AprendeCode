@@ -280,18 +280,18 @@ button {
 /* Footer contact container styles */
 .footer__contact {
     display: flex;
-    flex-wrap: wrap;
     align-content: flex-start;
     align-items: center;
     gap: 12px;
     flex: 1;
     min-width: 320px;
+    padding: 15px 0;
     color: var(--color-text-white);
 }
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     width: 100%;
 }
@@ -378,12 +378,12 @@ button {
     }
 
     .footer__contact {
-        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
     .contact-item {
-        align-items: center;
+
         max-width: 300px;
     }
 }

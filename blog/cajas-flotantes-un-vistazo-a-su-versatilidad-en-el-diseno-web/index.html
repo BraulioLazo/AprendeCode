@@ -45,17 +45,20 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    Como seguramente ya sabes, el navegador interpreta el código HTML en orden secuencial, lo que puede
-                    ser útil en ciertos casos, como al centrar una caja. Sin embargo, en muchas ocasiones necesitamos
-                    colocar cajas una al lado de la otra. Aquí es donde las Cajas Flotantes demuestran su increíble
-                    utilidad en la estructura de una página web. En este artículo, te mostraré un ejemplo basado en la
-                    página de inicio de nuestro sitio web. Aunque las Cajas Flotantes no son tan flexibles como las
-                    Cajas Flexibles (Flex Box), en este caso, podemos lograr el mismo resultado, ya que el ancho de las
-                    cajas hijas está en píxeles y no cambia con el tamaño del navegador.
+                    Por si no lo sabías, el navegador interpreta el código HTML de arriba a abajo, respetando su orden
+                    predefinido. En ciertas situaciones, este comportamiento es suficiente. Podemos, por ejemplo,
+                    centrar un elemento y voilà, tenemos lo que necesitamos. Pero hay ocasiones en que queremos que los
+                    elementos se alineen uno junto al otro. Ahí es donde entran en juego las Cajas Flotantes. Te
+                    preguntarás, ¿por qué es importante este modelo de cajas? Bueno, son una herramienta fantástica para
+                    estructurar una página web. Y para ilustrarlo, me basaré en la estructura de la página principal de
+                    esta web. Si bien las Cajas Flotantes no son tan flexibles como las Flex Box, aún pueden brindar
+                    resultados impresionantes. Esto es especialmente cierto cuando las cajas hijas tienen un ancho en
+                    píxeles constante, independientemente de si el ancho de la ventana del navegador cambia. Ahora,
+                    déjame darte un ejemplo sencillo de cómo funcionan las Cajas Flotantes.
                 </p>
 
                 <h2>
-                    Técnicas para Lograr que las Cajas Floten en tu Diseño Web
+                    Manejando Cajas Flotantes para un Diseño Web Óptimo
                 </h2>
 
                 <div class="snippets">
@@ -81,11 +84,10 @@
                 </div>
 
                 <p>
-                    Solo copia el código y pégalo en tu editor para ver la imagen de arriba. Como puedes observar,
-                    simplemente al utilizar la propiedad "float" con los valores "left" o "right" para que las cajas
-                    floten, logramos el efecto deseado. Además, al achicar la ventana del navegador, las cajas se apilan
-                    una debajo de la otra. En este artículo, trabajaremos con un ejemplo de estructura de cajas
-                    flotantes que se encuentra en la página de inicio.
+                    Todo lo que necesitas hacer es asignar a tus cajas la propiedad float, y seleccionar 'left' o
+                    'right' según prefieras. ¡Así de sencillo! Si cambias el tamaño de la ventana del navegador, verás
+                    cómo la estructura se adapta, con las cajas alineándose una debajo de la otra. Pero, ¿cómo podemos
+                    aplicar este concepto a la estructura de nuestra página de inicio? Veamos.
                 </p>
 
                 <div class="snippets">
@@ -111,16 +113,16 @@
                 </div>
 
                 <p>
-                    Si copiaste el código en tu editor, verás que la estructura se rompe cuando achicas la ventana del
-                    navegador y las cajas se colocan una debajo de la otra. Para resolver este inconveniente,
-                    simplemente crea otra caja hija dentro de la caja padre que contenga las tres cajas más pequeñas. De
-                    esta manera, las tres cajas estarán siempre centradas sin importar el tamaño del navegador. Puedes
-                    añadir un borde a la caja hija para visualizarla mejor, pero no es necesario, ya que solo la
-                    usaremos como contenedor sin aportar valor visual.
+                    Si has seguido las instrucciones y has copiado el código en tu editor, probablemente veas una imagen
+                    similar a la que presenté antes. Ahora, si reduces el tamaño de la ventana del navegador, la
+                    estructura comenzará a ajustarse. No te preocupes, hay una solución a este desafío: necesitas crear
+                    otra caja hija dentro de la caja padre que a su vez contenga las tres cajas más pequeñas. De esta
+                    manera, las tres cajas permanecerán centradas sin importar el tamaño de la ventana del navegador. Te
+                    dejo el código a continuación.
                 </p>
 
                 <h2>
-                    Manteniendo las Cajas Flotantes Siempre Centradas en tu Diseño Web
+                    Estrategias para Centrar Cajas Flotantes en tu Diseño Web
                 </h2>
 
                 <div class="snippets">
@@ -146,15 +148,16 @@
                 </div>
 
                 <p>
-                    En el código CSS, agregamos un "margin auto" a la caja hija tanto a la derecha como a la izquierda
-                    para mantener las tres cajas internas siempre centradas. Es importante tener en cuenta el ancho y
-                    alto de la caja hija, considerando el borde. En nuestro caso, el width es de 980px (sumando el ancho
-                    de las tres cajas internas y el margen) y el height es de 420px (sumando el margin-top de 70px y el
-                    alto de la caja). Si no añades el ancho y alto adecuados, las cajas internas se desbordarán.
+                    En el código CSS, asigné un margen automático a la caja hijo, tanto a la derecha como a la
+                    izquierda, para mantener las tres cajas internas centradas en todo momento. Es importante tener en
+                    cuenta que cuando declaras el ancho y la altura de la caja, debes considerar el grosor del borde de
+                    la caja hijo. Si no sumas el tamaño del borde a tus cálculos, las cajas internas pueden sobrepasar
+                    los límites de la caja hijo y romper la estructura. Te mostraré esto con un ejemplo más detallado y
+                    luego te proporcionaré el código final para que lo veas por ti mismo.
                 </p>
 
                 <h2>
-                    ¡Logrando una Estructura Final Perfectamente Centrada con Cajas Flotantes!
+                    Construyendo una Estructura Web Ideal con Cajas Flotantes Centradas
                 </h2>
 
                 <div class="snippets">
@@ -180,15 +183,19 @@
                 </div>
 
                 <p>
-                    La imagen de arriba se mostrará si copias el código en tu editor. Observarás cómo la estructura
-                    permanece centrada al achicar la ventana del navegador. Si te interesó este modelo de cajas, te
-                    invitamos a explorar el blog de las Cajas Flexibles o Flex Box. Estas son una herramienta poderosa y
-                    versátil para trabajar en el diseño web. Esperamos que este artículo te haya sido útil y que hayas
-                    aprendido algo nuevo. Recuerda que la programación es como un lenguaje, y cada día puedes aprender
-                    palabras nuevas y poner en práctica tus ideas. ¡Un abrazo desde AprendeCode! <br>
-                    <br>
-                    Con esta revisión, el artículo es más claro y atractivo para los lectores. Si necesitas más ayuda o
-                    tienes alguna otra pregunta, ¡no dudes en decírmelo!
+                    Si has seguido las instrucciones y copiado el código en tu editor, la imagen de arriba debería
+                    coincidir con lo que ves. Como mencioné anteriormente, la estructura se mantiene perfectamente
+                    centrada incluso cuando cambias el tamaño de la ventana del navegador.
+                </p>
+                <p>
+                    Si te ha parecido interesante este modelo de cajas, te recomendaría que explores el mundo de las
+                    <a href="/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/">Cajas Flexibles o Flex Box</a>. Son una herramienta increíblemente versátil y, como su nombre indica,
+                    ofrecen mucha más flexibilidad. Espero sinceramente que esta entrada de blog te haya sido útil y que
+                    hayas aprendido algo nuevo hoy. Recuerda, la programación es solo un lenguaje y, como cualquier otro
+                    lenguaje, existen múltiples formas de expresar lo mismo. Cada día es una nueva oportunidad para
+                    aprender más sobre este lenguaje fascinante y poner en práctica nuevas ideas. Recuerda: la mejor
+                    manera de aprender a programar es programar. Hasta aquí llegamos hoy, mi nombre es Braulio y esto ha
+                    sido AprendeCode. ¡Un abrazo!
                 </p>
 
 

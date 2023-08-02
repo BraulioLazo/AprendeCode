@@ -5,10 +5,12 @@
         <link rel="stylesheet" href="Estilos.css">
     </head>
     <body>
-        <section id="caja-padre">
-                  <div id="caja-1"> Caja 1 </div>
-                  <div id="caja-2"> Caja 2 </div>
-                  <div id="caja-3"> Caja 3 </div>
+        <section id="seccion">
+            <div id="caja-padre">
+                <div id="caja-1"> Caja 1 </div>
+                <div id="caja-2"> Caja 2 </div>
+                <div id="caja-3"> Caja 3 </div>
+            </div>   
         </section>
     </body>
 </html>
