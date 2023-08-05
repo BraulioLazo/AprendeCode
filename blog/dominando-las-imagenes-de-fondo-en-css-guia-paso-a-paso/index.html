@@ -33,14 +33,20 @@
             <div class="blog-content-section-container section-container">
 
                 <p>
-                    Para insertar una imagen de fondo en CSS, simplemente necesitamos la propiedad 'background-image', con la
-                    función 'url()' y dentro de ella, la ruta de la imagen que deseamos cargar. Sin embargo, la imagen aparecerá en
-                    su tamaño original. Si es demasiado grande, no se verá en su totalidad dentro del contenedor; si es más pequeña,
-                    no llenará completamente el contenedor. Afortunadamente, estas situaciones se pueden solucionar con unas pocas
+                    Para insertar una imagen de fondo en CSS, simplemente necesitamos la propiedad <strong>background-image</strong>,
+                    con la
+                    función <strong>url()</strong> y dentro de ella, la ruta de la imagen que deseamos cargar. Sin embargo, la imagen
+                    aparecerá en
+                    su tamaño original. Si es demasiado grande, no se verá en su totalidad dentro del contenedor; si es
+                    más pequeña,
+                    no llenará completamente el contenedor. Afortunadamente, estas situaciones se pueden solucionar con
+                    unas pocas
                     propiedades adicionales que exploraremos en este blog. <br>
                     <br>
-                    Como de costumbre, Código-Lover, tenemos un código de partida. Esta vez, tomaremos como ejemplo la página de
-                    inicio de AprendeCode. ¿Por qué? Porque tiene una imagen de fondo que se mantiene fija mientras hacemos scroll,
+                    Como de costumbre, Código-Lover, tenemos un código de partida. Esta vez, tomaremos como ejemplo la
+                    página de
+                    inicio de AprendeCode. ¿Por qué? Porque tiene una imagen de fondo que se mantiene fija mientras
+                    hacemos scroll,
                     y te mostraré cómo lograrlo al final de este blog. A continuación, te presento el código de partida.
                 </p>
 
@@ -60,112 +66,162 @@
                         </pre>
                     </div>
                 </div>
-            
+
                 <p>
-                    Realmente no necesitamos profundizar en el HTML, ya que la mayoría de este código es relleno para crear espacio
-                    al hacer scroll. Para visualizar el efecto de fondo fijo, he creado dos secciones adicionales para proporcionar
-                    suficiente espacio. En las Secciones Uno y Dos encontrarás algo de texto y un par de botones, únicamente para
+                    Realmente no necesitamos profundizar en el HTML, ya que la mayoría de este código es relleno para
+                    crear espacio
+                    al hacer scroll. Para visualizar el efecto de fondo fijo, he creado dos secciones adicionales para
+                    proporcionar
+                    suficiente espacio. En las Secciones Uno y Dos encontrarás algo de texto y un par de botones,
+                    únicamente para
                     hacerlo visualmente más atractivo.
-            
-                    En cuanto al CSS, tampoco nos detendremos a explicar detalles, excepto por una línea de comentario al final del
+
+                    En cuanto al CSS, tampoco nos detendremos a explicar detalles, excepto por una línea de comentario
+                    al final del
                     CSS. Justo debajo de esta línea es donde comenzaremos a trabajar, usando exclusivamente el selector
-                    'seccion-uno'.
+                    <strong>seccion-uno</strong>.
                 </p>
-            
+
                 <h2>
                     Insertando una Imagen de Fondo con CSS: Guía Paso a Paso
                 </h2>
-            
+
                 <p>
-                    Nuestro primer paso será abrir el selector 'seccion-uno' y comenzar a trabajar dentro de las llaves. Como
+                    Nuestro primer paso será abrir el selector <strong>seccion-uno</strong> y comenzar a trabajar dentro de las llaves.
+                    Como
                     mencioné al inicio de este blog, para agregar la imagen de fondo solo necesitamos la propiedad
-                    'background-image' y la función 'url()' con la ruta de la imagen que queremos cargar. Observa el código a
-                    continuación para comprender mejor. Como tengo la imagen en una carpeta llamada 'imágenes', quedaría de este
-                    modo: background-image: url(Imagenes/fondo-uno.jpg). Recuerda siempre revisar el nombre de tu carpeta y de la
+                    <strong>background-image</strong> y la función <strong>url()</strong> con la ruta de la imagen que queremos cargar. Observa el
+                    código a
+                    continuación para comprender mejor. Como tengo la imagen en una carpeta llamada <strong>imágenes</strong>, quedaría
+                    de este
+                    modo: <strong>background-image: url(Imagenes/fondo-uno.jpg)</strong>. Recuerda siempre revisar el nombre de tu
+                    carpeta y de la
                     imagen cuando vayas a cargarla.
                 </p>
-            
+
                 <h2>
                     Entendiendo el Uso de la Propiedad background-size en CSS
                 </h2>
-            
+
                 <p>
-                    Si ya cargaste la imagen de fondo, probablemente te diste cuenta de que la imagen aparece en su tamaño real y no
-                    se comporta como esperábamos. En mi caso, la imagen es grande y parece como si estuviera saliendo de la pantalla
-                    hacia la derecha. Si tu imagen es más pequeña, estará en la esquina superior izquierda y habrá espacio vacío a
-                    la derecha y abajo, dependiendo siempre de las dimensiones de la imagen. Para solucionar esto, disponemos de una
-                    propiedad llamada 'background-size', que acepta dos valores: 'contain' y 'cover'.
+                    Si ya cargaste la imagen de fondo, probablemente te diste cuenta de que la imagen aparece en su
+                    tamaño real y no
+                    se comporta como esperábamos. En mi caso, la imagen es grande y parece como si estuviera saliendo de
+                    la pantalla
+                    hacia la derecha. Si tu imagen es más pequeña, estará en la esquina superior izquierda y habrá
+                    espacio vacío a
+                    la derecha y abajo, dependiendo siempre de las dimensiones de la imagen. Para solucionar esto,
+                    disponemos de una
+                    propiedad llamada <strong>background-size</strong>, que acepta dos valores: <strong>contain</strong> y <strong>cover</strong>.
                 </p>
-            
-                <h2>Haciendo uso del Valor 'contain' en CSS</h2>
+
+                <h2>Haciendo uso del Valor contain en CSS</h2>
+
                 <p>
-                    Si traducimos el valor 'contain' del inglés al español, significa 'contener'. Es precisamente lo que hará el
-                    contenedor con la imagen de fondo al asignarle este valor a la propiedad 'background-size'. La imagen será
-                    responsiva sin problemas. Si reduces el tamaño de la ventana, la imagen crecerá para llenar el espacio vacío en
-                    su contenedor hasta que toque los bordes horizontales o verticales. Una vez que la imagen toque estos bordes,
-                    dejará de crecer y se repetirá hacia la derecha (ya que por defecto se posiciona a la izquierda y arriba).
-            
-                    Lo mismo ocurre cuando la imagen toca primero los bordes horizontales: dejará de crecer y comenzará a repetirse
+                    Si traducimos el valor <strong>contain</strong> del inglés al español, significa <strong>contener</strong>. Es precisamente lo que
+                    hará el
+                    contenedor con la imagen de fondo al asignarle este valor a la propiedad <strong>background-size</strong>. La
+                    imagen será
+                    responsiva sin problemas. Si reduces el tamaño de la ventana, la imagen crecerá para llenar el
+                    espacio vacío en
+                    su contenedor hasta que toque los bordes horizontales o verticales. Una vez que la imagen toque
+                    estos bordes,
+                    dejará de crecer y se repetirá hacia la derecha (ya que por defecto se posiciona a la izquierda y
+                    arriba).
+
+                    Lo mismo ocurre cuando la imagen toca primero los bordes horizontales: dejará de crecer y comenzará
+                    a repetirse
                     tantas veces como sea necesario para llenar el contenedor.
                 </p>
-            
+
                 <h2>Evitando la Repetición de la Imagen con background-repeat</h2>
                 <p>
                     Existe una manera de evitar que la imagen se repita una y otra vez, y es gracias a la propiedad
-                    'background-repeat' y el valor 'no-repeat' (background-repeat: no-repeat). Siempre que usemos el valor
-                    'contain', la imagen ya no se repetirá, pero dejará esos espacios vacíos mostrándose el fondo del contenedor.
-                    Aunque este comportamiento puede ser útil en algunos casos, no es lo que buscamos lograr en este momento. Así
-                    que ahora, vamos a explicar el valor 'cover'.
+                    <strong>background-repeat</strong> y el valor <strong>no-repeat</strong> (background-repeat: no-repeat). Siempre que usemos el
+                    valor
+                    <strong>contain</strong>, la imagen ya no se repetirá, pero dejará esos espacios vacíos mostrándose el fondo del
+                    contenedor.
+                    Aunque este comportamiento puede ser útil en algunos casos, no es lo que buscamos lograr en este
+                    momento. Así
+                    que ahora, vamos a explicar el valor <strong>cover</strong>.
                 </p>
-            
+
                 <h2>
-                    Cubriendo Todo el Contenedor con el Valor 'cover'
+                    Cubriendo Todo el Contenedor con el Valor cover
                 </h2>
                 <p>
-                    ¿Cómo se comporta el valor 'cover'? Con 'cover', la imagen cubrirá todo el espacio disponible de su contenedor.
-                    Se expandirá o se reducirá según sea necesario, manteniendo siempre sus dimensiones. Sin embargo, pueden surgir
-                    algunos inconvenientes que podrán arreglarse con otras propiedades. Por ejemplo, la imagen crecerá para llenar
-                    todo el contenedor, pero lo hará de izquierda a derecha y de arriba hacia abajo, lo que significa que la imagen
-                    no estará centrada y la mayoría de las veces perderemos información. Pero, como dije antes, no es algo que no
-                    podamos solucionar. Esto nos lleva a la siguiente propiedad: 'background-position'.
+                    ¿Cómo se comporta el valor <strong>cover</strong>? Con cover, la imagen cubrirá todo el espacio disponible de su
+                    contenedor.
+                    Se expandirá o se reducirá según sea necesario, manteniendo siempre sus dimensiones. Sin embargo,
+                    pueden surgir
+                    algunos inconvenientes que podrán arreglarse con otras propiedades. Por ejemplo, la imagen crecerá
+                    para llenar
+                    todo el contenedor, pero lo hará de izquierda a derecha y de arriba hacia abajo, lo que significa
+                    que la imagen
+                    no estará centrada y la mayoría de las veces perderemos información. Pero, como dije antes, no es
+                    algo que no
+                    podamos solucionar. Esto nos lleva a la siguiente propiedad: <strong>background-position</strong>.
                 </p>
-            
+
                 <h2>
                     Controlando la Posición de la Imagen con background-position
                 </h2>
                 <p>
-                    Como lo indica su nombre, con 'background-position' podemos controlar la posición de la imagen desde ambos ejes,
-                    X y Y (horizontal y vertical). La sintaxis sería: background-position: X Y. Para el eje X, podemos utilizar los
-                    valores 'left' (por defecto), 'center' o 'right'. Para el eje Y podemos usar 'top' (por defecto), 'center' o
-                    'bottom'. También podríamos, si la situación lo requiere, usar valores en porcentajes o en píxeles para obtener
-                    una posición más personalizada. Pero por ahora, para nuestro ejemplo, utilizaremos 'center' para ambos ejes.
+                    Como lo indica su nombre, con <strong>background-position</strong> podemos controlar la posición de la imagen desde
+                    ambos ejes,
+                    X y Y (horizontal y vertical). La sintaxis sería: background-position: X Y. Para el eje X, podemos
+                    utilizar los
+                    valores <strong>left</strong> (por defecto), <strong>center</strong> o <strong>right</strong>. Para el eje Y podemos usar <strong>top</strong> (por defecto),
+                    <strong>center</strong> o
+                    <strong>bottom</strong>. También podríamos, si la situación lo requiere, usar valores en porcentajes o en píxeles
+                    para obtener
+                    una posición más personalizada. Pero por ahora, para nuestro ejemplo, utilizaremos <strong>center</strong> para
+                    ambos ejes.
                     Nuestro código ahora luciría de la siguiente manera: background-position: center center.
                 </p>
-            
+
                 <h2>Ajustando la Imagen de Fondo al Contenedor con Background-clip</h2>
                 <p>
-                    Ahora que hemos centrado nuestra imagen, probablemente notes que ha mejorado bastante su apariencia. Sin
-                    embargo, en algunos casos, puede que la imagen todavía no se ajuste completamente al contenedor. Por ejemplo, si
-                    tienes una imagen con una relación de aspecto diferente a la de tu contenedor, podrías encontrarte con bordes
-                    vacíos alrededor de tu imagen. ¿Cómo podemos solucionar esto? Aquí es donde entra en juego la propiedad
-                    'background-clip'.
+                    Ahora que hemos centrado nuestra imagen, probablemente notes que ha mejorado bastante su apariencia.
+                    Sin
+                    embargo, en algunos casos, puede que la imagen todavía no se ajuste completamente al contenedor. Por
+                    ejemplo, si
+                    tienes una imagen con una relación de aspecto diferente a la de tu contenedor, podrías encontrarte
+                    con bordes
+                    vacíos alrededor de tu imagen. ¿Cómo podemos solucionar esto? Aquí es donde entra en juego la
+                    propiedad
+                    <strong>background-clip</strong>.
                 </p>
-            
+
                 <p>
-                    'Background-clip' especifica hasta dónde debe extenderse la imagen de fondo. Esta propiedad puede tomar tres
-                    valores: 'border-box' (valor por defecto, llega hasta los bordes del contenedor), 'padding-box' (la imagen se
-                    detendrá en el borde interno del contenedor) y 'content-box' (la imagen sólo ocupará el área de contenido del
-                    contenedor, excluyendo el padding y el borde). Sin embargo, para nuestro caso, queremos que la imagen cubra todo
-                    el espacio, por lo que usaremos 'border-box'.
+                    <strong>Background-clip</strong> especifica hasta dónde debe extenderse la imagen de fondo. Esta propiedad puede
+                    tomar tres
+                    valores: <strong>border-box</strong> (valor por defecto, llega hasta los bordes del contenedor), <strong>padding-box</strong> (la
+                    imagen se
+                    detendrá en el borde interno del contenedor) y <strong>content-box</strong> (la imagen sólo ocupará el área de
+                    contenido del
+                    contenedor, excluyendo el padding y el borde). Sin embargo, para nuestro caso, queremos que la
+                    imagen cubra todo
+                    el espacio, por lo que usaremos <strong>border-box</strong>.
                 </p>
-            
+
+                <p>
+                    Para ejemplificar más claramente el funcionamiento de la propiedad <strong>background-clip</strong>, puedes probar
+                    asignándole el valor <strong>content-box</strong>. Si tu contenedor tiene un padding de 40px en los lados, al aplicar
+                    este valor notarás que la imagen de fondo se ajustará y ocupará solamente el espacio destinado para
+                    el contenido. En otras palabras, la imagen tendrá un comportamiento similar al de las etiquetas de
+                    texto y otros elementos, respetando el padding del contenedor padre.
+                </p>
+
                 <h2>
                     Creando un Fondo Fijo al Desplazarse con CSS
                 </h2>
-            
+
                 <p>
-                    Finalmente, si quieres que tu imagen de fondo permanezca fija mientras te desplazas por la página (como en
-                    nuestro ejemplo inicial), puedes usar la propiedad 'background-attachment' con el valor 'fixed'. De este modo,
+                    Finalmente, si quieres que tu imagen de fondo permanezca fija mientras te desplazas por la página
+                    (como en
+                    nuestro ejemplo inicial), puedes usar la propiedad <strong>background-attachment</strong> con el valor <strong>fixed</strong>. De
+                    este modo,
                     la imagen de fondo se quedará en su lugar mientras te desplazas. Sin embargo, ten en cuenta que este
                     comportamiento puede variar dependiendo del navegador que estés utilizando.
                 </p>
@@ -187,6 +243,15 @@
                     </div>
                 </div>
 
+                <p>
+                    Y ahí lo tienen, mis queridos <strong>Código-Lovers</strong>. Con cada entrada, mi objetivo es que se sientan un paso
+                    más cerca de dominar este fascinante mundo de la programación. Recuerden siempre que cada línea de
+                    código que escriben es una expresión de su creatividad y una huella en el vasto universo digital. Si
+                    alguna vez sienten que es complicado, respiren hondo y recuerden que cada experto alguna vez fue un
+                    principiante. No duden en dejarme sus comentarios o dudas, y juntos aprenderemos y creceremos.
+                    ¡Hasta la próxima, y a seguir escribiendo código!
+                </p>
+
             </div>
         </section>
     </main>
@@ -198,7 +263,7 @@
     <script src="/js/entries.js"></script>
     <script>
         const entryName = 'dominando-las-imagenes-de-fondo-en-css-guia-paso-a-paso';
-        const totalSnippets = 8;
+        const totalSnippets = 4;
         fetchAndDisplayCodeSnippets(entryName, totalSnippets)
     </script>
 </body>
