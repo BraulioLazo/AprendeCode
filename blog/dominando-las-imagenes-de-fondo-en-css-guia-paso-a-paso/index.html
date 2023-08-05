@@ -33,9 +33,11 @@
             <div class="blog-content-section-container section-container">
 
                 <p>
-                    Para insertar una imagen de fondo en CSS, simplemente necesitamos la propiedad <strong>background-image</strong>,
+                    Para insertar una imagen de fondo en CSS, simplemente necesitamos la propiedad
+                    <strong>background-image</strong>,
                     con la
-                    función <strong>url()</strong> y dentro de ella, la ruta de la imagen que deseamos cargar. Sin embargo, la imagen
+                    función <strong>url()</strong> y dentro de ella, la ruta de la imagen que deseamos cargar. Sin
+                    embargo, la imagen
                     aparecerá en
                     su tamaño original. Si es demasiado grande, no se verá en su totalidad dentro del contenedor; si es
                     más pequeña,
@@ -87,14 +89,18 @@
                 </h2>
 
                 <p>
-                    Nuestro primer paso será abrir el selector <strong>seccion-uno</strong> y comenzar a trabajar dentro de las llaves.
+                    Nuestro primer paso será abrir el selector <strong>seccion-uno</strong> y comenzar a trabajar dentro
+                    de las llaves.
                     Como
                     mencioné al inicio de este blog, para agregar la imagen de fondo solo necesitamos la propiedad
-                    <strong>background-image</strong> y la función <strong>url()</strong> con la ruta de la imagen que queremos cargar. Observa el
+                    <strong>background-image</strong> y la función <strong>url()</strong> con la ruta de la imagen que
+                    queremos cargar. Observa el
                     código a
-                    continuación para comprender mejor. Como tengo la imagen en una carpeta llamada <strong>imágenes</strong>, quedaría
+                    continuación para comprender mejor. Como tengo la imagen en una carpeta llamada
+                    <strong>imágenes</strong>, quedaría
                     de este
-                    modo: <strong>background-image: url(Imagenes/fondo-uno.jpg)</strong>. Recuerda siempre revisar el nombre de tu
+                    modo: <strong>background-image: url(Imagenes/fondo-uno.jpg)</strong>. Recuerda siempre revisar el
+                    nombre de tu
                     carpeta y de la
                     imagen cuando vayas a cargarla.
                 </p>
@@ -112,15 +118,18 @@
                     espacio vacío a
                     la derecha y abajo, dependiendo siempre de las dimensiones de la imagen. Para solucionar esto,
                     disponemos de una
-                    propiedad llamada <strong>background-size</strong>, que acepta dos valores: <strong>contain</strong> y <strong>cover</strong>.
+                    propiedad llamada <strong>background-size</strong>, que acepta dos valores: <strong>contain</strong>
+                    y <strong>cover</strong>.
                 </p>
 
                 <h2>Haciendo uso del Valor contain en CSS</h2>
 
                 <p>
-                    Si traducimos el valor <strong>contain</strong> del inglés al español, significa <strong>contener</strong>. Es precisamente lo que
+                    Si traducimos el valor <strong>contain</strong> del inglés al español, significa
+                    <strong>contener</strong>. Es precisamente lo que
                     hará el
-                    contenedor con la imagen de fondo al asignarle este valor a la propiedad <strong>background-size</strong>. La
+                    contenedor con la imagen de fondo al asignarle este valor a la propiedad
+                    <strong>background-size</strong>. La
                     imagen será
                     responsiva sin problemas. Si reduces el tamaño de la ventana, la imagen crecerá para llenar el
                     espacio vacío en
@@ -134,12 +143,23 @@
                     tantas veces como sea necesario para llenar el contenedor.
                 </p>
 
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg" alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link" loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
                 <h2>Evitando la Repetición de la Imagen con background-repeat</h2>
                 <p>
                     Existe una manera de evitar que la imagen se repita una y otra vez, y es gracias a la propiedad
-                    <strong>background-repeat</strong> y el valor <strong>no-repeat</strong> (background-repeat: no-repeat). Siempre que usemos el
+                    <strong>background-repeat</strong> y el valor <strong>no-repeat</strong> (background-repeat:
+                    no-repeat). Siempre que usemos el
                     valor
-                    <strong>contain</strong>, la imagen ya no se repetirá, pero dejará esos espacios vacíos mostrándose el fondo del
+                    <strong>contain</strong>, la imagen ya no se repetirá, pero dejará esos espacios vacíos mostrándose
+                    el fondo del
                     contenedor.
                     Aunque este comportamiento puede ser útil en algunos casos, no es lo que buscamos lograr en este
                     momento. Así
@@ -150,7 +170,8 @@
                     Cubriendo Todo el Contenedor con el Valor cover
                 </h2>
                 <p>
-                    ¿Cómo se comporta el valor <strong>cover</strong>? Con cover, la imagen cubrirá todo el espacio disponible de su
+                    ¿Cómo se comporta el valor <strong>cover</strong>? Con cover, la imagen cubrirá todo el espacio
+                    disponible de su
                     contenedor.
                     Se expandirá o se reducirá según sea necesario, manteniendo siempre sus dimensiones. Sin embargo,
                     pueden surgir
@@ -167,15 +188,19 @@
                     Controlando la Posición de la Imagen con background-position
                 </h2>
                 <p>
-                    Como lo indica su nombre, con <strong>background-position</strong> podemos controlar la posición de la imagen desde
+                    Como lo indica su nombre, con <strong>background-position</strong> podemos controlar la posición de
+                    la imagen desde
                     ambos ejes,
                     X y Y (horizontal y vertical). La sintaxis sería: background-position: X Y. Para el eje X, podemos
                     utilizar los
-                    valores <strong>left</strong> (por defecto), <strong>center</strong> o <strong>right</strong>. Para el eje Y podemos usar <strong>top</strong> (por defecto),
+                    valores <strong>left</strong> (por defecto), <strong>center</strong> o <strong>right</strong>. Para
+                    el eje Y podemos usar <strong>top</strong> (por defecto),
                     <strong>center</strong> o
-                    <strong>bottom</strong>. También podríamos, si la situación lo requiere, usar valores en porcentajes o en píxeles
+                    <strong>bottom</strong>. También podríamos, si la situación lo requiere, usar valores en porcentajes
+                    o en píxeles
                     para obtener
-                    una posición más personalizada. Pero por ahora, para nuestro ejemplo, utilizaremos <strong>center</strong> para
+                    una posición más personalizada. Pero por ahora, para nuestro ejemplo, utilizaremos
+                    <strong>center</strong> para
                     ambos ejes.
                     Nuestro código ahora luciría de la siguiente manera: background-position: center center.
                 </p>
@@ -194,11 +219,14 @@
                 </p>
 
                 <p>
-                    <strong>Background-clip</strong> especifica hasta dónde debe extenderse la imagen de fondo. Esta propiedad puede
+                    <strong>Background-clip</strong> especifica hasta dónde debe extenderse la imagen de fondo. Esta
+                    propiedad puede
                     tomar tres
-                    valores: <strong>border-box</strong> (valor por defecto, llega hasta los bordes del contenedor), <strong>padding-box</strong> (la
+                    valores: <strong>border-box</strong> (valor por defecto, llega hasta los bordes del contenedor),
+                    <strong>padding-box</strong> (la
                     imagen se
-                    detendrá en el borde interno del contenedor) y <strong>content-box</strong> (la imagen sólo ocupará el área de
+                    detendrá en el borde interno del contenedor) y <strong>content-box</strong> (la imagen sólo ocupará
+                    el área de
                     contenido del
                     contenedor, excluyendo el padding y el borde). Sin embargo, para nuestro caso, queremos que la
                     imagen cubra todo
@@ -206,8 +234,10 @@
                 </p>
 
                 <p>
-                    Para ejemplificar más claramente el funcionamiento de la propiedad <strong>background-clip</strong>, puedes probar
-                    asignándole el valor <strong>content-box</strong>. Si tu contenedor tiene un padding de 40px en los lados, al aplicar
+                    Para ejemplificar más claramente el funcionamiento de la propiedad <strong>background-clip</strong>,
+                    puedes probar
+                    asignándole el valor <strong>content-box</strong>. Si tu contenedor tiene un padding de 40px en los
+                    lados, al aplicar
                     este valor notarás que la imagen de fondo se ajustará y ocupará solamente el espacio destinado para
                     el contenido. En otras palabras, la imagen tendrá un comportamiento similar al de las etiquetas de
                     texto y otros elementos, respetando el padding del contenedor padre.
@@ -220,7 +250,8 @@
                 <p>
                     Finalmente, si quieres que tu imagen de fondo permanezca fija mientras te desplazas por la página
                     (como en
-                    nuestro ejemplo inicial), puedes usar la propiedad <strong>background-attachment</strong> con el valor <strong>fixed</strong>. De
+                    nuestro ejemplo inicial), puedes usar la propiedad <strong>background-attachment</strong> con el
+                    valor <strong>fixed</strong>. De
                     este modo,
                     la imagen de fondo se quedará en su lugar mientras te desplazas. Sin embargo, ten en cuenta que este
                     comportamiento puede variar dependiendo del navegador que estés utilizando.
@@ -244,7 +275,8 @@
                 </div>
 
                 <p>
-                    Y ahí lo tienen, mis queridos <strong>Código-Lovers</strong>. Con cada entrada, mi objetivo es que se sientan un paso
+                    Y ahí lo tienen, mis queridos <strong>Código-Lovers</strong>. Con cada entrada, mi objetivo es que
+                    se sientan un paso
                     más cerca de dominar este fascinante mundo de la programación. Recuerden siempre que cada línea de
                     código que escriben es una expresión de su creatividad y una huella en el vasto universo digital. Si
                     alguna vez sienten que es complicado, respiren hondo y recuerden que cada experto alguna vez fue un

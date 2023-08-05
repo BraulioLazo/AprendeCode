@@ -1346,6 +1346,10 @@ button {
 .blog-content-section .blog-content-section-container .image-container img {
   width: 100%;
 }
+.blog-content-section .blog-content-section-container .image-container .img-youtube-link {
+  margin-top: 20px;
+  border-radius: 10px;
+}
 .blog-content-section .blog-content-section-container .snippets {
   display: flex;
   flex-wrap: wrap;
