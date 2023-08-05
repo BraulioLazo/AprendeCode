@@ -1421,6 +1421,14 @@ button {
   }
 }
 @media screen and (max-width: 768px) {
+  .header-section .header-container h1.header-title {
+    font-size: 36px;
+    line-height: 41px;
+  }
+  .blog-content-section .blog-content-section-container h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
   .blog-content-section .blog-content-section-container .snippets .snippet {
     width: 100%;
   }

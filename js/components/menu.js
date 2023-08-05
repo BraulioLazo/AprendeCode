@@ -249,6 +249,49 @@ class myMenu extends HTMLElement {
             color: var(--color-primary);
         }
 
+        .btn-link-container {
+            display: flex;
+        }
+
+        @keyframes btn-link-after {
+            30% {
+                top: calc(50% - 20px);
+                left: 40%;
+                width: 40px;
+                height: 40px;
+            }
+        
+            70% {
+                top: calc(50% - 25px);
+                left: 0px;
+                width: 50px;
+                height: 50px;
+        
+            }
+        
+            100% {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: var(--radius-main);
+                opacity: 1;
+            }
+        
+        }
+        
+        @keyframes btn-link-before {
+            100% {
+                top: calc(50% - 20px);
+                left: 50px;
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+        }
+
         /* Estilos para móvil */
 
         @media screen and (max-width: 1024px) {
@@ -344,8 +387,9 @@ class myMenu extends HTMLElement {
                     <div class="menu-icon__line menu-icon__line--three"></div>
                 </button>
 
-                <a href="#" class="btn-link menu-btn-link"><span>Descubrenos</span></a>
-
+                <div class="btn-link-container">
+                    <a href="#" class="btn-link menu-btn-link"><span>YouTube</span></a>
+                </div>
             </div>
         </div>
     </header>
