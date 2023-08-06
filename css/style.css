@@ -1192,7 +1192,7 @@ button {
   padding-top: 30px;
 }
 .search-section .search-section-container .form-container #search-buttons button {
-  padding: 10px 30px;
+  padding: 8px 25px;
   background-color: var(--background-color-white);
   outline: none;
   color: var(--text-color-dark);
