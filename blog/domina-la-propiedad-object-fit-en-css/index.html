@@ -32,9 +32,11 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    La propiedad <strong>object-fit</strong> es esencial cuando trabajamos con imágenes en HTML. A diferencia de las
+                    La propiedad <strong>object-fit</strong> es esencial cuando trabajamos con imágenes en HTML. A
+                    diferencia de las
                     imágenes de fondo que manejamos en el blog anterior, con object-fit, tratamos directamente con las
-                    imágenes de contenido. ¿Recuerdas cómo usamos los valores <strong>cover</strong> y <strong>contain</strong> para ajustar imágenes
+                    imágenes de contenido. ¿Recuerdas cómo usamos los valores <strong>cover</strong> y
+                    <strong>contain</strong> para ajustar imágenes
                     de fondo? Con object-fit, lograremos un efecto similar para imágenes de contenido. A continuación,
                     configuraremos dos contenedores para nuestras imágenes y, dentro de estos, colocaremos nuestras
                     imágenes utilizando HTML.
@@ -58,13 +60,15 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen1.jpg" alt="" loading="lazy" decoding="async">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagenes-antes-object-fit.jpg" alt=""
+                        loading="lazy" decoding="async">
                 </div>
 
                 <p>
                     Al copiar y probar el código, observarás que las imágenes aparecen distorsionadas porque están
                     adaptadas al completo espacio del contenedor. La idea es que la imagen llene este espacio sin perder
-                    sus proporciones originales, y aquí es donde <strong>object-fit</strong> entra en juego. Aunque ambas imágenes son
+                    sus proporciones originales, y aquí es donde <strong>object-fit</strong> entra en juego. Aunque
+                    ambas imágenes son
                     idénticas, he separado sus estilos CSS para que puedas apreciar el impacto de object-fit en cada
                     una.
                 </p>
@@ -94,36 +98,46 @@
                     </div>
                 </div>
                 <div class="image-container">
-                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen2.jpg" alt="" loading="lazy" decoding="async">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/comparacion-object-fit.jpg" alt=""
+                        loading="lazy" decoding="async">
                 </div>
 
                 <p>
-                    Como habrás notado, la <strong>imagen-1</strong> conserva sus proporciones perfectamente. Sin embargo, si reduces
-                    la ventana, verás que la parte superior de la imagen se corta. ¿No sería ideal que la imagen
-                    mantuviera un límite en su desplazamiento superior? Con <strong>object-position</strong>, podemos alcanzar este
-                    objetivo, controlando la posición horizontal y vertical de la imagen.
+                    Como habrás notado, la <strong>imagen-1</strong> mantiene sus proporciones de forma ideal. Pero al ajustar el tamaño
+                    de la ventana, es evidente que perdemos información visual de la imagen. Esto nos lleva a
+                    reflexionar sobre qué parte de la imagen queremos conservar prioritariamente, ya que en ocasiones
+                    nos interesará mantener la parte superior, mientras que en otras, el centro. Con <strong>object-position</strong>,
+                    tenemos la herramienta perfecta para decidir y controlar la posición horizontal y vertical de la
+                    imagen.
                 </p>
 
                 <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
                     <div class="image-container">
                         <picture>
                             <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
-                            <img src="/assets/global/aprendecode-canal-youtube.jpg" alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link" loading="lazy">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy" decoding="async">
                         </picture>
                     </div>
                 </a>
 
                 <h2>¡ Propiedad Object-Position !</h2>
                 <p>
-                    Para usar <strong>object-position</strong>, la sintaxis es: <strong>object-position: eje-x eje-y;</strong>. Por defecto, ambos ejes
-                    tienen el valor <strong>center</strong>. Si deseas que la imagen se mantenga alineada al centro horizontalmente
-                    pero arriba verticalmente, usarías <strong>object-position: center top;</strong>. Ahora te proporcionaré el código
+                    Para usar <strong>object-position</strong>, la sintaxis es: <strong>object-position: eje-x
+                        eje-y;</strong>. Por defecto, ambos ejes
+                    tienen el valor <strong>center</strong>. Si deseas que la imagen se mantenga alineada al centro
+                    horizontalmente
+                    pero arriba verticalmente, usarías <strong>object-position: center top;</strong>. Ahora te
+                    proporcionaré el código
                     para que lo integres en tu proyecto y visualices estos conceptos en acción. Si surge alguna duda,
                     solo consulta el código mientras lees este blog. <br>
                     <br>
                     Ha llegado el momento de concluir. ¡Gracias por acompañarme en este recorrido por object-fit! En
-                    <strong>AprendeCode</strong>, nuestra misión es brindarte valor y conocimiento. Espero que te vayas habiendo
-                    aprendido algo nuevo ya que ese, es el verdadero propósito. ¡Hasta la próxima y por aquí te dejo un <strong>Ciber-Abrazo</strong>!
+                    <strong>AprendeCode</strong>, nuestra misión es brindarte valor y conocimiento. Espero que te vayas
+                    habiendo
+                    aprendido algo nuevo ya que ese, es el verdadero propósito. ¡Hasta la próxima y por aquí te dejo un
+                    <strong>Ciber-Abrazo</strong>!
                 </p>
 
                 <div class="snippets">
@@ -144,7 +158,8 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen3.jpg" alt="" loading="lazy" decoding="async">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagenes-con-object-fit-aplicado.jpg"
+                        alt="" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>

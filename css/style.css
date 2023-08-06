@@ -1344,9 +1344,11 @@ button {
 .blog-content-section .blog-content-section-container .image-container {
   width: 100%;
   padding-top: 15px;
+  border-radius: var(--radius-main);
 }
 .blog-content-section .blog-content-section-container .image-container img {
   width: 100%;
+  border-radius: var(--radius-main);
 }
 .blog-content-section .blog-content-section-container .image-container .img-youtube-link {
   margin-top: 20px;

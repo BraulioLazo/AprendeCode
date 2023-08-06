@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="Estilos.css">
-    </head>
 
-    <body>
-        <section id="caja-padre">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Estilos.css">
+</head>
 
+<body>
+    <section id="seccion">
+        <div id="caja-padre">
             <div id="caja-1">
-                <img decoding="async" src="Imagenes/Imagen-1.jpg">
+                <img src="Imagenes/Imagen-1.jpg">
             </div>
 
             <div id="caja-2">
-                <img decoding="async" src="Imagenes/Imagen-2.jpg">
+                <img src="Imagenes/Imagen-2.jpg">
             </div>
+        </div>
+    </section>
+</body>
 
-        </section>
-    </body>
 </html>
