@@ -1333,6 +1333,7 @@ button {
 }
 .blog-content-section .blog-content-section-container p {
   width: 100%;
+  font-size: 20px;
   text-indent: 15px;
   padding-top: var(--entries-p-pad-top);
 }
@@ -1342,6 +1343,7 @@ button {
 }
 .blog-content-section .blog-content-section-container .image-container {
   width: 100%;
+  padding-top: 15px;
 }
 .blog-content-section .blog-content-section-container .image-container img {
   width: 100%;

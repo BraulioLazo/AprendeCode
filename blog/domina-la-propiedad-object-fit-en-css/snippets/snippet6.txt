@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+#caja-padre{
+    display: flex;
+
+}
+
+#caja-padre div{
+    width: 50%;
+    height: 100vh;
+}
+
+#caja-1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+#caja-2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}

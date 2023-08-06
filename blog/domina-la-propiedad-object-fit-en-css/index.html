@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+    <title>Domina la Propiedad object-fit en CSS - AprendeCode</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Domina la Propiedad object-fit en CSS
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    La propiedad <strong>object-fit</strong> es esencial cuando trabajamos con imágenes en HTML. A diferencia de las
+                    imágenes de fondo que manejamos en el blog anterior, con object-fit, tratamos directamente con las
+                    imágenes de contenido. ¿Recuerdas cómo usamos los valores <strong>cover</strong> y <strong>contain</strong> para ajustar imágenes
+                    de fondo? Con object-fit, lograremos un efecto similar para imágenes de contenido. A continuación,
+                    configuraremos dos contenedores para nuestras imágenes y, dentro de estos, colocaremos nuestras
+                    imágenes utilizando HTML.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen1.jpg" alt="" loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Al copiar y probar el código, observarás que las imágenes aparecen distorsionadas porque están
+                    adaptadas al completo espacio del contenedor. La idea es que la imagen llene este espacio sin perder
+                    sus proporciones originales, y aquí es donde <strong>object-fit</strong> entra en juego. Aunque ambas imágenes son
+                    idénticas, he separado sus estilos CSS para que puedas apreciar el impacto de object-fit en cada
+                    una.
+                </p>
+
+                <h2>
+                    ¡ Agregando la propiedad Object-Fit !
+                </h2>
+                <p>
+                    Prueba el siguiente código y compara cómo se comportan ambas imágenes al redimensionar la ventana
+                    del navegador. La diferencia será notable.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen2.jpg" alt="" loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Como habrás notado, la <strong>imagen-1</strong> conserva sus proporciones perfectamente. Sin embargo, si reduces
+                    la ventana, verás que la parte superior de la imagen se corta. ¿No sería ideal que la imagen
+                    mantuviera un límite en su desplazamiento superior? Con <strong>object-position</strong>, podemos alcanzar este
+                    objetivo, controlando la posición horizontal y vertical de la imagen.
+                </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg" alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link" loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>¡ Propiedad Object-Position !</h2>
+                <p>
+                    Para usar <strong>object-position</strong>, la sintaxis es: <strong>object-position: eje-x eje-y;</strong>. Por defecto, ambos ejes
+                    tienen el valor <strong>center</strong>. Si deseas que la imagen se mantenga alineada al centro horizontalmente
+                    pero arriba verticalmente, usarías <strong>object-position: center top;</strong>. Ahora te proporcionaré el código
+                    para que lo integres en tu proyecto y visualices estos conceptos en acción. Si surge alguna duda,
+                    solo consulta el código mientras lees este blog. <br>
+                    <br>
+                    Ha llegado el momento de concluir. ¡Gracias por acompañarme en este recorrido por object-fit! En
+                    <strong>AprendeCode</strong>, nuestra misión es brindarte valor y conocimiento. Espero que te vayas habiendo
+                    aprendido algo nuevo ya que ese, es el verdadero propósito. ¡Hasta la próxima y por aquí te dejo un <strong>Ciber-Abrazo</strong>!
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/domina-la-propiedad-object-fit-en-css/images/imagen3.jpg" alt="" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'domina-la-propiedad-object-fit-en-css';
+        const totalSnippets = 6;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>
