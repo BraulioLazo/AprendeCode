@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Aprende a darle un nuevo aspecto a tus páginas web con el uso de columnas en CSS. En este tutorial paso a paso, te mostramos cómo crear y estilizar columnas para un diseño más atractivo y legible.">
+    <meta name="keywords" content="frontend, all, CSS, columnas, column-count, column-gap, column-rule, diseño web, estilos CSS, diseño responsivo, tutorial CSS">
+    <meta name="author" content="Braulio, AprendeCode">
+
+    <meta property="og:title" content="Creando Columnas Estilizadas en CSS: Una Guía Paso a Paso">
+    <meta property="og:description" content="Sumérgete en el fascinante mundo de las columnas en CSS. Descubre cómo crear y estilizar columnas para mejorar la legibilidad y el diseño de tus páginas web.">
+    <meta property="og:image" content="/blog/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/desarrollador-trabajando-en-columnas-css.jpg">
+    <meta property="og:url" content="https://www.aprendecode.com/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/">
+    <meta property="og:type" content="article">
+
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
@@ -15,6 +25,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <title> Creando Columnas Estilizadas en CSS: Una Guía Paso a Paso </title>
 </head>
+
 
 <body>
     <my-menu></my-menu>
@@ -31,7 +42,8 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    Hoy exploraremos el mundo de las columnas en CSS. Más allá de su atractivo visual, las columnas
+                    Hoy exploraremos el mundo de las <strong>columnas en CSS</strong>. Más allá de su atractivo visual,
+                    las columnas
                     pueden mejorar la legibilidad de un texto. Sin embargo, aunque un diseño en dos o más columnas puede
                     parecer estético, es esencial evitarlo en textos extensos. Si la lectura requiere desplazarse hacia
                     abajo y luego volver al inicio para la siguiente columna, puede resultar incómodo para el lector,
@@ -41,8 +53,8 @@
                 <h2>Preparando nuestro Contenedor</h2>
                 <p>
                     Comencemos construyendo la estructura. Al trabajar con columnas en CSS, es crucial pensar en la
-                    adaptabilidad. Empezaremos con un contenedor para el texto, idealmente con un ancho en porcentaje y
-                    un min-height. De esta forma, nos aseguramos de que se ajuste a diferentes tamaños de pantalla. A
+                    adaptabilidad. Empezaremos con un contenedor para el texto, idealmente con un ancho en porcentaje.
+                    De esta forma, nos aseguramos de que se ajuste a diferentes tamaños de pantalla. A
                     continuación, te mostraré cómo declarar este contenedor y cómo colocar el texto dentro.
                 </p>
 
@@ -72,8 +84,7 @@
                     Una vez copies el código en tu editor, notarás un resultado similar al mostrado anteriormente. Para
                     copiar, simplemente sitúa el cursor sobre el código y haz clic en el botón "Copy" en la esquina
                     superior derecha. Pega el código en tu editor y observa. Si redimensionas la ventana del navegador,
-                    verás cómo el contenedor se adapta al contenido, gracias a nuestro uso del width en porcentaje y el
-                    min-height.
+                    verás cómo el contenedor se adapta al contenido, gracias a nuestro uso del width en porcentaje.
                 </p>
 
                 <h2>
@@ -81,27 +92,45 @@
                 </h2>
 
                 <p>
-                    Con nuestro contenedor preparado, es el momento de dar vida a nuestras columnas. Dividiré el
-                    contenido en dos columnas para un diseño estético, utilizando la propiedad column-count. Además,
-                    presentaré propiedades esenciales como column-gap, que nos ayuda a controlar el espacio entre
-                    columnas. Personalmente, prefiero usar un valor en px, pero puedes experimentar con em o %. Por
-                    último, no olvidemos la propiedad column-rule, que agrega una línea divisoria entre columnas para
-                    una lectura más clara.
+                    Ya con nuestro contenedor listo, es hora de darle vida a nuestras columnas. Voy a dividir el
+                    contenido en dos columnas para darle un toque estético, para esto usaremos la propiedad
+                    <strong>column-count</strong>. A esta propiedad le daremos el valor que corresponde al número de
+                    columnas que queremos, en nuestro caso, 2. Seguidamente, aplicaremos la propiedad
+                    <strong>column-gap</strong>, que nos permite controlar el espacio entre columnas. En lo personal, me
+                    inclino por un valor en px, pero no dudes en probar con em o %. Finalmente, está la propiedad
+                    <strong>column-rule</strong>, que añade una línea entre columnas para facilitar la lectura. Más
+                    abajo, me extenderé un poco más sobre esta última.
                 </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
 
                 <h2>Estilizando la División: La Propiedad column-rule</h2>
                 <p>
-                    Antes de concluir, me gustaría presentarte la propiedad column-rule. Esta propiedad, no solo añade
-                    un toque estético al dividir las columnas con una línea, sino que también mejora la legibilidad. Al
-                    igual que con el borde, hay diversas formas de estilizar esta línea. Por ejemplo, la opción "solid"
-                    ofrece una línea continua, mientras que "dotted" y "dashed" ofrecen estilos punteados y rayados,
-                    respectivamente. <br>
-                    <br>
+                    Antes de terminar, me gustaría hablarte un poco más acerca de la propiedad
+                    <strong>column-rule</strong>. Esta
+                    propiedad, aparte de añadir un detalle estético al dividir las columnas con una línea, también
+                    facilita la lectura. Al igual que con la propiedad border (borde), existen varias formas de
+                    estilizar esta línea. Por ejemplo, la opción <strong>solid</strong> brinda una línea continua, mientras que
+                    <strong>dotted</strong> y <strong>dashed</strong> ofrecen estilos punteados y a rayas, respectivamente. Para aclarar un poco más,
+                    los valores que usamos con esta propiedad son básicamente los mismos que usamos con border. El
+                    primer valor define el ancho de la línea, el segundo el tipo de línea y el tercero su color.
+                </p>
+                <p>
                     Con esto, hemos abordado lo esencial sobre columnas en CSS. A continuación, encontrarás el código
                     completo con todas las propiedades mencionadas. Y, si no estás en tu escritorio, también he añadido
-                    una imagen de cómo debería lucir el resultado. ¡Un ciber-abrazo para ti! Soy Braulio, y esto ha sido
-                    AprendeCode. ¡Hasta la próxima!
+                    una imagen de cómo debería lucir el resultado. Recuerda que mi nombre es Braulio, y que esto ha sido
+                    AprendeCode. ¡<strong>Un Abrazo</strong>!
                 </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
