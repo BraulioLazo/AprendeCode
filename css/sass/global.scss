@@ -219,6 +219,7 @@ button {
         z-index: 2;
 
         .header-title {
+            max-width: 1200px;
             color: var(--color-text-white);
             text-align: center;
             font-size: 48px;

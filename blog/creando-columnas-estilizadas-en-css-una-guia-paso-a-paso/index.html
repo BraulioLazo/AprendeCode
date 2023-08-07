@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <title> Creando Columnas Estilizadas en CSS: Una Guía Paso a Paso </title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Creando Columnas Estilizadas en CSS: Una Guía Paso a Paso
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Hoy exploraremos el mundo de las columnas en CSS. Más allá de su atractivo visual, las columnas
+                    pueden mejorar la legibilidad de un texto. Sin embargo, aunque un diseño en dos o más columnas puede
+                    parecer estético, es esencial evitarlo en textos extensos. Si la lectura requiere desplazarse hacia
+                    abajo y luego volver al inicio para la siguiente columna, puede resultar incómodo para el lector,
+                    especialmente si hay que usar el scroll.
+                </p>
+
+                <h2>Preparando nuestro Contenedor</h2>
+                <p>
+                    Comencemos construyendo la estructura. Al trabajar con columnas en CSS, es crucial pensar en la
+                    adaptabilidad. Empezaremos con un contenedor para el texto, idealmente con un ancho en porcentaje y
+                    un min-height. De esta forma, nos aseguramos de que se ajuste a diferentes tamaños de pantalla. A
+                    continuación, te mostraré cómo declarar este contenedor y cómo colocar el texto dentro.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/parrafo-comun-css.jpg"
+                        alt="Párrafo sin estilizar dentro de un contenedor con sombra" loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Una vez copies el código en tu editor, notarás un resultado similar al mostrado anteriormente. Para
+                    copiar, simplemente sitúa el cursor sobre el código y haz clic en el botón "Copy" en la esquina
+                    superior derecha. Pega el código en tu editor y observa. Si redimensionas la ventana del navegador,
+                    verás cómo el contenedor se adapta al contenido, gracias a nuestro uso del width en porcentaje y el
+                    min-height.
+                </p>
+
+                <h2>
+                    Diseñando Nuestras Columnas: Estilo y Espaciado
+                </h2>
+
+                <p>
+                    Con nuestro contenedor preparado, es el momento de dar vida a nuestras columnas. Dividiré el
+                    contenido en dos columnas para un diseño estético, utilizando la propiedad column-count. Además,
+                    presentaré propiedades esenciales como column-gap, que nos ayuda a controlar el espacio entre
+                    columnas. Personalmente, prefiero usar un valor en px, pero puedes experimentar con em o %. Por
+                    último, no olvidemos la propiedad column-rule, que agrega una línea divisoria entre columnas para
+                    una lectura más clara.
+                </p>
+
+                <h2>Estilizando la División: La Propiedad column-rule</h2>
+                <p>
+                    Antes de concluir, me gustaría presentarte la propiedad column-rule. Esta propiedad, no solo añade
+                    un toque estético al dividir las columnas con una línea, sino que también mejora la legibilidad. Al
+                    igual que con el borde, hay diversas formas de estilizar esta línea. Por ejemplo, la opción "solid"
+                    ofrece una línea continua, mientras que "dotted" y "dashed" ofrecen estilos punteados y rayados,
+                    respectivamente. <br>
+                    <br>
+                    Con esto, hemos abordado lo esencial sobre columnas en CSS. A continuación, encontrarás el código
+                    completo con todas las propiedades mencionadas. Y, si no estás en tu escritorio, también he añadido
+                    una imagen de cómo debería lucir el resultado. ¡Un ciber-abrazo para ti! Soy Braulio, y esto ha sido
+                    AprendeCode. ¡Hasta la próxima!
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/parrafo-estilizado-columnas-css.jpg"
+                        alt="Párrafo estilizado dividido en columnas con sombra en el contenedor y línea divisoria entre las columnas."
+                        loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'creando-columnas-estilizadas-en-css-una-guia-paso-a-paso';
+        const totalSnippets = 4;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>
