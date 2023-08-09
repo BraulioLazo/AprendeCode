@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <title>Creación de un Menú Web: Guía Completa para Principiantes</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Creación de un Menú Web: Guía Completa para Principiantes
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    El menú de navegación es uno de los elementos primordiales de cualquier página web. Si estás
+                    iniciando en el diseño de tu propio sitio, este será tu punto de partida. Aunque diseñar un menú
+                    básico es sencillo —sólo necesitas enlazar las páginas relevantes—, mi objetivo aquí es guiarte más
+                    allá de lo básico. Vamos a diseñar un menú que no solo funcione, sino que también sea visualmente
+                    atractivo para tus visitantes. Después de todo, el diseño juega un papel crucial en la experiencia
+                    del usuario.
+                </p>
+
+                <p>
+                    Antes de sumergirnos en los detalles, comencemos con lo esencial. El primer paso es definir y
+                    agregar todas las páginas que formarán parte de tu menú. Para este tutorial, nos centraremos en
+                    tres: Inicio, Sobre Mí y Contacto. Mi misión es guiarte paso a paso, asegurándome de que, incluso si
+                    eres principiante, al final de este blog tengas un menú funcional y estilizado.
+                </p>
+
+                <p>
+                    Utilizaré el editor de código Brackets para este tutorial. En caso de que estés utilizando el mismo, para añadir una nueva página, sigue estos
+                    pasos: Archivo / Nuevo. Tras crear el archivo, guárdalo con el nombre de tu página seguido de
+                    ".html". Abajo encontrarás un ejemplo de código que te ayudará a visualizar el proceso. He añadido
+                    algunas propiedades CSS para mejorar la legibilidad, pero este no será el diseño final.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/images/inicio-menu-ejemplo.jpg"
+                        loading="lazy" alt="Ejemplo inicial del menú web con código básico">
+                </div>
+
+                <h2>
+                    Aplicando Estilos al Menú: Primeros Pasos
+                </h2>
+                <p>
+                    Ahora, elevemos el diseño de nuestro menú. Aunque el estilo depende del gusto personal, te
+                    presentaré un diseño que considero elegante. Comenzaremos añadiendo un div para cada enlace y dos
+                    contenedores adicionales para el nombre del proyecto y los enlaces de las redes sociales. Te
+                    mostraré el progreso paso a paso para asegurarnos de que todo quede claro.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-contenedores.jpg"
+                        loading="lazy" alt="Menú con contenedores individuales para enlaces y secciones">
+                </div>
+
+                <h2>
+                    Corrigiendo Detalles y Mejorando la Estética
+                </h2>
+                <p>
+                    Si copias el código en tu editor, deberías ver algo similar a la imagen que proporcioné
+                    anteriormente. Observa que declaré la caja principal, denominada "menú", como flex. A las cajas
+                    hijas, les di un ancho en porcentaje para que se ajusten automáticamente, evitando problemas al
+                    reducir la ventana del navegador. Hasta este punto, todo parece en orden, pero hay elementos
+                    predeterminados que podríamos mejorar para embellecer nuestro diseño. A continuación, te explico
+                    estos ajustes, y al final te proporciono el código y una imagen de referencia.
+                </p>
+
+                <p>
+                    1 - Bordes Inconsistentes: A pesar de haberles asignado un borde de 1px a cada contenedor, notarás
+                    que algunos lucen más gruesos que otros. Este fenómeno ocurre cuando dos bordes se encuentran y, en
+                    lugar de mantener su grosor original de 1px, se fusionan y parecen tener 2px. La solución es
+                    sencilla: eliminamos uno de los bordes utilizando la propiedad border-width.
+                </p>
+
+                <p>
+                    2 - Estilo de Enlaces: Por defecto, los enlaces suelen venir con un color estándar y una línea
+                    subrayada, lo cual, a mi parecer, no es el estilo más atractivo. Mi propuesta es darles un tono
+                    negro y quitar ese subrayado usando la propiedad text-decoration con el valor none.
+                </p>
+
+                <p>
+                    3 - Tipografía: Otro detalle que vale la pena ajustar es la fuente. Por suerte, Google Fonts nos
+                    brinda opciones gratuitas y estilizadas para embellecer nuestro sitio.
+                </p>
+
+                <p>
+                    Adicionalmente, incorporé imágenes de redes sociales. Para lograr una buena disposición de estos
+                    íconos, configuré la caja contenedora #redes_sociales con position: relative y a los propios íconos
+                    con position: absolute. De esta manera, es más sencillo ajustar su posición dentro de la caja usando
+                    márgenes.
+                </p>
+
+                <div class="image-container">
+                    <img src="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-estilizado.jpg"
+                        loading="lazy" alt="Menú estilizado con cambios en bordes, enlaces y tipografía">
+                </div>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>
+                    Consejos Finales para un Menú Web Óptimo
+                </h2>
+                <p>
+                    Con el diseño básico listo, vamos a añadir interactividad y estilo. Quiero que, al pasar el cursor
+                    sobre los enlaces, haya un cambio visible que mejore la experiencia del usuario. Además,
+                    destacaremos la página activa con un estilo específico para que los usuarios sepan dónde se
+                    encuentran en el sitio. Abajo te dejo el código final y una imagen para que veas cómo debería lucir
+                    tu menú.
+                </p>
+                <p>
+                    Este tutorial está diseñado para ayudarte en tu viaje de aprendizaje en el mundo del diseño web.
+                    Siéntete libre de adaptar y usar este código en tus proyectos. En AprendeCode, nuestra misión es
+                    compartir el amor por el diseño y desarrollo web, y esperamos que este tutorial te haya sido útil.
+                    ¡Hasta la próxima!
+                </p>
+
+                <div class="image-container">
+                    <img src="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-finalizado.jpg"
+                        loading="lazy"
+                        alt="Menú web completamente estilizado y funcional con interacción al pasar el cursor">
+                </div>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'creacion-de-un-menu-web-guia-completa-para-principiantes';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

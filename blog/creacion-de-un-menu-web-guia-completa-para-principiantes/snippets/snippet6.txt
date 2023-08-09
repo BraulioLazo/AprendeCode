@@ -1,0 +1,70 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#menu{
+   margin-top: 120px;
+   display: flex;
+}
+
+#menu div{
+    height: 80px;
+    border: 1px solid black;
+    border-left-width: 0px;
+    text-align: center;
+    line-height: 80px;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#nombre_web{
+    width: 35%;
+    font-size: 40px;
+    font-weight: 400;
+}
+#inicio{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+#sobre_mi{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+#contacto{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#redes_sociales{
+    position: relative;
+    width: 35%;
+}
+
+#redes_sociales img{
+    position: absolute;
+    width: 40px;
+    top: 20px;
+}
+
+
+#facebook{
+   right: 80px;
+}
+
+#instagram{
+    right: 20px;
+}

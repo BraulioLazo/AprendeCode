@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#menu{
+   margin-top: 120px;
+   display: flex;
+}
+
+#menu div{
+    height: 60px;
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#nombre_web{
+    width: 35%;
+}
+
+#inicio{
+    width: 10%;
+}
+
+#sobre_mi{
+    width: 10%;
+}
+
+#contacto{
+    width: 10%;
+}
+
+#redes_sociales{
+    width: 35%;
+}

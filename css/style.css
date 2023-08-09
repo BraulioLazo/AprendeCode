@@ -1414,7 +1414,7 @@ button {
   opacity: 1;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1250px) {
   .blog-content-section .blog-content-section-container {
     width: 100%;
   }

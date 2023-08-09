@@ -1,0 +1,78 @@
+*{
+    font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p:hover{
+    background-color: black;
+    color: white;
+}
+
+#activo{
+    background-color: black;
+    color: white;
+}
+#menu{
+    display: flex;
+}
+
+#menu div{
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 80px;
+    border-left-width: 0px;
+}
+
+#nombre_proyecto{
+    width: 35%;
+    font-size: 40px;
+    font-weight: 400;
+
+}
+
+#inicio{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300px;
+}
+
+#sobre_mi{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300px;
+}
+
+#contacto{
+    width: 10%;
+    font-size: 20px;
+    font-weight: 300px;
+}
+
+#redes_sociales{
+    position: relative;
+    width: 35%;
+}
+
+#redes_sociales img{
+        position: absolute;
+        width: 40px;
+        margin-top: 20px;
+}
+
+
+#facebook{
+    right: 20px;
+}
+
+#instagram{
+    right: 80px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Estilos.css">
+    </head>
+
+    <body>
+       <nav>
+           <div id="menu">
+               <div id="nombre_web"> Nombre Del Proyecto </div>
+               <div id="inicio"> <a href="index.html"> <p> Inicio </p> </a>   </div>
+               <div id="sobre_mi"> <a href="sobre-mi.html"> <p> Sobre Mí </p> </a>  </div>
+               <div id="contacto"> <a href="contacto.html"> <p> Contacto </p> </a> </div>
+               <div id="redes_sociales"> Redes Sociales </div>
+           </div>
+      </nav>
+    </body>
+</html>
