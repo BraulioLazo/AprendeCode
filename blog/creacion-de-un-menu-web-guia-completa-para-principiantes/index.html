@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Aprende paso a paso cómo crear un menú web desde cero. Una guía completa y amigable para principiantes que desean entrar al mundo del desarrollo frontend.">
+    <meta name="keywords" content="desarrollo web, menú web, frontend, guía para principiantes, diseño web">
+    <meta name="author" content="Tu Nombre (o el nombre de tu sitio si prefieres)">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/creacion-de-un-menu-web-guia-completa-para-principiantes">
+    <meta property="og:title" content="Creación de un Menú Web: Guía Completa para Principiantes">
+    <meta property="og:description"
+        content="Aprende paso a paso cómo crear un menú web desde cero. Una guía detallada para principiantes en el desarrollo frontend.">
+    <meta property="og:image"
+        content="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/images/creacion-menu-web-desarrolladores.jpg">
+
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
@@ -15,6 +29,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <title>Creación de un Menú Web: Guía Completa para Principiantes</title>
 </head>
+
 
 <body>
     <my-menu></my-menu>
@@ -31,9 +46,10 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    El menú de navegación es uno de los elementos primordiales de cualquier página web. Si estás
+                    El <strong>menú de navegación</strong> es uno de los elementos primordiales de cualquier página web.
+                    Si estás
                     iniciando en el diseño de tu propio sitio, este será tu punto de partida. Aunque diseñar un menú
-                    básico es sencillo —sólo necesitas enlazar las páginas relevantes—, mi objetivo aquí es guiarte más
+                    básico es sencillo (sólo necesitas enlazar las páginas relevantes), mi objetivo aquí es guiarte más
                     allá de lo básico. Vamos a diseñar un menú que no solo funcione, sino que también sea visualmente
                     atractivo para tus visitantes. Después de todo, el diseño juega un papel crucial en la experiencia
                     del usuario.
@@ -47,7 +63,8 @@
                 </p>
 
                 <p>
-                    Utilizaré el editor de código Brackets para este tutorial. En caso de que estés utilizando el mismo, para añadir una nueva página, sigue estos
+                    Utilizaré el editor de código <strong>Brackets</strong> para este tutorial. En caso de que estés
+                    utilizando el mismo, para añadir una nueva página, sigue estos
                     pasos: Archivo / Nuevo. Tras crear el archivo, guárdalo con el nombre de tu página seguido de
                     ".html". Abajo encontrarás un ejemplo de código que te ayudará a visualizar el proceso. He añadido
                     algunas propiedades CSS para mejorar la legibilidad, pero este no será el diseño final.
@@ -112,7 +129,8 @@
                 </h2>
                 <p>
                     Si copias el código en tu editor, deberías ver algo similar a la imagen que proporcioné
-                    anteriormente. Observa que declaré la caja principal, denominada "menú", como flex. A las cajas
+                    anteriormente. Observa que declaré la caja principal, denominada <strong>menú</strong>, como flex. A
+                    las cajas
                     hijas, les di un ancho en porcentaje para que se ajusten automáticamente, evitando problemas al
                     reducir la ventana del navegador. Hasta este punto, todo parece en orden, pero hay elementos
                     predeterminados que podríamos mejorar para embellecer nuestro diseño. A continuación, te explico
@@ -120,20 +138,23 @@
                 </p>
 
                 <p>
-                    1 - Bordes Inconsistentes: A pesar de haberles asignado un borde de 1px a cada contenedor, notarás
+                    1 - <strong>Bordes Inconsistentes</strong>: A pesar de haberles asignado un borde de 1px a cada
+                    contenedor, notarás
                     que algunos lucen más gruesos que otros. Este fenómeno ocurre cuando dos bordes se encuentran y, en
                     lugar de mantener su grosor original de 1px, se fusionan y parecen tener 2px. La solución es
                     sencilla: eliminamos uno de los bordes utilizando la propiedad border-width.
                 </p>
 
                 <p>
-                    2 - Estilo de Enlaces: Por defecto, los enlaces suelen venir con un color estándar y una línea
+                    2 - <strong>strongEstilo de Enlaces</strong>: Por defecto, los enlaces suelen venir con un color
+                    estándar y una línea
                     subrayada, lo cual, a mi parecer, no es el estilo más atractivo. Mi propuesta es darles un tono
                     negro y quitar ese subrayado usando la propiedad text-decoration con el valor none.
                 </p>
 
                 <p>
-                    3 - Tipografía: Otro detalle que vale la pena ajustar es la fuente. Por suerte, Google Fonts nos
+                    3 - <strong>Tipografía</strong>: Otro detalle que vale la pena ajustar es la fuente. Por suerte,
+                    Google Fonts nos
                     brinda opciones gratuitas y estilizadas para embellecer nuestro sitio.
                 </p>
 
@@ -181,17 +202,23 @@
                     Consejos Finales para un Menú Web Óptimo
                 </h2>
                 <p>
-                    Con el diseño básico listo, vamos a añadir interactividad y estilo. Quiero que, al pasar el cursor
-                    sobre los enlaces, haya un cambio visible que mejore la experiencia del usuario. Además,
-                    destacaremos la página activa con un estilo específico para que los usuarios sepan dónde se
-                    encuentran en el sitio. Abajo te dejo el código final y una imagen para que veas cómo debería lucir
-                    tu menú.
+                    Llegamos a un punto donde el cambio es realmente notable. Ahora, solo nos queda añadir algunas
+                    transiciones a las cajas que contienen los enlaces, y con eso estaríamos. El primer ajuste que
+                    quiero hacer es que, al desplazar el cursor sobre uno de los enlaces, tanto el color del contenedor
+                    como el del texto cambien. Mi idea es poner un fondo negro y letras blancas, creando un contraste
+                    llamativo y elegante. Hacer esto es bastante sencillo: solo tenemos que añadir la pseudo-clase
+                    :hover a las etiquetas párrafo, así: <strong>p:hover</strong>. Pero aún hay más: quiero que la página en la que
+                    estemos se distinga con ese fondo negro y texto blanco. Para conseguirlo, podemos agregar una clase
+                    o un id <strong>activo</strong> al párrafo correspondiente a la página en uso. Por ejemplo, si estamos en <strong>Inicio</strong>,
+                    lo marcaríamos con <strong>id="activo"</strong>. Las demás etiquetas se mantendrán tal como están. Luego, en el CSS,
+                    definimos el id 'activo' con las mismas propiedades que cuando pasamos el cursor, quedando de esta
+                    manera: <strong>#activo { background-color: black; color: white; }</strong>.
                 </p>
                 <p>
-                    Este tutorial está diseñado para ayudarte en tu viaje de aprendizaje en el mundo del diseño web.
-                    Siéntete libre de adaptar y usar este código en tus proyectos. En AprendeCode, nuestra misión es
-                    compartir el amor por el diseño y desarrollo web, y esperamos que este tutorial te haya sido útil.
-                    ¡Hasta la próxima!
+                    Aquí te dejo el código y la imagen para que observes cómo queda. Y recuerda, si deseas usar este
+                    código en tu proyecto, ¡adelante! AprendeCode nació con el propósito de compartir la magia del
+                    Universo Digital y brindar guía a aquellos que, al igual que tú y como yo en su momento, se sumergen
+                    en este apasionante mundo. ¡Un gran abrazo!
                 </p>
 
                 <div class="image-container">
