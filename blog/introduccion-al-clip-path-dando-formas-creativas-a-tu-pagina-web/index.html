@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introducción al Clip-Path: Dando Formas Creativas a Tu Página Web</title>
+    <meta name="description" content="Descubre el poder del clip-path en el diseño web. Aprende a darle formas creativas y únicas a tus contenidos, desde círculos simples hasta polígonos complejos.">
+    <meta name="keywords" content="frontend, clip-path, diseño web, CSS, tutorial, guía, personalización, clippy, design">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="Introducción al Clip-Path: Dando Formas Creativas a Tu Página Web">
+    <meta property="og:description" content="Descubre el poder del clip-path en el diseño web. Aprende a darle formas creativas y únicas a tus contenidos, desde círculos simples hasta polígonos complejos.">
+    <meta property="og:image" content="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/clip-path-tutorial-header.jpg">
+    <meta property="og:url" content="https://www.wprendecode.com/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Nombre de tu sitio web">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+</head>
+
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Introducción al Clip-Path: Dando Formas Creativas a Tu Página Web
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Sabemos que la estructura de una página web se compone de cajas. Estas suelen ser rectangulares o
+                    cuadradas, pero ¿qué si deseamos darles una forma distinta? ¿Es posible? ¡Por supuesto! Aquí es
+                    donde interviene la propiedad Clip-Path. Piensa en ella como una herramienta de recorte que define
+                    puntos específicos en la caja, ocultando todo lo que queda fuera de esos puntos. Una vez entendido
+                    el concepto, que es bastante intuitivo, es momento de pasar a la práctica. Comenzaremos declarando
+                    el contenedor para la imagen y un texto alrededor. A continuación, te proporciono el código para que
+                    lo repliques y entiendas con mayor claridad.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/codigo-partida-contenedor.jpg"
+                         alt="Ejemplo de código inicial con contenedor principal, imagen y texto alrededor." loading="lazy" decoding="async">
+                </div>
+
+                <h2>Configuración Inicial: Estableciendo la Base</h2>
+                <p>
+                    Habiendo dado el primer paso, profundicemos en cada detalle. Los primeros dos contenedores están
+                    diseñados para aportar un atractivo visual. El contenedor principal envuelve todo y le añadí
+                    propiedades para que resalte. El segundo contenedor es específicamente para el texto e imagen,
+                    asegurando que estén centrados y ocupen solo el 80% del espacio principal. Lo crucial aquí es el
+                    contenedor de la imagen y el texto. Si replicaste el código, observarás una imagen en su forma
+                    estándar. Ahora, emplearemos Clip-Path para darle forma de círculo. Aunque un border-radius podría
+                    lograr un efecto similar, usaremos Clip-Path para que te familiarices con ella. Abajo, encontrarás
+                    el código e imagen resultante.
+                </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>
+                    Dándole Vida a la Imagen con Clip-Path
+                </h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/imagen-circular-clip-path.jpg"
+                         alt="Imagen transformada a forma circular utilizando la propiedad Clip-Path." loading="lazy" decoding="async">
+                </div>
+                <p>
+                    Si examinas el código, notarás que simplemente añadimos Clip-Path al contenedor. Aunque parece
+                    fácil, es porque es un círculo. Si quisiéramos crear un polígono, la declaración sería más
+                    desafiante. Para simplificar, existen herramientas como <a href="https://bennettfeely.com/clippy/" target="_blank">Clippy</a>. Al entrar, verás una representación
+                    visual como la imagen a continuación
+                </p>
+
+                <div class="image-container">
+                    <img src="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/interfaz-clippy-tool.jpg"
+                         alt="Interfaz de usuario del sitio web Clippy para ayudar en la creación de Clip-Paths." loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    En Clippy, solo tienes que seleccionar la forma deseada, copiar el código que aparece y pegarlo en
+                    tu contenedor. ¡Voilà! Ya tienes tu Clip-Path.
+                </p>
+
+                <h2>
+                    Refinando el Diseño: Shape-Outside y Shape-Margin
+                </h2>
+                <p>
+                    Sin embargo, hay aspectos que podemos perfeccionar. Observa que el texto mantiene la forma original
+                    de la imagen. Pero, podemos hacer que adopte la forma del Clip-Path usando la propiedad
+                    shape-outside. A continuación, te muestro el código y su resultado. En este caso, usaré un polígono
+                    para que veas la utilidad de la herramienta <a href="https://bennettfeely.com/clippy/" target="_blank">Clippy</a> que mencioné antes.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/imagen-poligono-clip-path.jpg"
+                         alt="Imagen con forma de polígono tras aplicar Clip-Path, rodeada por texto." loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    En el código anterior, modifiqué dos propiedades para resaltar un pequeño inconveniente en cómo el
+                    texto rodea la imagen. Si pruebas el código y usas el inspector, verás que el contenedor ha cambiado
+                    su forma. Esto empuja al texto. La solución es añadir border-box al final de shape-outside,
+                    recuperando así su forma original. Una vez solucionado, notarás que el texto está muy pegado a la
+                    imagen. Afortunadamente, podemos separarlo un poco usando shape-margin. Aquí te dejo el código
+                    ajustado y su resultado visual.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/resultado-final-clip-path.jpg"
+                         alt="Imagen final con texto alrededor siguiendo la forma del Clip-Path, mostrando propiedades agregadas." loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    ¡Y ya lo tenemos! Con estas propiedades, ya conoces los fundamentos de cómo trabajar con Clip-Path.
+                    Es tiempo de concluir, y espero sinceramente que este artículo te haya sido útil. Agradezco de
+                    corazón que me acompañaras en este viaje de aprendizaje. Recuerda, soy Braulio y esto es
+                    AprendeCode. ¡Un cálido abrazo!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>
