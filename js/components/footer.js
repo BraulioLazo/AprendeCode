@@ -414,7 +414,7 @@ button {
                    <div class="social-link">
                        <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
                    </div>
-                </a.
+                </a>
             </div>
         </div>
 

@@ -16,6 +16,8 @@
                 flex-wrap: wrap;
                 width: calc(33.333% - 20px);
                 gap: 10px;
+                border-radius: var(--radius-main);
+                transition: var(--transition-short);
 
                 .card__image-container,
                 .card__title,
@@ -28,13 +30,25 @@
                 .card__image-container {
                     img {
                         width: 100%;
+                        filter: brightness(0.8);
+                        border-radius: var(--radius-main);
+                        transition: var(--transition-short);
                     }
                 }
+
 
                 .btn-link-container {
                     justify-content: center;
                     padding-top: 25px;
                     border-top: 2px solid var(--color-primary);
+                }
+            }
+
+            .card:hover{
+                .card__image-container {
+                    img {
+                        filter: brightness(1);
+                    }
                 }
             }
         }

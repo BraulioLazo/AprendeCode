@@ -1,5 +1,9 @@
 let entries = [
     {
+        "title": "variables en css un vistazo a las propiedades personalizadas",
+        "keywords": "frontend, all, CSS, variables, propiedades, personalizadas, diseño, web, programación, programacion, estilos, :root, custom, properties, desarrollo"
+    },
+    {
         "title": "introduccion al clip-Path dando formas creativas a Tu pagina web",
         "keywords": "frontend, all, clip-path, clip, path, diseño, web, formas, creativas, CSS, tutorial, guía, personalización, clippy, design"
     },

@@ -1226,6 +1226,8 @@ button {
   flex-wrap: wrap;
   width: calc(33.333% - 20px);
   gap: 10px;
+  border-radius: var(--radius-main);
+  transition: var(--transition-short);
 }
 .card-section .card-section-container .cards .card .card__image-container,
 .card-section .card-section-container .cards .card .card__title,
@@ -1236,11 +1238,17 @@ button {
 }
 .card-section .card-section-container .cards .card .card__image-container img {
   width: 100%;
+  filter: brightness(0.8);
+  border-radius: var(--radius-main);
+  transition: var(--transition-short);
 }
 .card-section .card-section-container .cards .card .btn-link-container {
   justify-content: center;
   padding-top: 25px;
   border-top: 2px solid var(--color-primary);
+}
+.card-section .card-section-container .cards .card:hover .card__image-container img {
+  filter: brightness(1);
 }
 
 @media screen and (max-width: 1024px) {
