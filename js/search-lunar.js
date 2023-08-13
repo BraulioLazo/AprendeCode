@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.style.display = "flex";
             });
         } else {
-            let results = idx.search(category); // Buscamos directamente por categoría
+            let results = idx.search(category); 
             results.forEach(result => {
                 let card = cards[result.ref];
                 card.style.display = "flex";
