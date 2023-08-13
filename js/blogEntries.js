@@ -1,4 +1,8 @@
-let entries = [
+const entries = [
+    {
+        "title": "como crear una tabla en html",
+        "keywords": "frontend, all, tablas, html, crear, estructura, en, tabla, etiquetas, diseño, estilos, css"
+    },
     {
         "title": "variables en css un vistazo a las propiedades personalizadas",
         "keywords": "frontend, all, CSS, variables, propiedades, personalizadas, diseño, web, programación, programacion, estilos, :root, custom, properties, desarrollo"
@@ -29,6 +33,6 @@ let entries = [
     },
     {
         "title": "tecnicas avanzadas para la creacion de diseños flexibles con flexbox",
-        "keywords": "frontend, all, flexbox, flex, contenido, flex-box, flexible, maquetación, web, diseño, responsivo, responsive, CSS, técnicas, avanzadas, flexible,  adaptable"
+        "keywords": "frontend, all, flexbox, flex, contenido, flex-box, flexible, maquetación, web, diseño, responsivo, responsive, CSS, técnicas, avanzadas, flexible, adaptable"
     }
 ];
