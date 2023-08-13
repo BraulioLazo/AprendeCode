@@ -253,7 +253,7 @@ button {
 
 /* Footer about container styles */
 .footer__about {
-    flex: 4;
+    width: 100%
 }
 
 .footer__about h2,
