@@ -1,5 +1,9 @@
 const entries = [
     {
+        "title": "entendiendo la propiedad clear en css controla tus cajas flotantes",
+        "keywords": "frontend, all, css, clear, propiedad, cajas, flotantes, diseño, web, control, layout, flujo"
+    },
+    {
         "title": "como crear una tabla en html",
         "keywords": "frontend, all, tablas, html, crear, estructura, en, tabla, etiquetas, diseño, estilos, css"
     },
@@ -36,3 +40,5 @@ const entries = [
         "keywords": "frontend, all, flexbox, flex, contenido, flex-box, flexible, maquetación, web, diseño, responsivo, responsive, CSS, técnicas, avanzadas, flexible, adaptable"
     }
 ];
+
+

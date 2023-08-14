@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Estilos.css">
+    </head>
+
+    <body>
+         <div id="caja_padre">
+             <div id="caja_1"> Caja 1 </div>
+             <div id="caja_2"> Caja 2 </div>
+             <div id="caja_3"> Caja 3 </div>
+             <div id="caja_4"> Caja 4 </div>
+         </div>
+    </body>
+</html>

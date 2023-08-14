@@ -1,6 +1,11 @@
-// entradas.js
-
 var entriesElements = [
+    {
+        title: "Entendiendo la Propiedad 'Clear' en CSS: Controla Tus Cajas Flotantes",
+        description: "Sumérgete en el mundo de CSS y descubre el poder de la propiedad Clear. Aprende a dominar las cajas flotantes y evitar problemas comunes de diseño",
+        imageUrl: "/blog/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.jpg",
+        imageAlt: "Hombre explicando algo de programación a una chica mientras ambos miran atentamente la pantalla del ordenador.",
+        link: "/blog/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/",
+    },
     {
         title: "¿Cómo crear una tabla en HTML?",
         description: "Adéntrate en el mundo del diseño web con este tutorial completo sobre cómo crear y estilizar tablas en HTML. Desde los fundamentos básicos hasta los estilos más avanzados con CSS.",
@@ -65,4 +70,5 @@ var entriesElements = [
         imageAlt: "Cómo usar Flexbox para organizar elementos en CSS",
         link: "/blog/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/",
     },
+    
 ];
