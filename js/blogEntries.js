@@ -1,5 +1,9 @@
 const entries = [
     {
+        "title": "navegando el diseño web guia completa sobre enlaces en html y css",
+        "keywords": "frontend, all, enlaces, enlace, HTML, CSS, diseño, web, guía, completa, creación, de, internos, externos, enlaces, correo electrónico, teléfono, usabilidad"
+    },
+    {
         "title": "entendiendo la propiedad clear en css controla tus cajas flotantes",
         "keywords": "frontend, all, css, clear, propiedad, cajas, flotantes, diseño, web, control, layout, flujo"
     },

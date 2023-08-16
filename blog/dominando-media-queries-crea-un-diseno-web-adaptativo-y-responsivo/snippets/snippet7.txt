@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> AprendeCode </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Estilos.css">
+    </head>
+
+    <body>
+
+        <div id="contenedor_general">
+            <div id="caja_padre">
+                <div id="caja_oculta"> Caja Oculta </div>
+                <div class="caja_hijo"> Entrada Uno </div>
+                <div class="caja_hijo"> Entrada Dos </div>
+                <div class="caja_hijo"> Entrada Tres </div>
+                <div class="caja_hijo"> Entrada Cuatro </div>
+                <div class="caja_hijo"> Entrada Cinco </div>
+                <div class="caja_hijo"> Entrada Seis </div>
+                <div class="restaurar"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

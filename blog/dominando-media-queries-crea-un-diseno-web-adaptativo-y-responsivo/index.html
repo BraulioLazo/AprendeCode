@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <title>Dominando Media Queries: Crea un Diseño Web Adaptativo y Responsivo</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Dominando Media Queries: Crea un Diseño Web Adaptativo y Responsivo
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <!-- Encabezado recomendado -->
+                <h2>La Evolución del Diseño Web: La Importancia de las Media Queries</h2>
+
+                <!-- Párrafo 1 -->
+                <p>
+                    Las <strong>Media Queries</strong> desempeñan una función fundamental al detectar el dispositivo en
+                    el que se muestra nuestro sitio web. Antes de 2007, para navegar en línea era esencial contar con
+                    una <strong>computadora</strong>, ya que los <strong>teléfonos móviles</strong> carecían de la
+                    capacidad necesaria para <strong>descargar</strong> y <strong>mostrar</strong> sitios web. En ese
+                    contexto, los <strong>desarrolladores</strong> tenían una tarea relativamente sencilla, pues solo
+                    tenían que considerar el diseño para un tipo de dispositivo. Sin embargo, esta situación cambió con
+                    la llegada del <strong>iPhone</strong> en dicho año. Esta innovación los obligó a buscar
+                    alternativas, ya que los sitios web no eran adaptables a estos nuevos dispositivos.
+                </p>
+                <p>
+                    En un primer intento de solución, se crearon dos versiones del sitio web: una para
+                    <strong>ordenadores</strong> y otra para <strong>iPhones</strong>. Sin embargo, esta estrategia
+                    también evolucionó con la aparición del <strong>iPad</strong> en 2010. La solución inicial fue
+                    otorgar <strong>flexibilidad</strong> a los <strong>elementos</strong>, pero esto no resultó
+                    suficiente. Como es sabido, cuando un sitio web tiene <strong>múltiples columnas</strong>, estas
+                    pierden su forma al reducir la ventana del navegador. Fue precisamente este desafío lo que llevó a
+                    los <strong>desarrolladores</strong> a concebir una herramienta que hoy conocemos como
+                    <strong>Diseño Web Adaptable</strong>, o en inglés, <strong>Responsive Web Design</strong>.
+                </p>
+                <p>
+                    Este diseño revolucionario combina la <strong>flexibilidad</strong> de los <strong>diseños</strong>
+                    con la potencia de una herramienta de <strong>CSS</strong> llamada <strong>Media Query</strong>. Tal
+                    como mencioné anteriormente, la función principal de esta herramienta es identificar el
+                    <strong>dispositivo</strong> en el que se está visualizando nuestro sitio web.
+                </p>
+
+                <h2>Personalizando el Diseño Web para Diferentes Dispositivos con Media Queries</h2>
+                <!-- Párrafo 2 -->
+                <p>
+                    Lo primero que debes saber es que cuando hablo de dispositivos no solo me refiero al
+                    <strong>ordenador</strong>, <strong>Tablet</strong> o <strong>móvil</strong>, sino que esto abarca
+                    incluso <strong>impresoras</strong>. Ahora, para especificar para qué dispositivo se está creando
+                    este diseño, existen diferentes palabras clave, las cuales te muestro a continuación:
+                </p>
+                <ul>
+                    <li><strong><em>all:</em></strong> Las propiedades se aplican a todos los medios.</li>
+                    <li><strong><em>print:</em></strong> Las propiedades se aplican cuando el sitio web está siendo
+                        enviado a una
+                        impresora.</li>
+                    <li><strong><em>screen:</em></strong> Las propiedades se aplican cuando el sitio se muestra en una
+                        pantalla.</li>
+                    <li><strong><em>speech:</em></strong> Las propiedades se aplican cuando el sitio está siendo
+                        procesado por un
+                        sintetizador de voz.</li>
+                </ul>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.jpg">
+                            <img src="/assets/global/aprendecode-canal-youtube.jpg"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Puntos de Quiebre y Adaptación en Diseño Web Responsivo</h2>
+                <!-- Párrafo 3 -->
+                <p>
+                    Antes de mostrarte cómo se declara una <strong>media query</strong>, necesitas conocer algo muy
+                    importante: los <strong>puntos de quiebre</strong> o interrupción. ¿Qué quiere decir esto? El punto
+                    de quiebre es el momento exacto en el que se produce un cambio de dispositivo al pasar de una
+                    pantalla a otra (escritorio, tableta y móvil).
+                </p>
+                <p>
+                    Por ello, es esencial comprender cuáles son los puntos de quiebre para <strong>tablet</strong> y
+                    <strong>móvil</strong>. Para <strong>tablet</strong>, el punto de quiebre es de <strong>1024
+                        píxeles</strong>, mientras que para <strong>móvil</strong> es de <strong>768 píxeles</strong>.
+                    Si tienes dudas sobre estos puntos, puedes emplear el <strong>inspector de código</strong>. Al
+                    ingresar a cualquier sitio web, haz clic derecho y selecciona la opción "inspeccionar". Al abrir el
+                    inspector, reduce el tamaño de la ventana del navegador para ver cómo se muestran los píxeles que
+                    ocupa el sitio web.
+                </p>
+                <p>
+                    Notarás que al llegar a los <strong>1024 píxeles</strong>, el sitio web experimenta un cambio, y lo
+                    mismo ocurre al alcanzar los <strong>768 píxeles</strong>. Este último cambio es más drástico, ya
+                    que la mayoría de los elementos se mostrarán en bloque, uno debajo de otro. Además, existen otros
+                    dos puntos de quiebre comunes, a <strong>480 píxeles</strong> y a <strong>320 píxeles</strong>. Sin
+                    embargo, los dos primeros son los más utilizados en la práctica.
+                </p>
+                <p>
+                    En la imagen que aparece a continuación, podrás identificar dos elementos clave: el punto de quiebre
+                    y su correspondiente declaración en <strong>CSS</strong>.
+                </p>
+
+                <div class="image-container">
+                    <img src="/blog/dominando-media-queries-crea-un-diseno-web-adaptativo-y-responsivo/images/imagen1.jpg"
+                        alt="" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Puntos de Quiebre Personalizados</h2>
+                <!-- Párrafo 4 -->
+                <p>
+                    El hecho de que estos sean los <strong>puntos de quiebre</strong> más usados no significa que no
+                    puedas emplear otros. Tu sitio web puede tener un <strong>punto de quiebre personalizado</strong>
+                    según el diseño que hayas creado. Por lo tanto, necesitarás utilizar ese punto específico. Imagina
+                    que a los <strong>1052 píxeles</strong>, tu web comienza a mostrar problemas. En este caso, puedes
+                    usar ese punto exacto o incluso unos pocos píxeles antes.
+                    Ahora bien, después de haber comprendido los puntos de quiebre y las palabras clave, enfoquémonos en
+                    <strong>screen</strong>, el aspecto que más nos interesa.
+                </p>
+                <p>
+                    Una <strong>Media Query</strong> se declara con la regla <strong>@media</strong>, seguida de la
+                    palabra clave que hace referencia al medio en el que aplicaremos los cambios. En este caso,
+                    utilizamos <strong>screen</strong> para realizar modificaciones en las pantallas. Luego de
+                    <strong>screen</strong>, se utiliza el operador <strong>and</strong>. Dentro del paréntesis abierto
+                    y cerrado que sigue al <strong>and</strong>, se define el <strong>punto de quiebre</strong>. A
+                    continuación, te proporciono un ejemplo para una mejor comprensión.
+                    Aquí está el código y la imagen correspondiente. Si lo deseas, puedes copiarlo o examinarlo mientras
+                    continúo explicando más abajo.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/dominando-media-queries-crea-un-diseno-web-adaptativo-y-responsivo/images/imagen2.jpg"
+                        alt="" loading="lazy" decoding="async">
+                </div>
+
+                <h2>
+                    ¿Cómo encontrar el Punto de Quiebre en tu Web?
+                </h2>
+                <!-- Párrafo 5 -->
+                <p>
+                    Bien, para empezar, he decidido proporcionarte un ejemplo de la página sin utilizar la <strong>Media
+                        Query</strong>. Esto te permitirá identificar los puntos específicos donde comienza a
+                    deteriorarse la presentación, los cuales aprovecharemos. En este caso, supongamos que estamos
+                    tratando con tarjetas de entradas de un blog. Para una pantalla amplia, hemos optado por mostrar
+                    <strong>3 tarjetas por fila</strong>.
+                    Sin embargo, ¿qué sucede al reducir el tamaño de la ventana del navegador? En torno a los
+                    <strong>1128px</strong>, notarás que la estructura empieza a colapsar. Justo ahí, aplicaremos el
+                    <strong>primer punto de quiebre</strong>. Para ser más precisos, lo estableceremos en
+                    <strong>1135px</strong> para evitar llegar al límite exacto.
+                </p>
+                <p>
+                    Como te mencioné previamente, después del operador <strong>and</strong>, abrimos y cerramos un
+                    paréntesis, y en su interior ubicamos el <strong>punto de quiebre</strong>. De esta manera,
+                    indicamos que, con un ancho máximo de <strong>1135px</strong>, la <strong>caja principal</strong>,
+                    originalmente de 960px de ancho, deberá tener ahora <strong>640px</strong>. Este ajuste hará que la
+                    caja principal contenga solo <strong>dos cajas secundarias</strong> en su ancho, lo que forzará a
+                    que la siguiente caja se desplace hacia abajo.
+                    Así se declara la consulta <strong>max-width: 1135px</strong>. Te proporciono el código a
+                    continuación, para que observes la sintaxis completa. Si decides copiarlo en tu editor, notarás que
+                    exactamente en el píxel <strong>1135</strong>, las filas pasan de contener <strong>3 cajas</strong>
+                    a contener <strong>2</strong>.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Segundo Punto de Quiebre!</h2>
+                <!-- Párrafo 6 -->
+                <p>
+                    Una vez establecida esta primera consulta, es hora de identificar el <strong>segundo punto de
+                        quiebre</strong> en nuestro sitio web. Si continúas reduciendo el tamaño de la ventana del
+                    navegador, notarás que alrededor del píxel <strong>770</strong> aproximadamente, nuevamente la
+                    estructura empieza a deteriorarse. En mi caso, seleccionaré el píxel <strong>780</strong> como mi
+                    segundo punto de quiebre, para prevenir llegar al punto exacto.
+                    A continuación, te proporciono el <strong>código con ambas consultas de Media Query</strong>. Si
+                    decides copiarlo en tu editor, podrás experimentar cómo la estructura del sitio web cambia
+                    drásticamente en esos dos puntos precisos. Esta técnica nos permite lograr una presentación
+                    adaptable que se ajusta de manera óptima a distintos tamaños de pantalla.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Otros puntos importantes en las Media Queries!</h2>
+                <!-- Párrafo 7 -->
+                <p>
+                    Después de haber abordado la declaración de una <strong>consulta de Media Query</strong>, existen
+                    otros conceptos esenciales que deseo explorar contigo debido a su importancia. Primeramente,
+                    dependiendo de si estamos diseñando para la pantalla grande (ordenador) o para dispositivos móviles,
+                    deberemos emplear <strong>min-width</strong> o <strong>max-width</strong>. En el ejemplo previo,
+                    notaste que utilicé <strong>max-width</strong> dado que trabajé desde la pantalla grande hasta la
+                    más pequeña, que es la del móvil. No obstante, si estuviéramos realizando un diseño desde la
+                    pantalla pequeña hasta la del ordenador, emplearíamos <strong>min-width</strong>.
+                </p>
+                <p>
+                    En segundo lugar, dentro de las consultas de media podemos <strong>alterar completamente la
+                        estructura</strong> del sitio web. Esto no se limita únicamente a cajas; abarca colores,
+                    tipografías, tamaños de encabezados y cualquier otro aspecto imaginable. Incluso podemos ocultar
+                    ciertos elementos si es necesario, como el menú de navegación. Por ejemplo, en una versión de
+                    escritorio, el menú podría desplegarse por completo, mientras que en una vista móvil o de tablet se
+                    ocultaría y se reemplazaría por un ícono representativo.
+                </p>
+                <p>
+                    El tercer punto a destacar es que no estamos limitados a un solo punto de quiebre; podemos
+                    <strong>emplear dos al mismo tiempo</strong>. Supongamos que deseamos aplicar un tamaño de
+                    tipografía específico en la versión para tablet. Podríamos indicar que entre <strong>768 px y 1024
+                        px</strong> la tipografía sea de <strong>16 px</strong>, como un simple ejemplo. A continuación,
+                    te proporciono ejemplos concretos y su correspondiente código para que puedas comprender mejor estas
+                    posibilidades.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/blog/dominando-media-queries-crea-un-diseno-web-adaptativo-y-responsivo/images/imagen3.jpg"
+                        alt="" loading="lazy" decoding="async">
+                </div>
+
+                <h2>¡Explicando ejemplos en las Media Queries!</h2>
+                <!-- Párrafo 8 -->
+                <p>
+                    En el código de arriba, te he proporcionado diversos ejemplos con el propósito de que pueda
+                    explicarte cada uno de ellos de manera detallada. Además, en la hoja de estilos (CSS) encontrarás
+                    comentarios que dividen cada punto de quiebre, lo que te facilitará la comprensión mientras te
+                    explico.
+                </p>
+                <p>
+                    Comenzando con el primer punto de quiebre que ya habíamos implementado, este evita que la estructura
+                    de la página se desmorone. A continuación, abordaremos el segundo punto de quiebre. Para ilustrar
+                    este ejemplo de manera más eficaz, he añadido una nueva caja con un identificador al que he llamado
+                    "caja_oculta". He elegido un color de sombra completamente distinto para que puedas distinguirla con
+                    facilidad. En la segunda consulta, he indicado que exactamente en los <strong>1024 píxeles</strong>,
+                    la caja de color morado se vuelva invisible, o en otras palabras, se oculte. Esta acción se logra al
+                    declarar dentro de la consulta la caja oculta y asignarle la propiedad <strong>display</strong> con
+                    el valor <strong>none</strong>. Puedes intentarlo por ti mismo en tu editor: abre el inspector de
+                    código tal como lo mostré en la primera imagen y verás cómo en ese punto exacto, la caja desaparece
+                    de la vista.
+                </p>
+                <p>
+                    Ahora, pasemos a la tercera consulta. En este caso, he incorporado un ejemplo de <strong>dos puntos
+                        de quiebre dentro de la misma consulta</strong>. Como podrás observar en el código, el primer
+                    punto de quiebre lo he declarado con <strong>min-width</strong> y el segundo con
+                    <strong>max-width</strong>. Mediante esta consulta, estoy indicando que entre los <strong>768 px y
+                        los 1000 px</strong>, todos los hijos de las cajas cambien su color de fondo a gris. Te invito a
+                    realizar nuevamente este ejercicio en tu editor y notarás cómo, entre esos puntos precisos, las
+                    cajas alterarán su color. Sin embargo, una vez que la pantalla sea igual o menor a <strong>768
+                        px</strong>, volverán a adquirir su tono blanco original.
+                </p>
+                <p>
+                    Concluyendo, la última consulta, que es la cuarta, tiene la misma finalidad que la del inicio:
+                    <strong>evitar que la estructura de la página web se desorganice</strong>.
+                </p>
+
+                <h2>
+                    Conclusión y Reflexiones Finales sobre Media Queries
+                </h2>
+                <!-- Párrafo 9 -->
+                <p>
+                    Y así culminamos este blog sobre las Media Queries. Es importante tener en mente que lo que has
+                    explorado aquí constituye solo el punto de partida. En el mundo del desarrollo web, siempre hay más
+                    por aprender, ya que el código se transforma constantemente para adaptarse a las nuevas necesidades
+                    y sus correspondientes soluciones. Este aprendizaje se convierte en un proceso continuo y de por
+                    vida, aplicable no solo a ti, sino también a mí.
+                </p>
+                <p>
+                    Espero sinceramente que esta entrada te haya proporcionado los cimientos para dar pequeños pero
+                    significativos pasos en tu trayectoria. Si así ha sido, entonces considero que he cumplido con mi
+                    objetivo. En última instancia, recuerda que mi nombre es Braulio y que esto es AprendeCode. ¡Recibe
+                    un fuerte abrazo!
+                </p>
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'dominando-media-queries-crea-un-diseno-web-adaptativo-y-responsivo';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+
+</body>
+
+</html>

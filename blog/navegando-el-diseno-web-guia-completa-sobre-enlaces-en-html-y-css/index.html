@@ -13,8 +13,20 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
     <title>Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS</title>
+
+    <meta name="description" content="Descubre cómo crear enlaces en HTML y CSS, con ejemplos de enlaces internos, externos, al correo electrónico y al teléfono. Aprende a personalizar los estilos y mejorar la usabilidad de tus enlaces." />
+    <meta name="keywords" content="diseño web, enlaces HTML, enlaces CSS, guía completa, enlaces internos, enlaces externos, enlaces correo electrónico, enlaces teléfono, personalización estilos, usabilidad enlaces" />
+
+    <meta property="og:title" content="Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS" />
+    <meta property="og:description" content="Descubre cómo crear enlaces en HTML y CSS, con ejemplos de enlaces internos, externos, al correo electrónico y al teléfono. Aprende a personalizar los estilos y mejorar la usabilidad de tus enlaces." />
+    <meta property="og:image" content="URL de tu imagen en miniatura para compartir" />
+    <meta property="og:url" content="https://www.aprendecode.com/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/" />
+    <meta property="og:type" content="article" />
+
 </head>
+
 
 <body>
     <my-menu></my-menu>
@@ -30,32 +42,43 @@
 
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
-                <h2>Introducción a los enlaces en la web</h2>
                 <p>
-                    ¿Enlaces o Links? Realmente, podemos usar ambos términos. Aunque "link" es simplemente la traducción
-                    al inglés de "enlace", es una palabra ampliamente adoptada en el mundo hispanohablante. En este
-                    artículo, discutiremos cómo declarar enlaces en HTML y cómo darles estilo en CSS para que no
-                    parezcan tan insípidos por defecto.
-                </p>
-                <p>
-                    El primer enlace con el que te topas en una página web es, de hecho, el menú de navegación. Estos
-                    son enlaces internos que llevan de una página a otra dentro del mismo sitio. También están los
-                    enlaces dentro de los blogs; por ejemplo, las imágenes de las tarjetas del blog que llevan hacia la
-                    entrada correspondiente. Además, existen enlaces externos que, por ejemplo, podrían llevarte a redes
-                    sociales. Pero no todo se detiene ahí: es posible hacer que un usuario, al hacer clic en un enlace,
-                    automáticamente pueda enviarnos un correo electrónico o incluso llamar a nuestro número de teléfono
-                    sin tener que introducirlo manualmente.
+                    ¿Enlaces o <strong>Links</strong>? La verdad es que podemos llamarles de cualquier modo. Aunque la
+                    palabra <strong>link</strong> significa enlace en inglés, aun así esta es muy usada por las personas
+                    de habla hispana y ese es el tema del blog de hoy. Estaré compartiendo contigo cómo declararlos en
+                    <strong>HTML</strong> y luego cómo añadirles un par de estilos en <strong>CSS</strong>, ya que por
+                    defecto son muy poco llamativos.
                 </p>
 
-                <h2>Creando enlaces internos: el menú de navegación</h2>
                 <p>
-                    Después de esta breve introducción, te mostraré paso a paso cómo crear estos enlaces. Comencemos con
-                    el enlace interno, específicamente el menú de navegación. Imagina que estamos creando tres páginas:
-                    Inicio, Blog y Nosotros. Una vez que sepas cuántos enlaces necesitas, es hora de utilizar el
-                    elemento "a" dentro de las etiquetas del cuerpo (body). A este elemento le agregamos el atributo
-                    href, el cual nos llevará a la página deseada. Aquí te dejo un ejemplo del código y la imagen
-                    correspondiente para una mejor comprensión.
+                    Con el primer <strong>enlace</strong> que te vas a encontrar en una página web es el propio menú de
+                    navegación. Estos no son más que <strong>enlaces internos</strong> que te llevan de una página a
+                    otra. También encuentras estos <strong>enlaces</strong> en el blog, por ejemplo, usualmente las
+                    imágenes de las tarjetas del blog tienen un <strong>link</strong> hacia la entrada que le
+                    corresponde. Luego están los <strong>enlaces externos</strong>, que podrían estar en el mismo menú
+                    hacia las redes sociales, como podrás ver en muchos sitios web. Hasta aquí creo que me sigues, pero
+                    también podemos hacer que un usuario, al hacer clic en un <strong>enlace</strong>, automáticamente
+                    vaya a enviarnos un correo electrónico o incluso se marque nuestro número de teléfono en su móvil
+                    sin necesidad de que él mismo tenga que escribirlos.
                 </p>
+
+                <h2>¡Enlaces entre Páginas!</h2>
+                <p>
+                    Así que luego de esta pequeña introducción, tú y yo vamos a ir descubriendo pasito a pasito cómo
+                    crear estos <strong>enlaces</strong>. Iremos en el mismo orden que se mencionaron; así que el
+                    primero será el <strong>link interno</strong>. Comenzaremos por el propio menú, que no es más que
+                    <strong>enlaces</strong> de una página a otra. Supongamos que vamos a crear tres páginas: Inicio,
+                    Blog y Nosotros. Entonces, ya teniendo claro cuántos <strong>enlaces</strong> vamos a crear, dentro
+                    de las etiquetas de apertura y cierre del cuerpo (<strong>body</strong>), añadimos el elemento
+                    <strong>a</strong>, que incluye etiqueta de apertura y cierre (Abajo está el código, ve echando un
+                    vistazo mientras lees, así entenderás mejor). Luego, tenemos el atributo <strong>href</strong>, que
+                    es el encargado de llevarnos a la página correspondiente. Se declara el atributo
+                    <strong>href</strong>, se pone el signo de igual y luego, entre comillas, la URL (enlace) de la
+                    página correspondiente. Para terminar, colocas entre las etiquetas de apertura y cierre
+                    (<strong>a</strong>) el texto que será el enlace como tal; en este caso, será el nombre de cada
+                    página. Aquí abajo está el código y la imagen correspondiente.
+                </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -74,17 +97,29 @@
                     </div>
                 </div>
 
-                <h2>
-                    ¡Cuidado con los enlaces rotos!
-                </h2>
+                <div class="image-container">
+                    <img src="/blog/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/ejemplo-enlaces-resultado.jpg"
+                        alt="Captura de pantalla del resultado de los enlaces creados: menú de navegación con enlaces a Inicio, Blog y Nosotros." loading="lazy" decoding="async">
+                </div>
+
+                <h2>¡Enlace Externo!</h2>
                 <p>
-                    Es crucial recordar que, para que los enlaces funcionen en tu editor de código, debes tener una
-                    página para cada enlace mencionado. Si no, los enlaces no dirigirán a ningún sitio. Por esta razón,
-                    te dejo una imagen para que visualices cómo se ven. Aparte de eso, quiero señalar que la
-                    presentación que ves en la imagen es la apariencia por defecto de los enlaces. Si bien he realizado
-                    algunas modificaciones menores, como ajustar la altura de línea, pronto te mostraré cómo
-                    personalizar más estos estilos.
+                    <strong>Primero que todo</strong>, te recuerdo que para que este ejemplo te funcione en tu editor de
+                    código, necesitas crear una página para cada uno de los ejemplos que he usado en este blog. De lo
+                    contrario, los enlaces no funcionarán. Por eso te dejé la imagen para que veas cómo luce. Ah, y no
+                    te preocupes por el texto, es solo un relleno para que no se vea tan plano. Volviendo al tema, esta
+                    imagen de aquí arriba es exactamente el resultado por defecto de los <strong>enlaces</strong>. Lo
+                    único que he hecho diferente es declarar una caja padre y darle una sombra. Y al propio enlace le he
+                    dicho que tenga una altura de línea igual a la de la caja padre, solo con la intención de mantener
+                    los <strong>enlaces</strong> centrados. Más abajo le cambiaremos los estilos por defecto de estos
+                    <strong>enlaces</strong>, pero antes quiero mostrarte cómo hacer un enlace externo, otro tipo de
+                    enlace interno y los enlaces al correo electrónico y al teléfono. Pues para hacer todos los
+                    <strong>enlaces</strong> sin importar a qué, se sigue la misma sintaxis. Primero abres la etiqueta
+                    de enlace (<strong>a</strong>) y luego le agregas el atributo <strong>href</strong>, como ya viste
+                    en el ejemplo anterior. La diferencia con el enlace externo es solo que tienes que poner la ruta
+                    completa de la URL. Sería del modo que ves en el código de aquí abajo.
                 </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -103,29 +138,30 @@
                     </div>
                 </div>
 
-                <h2>
-                    Enlaces externos y otras variantes
-                </h2>
+                <h2>¡Enlace en la misma Página!</h2>
                 <p>
-                    No te dejo imagen porque no es necesario, si copiaste el código puedes ver que el enlace sale
-                    exactamente igual que en el ejemplo anterior, la diferencia está en el resultado al hacer clic.
-                    Ahora te dejo este otro ejemplo de enlace interno que te va a resultar bastante interesante. Cuando
-                    estamos dentro de una misma página es muy común que vayamos del final al principio haciendo clic en
-                    un ícono. Esto también se puede lograr perfectamente con un enlace. Abres y cierras la etiquetas de
-                    enlace y entre ambas, llamas la imagen a la cual le vamos a añadir el enlace. Pero en este caso lo
-                    he hecho con un div para que te salga cuando copies el código en tu editor. Abrí y cerré las
-                    etiquetas del div como puedes ver más abajo, le agregué un id, y entre ambas etiquetas le añadí un
-                    código que el navegador lo interpreta como una flecha. No hay necesidad de aprenderse ese código, si
-                    buscas en Google te saldrán un montón de íconos como ese, solo copias el código, lo pegas en tu HTML
-                    y listo.
+                    <strong>No te dejo imagen</strong> porque no es necesario; si copiaste el código, puedes ver que el
+                    enlace sale exactamente igual que en el ejemplo anterior. La diferencia está en el resultado al
+                    hacer clic. Ahora te dejo este otro ejemplo de <strong>enlace interno</strong> que te va a resultar
+                    bastante interesante. Cuando estamos dentro de una misma página, es muy común que vayamos del final
+                    al principio haciendo clic en un ícono. Esto también se puede lograr perfectamente con un
+                    <strong>enlace</strong>. Abres y cierras las etiquetas de enlace y entre ambas, llamas la imagen a
+                    la cual le vamos a añadir el enlace. Pero en este caso, lo he hecho con un <strong>div</strong> para
+                    que te salga cuando copies el código en tu editor. Abrí y cerré las etiquetas del
+                    <strong>div</strong>, como puedes ver más abajo, le agregué un <strong>id</strong>, y entre ambas
+                    etiquetas le añadí un código que el navegador interpreta como una flecha. No hay necesidad de
+                    aprenderse ese código, si buscas en Google, te saldrán un montón de íconos como ese. Solo copias el
+                    código, lo pegas en tu <strong>HTML</strong> y listo.
                 </p>
                 <p>
-                    Al igual que con los demás enlaces, vamos a declarar el atributo href pero dentro de este, hacemos
-                    referencia a la parte de la página que queremos ir. Por ejemplo, en este caso yo utilicé el id
-                    "encabezado", ya que es uno solo y sabrá perfectamente en qué parte de la página se encuentra. Aquí
-                    abajo está el código, cópialo en tu editor y verás cómo el enlace te lleva a la cabecera. No te dejo
-                    imagen porque es demasiado grande.
+                    Al igual que con los demás <strong>enlaces</strong>, vamos a declarar el atributo
+                    <strong>href</strong>, pero dentro de este, hacemos referencia a la parte de la página que queremos
+                    ir. Por ejemplo, en este caso yo utilicé el <strong>id</strong> <em>encabezado</em>, ya que es uno
+                    solo y sabrá perfectamente en qué parte de la página se encuentra. Aquí abajo está el código;
+                    cópialo en tu editor y verás cómo el enlace te lleva a la cabecera. <strong>No te dejo
+                        imagen</strong> porque es demasiado grande.
                 </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -144,27 +180,23 @@
                     </div>
                 </div>
 
-                <h2>
-                    Facilitando la comunicación: enlaces de correo y teléfono
-                </h2>
+                <h2>¡Enlace al Correo Electrónico!</h2>
                 <p>
-                    Ahora viene una parte bastante interesante, diría yo, ya que estaríamos proporcionando al usuario un
-                    medio para contactarnos de manera sumamente sencilla. Usualmente, estos enlaces (correo y teléfono)
-                    los encuentras en el pie de página, por lo que eso es lo que usaremos para el ejemplo. Como ya te
-                    mencioné anteriormente, sin importar a qué estamos enlazando, la sintaxis es la misma: abrimos la
-                    etiqueta de enlace y dentro le agregamos el atributo href. Sin embargo, ahora nos encontramos con
-                    una pequeña variación. Las diferencias realmente no son nada complicadas, se trata simplemente de
-                    dos palabras clave: una para enlazar al correo y otra al teléfono.
+                    Ahora viene una parte bastante interesante, diría yo, ya que le estaríamos dando al usuario un modo
+                    de contactar con nosotros de manera súper sencilla. Usualmente, estos enlaces (correo y teléfono)
+                    los encuentras en el pie de página, así que esto es lo que usaremos para el ejemplo. Como ya te dije
+                    anteriormente, sin importar a qué estamos enlazando, la sintaxis es la misma: abrimos la etiqueta de
+                    enlace y dentro le agregamos el atributo <strong>href</strong>. Sin embargo, ahora hay una pequeña
+                    diferencia. Las diferencias no son nada del otro mundo, son solo dos palabras clave: una para
+                    enlazar al correo y otra al teléfono. Para enlazar al correo electrónico, está la palabra clave
+                    <strong>mailto</strong>; esta va seguida de dos puntos y el correo electrónico al que queremos que
+                    nos escriban (mira el ejemplo en el código de abajo). Para el teléfono, está la palabra clave
+                    <strong>tel</strong>, y seguiríamos la misma sintaxis que con el correo electrónico. La función de
+                    estas palabras clave es abrir el programa correspondiente en tu dispositivo para realizar dicha
+                    acción. Así que solo te dejaré el ejemplo del correo electrónico, ya que vas a correr el código en
+                    tu ordenador. Aquí está el código.
                 </p>
-                <p>
-                    Para enlazar al correo electrónico, utilizamos la palabra clave "mailto", que va seguida de dos
-                    puntos y del correo electrónico al que deseamos que nos escriban (observa el ejemplo en el código de
-                    abajo). En el caso del teléfono, utilizamos la palabra clave "tel", y seguimos la misma sintaxis que
-                    con el correo electrónico. La función de estas palabras clave es invocar al programa o aplicación
-                    correspondiente en tu dispositivo para realizar la acción indicada. Sin embargo, solo te
-                    proporcionaré el ejemplo del correo electrónico, considerando que vas a ejecutar el código en tu
-                    ordenador. Aquí está el código.
-                </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -183,28 +215,32 @@
                     </div>
                 </div>
 
-                <h2>
-                    Personalizando la apariencia de los enlaces
-                </h2>
+                <div class="image-container">
+                    <img src="/blog/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/ejemplo-enlace-correo.jpg"
+                        alt="Captura de pantalla del ejemplo de enlace al correo electrónico usando el atributo mailto" loading="lazy" decoding="async">
+                </div>
+
+                <h2>¡Cambiando el estilo por defecto en los Enlaces!</h2>
                 <p>
-                    SSi ya has copiado el código en tu editor, notarás que al hacer clic en el enlace, este abrirá
-                    automáticamente el programa de correo electrónico que tienes configurado en tu dispositivo.
-                    ¡Siéntete libre de enviarme un correo! Estaré encantado de leerlo y te responderé tan pronto como
-                    pueda.
+                    Si copiaste el código en tu editor, el enlace te abrirá directamente el programa de correo
+                    electrónico que utilizas en tu dispositivo y podrás enviarme un correo si quieres. Así que aprovecha
+                    y hazlo; estaré encantado de recibirlo y te responderé lo más rápido posible.
                 </p>
                 <p>
-                    Ahora, después de entender bien estos ejemplos, es momento de ajustar los estilos predeterminados de
-                    los enlaces. Si no has interactuado con ningún enlace aún, podrás observar que su color es azul por
-                    defecto, y una vez que haces clic en él, cambia a un tono morado. Además, estos enlaces vienen
-                    subrayados. Francamente, ninguno de estos estilos luce particularmente estético. Empecemos
-                    eliminando ese subrayado, algo que podemos hacer con la propiedad text-decoration y asignándole el
-                    valor none. A continuación, cambiaremos el color predeterminado antes de que el enlace sea visitado
-                    utilizando la propiedad color; en este caso, optaré por el negro. Y para aquellos enlaces ya
-                    visitados, elegiremos un tono rojo. Esta elección es solo para que puedas notar el cambio; en muchos
-                    diseños, especialmente en menús de navegación, es común que el enlace mantenga su color original
-                    incluso después de ser visitado. Esto lo logramos gracias a la pseudo-clase :visited. A
-                    continuación, te proporciono el código que muestra cómo implementar estos ajustes estilísticos.
+                    Bien, ya dejando bien explicados estos ejemplos, es hora de cambiarle los estilos que vienen por
+                    defecto. Si acabas de copiar el código en tu editor y no has entrado en ningún enlace, notarás que
+                    su color es azul y luego de entrar se volverá de una tonalidad morada. Lo otro es que por defecto
+                    viene con un subrayado y la verdad, ninguna de las tres luce estética. Así que vamos a comenzar
+                    eliminando esa línea de subrayado que no me gusta para nada; eso es posible gracias a la propiedad
+                    <strong>text-decoration</strong> y el valor <strong>none</strong>. Luego cambiamos el color por
+                    defecto antes de visitar con la propiedad <strong>color</strong> y el valor que tú decidas; en este
+                    caso, solo usaré el negro. Cuando está visitado, vamos a ponerle un rojo, pero solo con la idea de
+                    que puedas ver el cambio en él. Por ejemplo, si estuvieras creando un menú de navegación, lo más
+                    común es que, aunque haya sido visitado, este mantenga su color. Esto será gracias a la pseudo-clase
+                    <strong>:visited</strong>. Aquí abajo te voy a dejar el código con la manera correcta de declarar
+                    todos estos cambios.
                 </p>
+
 
                 <div class="snippets">
                     <div class="snippet">
@@ -223,23 +259,34 @@
                     </div>
                 </div>
 
-                <h2>
-                    Reflexiones finales y próximos pasos
-                </h2>
+                <div class="image-container">
+                    <img src="/blog/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/ejemplo-cambios-estilos-enlaces.jpg"
+                        alt="Captura de pantalla de ejemplos de cambios en los estilos de enlaces: eliminación del subrayado, cambios de color y uso de pseudo-clases" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Conclusión y Despedida</h2>
                 <p>
-                    Algo importante que necesito recordarte es que, cuando te dejo código con imágenes, debes cargar las
-                    tuyas propias. El código no te va a funcionar o al menos no saldrá la imagen. En las preguntas
-                    frecuentes tienes algunas indicaciones sobre qué debes hacer si el código no funciona. Además, en
-                    este mundo digital, la constante actualización y adaptación es esencial, así que no te sientas
-                    frustrado si alguna vez encuentras algo que no se comporta exactamente como esperabas. La práctica y
-                    la investigación constante te ayudarán a dominar estos y otros temas relacionados.
+                    Ahora quiero decirte algo importante. Estas propiedades y pseudo-clases que he usado en el ejemplo
+                    han sido solo para cambiar los estilos que vienen por defecto en los enlaces. Sin embargo, se puede
+                    hacer muchísimo más que eso, incluso en el menú. Puedes agregarle efectos de cursor y demás,
+                    haciendo que cambie incluso el color de fondo o haciendo que cuando una página esté en uso, se
+                    mantenga de un color en particular el fondo y otro para las letras. Así que, si quieres aprender
+                    cómo realizar todos esos cambios en un menú de navegación, echa un vistazo en el siguiente blog:
+                    <strong><a href="/blog/creacion-de-un-menu-web-guia-completa-para-principiantes/">Creación de un
+                            Menú Web: Guía Completa para Principiantes</a></strong>. No quise hablar otra vez sobre
+                    todos esos cambios porque sería redundante, ya teniendo una entrada hecha sobre ese tema.
                 </p>
                 <p>
-                    Recuerda dejarme un comentario si te apetece, aunque sea solo para saludar. De verdad me dará
-                    muchísima alegría saber que este blog está aportando crecimiento a alguien más. Ahora sí que no va
-                    quedando más que despedirme. Por aquí te dejo un abrazo fuerte, recuerda que mi nombre es Braulio y
-                    que esto es AprendeCode. ¡Hasta la próxima entrada!
+                    Algo importante que necesito recordarte es que, cuando te dejo código con imágenes, tú debes cargar
+                    las tuyas propias. El código no te va a funcionar o, al menos, no saldrá la imagen. En las preguntas
+                    frecuentes tienes algunas indicaciones sobre qué debes hacer si el código no funciona. Recuerda
+                    dejarme un comentario si te apetece, aunque sea solo para saludar. De verdad, me dará muchísima
+                    alegría saber que este blog está aportando crecimiento a alguien más. Ahora sí que no va quedando
+                    más que despedirme. Por aquí te dejo un abrazo fuerte. Recuerda que mi nombre es
+                    <strong>Braulio</strong> y que esto
+                    es <strong>AprendeCode</strong>.
                 </p>
+
             </div>
         </section>
     </main>

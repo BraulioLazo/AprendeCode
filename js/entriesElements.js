@@ -1,5 +1,12 @@
 var entriesElements = [
     {
+        title: "Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS",
+        description: "Descubre cómo crear enlaces impactantes en tu diseño web con nuestra guía completa sobre enlaces en HTML y CSS.",
+        imageUrl: "/blog/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/desarrollador-desarrolladora-mirando-pantalla.jpg",
+        imageAlt: "Desarrollador y desarrolladora mirando la pantalla, con expresiones concentradas mientras intentan solucionar un error en el código.",
+        link: "/blog/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/",
+    },
+    {
         title: "Entendiendo la Propiedad 'Clear' en CSS: Controla Tus Cajas Flotantes",
         description: "Sumérgete en el mundo de CSS y descubre el poder de la propiedad Clear. Aprende a dominar las cajas flotantes y evitar problemas comunes de diseño",
         imageUrl: "/blog/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.jpg",
