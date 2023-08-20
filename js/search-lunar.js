@@ -1,12 +1,25 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const cardContainer = document.querySelector(".cards");
 
-    let documents = entries.map((doc, index) => {
-        return {
-            ...doc,
-            id: index
-        };
-    });
+    // Determinar la categoría basada en la URL
+    let category = "frontend"; // por defecto
+    if (location.href.includes("/arduino/")) {
+        category = "arduino";
+    }
+
+    // Filtrar las entradas según la categoría
+    let entriesForCategory;
+    if (category === "frontend") {
+        entriesForCategory = frontendCardContent;
+    } else if (category === "arduino") {
+        entriesForCategory = arduinoCardContent;
+    }
+
+    const documents = entriesForCategory.map((doc, index) => ({
+        ...doc,
+        id: index
+    }));
 
     let idx = lunr(function () {
         this.ref("id");
@@ -21,56 +34,27 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#search-form').addEventListener('submit', (event) => {
         event.preventDefault();
 
-        let query = document.querySelector('#search-input').value;
+        const query = document.querySelector('#search-input').value;
+        const results = idx.search(query);
 
-        const cards = cardContainer.querySelectorAll(".card");
-        cards.forEach((card) => {
-            card.style.display = 'none';
-        });
+        // Limpiar tarjetas anteriores
+        cardContainer.innerHTML = "";
 
-        let results = idx.search(query);
         results.forEach((result) => {
-            let card = cards[result.ref];
-            card.style.display = 'flex';
+            renderEntry(documents[result.ref]); // Usar la función renderEntry que ya tienes definida
         });
 
         document.querySelector('#search-input').value = "";
     });
 
-    let searchButtons = [
-        { name: "Todos", category: "all" },
-        { name: "FrontEnd", category: "frontend" },
-        { name: "Arduino", category: "arduino" },
-    ];
-
-    searchButtons.forEach(button => {
-        let btn = document.createElement("button");
-        btn.classList.add("card-search");
-
-        btn.textContent = button.name;
-        btn.addEventListener("click", function () {
-            performSearch(button.category);
-        });
-
-        document.querySelector("#search-buttons").appendChild(btn);
-    });
-
     function performSearch(category) {
-        const cards = cardContainer.querySelectorAll(".card");
-        cards.forEach(card => {
-            card.style.display = "none";
-        });
+        const results = idx.search(category);
 
-        if (category === "all") {
-            cards.forEach(card => {
-                card.style.display = "flex";
-            });
-        } else {
-            let results = idx.search(category); 
-            results.forEach(result => {
-                let card = cards[result.ref];
-                card.style.display = "flex";
-            });
-        }
+        // Limpiar tarjetas anteriores
+        cardContainer.innerHTML = "";
+
+        results.forEach(result => {
+            renderEntry(documents[result.ref]);
+        });
     }
 });

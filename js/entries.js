@@ -5,7 +5,7 @@ const fetchAndDisplayCodeSnippets = (entryName, totalSnippets) => {
 
     for (let i = 1; i <= totalSnippets; i++) {
         const snippetId = `snippet${i}`;
-        const snippetUrl = `/blog/${entryName}/snippets/${snippetId}.txt`;
+        const snippetUrl = `/frontend/${entryName}/snippets/${snippetId}.txt`;
 
         snippets.push({ snippetId, snippetUrl });
     }

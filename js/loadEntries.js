@@ -1,4 +1,3 @@
-// renderEntries.js
 
 let loaded = 0;
 
@@ -8,6 +7,21 @@ container.innerHTML = "";
 const loader = document.createElement('div');
 loader.id = 'loader';
 container.appendChild(loader);
+
+function getEntriesByURL() {
+    const pathName = window.location.pathname.split("/").filter(part => part !== "").pop();
+
+    switch(pathName) {
+        case "frontend":
+            return frontendCardContent;
+        case "arduino":
+            return arduinoCardContent;
+        default:
+            return []; 
+    }
+}
+
+const entriesElements = getEntriesByURL();
 
 function renderEntry(entry) {
     const card = document.createElement('div');
@@ -56,7 +70,11 @@ function renderEntry(entry) {
     card.appendChild(description);
     card.appendChild(btnLinkContainer);
 
-    container.insertBefore(card, loader);
+    if (loader.parentNode === container) {
+        container.insertBefore(card, loader);
+    } else {
+        container.appendChild(card);
+    }
 }
 
 function loadMoreCards() {
@@ -64,7 +82,6 @@ function loadMoreCards() {
     newEntries.forEach(renderEntry);
     loaded += newEntries.length;
 
-    // If all entries are loaded, unobserve the loader.
     if (loaded >= entriesElements.length) {
         observer.unobserve(loader);
     }

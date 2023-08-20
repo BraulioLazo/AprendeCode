@@ -12,7 +12,8 @@ class myMenu extends HTMLElement {
 
         const menuLinks = [
             { name: "Inicio", href: 'index.html', linkClass: "nav-link-home" },
-            { name: 'Blog', href: 'blog/', linkClass: "nav-link-blog" },
+            { name: 'Frontend', href: 'frontend/', linkClass: "nav-link-frontend" },
+            { name: 'Arduino', href: 'arduino/', linkClass: "nav-link-arduino" },
             { name: 'Nosotros', href: 'nosotros/', linkClass: "nav-link-about" },
             { name: 'Contacto', href: 'contacto/', linkClass: "nav-link-contact" }
         ];
