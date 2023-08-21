@@ -42,7 +42,7 @@
 }
 
 
-/* Aquí está declarada la Propiedad Clear con el valor Both */
+/* Aquí está agregada la Propiedad Clear con el valor Both */
 
 .restaurar{
     clear: both;

@@ -25,7 +25,6 @@ const fetchAndDisplayCodeSnippets = (entryName, totalSnippets) => {
     });
 };
 
-
 function copyToClipboard() {
     document.querySelectorAll('.copy-button').forEach(button => {
         button.addEventListener('click', () => {

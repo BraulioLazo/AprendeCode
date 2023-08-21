@@ -647,6 +647,7 @@ button {
   display: flex;
   align-content: flex-start;
   align-items: flex-start;
+  min-width: 171px;
 }
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
@@ -909,6 +910,75 @@ button {
     width: 100%;
     min-width: 350px;
     max-width: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header {
+    width: 100%;
+    text-align: center;
+  }
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container {
+    justify-content: center;
+    width: 100%;
+  }
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container .btn-link,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container .btn-link {
+    border: 1px solid var(--color-text-white);
   }
 }
 .about-section {
