@@ -31,126 +31,194 @@
                 <h2>Preparando el Terreno: Introducción y Configuración Inicial</h2>
                 <p>
                     ¡Bienvenidos a la segunda entrega de nuestro viaje por Arduino! En esta oportunidad, nos zambullimos
-                    en una lección práctica esencial: preparar nuestro entorno de trabajo. Si recordamos, en la entrada
+                    en una lección práctica esencial: <strong>preparar nuestro entorno de trabajo</strong>. Si
+                    recordamos, en la entrada
                     previa dimos los primeros pasos explorando el cautivante mundo de Arduino. Nos asomamos a tres de
-                    las placas más utilizadas en mi opinión: Arduino Uno, Arduino Nano y Arduino Mega. Además,
+                    las placas más utilizadas en mi opinión: <strong>Arduino Uno</strong>, <strong>Arduino Nano</strong>
+                    y <strong>Arduino Mega</strong>. Además,
                     destacamos la Arduino Uno como una excelente puerta de entrada a este Universo.
                 </p>
                 <p>
                     Independientemente de si cuentas con una placa Arduino y otros componentes en tus manos, estás listo
                     para iniciar tus primeros pasos en este vasto cosmos. Tal como mencioné antes, la comunidad detrás
-                    de Arduino es tan vasta que tienes a tu alcance una plataforma online totalmente gratuita. En ella,
+                    de Arduino es tan vasta que tienes a tu alcance una <strong>plataforma online totalmente
+                        gratuita</strong>. En ella,
                     no solo puedes explorar componentes esenciales de Arduino, sino que también puedes escribir y probar
                     código para experimentar su funcionamiento. Aunque no es una simulación exacta del mundo real, es
                     una herramienta sumamente útil, especialmente para los principiantes que pueden sentir cierta
                     aprensión al cometer errores que dañen componentes.
                 </p>
+
                 <p>
-                    Esta plataforma es conocida como Tinkercad, y a continuación, te presentaré una imagen para que
+                    Esta plataforma es conocida como <strong>Tinkercad</strong>, y a continuación, te presentaré una
+                    imagen para que
                     puedas familiarizarte con su interfaz. Además, quiero aclararte que Tinkercad no se limita solo a
                     trabajar con circuitos electrónicos, sino que también te brinda la oportunidad de crear diseños en
                     3D. Abajo encontrarás la imagen de su interfaz.
                 </p>
+
+                <div class="custom-list-container">
+                    <h3>¿Por qué empezar con Tinkercad?</h3>
+                    <ul>
+                        <li>
+                            <strong>Sin Costo de Errores:</strong> Experimenta y aprende sin preocuparte por dañar
+                            componentes costosos.
+                        </li>
+                        <li>
+                            <strong>Ambiente Libre de Miedo:</strong> La plataforma virtual elimina el temor a cometer
+                            errores, facilitando un aprendizaje más rápido.
+                        </li>
+                        <li>
+                            <strong>Recursos Abundantes:</strong> Tinkercad ofrece una variedad de herramientas y
+                            tutoriales
+                            para ayudarte en tu proceso de aprendizaje.
+                        </li>
+                    </ul>
+                </div>
+
                 <h2 style="color: red;">Aqui va Una imagen</h2>
                 <p>
-                    Imagina que compartes mi entusiasmo por la electrónica y el desarrollo, y no puedes esperar para
-                    poner a prueba tus conocimientos en el mundo real. ¡No te preocupes! Estoy aquí para guiarte. Te
-                    proporcionaré el enlace directo al sitio oficial, donde encontrarás instrucciones detalladas sobre
-                    cómo instalar el entorno de trabajo en tu computadora. Mi recomendación es que comiences tus
-                    primeras lecciones en Tinkercad, una plataforma que te permitirá probar tus códigos en un entorno
-                    virtual antes de trabajar con componentes físicos. Después de confirmar que todo funciona como
-                    esperas, podrás aplicar tus conocimientos a tus propios componentes.
+                    Imagina que compartes mi entusiasmo por la <strong>electrónica y el desarrollo</strong>, y no puedes
+                    esperar para poner a prueba tus conocimientos en el mundo real. ¡No te preocupes! Estoy aquí para
+                    guiarte. Te proporcionaré el enlace directo al sitio oficial, donde encontrarás instrucciones
+                    detalladas sobre cómo instalar el entorno de trabajo en tu computadora. Mi recomendación es que
+                    comiences tus primeras lecciones en <strong>Tinkercad</strong>, una plataforma que te permitirá
+                    probar tus códigos en un entorno virtual antes de trabajar con componentes físicos. Después de
+                    confirmar que todo funciona como esperas, podrás aplicar tus conocimientos a tus propios
+                    componentes.
                 </p>
+
 
                 <h2>Instalación del Arduino IDE y Primeros Pasos</h2>
                 <p>
-                    La primera etapa para instalar el Arduino IDE en tu computadora es descargar el archivo desde el
-                    siguiente enlace: <a href="https://www.arduino.cc/en/software" target="_blank" title="Sitio Oficial">Descargar Arduino IDE</a>. Una vez descargado,
+                    La primera etapa para instalar el <strong>Arduino IDE</strong> en tu computadora es descargar el
+                    archivo desde el siguiente enlace: <a href="https://www.arduino.cc/en/software" target="_blank"
+                        title="Sitio Oficial"><strong>Descargar Arduino IDE</strong></a>. Una vez descargado,
                     ejecuta el archivo y simplemente sigue las instrucciones paso a paso. No te preocupes, el IDE ya
                     viene configurado con ajustes predeterminados perfectos para comenzar. Si deseas obtener más
-                    detalles sobre la instalación en diferentes sistemas operativos, te invito a consultar la 
-                    <a href="https://www.arduino.cc/en/Guide" target="_blank" title="Sitio Oficial">guía
-                    oficial de instalación</a>. Allí podrás seleccionar tu sistema
-                    operativo y acceder a una explicación detallada
+                    detalles sobre la instalación en diferentes sistemas operativos, te invito a consultar la
+                    <a href="https://www.arduino.cc/en/Guide" target="_blank" title="Sitio Oficial"><strong>guía oficial
+                            de instalación</strong></a>. Allí podrás seleccionar tu sistema operativo y acceder
+                    a una explicación detallada.
                 </p>
 
-                <h2>
-                    Explorando la Interfaz del Arduino IDE
-                </h2>
 
+                <h2>Explorando la Interfaz del Arduino IDE</h2>
                 <p>
                     Una vez que has instalado el IDE en tu PC y lo abres, te recibirás con una interfaz similar a la que
                     se muestra en la imagen debajo. Observarás varias secciones en el menú superior, como es común en la
-                    mayoría de los programas. En la sección 'File', por ejemplo, podrás crear un nuevo 'sketch' (término
-                    que usaremos para referirnos a un nuevo proyecto o código) o abrir uno existente en el que ya estés
-                    trabajando. Estas opciones son familiares y esenciales en cualquier entorno de programación.
+                    mayoría de los programas. En la sección 'File', por ejemplo, podrás crear un nuevo
+                    '<strong>sketch</strong>' (término que usaremos para referirnos a un nuevo proyecto o código) o
+                    abrir uno existente en el que ya estés trabajando. Estas opciones son familiares y esenciales en
+                    cualquier entorno de programación.
                 </p>
                 <p>
                     Ahora bien, quiero que dirijas tu atención a dos botones que se encuentran justo debajo de este
-                    menú. Uno de ellos presenta una marca de verificación (representando la acción de verificar), y
-                    junto a él, encontrarás otro botón con una flecha apuntando hacia la derecha. El primero, conocido
-                    como 'verificar' o 'verify', se emplea para examinar el código que has escrito y, en caso de
-                    detectar algún error, te lo mostrará en la pantalla inferior. Además, también te proporcionará
-                    información sobre la cantidad de bytes que ocupa el programa y cuánto espacio disponible aún tienes.
+                    menú.
+                    Uno de ellos presenta una marca de verificación (representando la acción de verificar), y junto a
+                    él, encontrarás otro botón con una flecha apuntando hacia la derecha. El primero, conocido como
+                    '<strong>verificar</strong>' o 'verify', se emplea para examinar el código que has escrito y, en
+                    caso de detectar algún error, te lo mostrará en la pantalla inferior. Además, también te
+                    proporcionará información sobre la cantidad de bytes que ocupa el programa y cuánto espacio
+                    disponible aún tienes.
                 </p>
                 <p>
                     Por otro lado, el botón con la flecha hacia la derecha cumple una función fundamental: permite
-                    cargar el código que hayas creado en la placa, siempre y cuando esté conectada a la PC. Una vez que
-                    realizas esta acción, el IDE te ofrecerá información acerca de si la carga se realizó exitosamente o
-                    si se presentó algún inconveniente.
+                    cargar
+                    el código que hayas creado en la placa, siempre y cuando esté conectada a la PC. Una vez que
+                    realizas esta acción, el IDE te ofrecerá información acerca de si la carga se realizó
+                    <strong>exitosamente</strong> o si se presentó algún inconveniente.
                 </p>
 
                 <h2>Selección de la Placa y Puerto USB</h2>
                 <p>
-                    Justo seguido de ese botón, podrás observar una barra con el texto 'Select Board' en inglés. En esta
-                    opción, debemos seleccionar la placa que estamos utilizando y además, el puerto USB al cual está
-                    conectada la placa. Esta elección es crucial para asegurarte de que el código se cargue en la placa
-                    correcta y pueda funcionar como se espera.
-                    Observa también el menú lateral que se ubica a la izquierda, el cual ofrece opciones como la
-                    elección de librerías. Aunque estas funcionalidades son vitales para proyectos más avanzados, en
-                    esta etapa inicial no es necesario preocuparse por ellas. Nos centraremos en los aspectos
-                    fundamentales para empezar. Más adelante, exploraremos estos conceptos en detalle cuando llegue el
-                    momento oportuno.
+                    Justo seguido de ese botón, podrás observar una barra con el texto <strong>Select Board</strong> en
+                    inglés. En esta opción, debemos seleccionar la placa que estamos utilizando y además, el puerto USB
+                    al cual está conectada la placa. Esta elección es crucial para asegurarte de que el código se cargue
+                    en la placa correcta y pueda funcionar como se espera. Observa también el menú lateral que se ubica
+                    a la izquierda, el cual ofrece opciones como la elección de librerías. Aunque estas funcionalidades
+                    son vitales para proyectos más avanzados, en esta etapa inicial no es necesario preocuparse por
+                    ellas. Nos centraremos en los <strong>aspectos fundamentales</strong> para empezar. Más adelante,
+                    exploraremos estos conceptos en detalle cuando llegue el momento oportuno.
                 </p>
+
 
                 <h2>Creación de Cuenta y Plataforma en Línea</h2>
                 <p>
-                    Ahora, regresemos a Tinkercad. La maravilla de esta plataforma es su sencillez al crear cuentas.
-                    Solo sigue este enlace: https://www.tinkercad.com/join, y llegarás a la página donde podrás dar vida
-                    a tu cuenta. Una vez allí, encontrarás tres opciones, tal como se muestra en la imagen de abajo.
-                    Elige la opción "Crear Cuenta Personal". Personalmente, prefiero crear la cuenta a través de Google,
-                    ya que es un proceso simple, pero elige la opción que más te convenga. Aunque en el pasado se
-                    hablaba de una versión descargable de Tinkercad para PC, tras una pequeña investigación, no he
-                    encontrado una opción actual de descarga. Incluso el eslogan del sitio establece: "Tinkercad es una
-                    aplicación web gratuita para diseño 3D, electrónica y codificación. Somos la introducción ideal a
-                    Autodesk, un líder mundial en tecnología de diseño y fabricación." Pero aun así, en realidad no veo
-                    la necesidad de una versión descargable, dado que hoy en día tenemos acceso constante a internet
-                    desde nuestros hogares.
+                    Ahora, regresemos a <strong>Tinkercad</strong>. La maravilla de esta plataforma es su sencillez al
+                    crear cuentas. Solo sigue este enlace: <a href="https://www.tinkercad.com/join" target="_blank"
+                        title="Crear Cuenta en Tinkercad">Unirse a Tinkercad</a>, y llegarás a la página
+                    donde podrás dar vida a tu cuenta. Una vez allí, encontrarás tres opciones, tal como se muestra en
+                    la imagen de abajo. Elige la opción "Crear Cuenta Personal". Personalmente, prefiero crear la cuenta
+                    a través de Google, ya que es un proceso simple, pero elige la opción que más te convenga. Aunque en
+                    el pasado se hablaba de una versión descargable de Tinkercad para PC, tras una pequeña
+                    investigación, no he encontrado una opción actual de descarga. Incluso el eslogan del sitio
+                    establece: "<strong>Tinkercad es una aplicación web gratuita</strong> para diseño 3D, electrónica y
+                    codificación. Somos la introducción ideal a Autodesk, un líder mundial en tecnología de diseño y
+                    fabricación." Pero aun así, en realidad no veo la necesidad de una versión descargable, dado que hoy
+                    en día tenemos acceso constante a internet desde nuestros hogares.
                 </p>
                 <p>
                     Una vez autenticado en Tinkercad, te encontrarás con una interfaz similar a la que te muestro a
                     continuación. Una vez dentro, coloca el cursor sobre el botón "Crear" y se desplegarán varias
-                    opciones. En nuestro caso, seleccionaremos "Circuito".
-
-                    Al hacer clic en "Circuito", serás redirigido a una página donde podrás crear no solo el circuito de
-                    manera "física", es decir, conectando componentes entre sí, sino también escribir código. Como
-                    puedes observar en la imagen que se encuentra abajo, he arrastrado la placa Arduino Uno. Aunque en
-                    realidad es la única placa disponible en el simulador, créeme, es más que suficiente para dar los
-                    primeros pasos en este universo.
+                    opciones. En nuestro caso, seleccionaremos "<strong>Circuito</strong>". Al hacer clic en "Circuito",
+                    serás redirigido a una página donde podrás crear no solo el circuito de manera "física", es decir,
+                    conectando componentes entre sí, sino también escribir código. Como puedes observar en la imagen que
+                    se encuentra abajo, he arrastrado la placa <strong>Arduino Uno</strong>. Aunque en realidad es la
+                    única placa disponible en el simulador, créeme, es más que suficiente para dar los primeros pasos en
+                    este universo.
                 </p>
+
 
                 <h2>Próximos Pasos y Futuras Exploraciones en el Universo Arduino</h2>
                 <p>
-                    Realmente, no profundizaré más en esta plataforma en esta ocasión, ya que los pasos necesarios para
-                    crear nuestro primer proyecto los abordaremos en el próximo blog. En esta entrada, mi objetivo ha
-                    sido familiarizarte con las dos herramientas (interfaces, programas o plataformas) que utilizaremos
-                    a lo largo de este recorrido por el universo de Arduino. Además, en futuros blogs exploraremos cómo
-                    integrar el entorno IDE con VS Code, en caso de que ya te sientas familiarizado con este último.
-                    Esta integración nos permitirá trabajar de manera aún más eficiente, aprovechando funciones como el
-                    autocompletado que mencioné en la entrada anterior y que nos ayuda a identificar errores en tiempo
-                    real. Por ahora me despido, pero no sin antes desearte un emocionante viaje en el mundo de Arduino.
-                    ¡Estoy ansioso por continuar explorando juntos!
+                    <strong>Realmente, no profundizaré más en esta plataforma en esta ocasión</strong>, ya que los pasos
+                    necesarios para crear nuestro primer proyecto los abordaremos en el próximo blog. De hecho, en
+                    nuestra próxima entrada, te mostraré cómo hacer un LED parpadear en intervalos. <strong>Aunque
+                        parezca básico y es el mismo código que viene por defecto en las placas nuevas, es un excelente
+                        punto de partida en todos los cursos.</strong>
                 </p>
+
+                <p>
+                    En esta entrada, mi objetivo ha sido familiarizarte con las dos herramientas (interfaces, programas
+                    o plataformas) que utilizaremos a lo largo de este recorrido por el universo de Arduino.
+                    <strong>Además, en futuros blogs exploraremos cómo integrar el entorno IDE con VS Code</strong>, en
+                    caso de que ya te sientas familiarizado con este último. Esta integración nos permitirá trabajar de
+                    manera aún más eficiente, aprovechando funciones como el autocompletado que mencioné en la entrada
+                    anterior y que nos ayuda a identificar errores en tiempo real.
+                </p>
+
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <p>Antes de concluir, déjame recapitular los pasos esenciales que te llevarán a tener un inicio
+                        exitoso en tu aventura con Arduino:</p>
+
+                    <ol>
+                        <li><strong>Plataforma de Aprendizaje:</strong> Si eres un principiante, comienza con <a
+                                href="https://www.tinkercad.com/" target="_blank"
+                                rel="noopener noreferrer">Tinkercad</a> para experimentar en un entorno virtual sin
+                            riesgos.</li>
+                        <li><strong>Descarga e Instalación:</strong> Obtén el software <a
+                                href="https://www.arduino.cc/en/Main/Software" target="_blank"
+                                rel="noopener noreferrer">Arduino IDE</a> desde el sitio oficial. Es fundamental para
+                            escribir y cargar tus programas en la placa Arduino.</li>
+                        <li><strong>Primeros Pasos:</strong> Familiarízate con la interfaz de Arduino IDE. Abre
+                            ejemplos, estudia el código y experimenta cargándolos en tu placa.</li>
+                        <li><strong>Componentes Físicos:</strong> Una vez que te sientas cómodo en el entorno virtual,
+                            consigue los componentes necesarios para llevar tus proyectos al mundo real.</li>
+                        <li><strong>Comunidad:</strong> Sumérgete en la vasta <a href="https://forum.arduino.cc/"
+                                target="_blank" rel="noopener noreferrer">comunidad de Arduino</a>. Es un lugar perfecto
+                            para resolver dudas, compartir proyectos y aprender de otros entusiastas.</li>
+                    </ol>
+                </div>
+
+                <p>
+                    ¿<strong>Listo para embarcarte en este emocionante viaje</strong>? Con esto, culminamos nuestra
+                    aventura por hoy. Mi deseo es que te sientas preparado y motivado para sumergirte en el vasto
+                    universo de Arduino. ¡Nos vemos en la próxima entrada, ansioso por continuar explorando juntos!
+                </p>
+
             </div>
         </section>
     </main>

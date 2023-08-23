@@ -264,3 +264,9 @@ button {
         font-size: 35px;
     }
 }
+
+@media screen and (max-width: 768px){
+    section {
+        padding: 50px 20px;
+    }
+}

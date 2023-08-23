@@ -238,6 +238,11 @@ button {
     font-size: 35px;
   }
 }
+@media screen and (max-width: 768px) {
+  section {
+    padding: 50px 20px;
+  }
+}
 .section-presentation {
   position: relative;
   height: 100vh;
@@ -1432,6 +1437,25 @@ button {
 .blog-content-section .blog-content-section-container .image-container .img-youtube-link {
   margin-top: 20px;
   border-radius: 10px;
+}
+.blog-content-section .blog-content-section-container .custom-list-container {
+  width: 100%;
+}
+.blog-content-section .blog-content-section-container .custom-list-container h3 {
+  padding-top: 20px;
+}
+.blog-content-section .blog-content-section-container .custom-list-container ul,
+.blog-content-section .blog-content-section-container .custom-list-container ol {
+  padding-left: 60px;
+}
+.blog-content-section .blog-content-section-container .custom-list-container ul li,
+.blog-content-section .blog-content-section-container .custom-list-container ol li {
+  font-size: 20px;
+}
+.blog-content-section .blog-content-section-container .custom-list-container ul li a,
+.blog-content-section .blog-content-section-container .custom-list-container ol li a {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 .blog-content-section .blog-content-section-container .snippets {
   display: flex;
