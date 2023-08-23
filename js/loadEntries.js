@@ -38,7 +38,7 @@ function renderEntry(entry) {
     image.alt = entry.altText;
     image.classList.add('card__image');
     image.setAttribute('decoding', 'async');
-    image.setAttribute('loading', 'async');
+    image.setAttribute('loading', 'lazy');
     image.setAttribute('alt', entry.imageAlt)
 
     imageContainer.appendChild(image);
