@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+#contenedor_general{
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    background-color: white;
+
+}
+
+#caja_padre{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.caja_hijo{
+    float: left;
+    width: 280px;
+    height: 360px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    background-color: white;
+}
+
+.restaurar{
+    clear: both;
+}
+
+@media screen and (max-width: 1135px){
+    #caja_padre{
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    #caja_padre{
+        width: 320px;
+    }
+}
