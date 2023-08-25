@@ -78,7 +78,9 @@ function renderEntry(entry) {
 }
 
 function loadMoreCards() {
-    const newEntries = entriesElements.slice(loaded, loaded + 9);
+    let cardsToLoad = window.matchMedia("(max-width: 768px)").matches ? 3 : 6; 
+
+    const newEntries = entriesElements.slice(loaded, loaded + cardsToLoad);
     newEntries.forEach(renderEntry);
     loaded += newEntries.length;
 
@@ -86,6 +88,8 @@ function loadMoreCards() {
         observer.unobserve(loader);
     }
 }
+
+loadMoreCards();
 
 const options = {
     root: null,

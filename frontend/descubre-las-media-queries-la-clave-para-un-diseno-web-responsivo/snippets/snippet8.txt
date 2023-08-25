@@ -11,7 +11,7 @@
     text-align: center;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
     background-color: white;
-
+    border-radius: 20px;
 }
 
 #caja_padre{

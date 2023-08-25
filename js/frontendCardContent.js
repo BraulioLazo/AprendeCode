@@ -1,5 +1,13 @@
 var frontendCardContent = [
     {
+        keywords: "media queries, diseño adaptativo, puntos de quiebre, max-width, min-width, Responsive design, CSS adaptativo, Dispositivos móviles, moviles, diseño fluido, transiciones estéticas",
+        title: "Descubre las Media Queries: La Clave para un Diseño Web Responsivo",
+        description: "¡Profundiza con nosotros en el fascinante mundo de las Media Queries! Descubre cómo transforman el diseño web y por qué son esenciales para tu viaje de aprendizaje.",
+        imageUrl: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/images/equipo-desarrolladores.jpg",
+        imageAlt: "Equipo de desarrolladores trabajando en una mesa, con una chica explicando código a un chico a su lado",
+        link: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/",
+    },
+    {
         keywords: "enlaces, enlace, HTML, CSS, diseño, web, guía, completa, creación, de, internos, externos, enlaces, correo electrónico, teléfono, usabilidad",
         title: "Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS",
         description: "Descubre cómo crear enlaces impactantes en tu diseño web con nuestra guía completa sobre enlaces en HTML y CSS.",
