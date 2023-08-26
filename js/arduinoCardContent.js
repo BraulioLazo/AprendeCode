@@ -1,4 +1,4 @@
-var arduinoCardContent = [
+const arduinoCardContent = [
     {
         keywords: "arduino, tinkercad, ide, software, interfaz, programacion, proyectos, arduino, entorno, de, trabajo, entorno de trabajo, virtual, placa, codigo, electronica, microcontrolador, entrada, tutorial",
         title: "Iniciando con Arduino: Preparación del Entorno y Plataformas",

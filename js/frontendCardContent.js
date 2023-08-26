@@ -1,4 +1,4 @@
-var frontendCardContent = [
+const frontendCardContent = [
     {
         keywords: "media queries, diseño adaptativo, puntos de quiebre, max-width, min-width, Responsive design, CSS adaptativo, Dispositivos móviles, moviles, diseño fluido, transiciones estéticas",
         title: "Descubre las Media Queries: La Clave para un Diseño Web Responsivo",
