@@ -389,7 +389,7 @@ class myMenu extends HTMLElement {
                 </button>
 
                 <div class="btn-link-container">
-                    <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" class="btn-link menu-btn-link"><span>YouTube</span></a>
+                    <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer" class="btn-link menu-btn-link"><span>YouTube</span></a>
                 </div>
             </div>
         </div>

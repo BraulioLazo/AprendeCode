@@ -405,12 +405,12 @@ button {
             
             <p class="footer__brand-text">Encendiendo el fuego de la curiosidad, avivando la llama de la pasión por la tecnología.</p>
             <div class="social-links">
-                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener">
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
                    <div class="social-link">
                        <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="Logo de YouTube de AprendeCode" loading="lazy">
                    </div>
                 </a>
-                <a href="/blog/">
+                <a href="/frontend/">
                    <div class="social-link">
                        <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
                    </div>
