@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "",
+        title: "CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries",
+        description: "Descubre el poder del CSS Grid. Sumérgete en una guía completa, desde lo básico hasta conseguir diseños responsive. ¡No esperes más y amplía tus habilidades de diseño web!",
+        imageUrl: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.jpg",
+        imageAlt: "Ilustración de un chico concentrado escribiendo en su laptop en un entorno de trabajo, destacando la implementación de CSS Grid para diseños adaptables en desarrollo web.",
+        link: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/",
+    },
+    {
         keywords: "media queries, diseño adaptativo, puntos de quiebre, max-width, min-width, Responsive design, CSS adaptativo, Dispositivos móviles, moviles, diseño fluido, transiciones estéticas",
         title: "Descubre las Media Queries: La Clave para un Diseño Web Responsivo",
         description: "¡Profundiza con nosotros en el fascinante mundo de las Media Queries! Descubre cómo transforman el diseño web y por qué son esenciales para tu viaje de aprendizaje.",
