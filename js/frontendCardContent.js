@@ -1,6 +1,6 @@
 const frontendCardContent = [
     {
-        keywords: "",
+        keywords: "css grid, diseño, diseno, responsive, web, grids, retícula, diseño sin Media Queries, posicionamiento, layout, adaptable, tutorial, principiantes, avanzado, maquetación, estructura, web, desarrollo, columnas, filas, ",
         title: "CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries",
         description: "Descubre el poder del CSS Grid. Sumérgete en una guía completa, desde lo básico hasta conseguir diseños responsive. ¡No esperes más y amplía tus habilidades de diseño web!",
         imageUrl: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.jpg",
