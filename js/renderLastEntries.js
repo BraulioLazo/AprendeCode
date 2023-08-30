@@ -1,5 +1,13 @@
 const lastEntriesFrontend = [
     {
+        keywords: "como, ocultar, mostrar, contenido, con, javascript, NodeList, forEach, optimización, if-else, tutorial, entrada, blog, comentarios, testimonios",
+        title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
+        description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",
+        imageUrl: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.jpg",
+        imageAlt: "Mujer analizando líneas de código en su computadora para ocultar y mostrar contenido con JavaScript",
+        link: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/",
+    },
+    {
         title: "CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries",
         description: "Descubre el poder del CSS Grid. Sumérgete en una guía completa, desde lo básico hasta conseguir diseños responsive. ¡No esperes más y amplía tus habilidades de diseño web!",
         imageUrl: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.jpg",
@@ -19,13 +27,6 @@ const lastEntriesFrontend = [
         imageUrl: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/desarrollador-desarrolladora-mirando-pantalla.jpg",
         imageAlt: "Desarrollador y desarrolladora mirando la pantalla, con expresiones concentradas mientras intentan solucionar un error en el código.",
         link: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/",
-    },
-    {
-        title: "Entendiendo la Propiedad 'Clear' en CSS: Controla Tus Cajas Flotantes",
-        description: "Sumérgete en el mundo de CSS y descubre el poder de la propiedad Clear. Aprende a dominar las cajas flotantes y evitar problemas comunes de diseño",
-        imageUrl: "/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.jpg",
-        imageAlt: "Hombre explicando algo de programación a una chica mientras ambos miran atentamente la pantalla del ordenador.",
-        link: "/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/",
     },
 ];
 

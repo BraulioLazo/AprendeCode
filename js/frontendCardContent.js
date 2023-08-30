@@ -1,6 +1,14 @@
 const frontendCardContent = [
     {
-        keywords: "css grid, diseño, diseno, responsive, web, grids, retícula, diseño sin Media Queries, posicionamiento, layout, adaptable, tutorial, principiantes, avanzado, maquetación, estructura, web, desarrollo, columnas, filas, ",
+        keywords: "como, ocultar, mostrar, contenido, con, javascript, NodeList, forEach, optimización, if-else, tutorial, entrada, blog, comentarios, testimonios",
+        title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
+        description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",
+        imageUrl: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.jpg",
+        imageAlt: "Mujer analizando líneas de código en su computadora para ocultar y mostrar contenido con JavaScript",
+        link: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/",
+    },
+    {
+        keywords: "css grid, diseño, diseno, responsive, web, grids, retícula, diseño sin Media Queries, posicionamiento, layout, adaptable, tutorial, principiantes, avanzado, maquetación, estructura, web, desarrollo, columnas, filas",
         title: "CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries",
         description: "Descubre el poder del CSS Grid. Sumérgete en una guía completa, desde lo básico hasta conseguir diseños responsive. ¡No esperes más y amplía tus habilidades de diseño web!",
         imageUrl: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.jpg",
