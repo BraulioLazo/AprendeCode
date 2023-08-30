@@ -131,6 +131,17 @@
                 opacity: 1;
                 ;
             }
+
+            .snippet-javascript {
+                width: 90%;
+                margin: 0 auto;
+
+                pre {
+                    width: 100%;
+                    min-height: auto;
+
+                }
+            }
         }
     }
 }
@@ -156,6 +167,16 @@
                         max-width: 500px;
                     }
                 }
+                .snippet-javascript {
+                    width: 90%;
+                    margin: 0 auto;
+    
+                    pre {
+                        width: 100%;
+                        min-height: auto;
+                        max-width: none;
+                    }
+                }
             }
         }
     }
@@ -172,7 +193,7 @@
     }
 
     .blog-content-section {
-       
+
 
         .blog-content-section-container {
 
@@ -186,7 +207,7 @@
                     width: 100%;
 
                     pre {
-                        min-height: 250px;
+                        min-height: none;
                         max-height: 250px;
                         max-width: 768px;
                     }

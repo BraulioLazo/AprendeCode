@@ -1515,6 +1515,14 @@ button {
 .blog-content-section .blog-content-section-container .snippets .snippet .copy-button:hover {
   opacity: 1;
 }
+.blog-content-section .blog-content-section-container .snippets .snippet-javascript {
+  width: 90%;
+  margin: 0 auto;
+}
+.blog-content-section .blog-content-section-container .snippets .snippet-javascript pre {
+  width: 100%;
+  min-height: auto;
+}
 
 @media screen and (max-width: 1250px) {
   .blog-content-section .blog-content-section-container {
@@ -1530,6 +1538,15 @@ button {
     max-height: 250px;
     max-width: 500px;
   }
+  .blog-content-section .blog-content-section-container .snippets .snippet-javascript {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .blog-content-section .blog-content-section-container .snippets .snippet-javascript pre {
+    width: 100%;
+    min-height: auto;
+    max-width: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .header-section .header-container h1.header-title {
@@ -1544,7 +1561,7 @@ button {
     width: 100%;
   }
   .blog-content-section .blog-content-section-container .snippets .snippet pre {
-    min-height: 250px;
+    min-height: none;
     max-height: 250px;
     max-width: 768px;
   }

@@ -1,0 +1,5 @@
+var boton = document.querySelectorAll(".boton");
+var mostrarComentario = document.querySelectorAll(".no_mostrar");
+
+
+boton.forEach(function (elemento, indice){})

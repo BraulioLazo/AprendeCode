@@ -1,4 +1,6 @@
 
+
+
 const fetchAndDisplayCodeSnippets = (entryName, totalSnippets) => {
 
     const snippets = [];
@@ -33,15 +35,31 @@ function copyToClipboard() {
 
             navigator.clipboard.writeText(target.textContent)
                 .then(() => {
-                    button.textContent = "Copiado"; 
+                    button.textContent = "Copiado";
                 })
                 .catch(err => console.log('Error copying to clipboard', err));
 
             setTimeout(() => {
-                button.textContent = "Copiar"; 
-            }, 3000);  
+                button.textContent = "Copiar";
+            }, 3000);
         });
     });
 }
 
 window.addEventListener("DOMContentLoaded", copyToClipboard);
+
+
+
+const snippetFixHeight = () => {
+    const javascriptSnippts = document.querySelectorAll(".snippet-javascript");
+    javascriptSnippts.forEach(snippet => {
+        const snippetPre = snippet.querySelector('pre');
+        const snippetPreHeight = window.getComputedStyle(snippetPre).height;
+        if (window.innerWidth >= 1024 && snippetPreHeight >= 320) {
+            snippetPre.style.maxHeight = '320px';
+            snippetPre.style.minHeight = '320px';
+
+            console.log(window.getComputedStyle(snippetPre).height); 
+        }
+    });
+};

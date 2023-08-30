@@ -1,0 +1,9 @@
+var boton = document.querySelectorAll(".boton");
+var mostrarComentario = document.querySelectorAll(".no_mostrar");
+
+
+boton.forEach(function (elemento, indice){
+    elemento.addEventListener("click", function(){
+        mostrarComentario[indice].classList.toggle("mostrar_comentario");
+    })
+})
