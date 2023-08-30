@@ -108,9 +108,9 @@
                     <strong>hoja de JavaScript</strong> y comencemos. El primer paso es crear dos variables: una para
                     capturar los elementos con la clase "<strong>boton</strong>" y otra para capturar los elementos con
                     la clase "no_mostrar". La variable para los botones se definiría así
-                    (<code><strong>var boton = document.querySelectorAll(".boton")</strong></code>), y para los
+                    (<code><strong>var boton = document. querySelectorAll(".boton")</strong></code>), y para los
                     elementos a mostrar, así
-                    (<code><strong>var mostrarComentario = document.querySelectorAll(".no_mostrar")</strong></code>).
+                    (<code><strong>var mostrarComentario = document .querySelectorAll(".no_mostrar")</strong></code>).
                 </p>
 
 
@@ -164,7 +164,7 @@
                     directamente a la variable "boton", ya que JavaScript no sería capaz de identificar en cuál de los
                     botones estamos haciendo clic. Por tanto, el Event Listener se agregará al <strong>elemento
                         específico</strong>, de la siguiente manera:
-                    (<code>elemento.addEventListener("click", function(){})</code>). Ahora, en el interior de esa
+                    (<code>elemento. addEventListener("click", function(){})</code>). Ahora, en el interior de esa
                     función particular, necesitamos que se añada la clase "<strong>mostrar_comentario</strong>" a la
                     etiqueta de párrafo que ya contiene la clase "no_mostrar" desde el principio.
                 </p>
@@ -176,7 +176,7 @@
                     función. Para garantizar que la clase se añada al <strong>elemento correcto</strong>, vamos a
                     utilizar el <strong>índice</strong> de la variable para que JavaScript pueda identificar la posición
                     precisa. Esto se logra así:
-                    (<code>mostrarComentario[indice].classList.toggle ("mostrar_comentario")</code>).
+                    (<code>mostrarComentario[indice] .classList.toggle ("mostrar_comentario")</code>).
                 </p>
 
                 <p>
@@ -212,7 +212,7 @@
                     Para establecer esta <strong>condición</strong>, emplearemos las instrucciones <strong>"if"</strong>
                     y <strong>"else"</strong>. Al utilizar solo "if", estaríamos abarcando únicamente uno de los estados
                     posibles de dicha condición, específicamente el estado verdadero. Por ejemplo:
-                    <code>if (mostrarComentario[indice].classList.contains ("mostrar_comentario")) { elemento.innerHTML = "Ver Menos";}</code>
+                    <code>if (mostrarComentario[indice] .classList.contains ("mostrar_comentario")) { elemento.innerHTML = "Ver Menos";}</code>
                 </p>
 
                 <p>
