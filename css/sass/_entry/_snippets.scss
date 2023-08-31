@@ -49,11 +49,13 @@
 
             ul,
             ol {
+                padding-top: 5px;
                 padding-left: 60px;
 
                 li {
 
                     font-size: 20px;
+                    color: var(--color-text-medium);
 
                     a {
                         color: var(--color-primary);
@@ -132,7 +134,7 @@
                 ;
             }
 
-            .snippet-javascript {
+            .snippet-alone{
                 width: 90%;
                 margin: 0 auto;
 
@@ -167,7 +169,7 @@
                         max-width: 500px;
                     }
                 }
-                .snippet-javascript {
+                .snippet-alone {
                     width: 90%;
                     margin: 0 auto;
     
@@ -176,6 +178,14 @@
                         min-height: auto;
                         max-width: none;
                     }
+                }
+            }
+
+            .custom-list-container {
+                ul,
+                ol {
+                    padding-left: 35px;
+    
                 }
             }
         }

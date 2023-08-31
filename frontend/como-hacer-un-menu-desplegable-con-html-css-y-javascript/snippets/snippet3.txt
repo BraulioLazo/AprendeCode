@@ -1,0 +1,5 @@
+@media screen and (max-width: 1250px) {
+  .contenedor_paginas {
+    display: none;
+  }
+}

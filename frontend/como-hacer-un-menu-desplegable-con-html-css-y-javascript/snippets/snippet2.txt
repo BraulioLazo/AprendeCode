@@ -1,0 +1,96 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+/*-----------------------  MENU -----------------------*/
+
+#contenedor_menu {
+  width: 100%;
+  height: 80px;
+  background-color: #751fff;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#contenedor_hijo_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px 40px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#logo_menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+h2 {
+  font-size: 35px;
+  color: white;
+  font-family: "Khand", sans-serif;
+}
+
+h3 {
+  font-size: 55px;
+  margin-bottom: 40px;
+  padding: 10px 40px;
+  font-family: "Khand", sans-serif;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.contenedor_paginas { /* ESTE ES EL CONTENEDOR QUE HAREMOS DESPLEGABLE */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.pagina {
+  margin-left: 25px;
+  font-size: 16px;
+  color: gainsboro;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-family: "Khand", sans-serif;
+  transition: all 0.5s ease 0s;
+}
+
+/*----------  MENU TRNSICIONES ----------*/
+.contenedor_paginas p:hover {
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+/*-----------------------  CUERPO -----------------------*/
+
+#cuerpo {
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#cuerpo p {
+  font-size: 18px;
+  font-style: italic;
+  font-family: "lora", serif;
+}
