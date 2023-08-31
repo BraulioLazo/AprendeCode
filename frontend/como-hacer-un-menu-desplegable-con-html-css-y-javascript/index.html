@@ -42,20 +42,23 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    Cuando llegues al final de este blog, tendrás tu menú de página web completamente listo: responsive
-                    y desplegable gracias a JavaScript. ¡Te lo garantizo! Es posible que ya te sientas cómodo con HTML y
-                    CSS, pero si estás dando tus primeros pasos en el mundo de JavaScript, no te preocupes. Aquí en
-                    AprendeCode, estamos aquí para ayudarte a hacer esos primeros pasos, que a veces pueden parecer
-                    desafiantes, mucho más accesibles y fáciles de dar. En realidad, lo que hace que esos primeros pasos
-                    sean complicados es el temor a comenzar. Sin embargo, una vez des esos primeros pasos, te darás
-                    cuenta de que no es tan intimidante como pensabas. Pero dejemos a un lado esta introducción y
-                    centrémonos en lo verdaderamente emocionante: ¿cómo podemos crear un menú desplegable usando HTML,
-                    CSS y JavaScript?
+                    Cuando llegues al <strong>final de este blog</strong>, tendrás tu <strong>menú de página web
+                        completamente listo: responsive y desplegable gracias a JavaScript</strong>. ¡Te lo garantizo!
+                    Es posible que ya te sientas cómodo con <strong>HTML y CSS</strong>, pero si estás dando tus
+                    <strong>primeros pasos en el mundo de JavaScript</strong>, no te preocupes. Aquí en
+                    <strong>AprendeCode</strong>, estamos aquí para ayudarte a hacer esos primeros pasos, que a veces
+                    pueden parecer desafiantes, mucho <strong>más accesibles y fáciles de dar</strong>. En realidad, lo
+                    que hace que esos primeros pasos sean complicados es el <strong>temor a comenzar</strong>. Sin
+                    embargo, una vez des esos primeros pasos, te darás cuenta de que no es tan intimidante como
+                    pensabas. Pero dejemos a un lado esta introducción y <strong>centrémonos en lo verdaderamente
+                        emocionante</strong>: ¿cómo podemos crear un <strong>menú desplegable usando HTML, CSS y
+                        JavaScript</strong>?
                 </p>
                 <p>
-                    A continuación, encontrarás el código HTML y CSS, con algunos estilos predefinidos, que servirá como
-                    base. A partir de aquí, nos sumergiremos en la creación de un menú completamente desplegable y
-                    adaptable, lo cual es el enfoque principal de esta guía.
+                    A continuación, encontrarás el <strong>código HTML y CSS</strong>, con algunos <strong>estilos
+                        predefinidos</strong>, que servirá como base. A partir de aquí, nos <strong>sumergiremos en la
+                        creación de un menú completamente desplegable y adaptable</strong>, lo cual es el enfoque
+                    principal de esta guía.
                 </p>
 
                 <div class="snippets">
@@ -75,21 +78,24 @@
                     </div>
                 </div>
 
-                <h2>¡ Primeros pasos !</h2>
+                <h2>Iniciando con Tu Menú Desplegable: ¿Por Dónde Empezar?</h2>
                 <p>
-                    Al revisar el código, notarás que hasta ahora no hemos abordado el desplegable en sí, sino que hemos
-                    trabajado en los estilos que utilizaremos. Los enlaces actualmente no redirigen a ningún lugar y les
-                    he añadido un efecto hover para darle un toque más interesante: ajusté tanto el color como el tamaño
-                    con "transform: scale()".
+                    Al revisar el <strong>código</strong>, notarás que hasta ahora <strong>no hemos abordado el
+                        desplegable en sí</strong>, sino que hemos trabajado en los <strong>estilos que
+                        utilizaremos</strong>. Los enlaces actualmente no redirigen a ningún lugar y les he añadido un
+                    <strong>efecto hover</strong> para darle un toque más interesante: ajusté tanto el color como el
+                    tamaño con "<strong>transform: scale()</strong>".
                 </p>
                 <p>
-                    Después de analizar el código y ponerte al tanto de la situación actual, vamos a dar los primeros
-                    pasos en el orden adecuado para ir configurando el menú desplegable. El primer paso en la creación
-                    de un menú desplegable es ocultar la navegación utilizando Media Queries en el punto que
-                    consideremos adecuado. En este caso, he optado por hacerlo en un ancho de pantalla de 1250 píxeles.
-                    Ten en cuenta que este valor puede variar de una página a otra, según el tamaño del menú en
-                    cuestión. El proceso es bastante simple: buscamos la clase o el ID del contenedor de las páginas y
-                    simplemente le agregamos "display: none". Esto se vería de la siguiente manera:
+                    Después de <strong>analizar el código</strong> y ponerte al tanto de la situación actual, vamos a
+                    dar los <strong>primeros pasos en el orden adecuado</strong> para ir <strong>configurando el menú
+                        desplegable</strong>. El primer paso en la creación de un menú desplegable es <strong>ocultar la
+                        navegación utilizando Media Queries</strong> en el punto que consideremos adecuado. En este
+                    caso, he optado por hacerlo en un <strong>ancho de pantalla de 1250 píxeles</strong>. Ten en cuenta
+                    que este valor puede variar de una página a otra, según el tamaño del menú en cuestión. El proceso
+                    es bastante simple: buscamos la <strong>clase o el ID del contenedor de las páginas</strong> y
+                    simplemente le agregamos "<strong>display: none</strong>". Esto se vería de la siguiente manera:
+
                 </p>
 
                 <div class="snippets">
@@ -107,21 +113,24 @@
                     crear una transición y lograr que aparezca de manera gradual en lugar de repentinamente.
                 </p>
 
-                <h2>¡ Ocultando la navegación !</h2>
+                <h2>Cómo Ocultar la Navegación para Pantallas Pequeñas con Media Queries</h2>
                 <p>
-                    Vamos a empezar a aplicar los estilos en ese punto de quiebre (1250px). Si sigues el mismo orden que
-                    yo, podrás observar cómo el menú va cambiando y será mucho más sencillo comprender por qué decidí
-                    añadir esos estilos en particular. Comencemos con un "position: absolute" para colocarlo en la
-                    ubicación precisa que consideramos conveniente. Mi idea al diseñar este menú es que se despliegue
-                    debajo de la barra del menú que estará visible todo el tiempo, dando la impresión de que esta barra
-                    se está expandiendo. Para lograrlo, le he añadido un "top: 100px" y tanto "left" como "right" de
-                    30px, ya que toda la página cuenta con un relleno de 30px que marca el inicio y fin del contenido de
-                    la página. Luego, empleé "display: block" para que las páginas se posicionen una debajo de la otra,
-                    y "text-align: center" para mantener el texto centrado. Hasta aquí hemos establecido la posición y
-                    el aspecto deseado, pero aún necesitamos ocultar el contenido por completo. Con este propósito, he
-                    incorporado "padding: 0px", "height: 0px" y "overflow: hidden" para evitar que el texto se salga del
-                    contenedor. A continuación, encontrarás el código HTML y CSS para que puedas revisarlo y entenderlo
-                    mejor.
+                    Vamos a empezar a <strong>aplicar los estilos en ese punto de quiebre (1250px)</strong>. Si sigues
+                    el mismo orden que yo, podrás observar cómo el <strong>menú va cambiando</strong> y será mucho más
+                    sencillo comprender por qué decidí añadir esos estilos en particular. Comencemos con un
+                    "<strong>position: absolute</strong>" para colocarlo en la ubicación precisa que consideramos
+                    conveniente. Mi idea al diseñar este menú es que se <strong>despliegue debajo de la barra del
+                        menú</strong> que estará visible todo el tiempo, dando la impresión de que esta barra se está
+                    expandiendo. Para lograrlo, le he añadido un "<strong>top: 100px</strong>" y tanto
+                    "<strong>left</strong>" como "<strong>right</strong>" de 30px, ya que toda la página cuenta con un
+                    relleno de 30px que marca el inicio y fin del contenido de la página. Luego, empleé
+                    "<strong>display: block</strong>" para que las páginas se posicionen una debajo de la otra, y
+                    "<strong>text-align: center</strong>" para mantener el texto centrado. Hasta aquí hemos establecido
+                    la <strong>posición y el aspecto deseado</strong>, pero aún necesitamos <strong>ocultar el contenido
+                        por completo</strong>. Con este propósito, he incorporado "<strong>padding: 0px</strong>",
+                    "<strong>height: 0px</strong>" y "<strong>overflow: hidden</strong>" para evitar que el texto se
+                    salga del contenedor. A continuación, encontrarás el <strong>código HTML y CSS</strong> para que
+                    puedas revisarlo y entenderlo mejor.
                 </p>
 
                 <div class="snippets">
@@ -141,18 +150,20 @@
                     </div>
                 </div>
 
-                <h2>¡ Creando el ícono del Menú Desplegable !</h2>
+                <h2>Pasos para Crear un Ícono de Menú Desplegable con HTML y CSS</h2>
                 <p>
-                    Hemos logrado ocultar la navegación en pantallas más pequeñas desde ese punto en adelante. Sin
-                    embargo, ahora necesitamos incorporar un ícono que permita que la navegación reaparezca cuando el
-                    usuario lo seleccione. Para crear este ícono, utilizaremos HTML y CSS para aplicar transiciones.
-                    Primero, dirígete a tu archivo HTML y crea un "div" con la clase "icono_menu_desplegable". Dentro de
-                    este "div", agrega tres "div" adicionales, cada uno representando una línea. Asignaremos a estos
-                    tres "div" una clase común llamada "desplegable_linea" y una clase única para identificar cada uno
-                    de ellos: "desplegable_linea_uno", "desplegable_linea_dos" y "desplegable_linea_tres".
-
-                    A continuación, encontrarás el código hasta este punto para que puedas revisarlo. En breve, añadiré
-                    los estilos CSS para el ícono, y luego te explicaré los pasos que he tomado.
+                    Hemos logrado <strong>ocultar la navegación en pantallas más pequeñas</strong> desde ese punto en
+                    adelante. Sin embargo, ahora necesitamos incorporar un <strong>ícono que permita que la navegación
+                        reaparezca</strong> cuando el usuario lo seleccione. Para crear este ícono, utilizaremos
+                    <strong>HTML y CSS</strong>. Primero, dirígete a tu archivo HTML y crea un
+                    "<strong>div</strong>" con la clase "<strong>icono_menu_desplegable</strong>". Dentro de este "div",
+                    agrega <strong>tres "div" adicionales</strong>, cada uno representando una línea. Asignaremos a
+                    estos tres "div" una clase común llamada "<strong>desplegable_linea</strong>" y una clase única para
+                    identificar cada uno de ellos: "<strong>desplegable_linea_uno</strong>",
+                    "<strong>desplegable_linea_dos</strong>" y "<strong>desplegable_linea_tres</strong>". A
+                    continuación, encontrarás el <strong>código hasta este punto</strong> para que puedas revisarlo. En
+                    breve, añadiré los <strong>estilos CSS para el ícono</strong>, y luego te explicaré los pasos que he
+                    tomado.
                 </p>
 
                 <div class="snippets">
@@ -171,46 +182,52 @@
                         </pre>
                     </div>
                 </div>
-                <h2>¡ Estilos del ícono del Menú Desplegable !</h2>
+                <h2>Aplicando Estilos CSS al Ícono de tu Menú Desplegable</h2>
                 <p>
-                    En el código, notarás que los estilos para el ícono se han agregado dentro del punto de quiebre de
-                    1250px, asegurándonos de que solo se apliquen desde ese punto en adelante. Ahora, permíteme
-                    explicarte un poco sobre los estilos, por qué los he aplicado de esta manera y luego nos
-                    adentraremos en el JavaScript.
-                    Dentro de la clase "icono_menu_desplegable", lo más relevante es la propiedad "position: relative",
-                    que controlará la posición del ícono. Continuamos con un "width" de 49px, un "height" también de
-                    49px, y un "padding" de 12px y 8px.
+                    En el código, notarás que los estilos para el <strong>ícono se han agregado dentro del punto de
+                        quiebre de 1250px</strong>, asegurándonos de que solo se apliquen desde ese punto en adelante.
+                    Ahora, permíteme explicarte un poco sobre los <strong>estilos</strong>, por qué los he aplicado de
+                    esta manera y luego nos adentraremos en el <strong>JavaScript</strong>. Dentro de la clase
+                    "<strong>icono_menu_desplegable</strong>", lo más relevante es la propiedad "<strong>position:
+                        relative</strong>", que controlará la posición del ícono. Continuamos con un
+                    "<strong>width</strong>" de 49px, un "<strong>height</strong>" también de 49px, y un
+                    "<strong>padding</strong>" de 12px y 8px.
                 </p>
                 <p>
-                    Luego, encontramos los estilos para las líneas utilizando la clase "desplegable_linea". Comenzamos
-                    con "position: absolute", ya que queremos controlar la posición de cada línea de manera individual.
-                    A continuación, asignamos un "width" de 34px, "height" de 3px, "border-radius" de 5px y
-                    "background-color" blanco. Seguidamente, abrimos llaves individuales para cada clase de línea
-                    ("desplegable_linea_uno", "desplegable_linea_dos" y "desplegable_linea_tres") y les asignamos
-                    posiciones específicas: "top: 15px" para la primera línea, "top: 23px" para la segunda y "bottom:
-                    15px" para la tercera.
+                    Luego, encontramos los estilos para las <strong>líneas</strong> utilizando la clase
+                    "<strong>desplegable_linea</strong>". Comenzamos con "<strong>position: absolute</strong>", ya que
+                    queremos controlar la posición de cada línea de manera individual. A continuación, asignamos un
+                    "<strong>width</strong>" de 34px, "<strong>height</strong>" de 3px, "<strong>border-radius</strong>"
+                    de 5px y "<strong>background-color</strong>" blanco. Seguidamente, abrimos llaves individuales para
+                    cada clase de línea ("<strong>desplegable_linea_uno</strong>",
+                    "<strong>desplegable_linea_dos</strong>" y "<strong>desplegable_linea_tres</strong>") y les
+                    asignamos posiciones específicas: "<strong>top: 15px</strong>" para la primera línea, "<strong>top:
+                        23px</strong>" para la segunda y "<strong>bottom: 15px</strong>" para la tercera.
                 </p>
                 <p>
-                    Si has copiado el código en tu editor y ajustas el tamaño de la ventana, podrás ver cómo el ícono
-                    del menú desplegable aparece en el punto de quiebre de 1250px y desaparece cuando la ventana se
-                    agranda.
+                    Si has copiado el <strong>código en tu editor</strong> y ajustas el tamaño de la ventana, podrás ver
+                    cómo el <strong>ícono del menú desplegable aparece en el punto de quiebre de 1250px</strong> y
+                    desaparece cuando la ventana se agranda.
+
                 </p>
 
-                <h2>¡ Clase desplegar_menu !</h2>
+                <h2>Creando la Clase CSS para el Despliegue de tu Menú</h2>
                 <p>
-                    Ahora, es necesario que cuando un usuario haga clic en el ícono, el menú se despliegue o, en caso de
-                    estar desplegado, vuelva a ocultarse. Este comportamiento se logra mediante JavaScript. Sin embargo,
-                    antes de adentrarnos en JavaScript, debemos crear una clase que contendrá los estilos del menú
-                    cuando esté completamente desplegado. Para hacerlo, dirigámonos a la hoja de estilos y creemos esa
-                    clase, que más tarde añadiremos utilizando JavaScript.
+                    Ahora, es necesario que cuando un usuario haga clic en el <strong>ícono</strong>, el <strong>menú se
+                        despliegue</strong> o, en caso de estar desplegado, vuelva a ocultarse. Este comportamiento se
+                    logra mediante <strong>JavaScript</strong>. Sin embargo, antes de adentrarnos en JavaScript, debemos
+                    crear una clase que contendrá los <strong>estilos del menú cuando esté completamente
+                        desplegado</strong>. Para hacerlo, dirigámonos a la hoja de estilos y creemos esa clase, que más
+                    tarde añadiremos utilizando JavaScript.
                 </p>
                 <p>
-                    Esta clase contendrá únicamente dos propiedades, ya que los estilos que ya se habían aplicado al
-                    contenedor de las páginas son los adecuados. La clase se llama "desplegar_menu". Dentro de ella,
-                    solo necesitamos contrarrestar el "padding: 0px" que se estableció previamente con un valor de
-                    "30px" y el "height", que originalmente era "0px", ahora se establecerá en "10em". Por último, en la
-                    clase "contenedor_paginas", añadí la propiedad "transition", que permitirá que el menú aparezca y
-                    desaparezca gradualmente, como ya mencioné anteriormente.
+                    Esta clase contendrá únicamente dos propiedades, ya que los <strong>estilos que ya se habían
+                        aplicado al contenedor de las páginas son los adecuados</strong>. La clase se llama
+                    "<strong>desplegar_menu</strong>". Dentro de ella, solo necesitamos contrarrestar el
+                    "<strong>padding: 0px</strong>" que se estableció previamente con un valor de "30px" y el
+                    "<strong>height</strong>", que originalmente era "0px", ahora se establecerá en "10em". Por último,
+                    en la clase "<strong>contenedor_paginas</strong>", añadí la propiedad "<strong>transition</strong>",
+                    que permitirá que el menú aparezca y desaparezca gradualmente, como ya mencioné anteriormente.
                 </p>
 
                 <div class="snippets">
@@ -230,36 +247,40 @@
                     </div>
                 </div>
 
-                <h2>¡ Comienzo del JavaScript !</h2>
+                <h2>Integrando JavaScript para un Menú Desplegable Interactivo</h2>
                 <p>
-                    Una vez definida esta clase, nuestro objetivo es añadir la clase "desplegar_menu" al contenedor de
-                    las páginas cuando el usuario haga clic en el ícono del menú. Para lograr esto, utilizaremos
-                    JavaScript. Así que, dirijámonos a la sección de JavaScript y empecemos.
+                    Una vez definida esta clase, nuestro objetivo es añadir la clase "<strong>desplegar_menu</strong>"
+                    al contenedor de las páginas cuando el usuario haga clic en el ícono del menú. Para lograr esto,
+                    utilizaremos <strong>JavaScript</strong>. Así que, dirijámonos a la sección de
+                    <strong>JavaScript</strong> y empecemos.
                 </p>
                 <p>
-                    Primero, crearemos una variable llamada "iconoMenu" para seleccionar el ícono del menú. Esto se hace
-                    con la función "document.querySelector (".icono_menu_desplegable")". Luego, estableceremos una
-                    función llamada "desplegarMenu", aunque inicialmente estará vacía: "function desplegarMenu(){}".
-                    Posteriormente, fuera de las llaves de esta función, añadiremos un Event Listener a la variable
-                    "iconoMenu" que creamos anteriormente. Este Event Listener estará configurado para que cuando se
-                    haga clic en el ícono del menú, se active la función "desplegarMenu":
-                    "iconoMenu.addEventListener ('click', desplegarMenu)".
+                    Primero, crearemos una variable llamada "<strong>iconoMenu</strong>" para seleccionar el ícono del
+                    menú. Esto se hace con la función
+                    "<strong>document.querySelector (".icono_menu_desplegable")</strong>". Luego, estableceremos una
+                    función llamada "<strong>desplegarMenu</strong>", aunque inicialmente estará vacía:
+                    "<strong>function desplegarMenu(){}"</strong>. Posteriormente, fuera de las llaves de esta función,
+                    añadiremos un <strong>Event Listener</strong> a la variable "<strong>iconoMenu</strong>" que creamos
+                    anteriormente. Este <strong>Event Listener</strong> estará configurado para que cuando se haga clic
+                    en el ícono del menú, se active la función "<strong>desplegarMenu</strong>":
+                    "<strong>iconoMenu.addEventListener('click', desplegarMenu)"</strong>.
                 </p>
                 <p>
-                    Luego, nos adentraremos en la función "desplegarMenu". En su interior, indicaremos lo que deseamos
-                    que esta haga. Básicamente, cada vez que se haga clic en el ícono del menú, queremos agregar la
-                    clase "desplegar_menu" al contenedor de las páginas que ya contiene la clase "contenedor_paginas".
-                    Si la clase ya está presente, deseamos que se elimine para ocultar nuevamente el menú. Para llevar a
-                    cabo esto, emplearemos la propiedad "classList" y el método "toggle", que funciona como un
+                    Luego, nos adentraremos en la función "<strong>desplegarMenu</strong>". En su interior, indicaremos
+                    lo que deseamos que esta haga. Básicamente, cada vez que se haga clic en el ícono del menú, queremos
+                    agregar la clase "<strong>desplegar_menu</strong>" al contenedor de las páginas que ya contiene la
+                    clase "<strong>contenedor_paginas</strong>". Si la clase ya está presente, deseamos que se elimine
+                    para ocultar nuevamente el menú. Para llevar a cabo esto, emplearemos la propiedad
+                    "<strong>classList</strong>" y el método "<strong>toggle</strong>", que funciona como un
                     interruptor, alternando entre agregar y eliminar la clase de manera continua.
                 </p>
                 <p>
-                    Declararemos una variable llamada "menuDesplegable" utilizando la función
-                    "document.querySelector (".contenedor_paginas")". A continuación, añadiremos la propiedad "classList"
-                    seguida del método "toggle" a esta variable, de la siguiente manera:
-                    "menuDesplegable.classList .toggle("desplegar_menu")". A continuación, te proporciono el código
-                    completo de JavaScript para que puedas revisarlo, copiarlo
-                    en tu editor y aclarar cualquier duda que puedas tener.
+                    Declararemos una variable llamada "<strong>menuDesplegable</strong>" utilizando la función
+                    "<strong>document.querySelector (".contenedor_paginas")</strong>". A continuación, añadiremos la
+                    propiedad "<strong>classList</strong>" seguida del método "<strong>toggle</strong>" a esta variable,
+                    de la siguiente manera: "<strong>menuDesplegable.classList .toggle("desplegar_menu")"</strong>". A
+                    continuación, te proporciono el código completo de <strong>JavaScript</strong> para que puedas
+                    revisarlo, copiarlo en tu editor y aclarar cualquier duda que puedas tener.
                 </p>
 
                 <div class="snippets">
@@ -277,15 +298,16 @@
                     Si copias el código en tu editor, notarás que funciona a la perfección. Cada vez que hagas clic en
                     el ícono del menú, este se desplegará y ocultará de manera continua. Ahora bien, ¿qué más podemos
                     explorar? Si observas el ícono, mantendrá la misma forma incluso cuando el menú esté desplegado.
-                    Normalmente, cuando el menú está desplegado, la imagen cambia a una "x". Podemos lograr esto
-                    mediante código, pero eso será tratado en detalle en el próximo blog para no hacer este artículo
-                    excesivamente largo. Una vez esté listo, lo encontrarás aquí: "Transición en el ícono del menú:
-                    ¿Cómo hacerlo?"
+                    Normalmente, cuando el menú está desplegado, la imagen cambia a una "<strong>x</strong>". Podemos
+                    lograr esto mediante código, pero eso será tratado en detalle en el próximo blog para no hacer este
+                    artículo excesivamente largo. Una vez esté listo, lo encontrarás aquí: "<strong>Transición en el
+                        ícono del menú: ¿Cómo hacerlo?</strong>"
                 </p>
                 <p>
                     En resumen, espero que hayas disfrutado y aprendido algo nuevo. Recuerda que mi nombre es Braulio y
-                    que esto es AprendeCode. Si tienes alguna duda o comentario, no dudes en dejármelo saber en la
-                    pestaña de contacto en el menú. ¡Hasta la próxima!
+                    que esto es <strong>AprendeCode</strong>. Si tienes alguna duda o comentario, no dudes en dejármelo
+                    saber en la pestaña de contacto en el menú. ¡Hasta la próxima!
+
                 </p>
 
             </div>
