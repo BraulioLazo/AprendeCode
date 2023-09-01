@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "menú,com, hacer, un, menu, desplegable, con, html, css, desplegable,  javascript, tutorial, entrada, responsive, ocultar, mostrar, contenido",
+        title: "Cómo hacer un menú desplegable con HTML, CSS y JavaScript?",
+        description: "Dale vida a tu sitio web con un menú desplegable interactivo. En esta guía paso a paso, exploraremos cómo crear un menú desplegable adaptable utilizando HTML, CSS y JavaScript.",
+        imageUrl: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/images/menu-desplegable-html-css-javascript.jpg",
+        imageAlt: "Chica explorando el emocionante mundo del menú desplegable en su PC de escritorio: una guía completa de HTML, CSS y JavaScript para crear un menú interactivo y adaptable en AprendeCode.",
+        link: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/",
+    },
+    {
         keywords: "como, ocultar, mostrar, contenido, con, javascript, NodeList, forEach, optimización, if-else, tutorial, entrada, blog, comentarios, testimonios",
         title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
         description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",

@@ -1,5 +1,13 @@
 const lastEntriesFrontend = [
     {
+        keywords: "menú,com, hacer, un, menu, desplegable, con, html, css, desplegable,  javascript, tutorial, entrada, responsive, ocultar, mostrar, contenido",
+        title: "Cómo hacer un menú desplegable con HTML, CSS y JavaScript?",
+        description: "Dale vida a tu sitio web con un menú desplegable interactivo. En esta guía paso a paso, exploraremos cómo crear un menú desplegable adaptable utilizando HTML, CSS y JavaScript.",
+        imageUrl: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/images/menu-desplegable-html-css-javascript.jpg",
+        imageAlt: "Chica explorando el emocionante mundo del menú desplegable en su PC de escritorio: una guía completa de HTML, CSS y JavaScript para crear un menú interactivo y adaptable en AprendeCode.",
+        link: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/",
+    },
+    {
         keywords: "como, ocultar, mostrar, contenido, con, javascript, NodeList, forEach, optimización, if-else, tutorial, entrada, blog, comentarios, testimonios",
         title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
         description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",
@@ -20,21 +28,14 @@ const lastEntriesFrontend = [
         imageUrl: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/images/equipo-desarrolladores.jpg",
         imageAlt: "Equipo de desarrolladores trabajando en una mesa, con una chica explicando código a un chico a su lado",
         link: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/",
-    },
-    {
-        title: "Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS",
-        description: "Descubre cómo crear enlaces impactantes en tu diseño web con nuestra guía completa sobre enlaces en HTML y CSS.",
-        imageUrl: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/desarrollador-desarrolladora-mirando-pantalla.jpg",
-        imageAlt: "Desarrollador y desarrolladora mirando la pantalla, con expresiones concentradas mientras intentan solucionar un error en el código.",
-        link: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/",
-    },
+    }
 ];
 
 const renderEntryContent = (cardContent) => {
     return `
     <div class="entry-card">
        <div class="entry-card__image-container">
-           <img src="${cardContent.imageUrl}" loading="lazy" alt="${cardContent.imageAlt}">
+           <img src="${cardContent.imageUrl}" loading="lazy" decoding="async" alt="${cardContent.imageAlt}">
        </div>
        <div class="entry-card__bottom-position">
            <h3>${cardContent.title}</h3>
