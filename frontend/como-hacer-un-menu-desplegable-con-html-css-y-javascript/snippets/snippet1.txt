@@ -37,7 +37,7 @@
         <section id="cuerpo">
 
             <h3>
-                ¿Cómo crear un menú desplegable con HTML, CSS y JavaScript?
+                ¿Cómo hacer un menú desplegable con HTML, CSS y JavaScript?
             </h3>
 
             <p>
