@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "HTML, CSS, JavaScript, menú desplegable, transición, ícono de menú, responsivo, adaptativo, tutorial, paso a paso, código, programación, clases CSS, transformación, rotación, línea, div, desarrollo web",
+        title: "Transición en el ícono del menú ¿Cómo hacerlo?",
+        description: "Descubre cómo crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Sigue nuestro tutorial paso a paso y haz que tu menú sea no solo funcional sino también visualmente atractivo.",
+        imageUrl: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg",
+        imageAlt: "Dos muchachos discutiendo cómo hacer una transición en el ícono del menú desplegable usando HTML, CSS y JavaScript.",
+        link: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/",
+    },
+    {
         keywords: "menú,com, hacer, un, menu, desplegable, con, html, css, desplegable,  javascript, tutorial, entrada, responsive, ocultar, mostrar, contenido",
         title: "Cómo hacer un menú desplegable con HTML, CSS y JavaScript?",
         description: "Dale vida a tu sitio web con un menú desplegable interactivo. En esta guía paso a paso, exploraremos cómo crear un menú desplegable adaptable utilizando HTML, CSS y JavaScript.",
@@ -120,5 +128,5 @@ const frontendCardContent = [
         imageAlt: "Cómo usar Flexbox para organizar elementos en CSS",
         link: "/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/",
     },
-    
+
 ];

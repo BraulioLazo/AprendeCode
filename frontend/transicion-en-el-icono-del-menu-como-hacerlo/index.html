@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Aprende a crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Este tutorial paso a paso te guía en cada etapa del proceso.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, menú desplegable, transición, ícono de menú, tutorial, desarrollo web, programación">
+    <meta name="author" content="Braulio de AprendeCode">
+    
+    <meta property="og:title" content="Transición en el ícono del menú ¿Cómo hacerlo?">
+    <meta property="og:description" content="Descubre cómo realizar una transición animada en el ícono de tu menú desplegable utilizando HTML, CSS y JavaScript. Este artículo detallado te ofrece un tutorial completo.">
+    <meta property="og:image" content="/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/transicion-en-el-icono-del-menu-como-hacerlo/">
+    <meta property="og:type" content="article">
+    
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Transición en el ícono del menú ¿Cómo hacerlo?</title>
+</head>
+
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Transición en el ícono del menú ¿Cómo hacerlo?
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    ¡Hola <strong>AprendeCoder</strong>! En nuestro último blog, exploramos cómo <strong>crear un menú
+                        desplegable desde cero</strong>. ¡Hoy, estamos listos para dar el siguiente paso emocionante! En
+                    esta entrada, te guiaré a través de la <strong>creación de una transición en el ícono de
+                        menú</strong>, que se desplegará al hacer clic, mostrando así el menú oculto. Sé que puede
+                    parecer complicado, pero te aseguro que es más <strong>sencillo de lo que parece</strong>. De hecho,
+                    pensé que si incluíamos este proceso en la entrada anterior, se volvería demasiado extensa. Por eso,
+                    ¡estoy emocionado de mostrarte cómo lograrlo aquí!
+                </p>
+                <p>
+                    ¡Vamos directo al grano, sin demasiada introducción, ya que sé que prefieres <strong>ir al meollo
+                        del asunto</strong>! A continuación, encontrarás el <strong>código que utilizaremos como punto
+                        de partida</strong>. Esta es una continuación directa del blog anterior, por lo que empezaremos
+                    justo donde lo dejamos. He incluido el <strong>código HTML, CSS y JavaScript</strong> en el orden
+                    que corresponde. Al copiar este código, deberías obtener un menú desplegable con un texto de Lorem
+                    Ipsum que añadí para darle un poco más de cuerpo. Aquí tienes el <strong>código completo</strong>.
+                    ¡Cópialo y luego te explicaré paso a paso cómo lograr la transición en el ícono!
+                </p>
+
+                <h2>Preparando el terreno: HTML, CSS y JavaScript iniciales</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Configurando estilos: Clases CSS para la transición</h2>
+                <p>
+                    Si ya le has echado un vistazo al <strong>código</strong>, habrás notado que el <strong>menú
+                        desplegable está funcionando a la perfección</strong>. Sin embargo, para darle el toque final,
+                    necesitamos <strong>lograr la transición de las tres líneas del ícono a una "X"</strong>. No te
+                    preocupes, este proceso es emocionante y te guiaré paso a paso. Comencemos por <strong>declarar las
+                        clases que contendrán los estilos para esta transición</strong>. Una vez hecho esto, nos
+                    dirigiremos a la <strong>hoja de estilos</strong> para implementarlos.
+                </p>
+                <p>
+                    Como son <strong>tres líneas</strong> las que vamos a transformar, vamos a crear una <strong>clase
+                        para cada una de ellas</strong>. Empecemos por "<strong>rotar_linea_uno</strong>". En el bloque
+                    de reglas de esta clase, incluiremos la propiedad "<strong>transform</strong>" con las funciones
+                    "<strong>translateY</strong>" con un valor de 8px y "<strong>rotateZ</strong>" con un valor de
+                    45deg. Esto logrará que la línea uno se mueva 8 píxeles hacia abajo desde su posición original y
+                    rote 45 grados en sentido horario. Puedes consultar el <strong>código CSS</strong> a continuación
+                    para comprenderlo mejor.
+                </p>
+                <p>
+                    Luego, definimos la clase "<strong>eliminar_linea_dos</strong>". Esta es la más sencilla, ya que
+                    solo necesitamos declararla y asignarle la propiedad "<strong>width</strong>" con un valor de 0px.
+                    Por último, tenemos la clase "<strong>rotar_linea_tres</strong>". Nuevamente, dentro de su bloque de
+                    reglas, usamos la propiedad "<strong>transform</strong>" con las funciones
+                    "<strong>translateY</strong>" y "<strong>rotateZ</strong>". Sin embargo, el valor de "translateY"
+                    ahora es -8px, para mover la línea hacia arriba, y el valor de "rotateZ" es -45deg, para una
+                    rotación en sentido antihorario, en contraposición a la clase "rotar_linea_uno".
+                </p>
+                <p>
+                    Si te preguntas cómo decidí la distancia de <strong>8 píxeles</strong> para mover las líneas en el
+                    eje Y, te cuento que fue producto de <strong>algunas pruebas</strong>. Comencé con 10 píxeles, luego
+                    probé con 9 y finalmente encontré que 8 era el ajuste perfecto. Esta medida puede variar según la
+                    <strong>separación entre las líneas</strong>, así que siempre es una cuestión de <strong>ajuste
+                        visual</strong>. Ahora que tenemos nuestras clases listas, es hora de avanzar al
+                    <strong>JavaScript</strong> para aplicarlas a los div correspondientes. Echa un vistazo al
+                    <strong>código CSS</strong> a continuación, donde las clases están definidas al final, separadas por
+                    comentarios.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Entrando en la lógica: Código JavaScript para la transición</h2>
+                <p>
+                    Ahora estamos listos para empezar con el <strong>JavaScript</strong>. Como partimos del JavaScript
+                    que compartiste al comienzo del blog, continuaremos desde allí. Dentro de la función
+                    <strong>desplegarMenu()</strong>, vamos a declarar <strong>tres variables que contendrán las
+                        referencias a las líneas del ícono</strong>. Las declaré de la siguiente manera:
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    Estas variables representarán cada una de las líneas del ícono. Como mencioné antes, si necesitas
+                    aclarar alguna parte, no dudes en consultar el código JavaScript a continuación para obtener un
+                    entendimiento más profundo.
+                </p>
+
+                <h2>Utilizando classList.toggle: Una solución simple para cambios complejos</h2>
+                <p>
+                    Ahora, una vez que tenemos estas <strong>tres variables declaradas</strong>, procederemos a
+                    agregarles las <strong>clases</strong> que creamos en la hoja de estilos para lograr la
+                    <strong>transición del ícono</strong>. Como mencioné en un blog anterior (si aún no lo has leído,
+                    aquí tienes el enlace <strong>¿Cómo hacer un menú desplegable con HTML, CSS y JavaScript?</strong>),
+                    podemos lograr esto usando la propiedad <strong>classList</strong> y el método
+                    <strong>toggle</strong>, que funciona como un interruptor. A continuación, te proporcionaré un
+                    ejemplo de cómo lo hice con la primera variable, <strong>"lineaUno"</strong>, y luego te daré las
+                    tres variables con las clases correspondientes.
+                </p>
+                <p>
+                    Para la primera variable, el código se vería así:
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Recuerda que las otras <strong>dos variables, "lineaDos" y "lineaTres"</strong>, seguirán la misma
+                    sintaxis, pero usando las <strong>clases correspondientes</strong>. Puedes encontrar las tres
+                    variables con las clases en el <strong>código JavaScript</strong> que te proporciono a continuación.
+                    ¡Esto dará vida a la <strong>transición en el ícono del menú</strong>!
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Si ya <strong>copiaste el código en tu editor</strong>, seguramente has notado cómo funciona la
+                    <strong>transición en el ícono del menú</strong>. Con este blog, hemos logrado <strong>completar y
+                        hacer totalmente funcional el menú desplegable</strong>, que además es <strong>responsive y se
+                        adapta a diferentes dispositivos</strong>. Antes de concluir, me gustaría <strong>resumir los
+                        puntos clave</strong> que hemos cubierto hoy para asegurarnos de que no te pierdas ningún
+                    <strong>detalle importante</strong>.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <ol>
+                        <li><strong>Partiendo del Punto Donde nos Quedamos:</strong> Retomamos el código del menú
+                            desplegable del blog anterior para avanzar en el proyecto.</li>
+                        <li><strong>Configuración de Estilos Iniciales:</strong> Visualizamos el código HTML, CSS y
+                            JavaScript que sirve como punto de partida para la transición del ícono del menú.</li>
+                        <li><strong>Definiendo Clases CSS para la Transición:</strong> Aprendimos cómo crear clases CSS
+                            específicas para transformar las líneas del ícono del menú en una "X".</li>
+                        <li><strong>Entendiendo las Propiedades de Transformación:</strong> Explicamos la propiedad
+                            "transform" y sus funciones "translateY" y "rotateZ" para mover y rotar las líneas del
+                            ícono.</li>
+                        <li><strong>Implementación con JavaScript:</strong> Utilizamos JavaScript para aplicar
+                            dinámicamente las clases CSS creadas, logrando la transición en el ícono del menú.</li>
+                        <li><strong>Detalles Finales y Ajustes:</strong> Comentamos sobre cómo llegamos a la decisión de
+                            mover las líneas 8 píxeles y por qué es un ajuste visual.</li>
+                        <li><strong>Conclusión y Siguientes Pasos:</strong> Finalizamos el blog, resaltando la
+                            importancia de la práctica para consolidar el aprendizaje y anticipando temas futuros.</li>
+                    </ol>
+                </div>
+
+                <h2>¡Y eso es todo! Menú desplegable completado y listo para usar</h2>
+                <p>
+                    <strong>Recuerda</strong>, la mejor manera de realmente <strong>aprender a programar</strong> es no
+                    solo leyendo, sino también <strong>practicando</strong>. Así que, te animo a que tomes lo que has
+                    aprendido en este blog y <strong>empieces a aplicarlo</strong> en tu laptop, móvil o cualquier
+                    dispositivo donde estés leyendo esto.
+                </p>
+                <p>
+                    Llegamos al final de este blog y quiero aprovechar para <strong>agradecerte sinceramente</strong>
+                    por tomar el tiempo de leer y seguir este contenido. Espero que hayas disfrutado <strong>aprendiendo
+                        sobre cómo crear un menú desplegable con HTML, CSS y JavaScript</strong>. Siempre estoy aquí
+                    para <strong>ayudarte en tu viaje de aprendizaje</strong>. ¡Hasta la próxima en el siguiente blog!
+                </p>
+                <p>
+                    Un abrazo, 
+                    Braulio de <strong>AprendeCode</strong>
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'transicion-en-el-icono-del-menu-como-hacerlo';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

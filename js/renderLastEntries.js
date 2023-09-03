@@ -1,6 +1,12 @@
 const lastEntriesFrontend = [
     {
-        keywords: "menú,com, hacer, un, menu, desplegable, con, html, css, desplegable,  javascript, tutorial, entrada, responsive, ocultar, mostrar, contenido",
+        title: "Transición en el ícono del menú ¿Cómo hacerlo?",
+        description: "Descubre cómo crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Sigue nuestro tutorial paso a paso y haz que tu menú sea no solo funcional sino también visualmente atractivo.",
+        imageUrl: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg",
+        imageAlt: "Dos muchachos discutiendo cómo hacer una transición en el ícono del menú desplegable usando HTML, CSS y JavaScript.",
+        link: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/",
+    },
+    {
         title: "Cómo hacer un menú desplegable con HTML, CSS y JavaScript?",
         description: "Dale vida a tu sitio web con un menú desplegable interactivo. En esta guía paso a paso, exploraremos cómo crear un menú desplegable adaptable utilizando HTML, CSS y JavaScript.",
         imageUrl: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/images/menu-desplegable-html-css-javascript.jpg",
@@ -8,7 +14,6 @@ const lastEntriesFrontend = [
         link: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/",
     },
     {
-        keywords: "como, ocultar, mostrar, contenido, con, javascript, NodeList, forEach, optimización, if-else, tutorial, entrada, blog, comentarios, testimonios",
         title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
         description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",
         imageUrl: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.jpg",
@@ -22,13 +27,6 @@ const lastEntriesFrontend = [
         imageAlt: "Ilustración de un chico concentrado escribiendo en su laptop en un entorno de trabajo, destacando la implementación de CSS Grid para diseños adaptables en desarrollo web.",
         link: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/",
     },
-    {
-        title: "Descubre las Media Queries: La Clave para un Diseño Web Responsivo",
-        description: "¡Profundiza con nosotros en el fascinante mundo de las Media Queries! Descubre cómo transforman el diseño web y por qué son esenciales para tu viaje de aprendizaje.",
-        imageUrl: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/images/equipo-desarrolladores.jpg",
-        imageAlt: "Equipo de desarrolladores trabajando en una mesa, con una chica explicando código a un chico a su lado",
-        link: "/frontend/descubre-las-media-queries-la-clave-para-un-diseno-web-responsivo/",
-    }
 ];
 
 const renderEntryContent = (cardContent) => {
