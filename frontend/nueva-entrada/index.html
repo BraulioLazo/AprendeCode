@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Nueva Entrada</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Nueva Entrada
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    ¡Hola, Aprende-Coder! Hoy te traigo un emocionante blog titulado "Galería Responsive con CSS Grid".
+                    Sin lugar a dudas, las imágenes desempeñan un papel esencial en la web. No solo en términos
+                    estéticos, sino también para transmitir el mensaje que deseamos con el contenido de nuestro sitio
+                    web. Pensando en esto, he creado este blog para explorar juntos cómo crear una galería responsive
+                    utilizando CSS Grid. No te preocupes, no será muy largo, ya que ya hay un blog dedicado por completo
+                    a CSS Grid.
+                </p>
+                <p>
+                    Sin perder tiempo, vamos directamente a lo que más nos apasiona: el código. A continuación,
+                    encontrarás el código de partida. Hemos creado una caja contenedora principal y cinco cajas
+                    secundarias con algunos estilos básicos. A partir de aquí, daremos los pasos necesarios para
+                    transformarlo en una galería responsive que se adapte perfectamente a distintos dispositivos.
+                    ¡Empecemos!
+                </p>
+
+                <h2>Codigo de partida HTML y CSS </h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Sin duda, es evidente tanto en el código como en la imagen que hemos definido una caja principal
+                    junto con cinco cajas secundarias que servirán como contenedores para las imágenes. Cada una de
+                    estas cajas tiene asignadas dos clases: "imagen" para todas y una clase adicional para
+                    identificarlas individualmente. Esta segunda clase nos permitirá tener un mayor control sobre la
+                    disposición de las cajas en el diseño del CSS Grid.
+                </p>
+                <p>
+                    Tras una revisión inicial del código, estamos listos para avanzar al primer paso esencial: convertir
+                    el contenedor principal en un Grid. Lograremos esto utilizando la propiedad "display" con el valor
+                    "grid". Luego, con la propiedad "grid-template-columns", definiremos el número de columnas que
+                    deseamos para nuestro diseño. En este caso, he establecido cuatro columnas, cada una con un tamaño
+                    de 1fr, utilizando la función "repeat". La línea quedaría como sigue: "grid-template-columns:
+                    repeat(4, 1fr)". Por último, agregaremos un margen de 20px entre las cajas utilizando la propiedad
+                    "grid-gap". De esta manera, estamos dando los primeros pasos para construir nuestra galería
+                    responsive con CSS Grid. ¿Preparados para continuar? ¡Sigamos adelante!
+                </p>
+
+                <h2>¡ Propiedad object-fit !</h2>
+
+                <p>
+                    Antes de sumergirnos en la disposición de las cajas, es importante que invoquemos las imágenes desde
+                    el HTML. Una vez tengamos las imágenes cargadas, podremos proceder con el posicionamiento. Al cargar
+                    las imágenes, nos trasladamos a la hoja de estilos y les indicamos que ocupen el 100% del ancho y
+                    alto de su contenedor respectivo. Sin embargo, sabes tan bien como yo que esto puede causar
+                    distorsiones en las imágenes, ya que para ajustarse al 100% del contenedor, pierden sus dimensiones
+                    originales. Para evitar esta distorsión, aprovecharemos la propiedad "object-fit" con el valor
+                    "cover". Además, para mantener las imágenes centradas tanto en horizontal como en vertical,
+                    utilizaremos la propiedad "object-position" con los valores "center" y "center".
+                </p>
+                <p>
+                    A continuación, te proporciono el código hasta este punto, así como la imagen de cómo lucen las
+                    cajas con las imágenes cargadas. Recuerda que al copiar el código en tu editor, las imágenes no
+                    aparecerán, ya que necesitas cargar tus propias imágenes. Sin más, aquí tienes el código:
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡ Posicionamiento de los contenedores !</h2>
+
+                <p>
+                    ¡Vamos avanzando a paso firme en la mejora de nuestra galería responsive! Al copiar el código
+                    mencionado en tu editor, ya deberías estar viendo una galería con imágenes cargadas. Ahora es el
+                    momento de perfeccionar su posicionamiento y lograr que luzca aún más impresionante gracias a CSS
+                    Grid.
+
+                    En primer lugar, vamos a realizar un ajuste necesario. Eliminaremos tanto los padding como los
+                    margenes que habíamos agregado a los contenedores de imágenes en un principio. Estos espacios
+                    adicionales ya no son necesarios al haber cargado las imágenes.
+                </p>
+                <p>
+                    Con la preparación hecha, ahora nos sumergimos en el posicionamiento de las cajas. Para comenzar,
+                    vamos a otorgarle un espacio de dos columnas a la primera caja, que lleva la clase
+                    "imagen_horizontal_uno". Esto lo lograremos mediante la propiedad "grid-column". Siguiendo desde la
+                    izquierda, le indicamos que comience en la línea 1 y termine en la línea 3, expresado como
+                    "grid-column: 1 / 3". Te recuerdo que si estas propiedades aún no te resultan familiares, puedes
+                    consultar el blog sobre CSS Grid que mencioné anteriormente: <a
+                        href="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/">CSS Grid
+                        desde Cero: Diseños Adaptables
+                        Sin Necesidad de Media Queries</a>.
+                </p>
+                <p>
+                    Este blog está repleto de información valiosa sobre CSS Grid, lo que te permitirá comprender aún
+                    mejor el contenido aquí presentado. ¡Sigamos adelante, estamos en la vía correcta para lograr una
+                    galería espectacularmente responsiva!
+                </p>
+
+                <h2>¡ Posicionamiento del contenedor tres !</h2>
+                <p>
+                    Tras implementar el posicionamiento de la primera imagen, nuestro próximo destino es la tercera
+                    caja, ya que deseamos dejar la segunda caja con una columna.
+                    Centrémonos en la caja número tres, a la cual le hemos asignado la clase "imagen_vertical_uno". Dado
+                    que planeamos que esta caja ocupe dos filas, recurriremos a la propiedad "grid-row" y utilizaremos
+                    los valores -3 y -1, lo que indica que empezará en la tercera línea y finalizará en la primera. Sin
+                    embargo, es importante mencionar que si nos limitamos únicamente a esta propiedad, experimentaremos
+                    un comportamiento no deseado, como podrás comprobar por ti mismo si pruebas esta línea de código en
+                    tu editor.
+                </p>
+                <p>
+                    Para evitar este problema, vamos a complementar nuestra estrategia empleando la propiedad
+                    "grid-column", indicando que la caja debe abarcar desde la cuarta línea hasta la quinta. Si sientes
+                    que estas instrucciones necesitan mayor claridad, no dudes en consultar el fragmento de código
+                    proporcionado más abajo.
+                </p>
+
+                <h2>¡ Posicionamiento del contenedor cinco !</h2>
+                <p>
+                    Ahora nos enfocaremos en la cuarta imagen, la cual queremos que continúe ocupando únicamente una
+                    columna y una fila. Para lograrlo, no será necesario realizar ningún cambio en esta caja en
+                    particular, ya que su posición es la ideal para nuestro diseño.
+
+                    Pasemos a la quinta imagen, a la cual le asignamos la clase "imagen_horizontal_dos". Para esta caja,
+                    deseamos que ocupe dos columnas en el grid. Utilizaremos la propiedad "grid-column" y le indicaremos
+                    que comience en la línea 2 y finalice en la línea 4. Con esta configuración, obtendremos el
+                    resultado deseado: "grid-column: 2 / 4". Al implementar estas modificaciones, habremos completado el
+                    diseño del layout en la versión de escritorio.
+                </p>
+                <p>
+                    En este punto, te proporciono el código correspondiente hasta aquí. Luego, continuaremos con las
+                    Media Queries, que nos permitirán ajustar el posicionamiento para las vistas en tableta y móvil.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡ Media Queries (max-width: 1024px) !</h2>
+                <p>
+                    ¡Excelente progreso en la optimización de la galería responsive! Ahora, es el momento de ajustar el
+                    diseño para pantallas de tamaño mediano, como las tabletas. En esta etapa, queremos que la galería
+                    muestre únicamente dos imágenes por fila, ya que tres podrían lucir demasiado pequeñas en este
+                    formato. Para lograr esto, nos adentraremos en la media query que abarca pantallas de hasta 1024px
+                    de ancho. Así, creamos la condición con el siguiente código:
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    En la versión para tablets, donde anteriormente teníamos cuatro columnas, ajustaremos la cantidad a
+                    tres columnas utilizando la propiedad "grid-template-columns". Dos de estas columnas contendrán la
+                    primera imagen, mientras que la tercera se destinará a la segunda imagen. De esta manera, lograremos
+                    que solo dos imágenes se muestren por fila, resultando en:
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Es importante recalcar que las dos primeras imágenes se mantendrán en su posición sin necesidad de
+                    modificaciones. Sin embargo, la tercera imagen, identificada por la clase "imagen_vertical_uno",
+                    requerirá reajustar tanto sus filas como columnas. La propiedad "grid-row" se establecerá de la
+                    línea 3 a la 4, mientras que "grid-column" abarcará desde la columna 1 hasta la 4. Este ajuste
+                    permitirá que la tercera imagen ocupe todo el ancho de la fila en la que se encuentra.
+                    En este punto, aquí tienes el código actualizado hasta ahora. Continuaremos con el último punto de
+                    quiebre para adaptar la galería a dispositivos móviles.
+                </p>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡ Segundo punto de quiebre (max-width: 768px) !</h2>
+                <p>
+                    Ahora, nos centraremos en hacer que la galería luzca fantástica en dispositivos móviles. Para ello,
+                    abriremos una media query que se active en pantallas de hasta 768px de ancho, que es el tamaño
+                    típico de muchos dispositivos móviles. Comenzamos con el siguiente código:
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet11">Copiar</button>
+                        <pre>
+                           <code id="snippet11" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    En la pantalla pequeña, queremos que cada imagen ocupe una fila completa. Para lograrlo, declaramos
+                    una sola columna para el contenedor padre utilizando la propiedad "grid-template-columns":
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet12">Copiar</button>
+                        <pre>
+                           <code id="snippet12" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    Luego, para simplificar el diseño en dispositivos móviles, vamos a revertir el posicionamiento que
+                    habíamos aplicado previamente. En este caso, ya habíamos posicionado tres contenedores específicos:
+                    "imagen_horizontal_uno", "imagen_vertical_uno" e "imagen_horizontal_dos". Ahora, simplemente
+                    abriremos cada clase en el CSS y eliminaremos cualquier propiedad de posicionamiento que hubiéramos
+                    agregado previamente. En lugar de especificar un nuevo posicionamiento, estableceremos "grid-column:
+                    auto" para permitir que los contenedores sigan el flujo por defecto en dispositivos móviles.
+
+                    Por ejemplo, para la clase "imagen_horizontal_uno", quedaría así:
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet13">Copiar</button>
+                        <pre>
+                           <code id="snippet13" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    Con esto, hemos completado la adaptación de la galería a pantallas de diferentes tamaños. A
+                    continuación, te proporciono el código completo para que puedas revisarlo y copiarlo si lo deseas.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet14">Copiar</button>
+                        <pre>
+                           <code id="snippet14" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet15">Copiar</button>
+                        <pre>
+                           <code id="snippet15" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    Ahora, con el diseño adaptado para diferentes dispositivos, estamos listos para concluir este
+                    tutorial. Antes de despedirme, tengo una emocionante noticia que compartir contigo: ¡nuestro canal
+                    de YouTube está oficialmente en marcha! Si deseas explorar aún más contenido y aprender más sobre
+                    desarrollo web, te invito a visitar nuestro canal en el siguiente enlace: 
+                    <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" rel="noopener noreferrer" target="_blank">Canal de YouTube –
+                    AprendeCode</a>.
+
+                    Ahora, llega el momento de despedirnos por ahora. ¡Te envío un fuerte abrazo y muchas gracias por
+                    seguir aprendiendo con AprendeCode! Hasta la próxima, Braulio.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 15;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>
