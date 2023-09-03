@@ -1,6 +1,15 @@
 const frontendCardContent = [
+    
     {
-        keywords: "HTML, CSS, JavaScript, menú desplegable, transición, ícono de menú, responsivo, adaptativo, tutorial, paso a paso, código, programación, clases CSS, transformación, rotación, línea, div, desarrollo web",
+        keywords: "css, grid, galería, galeria, responsive, design, desarrollo, web, html, css, tutorial, guía, paso, a, media, queries, posicionamiento, layout, adaptabilidad, diseño, web, imágenes, imagenes",
+        title: "Cómo Crear una Galería Responsive con CSS Grid: Guía Paso a Paso",
+        description: "Descubre cómo crear una impresionante galería de imágenes responsive con CSS Grid. Esta guía paso a paso te lleva desde la estructura HTML básica hasta las media queries, asegurándote de que tu galería se vea genial en todos los dispositivos.",
+        imageUrl: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/images/galeria-responsive-css-grid.jpg",
+        imageAlt: "Tres desarrolladores colaborando en un proyecto de galería de imágenes con CSS Grid: uno revisando el diseño en una tableta, mientras las otras dos discuten las adaptaciones para pantallas grandes y el código subyacente.",
+        link: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/",
+    },
+    {
+        keywords: "HTML, CSS, JavaScript, menú, menu, desplegable, transición, transicion, ícono, icono, de, responsivo, adaptativo, tutorial, paso a paso, código, programación, rotación, línea",
         title: "Transición en el ícono del menú ¿Cómo hacerlo?",
         description: "Descubre cómo crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Sigue nuestro tutorial paso a paso y haz que tu menú sea no solo funcional sino también visualmente atractivo.",
         imageUrl: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg",

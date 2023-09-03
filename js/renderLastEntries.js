@@ -1,5 +1,12 @@
 const lastEntriesFrontend = [
     {
+        title: "Cómo Crear una Galería Responsive con CSS Grid: Guía Paso a Paso",
+        description: "Descubre cómo crear una impresionante galería de imágenes responsive con CSS Grid. Esta guía paso a paso te lleva desde la estructura HTML básica hasta las media queries, asegurándote de que tu galería se vea genial en todos los dispositivos.",
+        imageUrl: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/images/galeria-responsive-css-grid.jpg",
+        imageAlt: "Tres desarrolladores colaborando en un proyecto de galería de imágenes con CSS Grid: uno revisando el diseño en una tableta, mientras las otras dos discuten las adaptaciones para pantallas grandes y el código subyacente.",
+        link: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/",
+    },
+    {
         title: "Transición en el ícono del menú ¿Cómo hacerlo?",
         description: "Descubre cómo crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Sigue nuestro tutorial paso a paso y haz que tu menú sea no solo funcional sino también visualmente atractivo.",
         imageUrl: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg",
@@ -19,13 +26,6 @@ const lastEntriesFrontend = [
         imageUrl: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.jpg",
         imageAlt: "Mujer analizando líneas de código en su computadora para ocultar y mostrar contenido con JavaScript",
         link: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/",
-    },
-    {
-        title: "CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries",
-        description: "Descubre el poder del CSS Grid. Sumérgete en una guía completa, desde lo básico hasta conseguir diseños responsive. ¡No esperes más y amplía tus habilidades de diseño web!",
-        imageUrl: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.jpg",
-        imageAlt: "Ilustración de un chico concentrado escribiendo en su laptop en un entorno de trabajo, destacando la implementación de CSS Grid para diseños adaptables en desarrollo web.",
-        link: "/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/",
     },
 ];
 
