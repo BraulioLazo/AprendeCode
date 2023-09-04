@@ -1,7 +1,7 @@
 const frontendCardContent = [
     
     {
-        keywords: "",
+        keywords: "Efecto, de, Scroll, Desplazamiento, JavaScript, Menú, menu, Código, CSS, Propiedad, Cambiar, Color, de, fondo, window.onscroll, onscroll, efect",
         title: "¿Cómo hacer Efecto Scroll con JavaScript?",
         description: "Descubre cómo añadir un toque dinámico y atractivo a tu sitio web con efectos de desplazamiento (Scroll) en JavaScript. Sumérgete en este tutorial detallado que te guiará paso a paso para implementar un efecto de scroll en el menú de tu página.",
         imageUrl: "/frontend/como-hacer-efecto-scroll-con-javascript/images/chica-en-escritorio-trabajando-en-efecto-scroll.webp",

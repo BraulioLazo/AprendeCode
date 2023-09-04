@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Aprende cómo implementar efectos de desplazamiento con JavaScript para añadir dinamismo a tu sitio web. Este tutorial te guía a través de cada paso para crear un efecto de scroll en el menú de tu página web.">
+    <meta name="keywords" content="JavaScript, Efecto de Scroll, Desplazamiento, Menú, Diseño Web, AprendeCode, Tutorial, Código">
     <meta name="author" content="Braulio de AprendeCode">
 
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:title" content="Cómo Crear un Efecto de Scroll Dinámico en tu Menú con JavaScript">
+    <meta property="og:description" content="Sumérgete en este tutorial paso a paso para aprender cómo añadir un efecto de desplazamiento dinámico y atractivo al menú de tu sitio web usando JavaScript.">
+    <meta property="og:image" content="/frontend/como-hacer-efecto-scroll-con-javascript/images/chica-en-escritorio-trabajando-en-efecto-scroll.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-hacer-efecto-scroll-con-javascript/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
@@ -80,7 +80,7 @@
 
                 <p>
                     Si dedicas un momento a examinar detenidamente el código que te he proporcionado arriba, notarás que
-                    <strong>aún no hemos abordado en absoluto el Efecto Scroll</strong> que nos ocupa. En el HTML, verás
+                    <strong>aún no hemos abordado en absoluto el Efecto Scroll</strong>. En el HTML, verás
                     que hay un <strong>menú de navegación</strong> al que le conferiremos el mencionado efecto de
                     desplazamiento. Más adelante, encontrarás una sección que contiene una única imagen y un degradado.
                     He incluido este degradado para lograr una <strong>transición suave entre las secciones
@@ -160,7 +160,7 @@
                 <h2>Identificando el Menú: Variable y Selectores en JavaScript</h2>
                 <p>
                     Ahora, avanzando en el <strong>JavaScript</strong>, el primer paso es declarar una variable para
-                    seleccionar el elemento con la clase <strong>".menu"</strong>. Así es como lo haremos: <strong>var
+                    seleccionar el elemento con la clase <strong>"menu"</strong>. Así es como lo haremos: <strong>var
                         menu = document.querySelector(".menu")</strong>. Antes de continuar, es importante mencionar que
                     he optado por declarar esta variable en el <strong>ámbito local</strong>. Esto se debe a que esta es
                     la única línea de código que necesitamos para este blog en particular, y no planeamos utilizar la
@@ -179,12 +179,12 @@
                 <p>
                     El siguiente paso consiste en agregar la clase que preparamos en la <strong>hoja de
                         estilos</strong>,
-                    "<strong>cambiar-fondo</strong>", al elemento que tiene la clase "<strong>.menu</strong>". Vamos a
+                    "<strong>cambiar-fondo</strong>", al elemento que tiene la clase "<strong>menu</strong>". Vamos a
                     abordar la <strong>sintaxis</strong> y luego explicaré el funcionamiento detrás de ella. Así es como
                     se verá: <strong>menu.classList.toggle("cambiar-fondo", window.scrollY > 0)</strong>. ¿Qué implica
                     esta línea de código? En realidad, estamos estableciendo que cuando el desplazamiento en el eje
                     vertical sea mayor que cero, se añada la clase "cambiar-fondo" al elemento que contiene la clase
-                    ".menu" utilizando el método <strong>toggle</strong>. ¿Qué logramos con esto? Básicamente, al
+                    "menu" utilizando el método <strong>toggle</strong>. ¿Qué logramos con esto? Básicamente, al
                     observar si el valor de desplazamiento <strong>window.scrollY</strong> es mayor que cero, decidimos
                     si añadir o eliminar la clase "cambiar-fondo".
                 </p>
@@ -249,13 +249,13 @@
                         emocionantes</strong>. Tu <strong>dedicación</strong> y <strong>pasión</strong> son el motor que
                     impulsa tu camino hacia el <strong>conocimiento</strong>. Si te encuentras con alguna
                     <strong>pregunta</strong> o <strong>inquietud</strong> en este viaje, no dudes en dejarme un
-                    comentario. Estoy aquí para ser tu <strong>guía y aliado</strong> en tu búsqueda de conocimiento.
+                    mensaje en la pestaña contacto. Estoy aquí para servirte de <strong>guía</strong> en tu búsqueda de conocimiento.
                     Cada <strong>desafío</strong> es una oportunidad de <strong>crecimiento</strong>, y con cada línea
                     de código, estás creando un futuro lleno de <strong>posibilidades</strong>.
                 </p>
                 <p>
-                    ¡<strong>Hasta la próxima</strong>! Recuerda que mi nombre es Braulio, que esto es AprendeCode, y
-                    juntos seguiremos explorando el <strong>emocionante mundo del desarrollo</strong>. ¡Un Abrazo!
+                    ¡<strong>Hasta la próxima</strong>! Recuerda que mi nombre es Braulio, que esto es AprendeCode y
+                    que juntos seguiremos explorando el <strong>emocionante mundo del desarrollo</strong>. ¡Un Abrazo!
                 </p>
 
 
