@@ -1,6 +1,15 @@
 const frontendCardContent = [
     
     {
+        keywords: "",
+        title: "¿Cómo hacer Efecto Scroll con JavaScript?",
+        description: "Descubre cómo añadir un toque dinámico y atractivo a tu sitio web con efectos de desplazamiento (Scroll) en JavaScript. Sumérgete en este tutorial detallado que te guiará paso a paso para implementar un efecto de scroll en el menú de tu página.",
+        imageUrl: "/frontend/como-hacer-efecto-scroll-con-javascript/images/chica-en-escritorio-trabajando-en-efecto-scroll.webp",
+        imageAlt: "Chica sentada en su escritorio mirando el efecto de desplazamiento que ha implementado en su sitio web.",
+        link: "/frontend/como-hacer-efecto-scroll-con-javascript/",
+    },
+    
+    {
         keywords: "css, grid, galería, galeria, responsive, design, desarrollo, web, html, css, tutorial, guía, paso, a, media, queries, posicionamiento, layout, adaptabilidad, diseño, web, imágenes, imagenes",
         title: "Cómo Crear una Galería Responsive con CSS Grid: Guía Paso a Paso",
         description: "Descubre cómo crear una impresionante galería de imágenes responsive con CSS Grid. Esta guía paso a paso te lleva desde la estructura HTML básica hasta las media queries, asegurándote de que tu galería se vea genial en todos los dispositivos.",
