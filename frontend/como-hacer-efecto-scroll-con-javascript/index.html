@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>¿Cómo hacer Efecto Scroll con JavaScript?</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¿Cómo hacer Efecto Scroll con JavaScript?
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+
+                <h2>Introducción: El Efecto de Desplazamiento con JavaScript Explicado</h2>
+                <p>
+                    ¿Alguna vez te has preguntado <strong>cómo lograr un efecto de desplazamiento (scroll) con
+                        JavaScript</strong>? Es una cuestión que seguramente ha cruzado por la mente de muchos de
+                    nosotros. Los efectos que se activan al hacer scroll le aportan <strong>dinamismo y atractivo a
+                        cualquier sitio web</strong>, y todos anhelamos captar la atención de los usuarios al visitar
+                    nuestra página. Es por ello que hoy te traigo este blog, que aunque breve en extensión, resulta
+                    sumamente interesante para aquellos <strong>apasionados por el mundo del código</strong>. En esta
+                    ocasión, nos centraremos en explorar cómo implementar el efecto scroll en el menú de tu sitio.
+                </p>
+                <p>
+                    Ahora que concluimos con la introducción, <strong>adentrémonos poco a poco en este tema</strong>.
+                    Empezaremos por el <strong>código de partida</strong>, el cual te proporciono a continuación para
+                    que lo analicemos juntos.
+                </p>
+
+
+                <h2>Preparando el Terreno: Tu Código de Partida para el Efecto Scroll</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Si dedicas un momento a examinar detenidamente el código que te he proporcionado arriba, notarás que
+                    <strong>aún no hemos abordado en absoluto el Efecto Scroll</strong> que nos ocupa. En el HTML, verás
+                    que hay un <strong>menú de navegación</strong> al que le conferiremos el mencionado efecto de
+                    desplazamiento. Más adelante, encontrarás una sección que contiene una única imagen y un degradado.
+                    He incluido este degradado para lograr una <strong>transición suave entre las secciones
+                        contiguas</strong>. Por último, la sección final no contiene más que un espacio vacío que nos
+                    permitirá disponer de un área para realizar el desplazamiento. Es importante recordar que, aunque
+                    copies el código, la imagen no se mostrará, ya que no la estás copiando. Por lo tanto, es
+                    <strong>fundamental que tengas tu propia imagen</strong> para asegurar el correcto funcionamiento al
+                    ejecutar el código en tu dispositivo.
+                </p>
+                <p>
+                    En cuanto al CSS, podrás apreciar que hemos aplicado la propiedad <strong>"position: fixed"</strong>
+                    al menú para que permanezca fijo en la parte superior incluso mientras se realiza el desplazamiento
+                    en la ventana. En realidad, considero que no es necesario examinar minuciosamente el resto del
+                    código CSS, ya que se trata principalmente de estilos estándar. <strong>A partir de este punto,
+                        concentrémonos al cien por ciento en la creación del Efecto Scroll específico para el
+                        menú</strong>.
+                </p>
+
+
+                <h2>Configurando la Clase 'cambiar-fondo': Estilos CSS para el Efecto Scroll</h2>
+                <p>
+                    Pasemos a la hoja de estilos (<strong>CSS</strong>), donde <strong>solamente necesitaremos crear una
+                        clase</strong> que contendrá los estilos aplicados al menú al activar el efecto de scroll.
+                    Posteriormente, esta misma clase será asignada al elemento correspondiente mediante
+                    <strong>JavaScript</strong>. En realidad, lo único que debemos definir dentro de esta nueva clase es
+                    un <strong>fondo de color</strong>, ya que el menú mantendrá su apariencia constante en términos de
+                    posición. El cambio que se presentará será <strong>únicamente en el color de fondo del menú durante
+                        el desplazamiento</strong>.
+                </p>
+                <p>
+                    Es el momento de dirigirnos a la hoja de estilos y, bajo el <strong>selector del menú</strong>,
+                    procederemos a declarar la nueva clase. En este caso, he optado por nombrarla
+                    "<strong>cambiar-fondo</strong>". Dentro de este selector, el único estilo que agregaremos es el de
+                    "<strong>background-color</strong>", que, como mencioné previamente, será de color blanco. El
+                    resultado final sería el siguiente: "<strong>background-color: white</strong>". Con estos pasos,
+                    hemos completado lo necesario en la hoja de estilos. Ahora continuaremos en la sección de
+                    <strong>JavaScript</strong>, donde también encontrarás que es una tarea sumamente sencilla.
+                </p>
+
+
+                <h2>Detectar Desplazamiento: Escuchando el Evento Scroll en JavaScript</h2>
+                <p>
+                    Ahora, adentrándonos en el <strong>JavaScript</strong>, el primer paso consiste en <strong>detectar
+                        cuándo se realiza un desplazamiento</strong> en la ventana y, en ese momento, ejecutar una
+                    función específica. Dentro de esta función, indicaremos que el menú cambie de color bajo ciertas
+                    condiciones. Aquí tienes la estructura básica y luego profundizaremos en lo que estamos logrando con
+                    ella: "<strong>window.onscroll = function(){}</strong>". Esta línea marca el inicio de lo que
+                    necesitamos implementar en JavaScript.
+                </p>
+                <p>
+                    En esencia, lo que estamos expresando es que, cuando ocurra un <strong>desplazamiento</strong>
+                    (mediante la propiedad "<strong>onscroll</strong>") en la ventana del navegador (utilizando el
+                    objeto "<strong>window</strong>"), se activará la función anónima que sigue. Luego, dentro de las
+                    llaves de esta función, especificaremos qué deseamos que se lleve a cabo. Te proporciono el código
+                    completo más adelante para que puedas examinarlo mientras te explico con más detalle.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    A medida que avanzamos, exploraremos cómo <strong>implementar esta función</strong> para lograr el
+                    efecto deseado en el menú. Por favor, continúa revisando el <strong>código completo</strong> que
+                    proporcionaré a continuación para obtener una comprensión más completa.
+                </p>
+
+
+                <h2>Identificando el Menú: Variable y Selectores en JavaScript</h2>
+                <p>
+                    Ahora, avanzando en el <strong>JavaScript</strong>, el primer paso es declarar una variable para
+                    seleccionar el elemento con la clase <strong>".menu"</strong>. Así es como lo haremos: <strong>var
+                        menu = document.querySelector(".menu")</strong>. Antes de continuar, es importante mencionar que
+                    he optado por declarar esta variable en el <strong>ámbito local</strong>. Esto se debe a que esta es
+                    la única línea de código que necesitamos para este blog en particular, y no planeamos utilizar la
+                    variable para ningún otro propósito. Sin embargo, si la declaramos en el ámbito global, funcionará
+                    igualmente bien. Además, en caso de que necesitemos reutilizarla en el futuro, tendremos esa
+                    flexibilidad.
+                </p>
+                <p>
+                    Continuemos avanzando para implementar el <strong>efecto de cambio de color en el menú</strong>. A
+                    medida que sigas leyendo, encontrarás el <strong>código completo y detallado</strong> que necesitas
+                    para lograrlo.
+                </p>
+
+
+                <h2>Manipulación de Clases: Cómo Aplicar 'cambiar-fondo' mediante JavaScript</h2>
+                <p>
+                    El siguiente paso consiste en agregar la clase que preparamos en la <strong>hoja de
+                        estilos</strong>,
+                    "<strong>cambiar-fondo</strong>", al elemento que tiene la clase "<strong>.menu</strong>". Vamos a
+                    abordar la <strong>sintaxis</strong> y luego explicaré el funcionamiento detrás de ella. Así es como
+                    se verá: <strong>menu.classList.toggle("cambiar-fondo", window.scrollY > 0)</strong>. ¿Qué implica
+                    esta línea de código? En realidad, estamos estableciendo que cuando el desplazamiento en el eje
+                    vertical sea mayor que cero, se añada la clase "cambiar-fondo" al elemento que contiene la clase
+                    ".menu" utilizando el método <strong>toggle</strong>. ¿Qué logramos con esto? Básicamente, al
+                    observar si el valor de desplazamiento <strong>window.scrollY</strong> es mayor que cero, decidimos
+                    si añadir o eliminar la clase "cambiar-fondo".
+                </p>
+                <p>
+                    Cabe recordar que el método <strong>toggle</strong> añadirá la clase si no está presente y la
+                    eliminará si ya está en el elemento. Ahora, con el agregado de la condición (<strong>window.scrollY
+                        > 0</strong>), esta adición o eliminación dependerá del estado del desplazamiento. En otras
+                    palabras, cuando la condición es verdadera, la clase se añadirá; cuando la condición sea falsa, la
+                    clase se eliminará.
+                </p>
+                <p>
+                    A continuación, encontrarás el <strong>código completo</strong> hasta este punto, el cual puedes
+                    copiar y pegar según lo necesites.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Reflexiones Finales y Resumen de Aprendizaje</h2>
+                <p>
+                    Antes de cerrar esta <strong>valiosa guía</strong>, me gustaría ofrecerte un
+                    <strong>resumen</strong>
+                    de los puntos clave que hemos cubierto. Esta lista sirve como un <strong>recordatorio
+                        rápido</strong> de los pasos y <strong>conceptos esenciales</strong> para implementar el
+                    <strong>efecto de desplazamiento</strong> en tu menú con <strong>JavaScript</strong>. ¡Espero que te
+                    sea de utilidad para tus <strong>futuros proyectos</strong>!
+                </p>
+
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <ol>
+                        <li><strong>Introducción al Efecto Scroll:</strong> Explicamos la relevancia del efecto de
+                            desplazamiento en el menú para mejorar la experiencia del usuario en un sitio web.</li>
+                        <li><strong>Código de Partida HTML y CSS:</strong> Proporcionamos un punto de partida con código
+                            HTML y CSS para familiarizarnos con los elementos que intervendrán en el efecto scroll.</li>
+                        <li><strong>Importancia de 'position: fixed':</strong> Destacamos cómo mantener el menú en una
+                            posición fija mejora la usabilidad durante el desplazamiento.</li>
+                        <li><strong>Declarando la Clase 'cambiar-fondo':</strong> Creamos una clase CSS que cambiará el
+                            fondo del menú durante el desplazamiento.</li>
+                        <li><strong>Detectar el Desplazamiento con JavaScript:</strong> Aprendemos cómo usar JavaScript
+                            para detectar cuando el usuario está haciendo scroll.</li>
+                        <li><strong>Implementación en JavaScript:</strong> Explicamos el código JavaScript que asignará
+                            la clase 'cambiar-fondo' al menú al desplazarse.</li>
+                        <li><strong>Toggle de la Clase con Condiciones:</strong> Detallamos cómo usar
+                            `menu.classList.toggle` con una condición para añadir o eliminar la clase según la posición
+                            de desplazamiento.</li>
+                    </ol>
+                </div>
+
+                <p>
+                    Y así concluimos por hoy, pero recuerda que cada <strong>paso</strong> que damos en el <strong>mundo
+                        del código</strong> nos acerca más a la realización de <strong>grandes ideas y proyectos
+                        emocionantes</strong>. Tu <strong>dedicación</strong> y <strong>pasión</strong> son el motor que
+                    impulsa tu camino hacia el <strong>conocimiento</strong>. Si te encuentras con alguna
+                    <strong>pregunta</strong> o <strong>inquietud</strong> en este viaje, no dudes en dejarme un
+                    comentario. Estoy aquí para ser tu <strong>guía y aliado</strong> en tu búsqueda de conocimiento.
+                    Cada <strong>desafío</strong> es una oportunidad de <strong>crecimiento</strong>, y con cada línea
+                    de código, estás creando un futuro lleno de <strong>posibilidades</strong>.
+                </p>
+                <p>
+                    ¡<strong>Hasta la próxima</strong>! Recuerda que mi nombre es Braulio, que esto es AprendeCode, y
+                    juntos seguiremos explorando el <strong>emocionante mundo del desarrollo</strong>. ¡Un Abrazo!
+                </p>
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'como-hacer-efecto-scroll-con-javascript';
+        const totalSnippets = 4;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>
