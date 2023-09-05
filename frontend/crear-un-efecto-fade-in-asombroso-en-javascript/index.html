@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description"
+        content="Aprende a crear un asombroso efecto Fade In utilizando JavaScript con nuestra guía paso a paso. Descubre cómo añadir transiciones suaves y efectos visuales atractivos a tu página web.">
+    <meta name="keywords"
+        content="Fade In, JavaScript, efecto, tutorial, guía, paso a paso, animación, código, frontend, desarrollo web">
     <meta name="author" content="Braulio de AprendeCode">
 
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:title" content="Crear un Efecto Fade In Asombroso en JavaScript: Todo lo que Necesitas Saber">
+    <meta property="og:description"
+        content="Esta guía completa te enseñará cómo implementar un efecto Fade In en tu página web utilizando JavaScript. Perfecto para principiantes que buscan añadir interactividad visual.">
+    <meta property="og:image"
+        content="/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/images/hombre-codificando-efecto-fade-in-javascript.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
@@ -50,8 +55,9 @@
                         para guiarte en cada paso del camino</strong>. Así que, sin más preámbulos, <strong>vamos a
                         sumergirnos en el fascinante mundo de los efectos FADE IN</strong>. Comenzaremos echando un
                     vistazo al <strong>código inicial</strong> para que te familiarices con él. Abajo encontrarás el
-                    <strong>código que necesitas</strong>, y después, lo analizaremos juntos. <strong>Simplemente
-                        cópialo en tu editor de código preferido, sigue los mismos pasos que yo, ¡y estarás listo para
+                    <strong>código que necesitas</strong>, y después, lo analizaremos juntos. Simplemente
+                    cópialo en tu editor de código preferido, sigue los mismos pasos que yo, <strong>¡y estarás listo
+                        para
                         crear magia!</strong>
                 </p>
 
@@ -90,15 +96,15 @@
                     elemento del documento. <strong>Presta atención a cómo tratamos el elemento clave:
                         "elemento-oculto"</strong>. Inicialmente, su opacidad es 0, pero a través de JavaScript, le
                     añadiremos la clase <strong>"visible"</strong> que ya hemos definido al final de la hoja de estilos.
-                    Esta clase "visible" ajusta la opacidad a 1. Si te sientes un poco confundido, <strong>no dudes en
-                        volver atrás y leerlo de nuevo para asegurarte de que todo quede claro</strong>.
+                    Esta clase "visible" ajusta la opacidad a 1.
                 </p>
 
 
                 <h2>Verificación Manual: Asegura que Todo Esté Listo</h2>
                 <p>
-                    <strong>Ahora, adentrémonos en la parte emocionante: escribir líneas de código y desentrañar el
-                        misterio</strong>. Al ingresar al mundo del <strong>JavaScript</strong>, comenzamos a dar forma
+                    Ahora, <strong>adentrémonos en la parte emocionante</strong>: escribir líneas de código y
+                    desentrañar el
+                    misterio. Al ingresar al mundo del <strong>JavaScript</strong>, comenzamos a dar forma
                     a nuestra idea. Pero antes de sumergirnos completamente, vamos a realizar una <strong>pequeña
                         prueba</strong> para asegurarnos de que todo esté en orden hasta este punto. Después de ejecutar
                     el código en tu editor, realiza un <strong>desplazamiento hacia el final de la página web</strong>.
@@ -111,7 +117,8 @@
 
 
                 <div class="image-container">
-                    <img src="/frontend/nueva-entrada/images/ejemplo-scroll-fade-in.webp" loading="lazy"
+                    <img src="/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/images/ejemplo-scroll-fade-in.webp"
+                        loading="lazy"
                         alt="Captura de pantalla mostrando cómo agregar manualmente la clase 'visible' para activar una transición suave durante el efecto de desplazamiento.">
                 </div>
 
@@ -196,7 +203,7 @@
                     método <strong>classList.add()</strong> en el elemento que queremos que tenga el efecto Fade In.
                     Quedaría de esta manera: <strong>elemento.classList.add("visible")</strong>. Sin embargo, aquí entra
                     un pequeño matiz importante. Si agregamos esta línea de código tal como está, el efecto Fade In se
-                    activaría cada vez que se haga scroll, incluso si el elemento está a la vista por solo un píxel.
+                    activaría cada vez que se haga scroll, incluso si el elemento no está a la vista.
                     <strong>Esto no es lo que queremos</strong>, porque aunque el efecto estaría ocurriendo
                     técnicamente, no sería realmente visible para el usuario.
                 </p>
@@ -241,7 +248,7 @@
                 <h2>Cómo Usar getBoundingClientRect para Optimizar el Efecto Fade In</h2>
                 <p>
                     <strong>Espero que estés siguiendo el ritmo hasta este punto.</strong> Si algo no está claro o
-                    necesitas un poco de orientación, no dudes en dejarme un comentario. <strong>¡Continuemos!</strong>
+                    necesitas un poco de orientación, no dudes en dejarme un mensaje en la pestaña contacto. <strong>¡Continuemos!</strong>
                     Ahora nos enfocaremos en determinar la distancia entre el elemento al que queremos aplicar el efecto
                     y la parte superior del viewport. Te prometo que esto es tan simple como respirar en el mundo del
                     código. Para lograrlo, tenemos a nuestro aliado: el <strong>método getBoundingClientRect()</strong>.
@@ -338,9 +345,39 @@
                         </pre>
                     </div>
                 </div>
+
+                <h2>Conclusión y Despedida</h2>
                 <p>
-                    Por favor, tómate un momento para <strong>dejarme un mensaje en la pestaña contacto</strong> si todo lo que hemos abordado hasta
-                        ahora está claro para ti. Si en algún punto te has sentido un poco perdido, no dudes en
+                    Antes de despedirme, quiero dejarte con un resumen práctico de todo lo que hemos explorado hoy. Si
+                    alguna vez necesitas un repaso rápido o quieres saltar a un tema específico, este resumen te será de
+                    gran ayuda.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <ol>
+                        <li><strong>Concepto Básico:</strong> Introducción a la técnica de efecto Fade In y su utilidad
+                            en la experiencia del usuario.</li>
+                        <li><strong>Configuración del Event Listener:</strong> Cómo configurar un "Event Listener" para
+                            detectar el scroll del usuario en la página.</li>
+                        <li><strong>Clase Visible:</strong> Utilización del método `classList.add()` para agregar la
+                            clase "visible" y activar el efecto Fade In.</li>
+                        <li><strong>Cálculo de Distancia:</strong> Aprendimos a usar la propiedad "innerHeight" y el
+                            método `getBoundingClientRect()` para determinar la distancia entre el elemento y el
+                            viewport.</li>
+                        <li><strong>Condición para la Visibilidad:</strong> Creación de una condición que determina en
+                            qué momento el elemento debe volverse visible, basada en la distancia calculada.</li>
+                        <li><strong>Depuración y Pruebas:</strong> Uso del inspector del navegador y la consola para
+                            verificar que el efecto está funcionando como se esperaba.</li>
+                        <li><strong>Efecto Repetible:</strong> Opción para hacer que el efecto se repita cada vez que se
+                            cumpla la condición, quitando y agregando la clase "visible" según corresponda.</li>
+                    </ol>
+                </div>
+
+                <p>
+                    Ahora por favor, tómate un momento para <strong>dejarme un mensaje en la pestaña contacto</strong> si todo
+                    lo que hemos abordado hasta
+                    ahora está claro para ti. Si en algún punto te has sentido un poco perdido, no dudes en
                     decírmelo. <strong>Estoy aquí para ayudarte a comprender cada detalle.</strong> Si prefieres
                     aprender de manera visual, no olvides visitar nuestro
                     <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" rel="noopener noreferrer"
@@ -368,7 +405,7 @@
     <script src="/js/components/footer.js"></script>
     <script src="/js/entries.js"></script>
     <script>
-        const entryName = 'nueva-entrada';
+        const entryName = 'crear-un-efecto-fade-in-asombroso-en-javascript';
         const totalSnippets = 9;
         fetchAndDisplayCodeSnippets(entryName, totalSnippets)
     </script>

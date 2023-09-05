@@ -1,6 +1,14 @@
 const frontendCardContent = [
     
     {
+        keywords: "Fade, In, JavaScript, efecto, scroll, tutorial, guía, guia, paso a paso, animación, animacion, codigo, código, frontend, desarrollo web",
+        title: "Crear un Efecto Fade In Asombroso en JavaScript: Todo lo que Necesitas Saber",
+        description: "Aprende a crear un efecto Fade In asombroso usando JavaScript con nuestro tutorial detallado. Esta guía te llevará paso a paso a través del proceso para hacer que tu sitio web se destaque.",
+        imageUrl: "/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/images/hombre-codificando-efecto-fade-in-javascript.webp",
+        imageAlt: "Hombre joven con audífonos sentado frente a una laptop, codificando un efecto Fade In en JavaScript.",
+        link: "/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/",
+    },
+    {
         keywords: "Efecto, de, Scroll, Desplazamiento, JavaScript, Menú, menu, Código, CSS, Propiedad, Cambiar, Color, de, fondo, window.onscroll, onscroll, efect",
         title: "¿Cómo hacer Efecto Scroll con JavaScript?",
         description: "Descubre cómo añadir un toque dinámico y atractivo a tu sitio web con efectos de desplazamiento (Scroll) en JavaScript. Sumérgete en este tutorial detallado que te guiará paso a paso para implementar un efecto de scroll en el menú de tu página.",
