@@ -1,54 +1,51 @@
 const lastEntriesFrontend = [
     {
-        title: "Cómo Crear una Galería Responsive con CSS Grid: Guía Paso a Paso",
-        description: "Descubre cómo crear una impresionante galería de imágenes responsive con CSS Grid. Esta guía paso a paso te lleva desde la estructura HTML básica hasta las media queries, asegurándote de que tu galería se vea genial en todos los dispositivos.",
-        imageUrl: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/images/galeria-responsive-css-grid.jpg",
-        imageAlt: "Tres desarrolladores colaborando en un proyecto de galería de imágenes con CSS Grid: uno revisando el diseño en una tableta, mientras las otras dos discuten las adaptaciones para pantallas grandes y el código subyacente.",
-        link: "/frontend/como-crear-una-galeria-responsive-con-css-grid-guia-paso-a-paso/",
+        title: "Descubre Cómo Mejorar la Comunicación Entre Funciones en JavaScript",
+        description: "Aprende a mejorar la comunicación entre funciones en JavaScript para llevar tu código al siguiente nivel. Este tutorial te guiará a través de técnicas efectivas para escribir funciones más limpias y organizadas.",
+        imageUrl: "/frontend/descubre-como-mejorar-la-comunicacion-entre-funciones-en-javascript/images/comunicacion-entre-funciones-javascrcript.webp",
+        imageAlt: "Una pareja tumbada en cómodos sillones, la chica está escribiendo código mientras su pareja la observa; representando una buena comunicación entre funciones en JavaScript.",
+        link: "/frontend/descubre-como-mejorar-la-comunicacion-entre-funciones-en-javascript/",
     },
     {
-        title: "Transición en el ícono del menú ¿Cómo hacerlo?",
-        description: "Descubre cómo crear una transición suave en el ícono de tu menú desplegable con HTML, CSS y JavaScript. Sigue nuestro tutorial paso a paso y haz que tu menú sea no solo funcional sino también visualmente atractivo.",
-        imageUrl: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/images/icono-menu-desplegable-javascript.jpg",
-        imageAlt: "Dos muchachos discutiendo cómo hacer una transición en el ícono del menú desplegable usando HTML, CSS y JavaScript.",
-        link: "/frontend/transicion-en-el-icono-del-menu-como-hacerlo/",
+        title: "Crear un Efecto Fade In Asombroso en JavaScript: Todo lo que Necesitas Saber",
+        description: "Aprende a crear un efecto Fade In asombroso usando JavaScript con nuestro tutorial detallado. Esta guía te llevará paso a paso a través del proceso para hacer que tu sitio web se destaque.",
+        imageUrl: "/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/images/hombre-codificando-efecto-fade-in-javascript.webp",
+        imageAlt: "Hombre joven con audífonos sentado frente a una laptop, codificando un efecto Fade In en JavaScript.",
+        link: "/frontend/crear-un-efecto-fade-in-asombroso-en-javascript/",
     },
     {
-        title: "Cómo hacer un menú desplegable con HTML, CSS y JavaScript?",
-        description: "Dale vida a tu sitio web con un menú desplegable interactivo. En esta guía paso a paso, exploraremos cómo crear un menú desplegable adaptable utilizando HTML, CSS y JavaScript.",
-        imageUrl: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/images/menu-desplegable-html-css-javascript.jpg",
-        imageAlt: "Chica explorando el emocionante mundo del menú desplegable en su PC de escritorio: una guía completa de HTML, CSS y JavaScript para crear un menú interactivo y adaptable en AprendeCode.",
-        link: "/frontend/como-hacer-un-menu-desplegable-con-html-css-y-javascript/",
-    },
-    {
-        title: "¿Cómo ocultar y mostrar contenido con JavaScript?",
-        description: "Descubre cómo ocultar y mostrar contenido con JavaScript de manera eficiente. Desde la preparación de tu HTML y CSS, hasta la implementación de Event Listeners y estructuras condicionales con if-else.",
-        imageUrl: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.jpg",
-        imageAlt: "Mujer analizando líneas de código en su computadora para ocultar y mostrar contenido con JavaScript",
-        link: "/frontend/como-ocultar-y-mostrar-contenido-con-javascript/",
+        title: "¿Cómo hacer Efecto Scroll con JavaScript?",
+        description: "Descubre cómo añadir un toque dinámico y atractivo a tu sitio web con efectos de desplazamiento (Scroll) en JavaScript. Sumérgete en este tutorial detallado que te guiará paso a paso para implementar un efecto de scroll en el menú de tu página.",
+        imageUrl: "/frontend/como-hacer-efecto-scroll-con-javascript/images/chica-en-escritorio-trabajando-en-efecto-scroll.webp",
+        imageAlt: "Chica sentada en su escritorio mirando el efecto de desplazamiento que ha implementado en su sitio web.",
+        link: "/frontend/como-hacer-efecto-scroll-con-javascript/",
     },
 ];
 
 const renderEntryContent = (cardContent) => {
     return `
-    <div class="entry-card">
-       <div class="entry-card__image-container">
-           <img src="${cardContent.imageUrl}" loading="lazy" decoding="async" alt="${cardContent.imageAlt}">
-       </div>
-       <div class="entry-card__bottom-position">
-           <h3>${cardContent.title}</h3>
-           <div class="entry-card__button-container">
-               <a class="btn-link" href="${cardContent.link}"><span>Ver Más</span></a>
+    <div class="card">
+       <a href="${cardContent.link}">
+           <div class="card__image-container">
+               <img src="${cardContent.imageUrl}" alt="${cardContent.imageAlt}" class="card__image" decoding="async" loading="lazy">
            </div>
+       </a>
+       <h3 class="card__title">${cardContent.title}</h3>
+       <p class="card__description">${cardContent.description}</p>
+       <div class="btn-link-container">
+           <a href="${cardContent.link}" class="btn-link">
+               <span>Leer Más</span>
+           </a>
        </div>
-    </div>`;
+    </div>
+    `;
 };
 
 function renderLastEntries() {
     const lastEntriesFrontendContainer = document.querySelector(".latest-entries-frontend__cards-container");
     lastEntriesFrontendContainer.innerHTML = "";
 
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 3; index++) {
         lastEntriesFrontendContainer.innerHTML += renderEntryContent(lastEntriesFrontend[index]);
     }
 }
