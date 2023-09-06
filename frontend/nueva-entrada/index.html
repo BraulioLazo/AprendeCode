@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Descubre Cómo Mejorar la Comunicación Entre Funciones en JavaScript</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Descubre Cómo Mejorar la Comunicación Entre Funciones en JavaScript
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    La <strong>comunicación entre funciones en JavaScript</strong> es un concepto fundamental que nos
+                    permite mejorar la organización y estructura de nuestro código. En esencia, se trata de la
+                    <strong>capacidad de invocar una función desde otra función</strong>, lo que facilita la
+                    <strong>reutilización de código</strong> y la <strong>modularización de tareas</strong>. Esta
+                    práctica no solo contribuye a la claridad del código, sino que también permite mantener un enfoque
+                    más <strong>modular y eficiente</strong> en el desarrollo. Incluso puedes llevar este concepto un
+                    <strong>paso más allá</strong> y separar tus funciones en diferentes archivos de script, manteniendo
+                    la posibilidad de que <strong>interactúen entre sí</strong>. Sin más preámbulos, exploraremos a
+                    continuación cómo <strong>implementar y aprovechar</strong> la comunicación entre funciones en
+                    JavaScript. Te proporciono el <strong>código inicial</strong> para que puedas sumergirte en el tema.
+                </p>
+                <h2>Configurando el Entorno: Código Base para Empezar</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Análisis del Código: Un Vistazo Detallado</h2>
+                <p>
+                    Bueno, si llegaste a leer el <strong>blog anterior sobre el efecto FADE IN</strong>, habrás notado
+                    que llegamos al mismo punto aquí. Utilizaremos el <strong>mismo ejemplo como punto de
+                        partida</strong>. En esta ocasión, simplemente he modificado algunos textos para que se ajusten
+                    al tema que estamos explorando ahora. En caso de que hayas seguido el blog anterior, este será un
+                    <strong>territorio familiar</strong>. Cambié algunos detalles para que encajen con el nuevo enfoque,
+                    pero en esencia, el proceso es similar. Si aún no has leído el blog anterior, te sugiero que le
+                    eches un vistazo antes de <strong>profundizar en este</strong>, ya que te ayudará a tener una
+                    <strong>comprensión completa</strong> de cómo hemos llegado hasta aquí en el código. Si ya estás
+                    familiarizado con el contenido previo, siéntete libre de <strong>omitir esta parte y avanzar
+                        directamente</strong> a lo que nos espera. (Si deseas omitir la explicación, haz clic
+                    <strong>AQUÍ</strong>)
+                </p>
+                <p>
+                    En el archivo HTML encontramos <strong>dos secciones</strong> que están declaradas principalmente
+                    para proporcionar espacio al realizar el desplazamiento. Sin embargo, el elemento más relevante es
+                    aquel con la clase <strong>elemento-oculto</strong>, ya que es el que va a aparecer y desaparecer,
+                    en otras palabras, es el <strong>responsable del Efecto Scroll</strong> que estudiaremos. En el
+                    archivo CSS, hay <strong>dos elementos clave</strong> a los que debemos prestar atención. En primer
+                    lugar, el selector <strong>elemento-oculto</strong> contiene los estilos para dicho elemento, y al
+                    inicio, la opacidad está establecida en cero. En segundo lugar, está la clase
+                    <strong>visible</strong> que hemos preparado, la cual tiene una opacidad de uno. Esta clase será
+                    añadida al elemento mediante el <strong>JavaScript</strong> para lograr el <strong>efecto
+                        deseado</strong> durante el desplazamiento.
+                </p>
+
+                <h2>Desglosando el Código JavaScript</h2>
+                <p>
+                    En el archivo JavaScript, comienzo por <strong>seleccionar el elemento con la clase
+                        'elemento-oculto'</strong> y guardo esta referencia en una variable llamada 'elemento'. Luego,
+                    añado un <strong>Event Listener a la ventana</strong>, ya que deseo que el efecto se active cada vez
+                    que ocurra un evento de desplazamiento. Dentro de la función asociada a este Event Listener, declaro
+                    una variable para almacenar la <strong>posición exacta del elemento</strong> en relación con el
+                    viewport. A continuación, establezco una <strong>condición</strong> que verifica si la distancia
+                    entre el borde superior del elemento y el borde inferior del viewport es igual o mayor a 600
+                    píxeles. Si se cumple esta condición, agrego la clase '<strong>visible</strong>' al elemento que
+                    posee la clase 'elemento-oculto'; en caso contrario, la clase 'visible' se elimina.
+                </p>
+                <p>
+                    Si estás siguiendo el proceso hasta aquí, <strong>excelente</strong>. Ahora nos dirigimos a lo que
+                    realmente nos interesa: la <strong>Comunicación entre funciones</strong>. No obstante, si quedaste
+                    con alguna pregunta, te recomiendo encarecidamente que leas el <strong>blog anterior</strong> para
+                    obtener un contexto más completo antes de continuar con esta sección. Sin más preámbulos,
+                    <strong>¡comencemos!</strong>
+                </p>
+
+                <h2>La Esencia de la Comunicación Funcional en JS</h2>
+                <p>
+                    La verdad es que <strong>establecer la comunicación entre funciones</strong> es sumamente sencillo,
+                    y vamos a comenzar este proceso <strong>creando las funciones que deseamos conectar</strong>. En
+                    este escenario, crearé dos funciones: una para la parte verdadera de la condición y otra para la
+                    parte falsa. Para mantener la coherencia, las llamaré <strong>verdadera()</strong> y
+                    <strong>Falsa()</strong>. Una vez que tengamos estas dos funciones listas, incorporaremos en su
+                    interior el código correspondiente y nos centraremos primero en la función verdadera().
+                </p>
+                <p>
+                    Tomamos el código presente en la sección de la <strong>condición verdadera</strong> y lo ubicamos
+                    dentro de la función verdadera(). Ahora, en cuanto a la <strong>comunicación entre
+                        funciones</strong>, la estrategia es simple: llamamos a la función correspondiente desde donde
+                    recortamos el código original (la parte verdadera de la condición). En este caso, sería:
+                    (<strong>verdadera();</strong>). Continuamos con el mismo enfoque para <strong>falsa()</strong>.
+                    Extraemos el código presente en la parte falsa de la condición y lo insertamos en esta función. Por
+                    supuesto, igualmente necesitamos llamar a la función desde donde recortamos el código original (la
+                    parte falsa de la condición), de esta forma: (<strong>falsa();</strong>).
+                </p>
+                <p>
+                    A continuación, te proporciono el código hasta este punto, con el fin de <strong>brindarte una
+                        visión más clara del proceso</strong>.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Pasando Variables: Argumentos en Funciones</h2>
+                <p>
+                    Antes de avanzar, quisiera hacer una <strong>breve pausa para informarte</strong> que este mismo
+                    blog está disponible en <strong>formato de video</strong>. Puede que encuentres más facilidad en la
+                    comprensión a través de este medio, así que te proporciono el enlace: 'Comunicación entre Funciones
+                    – JavaScript'.
+                </p>
+                <p>
+                    Si copias el <strong>código anterior</strong> en tu editor, debería continuar funcionando tal como
+                    lo hacía al principio. Sin embargo, desde estas funciones estamos accediendo a una <strong>variable
+                        que reside en el ámbito global</strong> (variable elemento), y naturalmente estas funciones
+                    pueden acceder a ella. Pero, ¿qué ocurriría si la variable se encontrara dentro del <strong>ámbito
+                        local de otra función</strong>? Imagina que trasladas la variable elemento dentro de la
+                    función AparecerElemento(), actualizas y te encuentras con que el código ya no funciona.
+                    Al inspeccionar, es probable que el navegador indique que la <strong>variable elemento no está
+                        definida</strong>. En efecto, al encontrarse la variable en el ámbito local de otra función,
+                    JavaScript no puede acceder a ella; aunque puede explorar el ámbito global, no es capaz de acceder
+                    al ámbito local, es decir, al interior de otras funciones.
+                </p>
+                <p>
+                    No obstante, existe una <strong>solución para este dilema</strong>. Lo único que debes hacer es
+                    proporcionar la variable que está teniendo dificultades como argumento a la función que estás
+                    invocando. Este enfoque es como decirle: 'Llévate consigo esta variable'. ¿Cómo llevamos esto a
+                    cabo? Dentro de los paréntesis de la función, añades el <strong>nombre de la variable que deseas
+                        pasar como argumento</strong> (en este caso, elemento). Luego, en el cuerpo de la función,
+                    simplemente le recordamos su existencia. Reiteramos el nombre de la variable que le estamos pasando
+                    (elemento) dentro de los paréntesis de la función. A continuación, te proporciono el código hasta
+                    este punto. Te sugiero que <strong>sigas revisándolo mientras avanzas en la lectura para facilitar
+                        tu comprensión</strong>.
+
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¿Es Posible Cambiar el Nombre de un Argumento en Funciones?</h2>
+                <p>
+                    Ahora, aquí hay otro <strong>detalle interesante</strong>: una vez que le proporcionamos la variable
+                    como argumento y la recordamos, podemos optar por <strong>llamarla de un modo distinto</strong>.
+                    Permíteme proporcionarte un ejemplo para ilustrarlo mejor. Supongamos que cambiamos el nombre
+                    <strong>elemento</strong> a <strong>caja</strong>. Sin embargo, si guardamos los cambios y
+                    actualizamos la página, observarás un
+                    <strong>error en el inspector</strong>. ¿Por qué se está generando este error? Una vez más, el
+                    mensaje nos indica que 'elemento' no está definido. La causa radica en que al <strong>alterar el
+                        nombre dentro de la función</strong>, cualquier referencia a ese nombre dentro de ella también
+                    se modifica.
+                    En este escenario, se usa la variable solo una vez; sin embargo, incluso si se utilizara en
+                    <strong>varios puntos</strong>, ya no sería elemento, sino caja. Si guardas este cambio y
+                    actualizas, el <strong>código funcionará según lo esperado</strong>. Te proporciono el fragmento de
+                    código a continuación.
+                </p>
+                <p>
+                    Haremos lo mismo con la función <strong>falsa()</strong>. Simplemente cambias el nombre de la
+                    variable por el que
+                    prefieras y, dentro de la función, utilizas ese nuevo nombre. Ciertamente, no es una
+                    <strong>obligación cambiar el nombre</strong>; no obstante, hacerlo puede contribuir a la
+                    <strong>organización y legibilidad del código</strong>.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Cómo Organizar Tus Funciones para Mayor Eficiencia</h2>
+                <p>
+                    Un detalle que tal vez quieras considerar es el <strong>dividir estas funciones en diferentes
+                        archivos de script</strong>. No sólo le da un <strong>toque profesional</strong> a tu proyecto,
+                    sino que también <strong>facilita el mantenimiento a largo plazo</strong>. Aquí te muestro cómo
+                    hacerlo. Crea un archivo nuevo para cada función: uno para 'verdadera' y otro para 'falsa'. Luego,
+                    corta y pega el código correspondiente en cada archivo. Pero ojo, recuerda <strong>invocar estos
+                        archivos en tu HTML</strong>, o podrás experimentar algunos <strong>problemas técnicos</strong>.
+                    Guarda los cambios, actualiza la página y verifica si todo funciona. Si es así, <strong>¡vas por
+                        buen camino!</strong>
+                </p>
+
+                <h2>Entendiendo el Orden de Llamadas y el Hoisting</h2>
+                <p>
+                    El orden en que se llaman a estos archivos de script <strong>podría ser relevante</strong>. Pero
+                    antes de profundizar, detengámonos un momento para entender los <strong>distintos tipos de funciones
+                        en JavaScript</strong> y el fenómeno del "<strong>hoisting</strong>" o alzado.
+                </p>
+                <p>
+                    En JavaScript, tenemos <strong>funciones declarativas, anónimas y funciones flecha</strong>. Las
+                    funciones declarativas son aquellas que usan la palabra clave <strong>function</strong>, seguidas
+                    del nombre de la función y su cuerpo de código. Gracias al <strong>hoisting</strong>, estas
+                    funciones se mueven al inicio de su ámbito, permitiéndote llamarlas incluso antes de su declaración.
+                    Esto es super útil cuando estás trabajando con un montón de funciones que interactúan entre sí.
+                </p>
+                <p>
+                    Las <strong>funciones anónimas</strong>, sin embargo, no tienen un nombre y suelen usarse en casos
+                    donde la función es requerida temporalmente, como un argumento para otra función. A diferencia de
+                    las funciones declarativas, las funciones anónimas <strong>no son sujetas a hoisting si están
+                        asignadas a una variable</strong>. Por lo tanto, no podrás llamarlas antes de su declaración en
+                    el código.
+                </p>
+                <p>
+                    Por último, las <strong>funciones flecha</strong>, que surgieron con ECMAScript 6, te permiten
+                    escribir funciones de una manera más concisa. Además, <strong>no tienen su propio objeto
+                        this</strong>, lo cual puede hacer más sencillo el manejo de este contexto en situaciones
+                    complejas.
+                </p>
+                <p>
+                    En resumen, el <strong>hoisting puede o no afectar el comportamiento de tus funciones</strong>
+                    dependiendo de cómo las hayas declarado. Pero en nuestro ejemplo, donde las funciones 'verdadera()'
+                    y 'falsa()' son activadas por condiciones específicas, el <strong>orden de los archivos de script no
+                        tiene un impacto significativo</strong>.
+
+                </p>
+                <h2>En Resumen</h2>
+                <p>
+                    Para asegurarnos de que has captado todos los puntos clave de esta entrada, aquí hay un resumen
+                    de los temas que hemos abordado hoy:
+                </p>
+                <div class="custom-list-container">
+                    <h3>En resumen: Lo que hemos cubierto hoy</h3>
+                    <ol>
+                        <li><strong>Comunicación entre Funciones:</strong> Diseño y vinculación de las funciones
+                            'verdadera()' y 'falsa()' para adaptarse a distintas situaciones.</li>
+                        <li><strong>Ámbito de Variables:</strong> Solución al desafío de acceder a variables desde
+                            diferentes ámbitos, utilizando argumentos de función como intermediarios.</li>
+                        <li><strong>Renombrar Variables:</strong> Técnicas para modificar el nombre de una variable
+                            dentro del ámbito de una función sin afectar su referencia global.</li>
+                        <li><strong>Organización del Código:</strong> Estrategias para dividir las funciones en
+                            múltiples archivos de script, optimizando así la mantenibilidad y la legibilidad del código.
+                        </li>
+                        <li><strong>Tipos de Funciones y Hoisting:</strong> Comprendiendo las diferencias entre
+                            funciones declarativas, anónimas y de flecha, y el papel del <strong>hoisting</strong> en su
+                            comportamiento.</li>
+                    </ol>
+                </div>
+
+                <h2>Práctica y Feedback</h2>
+                <p>
+                    Lamentablemente, no puedo ofrecerte un ejercicio práctico directo aquí en el blog, pero te invito a
+                    revisar el tutorial completo en mi canal: 'Comunicación entre Funciones – JavaScript'. Y por
+                    supuesto, estaré encantado de escuchar tus comentarios y preguntas abajo. ¡Tus dudas me ayudan a
+                    mejorar! Bueno, Código-Lovers, ha sido un placer guiarlos una vez más en esta aventura de
+                    aprendizaje. Recuerden, siempre estaré aquí para apoyarlos en cada paso del camino. Hasta la próxima
+                    y, como siempre, soy Braulio de AprendeCode. ¡Un abrazo!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 6;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

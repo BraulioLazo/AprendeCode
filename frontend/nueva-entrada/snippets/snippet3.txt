@@ -1,0 +1,14 @@
+var elemento = document.querySelector(".elemento-oculto");
+
+function AparecerElemento()
+  {
+    var distancia = window.innerHeight - elemento.getBoundingClientRect().top;
+    if(distancia >= 600)
+      {
+         elemento.classList.add("visible");
+      }  else {
+                 elemento.classList.remove("visible");
+              }
+  }
+
+window.addEventListener("scroll", AparecerElemento);
