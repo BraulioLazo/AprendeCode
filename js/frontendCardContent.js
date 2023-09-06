@@ -1,5 +1,12 @@
 const frontendCardContent = [
-    
+    {
+        keywords: "funciones, en, javascript, Comunicacion, entre, Ámbito, ambito, de, Renombrar, variables, Organización, organizacion, código, codigo Funciones declarativas, anónimas, anonimas, flecha, que, es, el, Hoisting, ECMAScript 6",
+        title: "Descubre Cómo Mejorar la Comunicación Entre Funciones en JavaScript",
+        description: "Aprende a mejorar la comunicación entre funciones en JavaScript para llevar tu código al siguiente nivel. Este tutorial te guiará a través de técnicas efectivas para escribir funciones más limpias y organizadas.",
+        imageUrl: "/frontend/descubre-como-mejorar-la-comunicacion-entre-funciones-en-javascript/images/comunicacion-entre-funciones-javascrcript.webp",
+        imageAlt: "Una pareja tumbada en cómodos sillones, la chica está escribiendo código mientras su pareja la observa; representando una buena comunicación entre funciones en JavaScript.",
+        link: "/frontend/descubre-como-mejorar-la-comunicacion-entre-funciones-en-javascript/",
+    },
     {
         keywords: "Fade, In, JavaScript, efecto, scroll, tutorial, guía, guia, paso a paso, animación, animacion, codigo, código, frontend, desarrollo web",
         title: "Crear un Efecto Fade In Asombroso en JavaScript: Todo lo que Necesitas Saber",
