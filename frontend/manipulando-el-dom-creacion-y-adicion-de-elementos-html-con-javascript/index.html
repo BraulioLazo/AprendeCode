@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Explora cómo manipular el DOM eficientemente usando JavaScript. Descubre técnicas para crear y añadir elementos HTML dinámicamente y mejora tus habilidades de desarrollo web.">
-    <meta name="keywords" content="Manipulación del DOM, Creación de elementos HTML, Adición de elementos HTML, JavaScript, innerHTML, Método forEach, AprendeCode, Desarrollo web, Técnicas de manipulación DOM, Generación dinámica de contenidos">
+    <meta name="description"
+        content="Explora cómo manipular el DOM eficientemente usando JavaScript. Descubre técnicas para crear y añadir elementos HTML dinámicamente y mejora tus habilidades de desarrollo web.">
+    <meta name="keywords"
+        content="Manipulación del DOM, Creación de elementos HTML, Adición de elementos HTML, JavaScript, innerHTML, Método forEach, AprendeCode, Desarrollo web, Técnicas de manipulación DOM, Generación dinámica de contenidos">
     <meta name="author" content="Braulio de AprendeCode">
 
     <meta property="og:title" content="Manipulando el DOM: Creación y Adición de Elementos HTML con JavaScript">
-    <meta property="og:description" content="Sumérgete en la eficiente manipulación del DOM con JavaScript. Descubre métodos para crear y añadir elementos HTML de manera dinámica, mejorando tus habilidades de desarrollo web.">
-    <meta property="og:image" content="/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/images/desarrolladores-manipulacion-dom.webp">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/">
+    <meta property="og:description"
+        content="Sumérgete en la eficiente manipulación del DOM con JavaScript. Descubre métodos para crear y añadir elementos HTML de manera dinámica, mejorando tus habilidades de desarrollo web.">
+    <meta property="og:image"
+        content="/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/images/desarrolladores-manipulacion-dom.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
@@ -58,8 +63,8 @@
 
                 <p>
                     Como siempre, proporcionaré un código de partida. A continuación, encontrarás el código
-                    <strong>HTML</strong>, mientras que el <strong>CSS</strong> y el <strong>JavaScript</strong> estarán
-                    en blanco, ya que los desarrollaremos desde cero. Copia este código de inicio para que puedas seguir
+                    <strong>HTML</strong> y <strong>CSS</strong> mientras que el<strong> JavaScript</strong> estará
+                    en blanco, ya que lo desarrollaremos desde cero. Copia este código de inicio para que puedas seguir
                     los mismos pasos que explicaré a continuación.
                 </p>
 
@@ -86,9 +91,10 @@
                     <strong>caja padre</strong>, una <strong>caja hija</strong> y dentro de la caja hija, la letra H. En
                     cuanto a los estilos, el <strong>CSS</strong> define la apariencia de cada uno de estos elementos.
                     En particular, el cuerpo del documento se declara como flexible para permitir el centrado de la caja
-                    padre, y también se carga una <strong>imagen de fondo</strong>. Si estás siguiendo junto con el
+                    padre, y también se carga una <strong>imagen de fondo</strong>. Si ya copiaste el
                     código, asegúrate de cargar una imagen de fondo para que puedas apreciar cómo los elementos
-                    interactúan y definirse con claridad, ya que sin un fondo, el diseño puede parecer un poco plano. A
+                    interactúan y puedan definirse con claridad, ya que sin un fondo, el diseño puede parecer un poco
+                    plano. A
                     continuación, se establecen los estilos tanto para la <strong>caja padre</strong> como para la
                     <strong>caja hija</strong>. No profundizaré mucho en la explicación de los estilos CSS, ya que estos
                     son principalmente cuestiones de diseño y preferencia personal. A continuación, te proporcionaré una
@@ -112,7 +118,7 @@
                     declaración se verá así: <strong>var letras = ["A", "B", "C", "D"]</strong>. El siguiente paso es
                     crear la función encargada de pintar estos elementos, y la nombraremos
                     <strong>PintarElementos</strong>. La función se declara de esta manera: <strong>function
-                        PintarElementos(){}</strong> y, de inmediato, la llamamos utilizando
+                        PintarElementos(){}</strong> y, de inmediato, la llamamos,
                     <strong>PintarElementos()</strong>. A mí personalmente, me gusta verificar cada paso que doy para
                     asegurarme de que todo esté en orden, así que voy a imprimir el contenido del array en la consola
                     para confirmar que se ha definido correctamente. Para lograrlo, simplemente insertamos
@@ -136,8 +142,8 @@
                 <p>
                     Antes de proseguir, quiero informarte que este blog también está disponible en formato de video en
                     nuestro <strong>canal de YouTube</strong>. Si prefieres aprender a través de videos, aquí te dejo el
-                    enlace al tutorial: <a href="https://www.youtube.com/watch?v=zb__yZFfGEw" rel="noopener noreferrer" 
-                    target="_blank"> Tutorial de YouTube </a>. ¡Espero que lo disfrutes!
+                    enlace al tutorial: <a href="https://www.youtube.com/watch?v=zb__yZFfGEw" rel="noopener noreferrer"
+                        target="_blank"> Tutorial de YouTube </a>. ¡Espero que lo disfrutes!
                 </p>
 
                 <p>
@@ -253,7 +259,7 @@
                     debemos agregar comillas alrededor de cada fragmento de string por separado. Esto significa que
                     debemos tomar la etiqueta de apertura del div y colocarla completa entre comillas. Además, es
                     importante destacar que como el atributo <strong>class</strong> ya está dentro de comillas dobles,
-                    debemos usar comillas simples para el interior. Usar las mismas comillas para ambos casos
+                    debemos usar comillas simples para el exterior. Usar las mismas comillas para ambos casos
                     confundiría a JavaScript, ya que no podría distinguir claramente dónde comienza y termina cada
                     conjunto de comillas, lo que generaría un error. Luego, debemos agregar el signo de más
                     (<strong>+</strong>) entre cada fragmento de string para <strong>concatenarlos</strong>
@@ -305,10 +311,11 @@
                     directamente desde el editor, así que no deberías tener ningún problema. Recuerda que también puedes
                     disfrutar de este mismo contenido en formato de video en nuestro canal de <strong>YouTube</strong>.
                     De hecho, aquí te dejo el enlace para que puedas disfrutar de todo el contenido de
-                    <strong>AprendeCode</strong> en YouTube: <strong>Enlace a AprendeCode en YouTube</strong>. Espero
-                    sinceramente que hayas aprendido algo nuevo y que hayas disfrutado de esta experiencia. Y como ya no
-                    me queda más nada que decir, recuerda que mi nombre es <strong>Braulio</strong> y esto es
-                    <strong>AprendeCode</strong>.
+                    <strong>AprendeCode</strong> en YouTube:
+                    <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" rel="noopener noreferrer"
+                        target="_blank"> Canal de YouTube</a>. Espero sinceramente que hayas aprendido algo nuevo y que
+                    hayas disfrutado de esta experiencia. Y como ya no me queda más nada que decir, recuerda que mi
+                    nombre es <strong>Braulio</strong> y que esto es <strong>AprendeCode</strong>.
                 </p>
 
             </div>
