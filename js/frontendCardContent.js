@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "Manipulación, del, DOM, Creación, de, elementos, HTML, Adición, JavaScript, dinámicos, innerHTML, Método forEach, Pintar, Técnicas, desarrollo, web, arrays, JS, eficiente, Generación, dinámica, contenidos, Ejemplos",
+        title: "Manipulando el DOM: Creación y Adición de Elementos HTML con JavaScript",
+        description: "Descubre cómo manipular el DOM con JavaScript de manera eficiente. En esta entrada, profundizamos en la creación y adición dinámica de elementos HTML, proporcionando ejemplos claros y técnicas prácticas.",
+        imageUrl: "/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/images/desarrolladores-manipulacion-dom.webp",
+        imageAlt: "Desarrollador y desarrolladora trabajando en la manipulación del DOM utilizando JavaScript",
+        link: "/frontend/manipulando-el-dom-creacion-y-adicion-de-elementos-html-con-javascript/",
+    },
+    {
         keywords: "funciones, en, javascript, Comunicacion, entre, Ámbito, ambito, de, Renombrar, variables, Organización, organizacion, código, codigo Funciones declarativas, anónimas, anonimas, flecha, que, es, el, Hoisting, ECMAScript 6",
         title: "Descubre Cómo Mejorar la Comunicación Entre Funciones en JavaScript",
         description: "Aprende a mejorar la comunicación entre funciones en JavaScript para llevar tu código al siguiente nivel. Este tutorial te guiará a través de técnicas efectivas para escribir funciones más limpias y organizadas.",
