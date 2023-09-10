@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Manipulando el DOM: Creación y Adición de Elementos HTML con JavaScript</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Manipulando el DOM: Creación y Adición de Elementos HTML con JavaScript
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+
+                <h2>
+                    Introducción a la Creación de Elementos HTML a través de JavaScript
+                </h2>
+                <p>
+                    <strong>¿Cómo crear elementos HTML con JavaScript?</strong> Para lograr la creación de elementos
+                    mediante JavaScript, hay <strong>dos métodos fundamentales</strong> que es crucial conocer. En
+                    primer lugar, tenemos el método <strong>createElement()</strong>, que, como su nombre sugiere,
+                    permite crear un nuevo elemento HTML, como un div, por ejemplo. En segundo lugar, encontramos el
+                    método <strong>appendChild()</strong>, que se encarga de agregar este nuevo elemento, o contenedor,
+                    como un hijo dentro del elemento al que se le ha pasado como argumento. Aunque pueda sonar un poco
+                    complejo al principio, te aseguro que no lo es en absoluto. Vamos a abordar estos métodos paso a
+                    paso para que no te pierdas ningún detalle.
+                </p>
+
+                <p>
+                    Como siempre, proporcionaré un código de partida. A continuación, encontrarás el código
+                    <strong>HTML</strong>, mientras que el <strong>CSS</strong> y el <strong>JavaScript</strong> estarán
+                    en blanco, ya que los desarrollaremos desde cero. Copia este código de inicio para que puedas seguir
+                    los mismos pasos que explicaré a continuación.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Análisis del Código Base: Entendiendo la Estructura</h2>
+                <p>
+                    En el <strong>código HTML</strong>, encontrarás una estructura sencilla que consta de una
+                    <strong>caja padre</strong>, una <strong>caja hija</strong> y dentro de la caja hija, la letra H. En
+                    cuanto a los estilos, el <strong>CSS</strong> define la apariencia de cada uno de estos elementos.
+                    En particular, el cuerpo del documento se declara como flexible para permitir el centrado de la caja
+                    padre, y también se carga una <strong>imagen de fondo</strong>. Si estás siguiendo junto con el
+                    código, asegúrate de cargar una imagen de fondo para que puedas apreciar cómo los elementos
+                    interactúan y definirse con claridad, ya que sin un fondo, el diseño puede parecer un poco plano. A
+                    continuación, se establecen los estilos tanto para la <strong>caja padre</strong> como para la
+                    <strong>caja hija</strong>. No profundizaré mucho en la explicación de los estilos CSS, ya que estos
+                    son principalmente cuestiones de diseño y preferencia personal. A continuación, te proporcionaré una
+                    imagen que muestra cómo se ve el diseño final con mi imagen de fondo. La única diferencia que
+                    notarás en tu diseño será la imagen que cargues o, en su defecto, un fondo oscuro si no cargas
+                    ninguna. Ahora, pasemos al <strong>JavaScript</strong> y comencemos.
+                </p>
+
+                <h2>
+                    Poniendo Manos a la Obra: Primeros Pasos con JavaScript
+                </h2>
+                <p>
+                    Para comenzar, vamos a declarar un <strong>array</strong> que contendrá los elementos que deseamos
+                    pintar. En este caso, serán cuatro letras, así que lo nombraremos <strong>letras</strong>. La
+                    declaración se verá así: <strong>var letras = ["A", "B", "C", "D"]</strong>. El siguiente paso es
+                    crear la función encargada de pintar estos elementos, y la nombraremos
+                    <strong>PintarElementos</strong>. La función se declara de esta manera: <strong>function
+                        PintarElementos(){}</strong> y, de inmediato, la llamamos utilizando
+                    <strong>PintarElementos()</strong>. A mí personalmente, me gusta verificar cada paso que doy para
+                    asegurarme de que todo esté en orden, así que voy a imprimir el contenido del array en la consola
+                    para confirmar que se ha definido correctamente. Para lograrlo, simplemente insertamos
+                    <strong>console.log(letras)</strong> dentro de las llaves de la función
+                    <strong>PintarElementos()</strong>. Si, al ejecutar el código, ves el array en la consola, significa
+                    que todo está en orden.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Manipulación de Elementos: La Magia detrás de innerHTML</h2>
+                <p>
+                    Antes de proseguir, quiero informarte que este blog también está disponible en formato de video en
+                    nuestro <strong>canal de YouTube</strong>. Si prefieres aprender a través de videos, aquí te dejo el
+                    enlace al tutorial: <a href="https://www.youtube.com/watch?v=zb__yZFfGEw" rel="noopener noreferrer" 
+                    target="_blank"> Tutorial de YouTube </a>. ¡Espero que lo disfrutes!
+                </p>
+
+                <p>
+                    Dentro de esta función, nuestro primer paso es borrar el contenido existente dentro de la
+                    <strong>caja padre</strong>, ya que deseamos que los elementos del array se pinten en su lugar.
+                    ¿Cómo lo hacemos? Es realmente sencillo. En primer lugar, creamos una variable para seleccionar la
+                    caja padre y poder modificar su contenido. Esto se realiza de la siguiente manera: <strong>var
+                        cajaPadre = document.querySelector(".caja-padre")</strong>. El segundo paso consiste en
+                    modificar el contenido de esta caja utilizando la propiedad <strong>innerHTML</strong>. Esto se
+                    logra mediante <strong>cajaPadre.innerHTML = ""</strong>. La propiedad innerHTML nos permite cambiar
+                    el contenido de un elemento HTML. En nuestro caso, utilizamos comillas dobles vacías para
+                    asegurarnos de que el contenido se borre por completo. Es importante recordar que, si deseamos que
+                    se muestre un texto literal, lo colocamos entre comillas. Sin embargo, si queremos que se interprete
+                    como una variable o un valor, lo escribimos sin comillas. En este caso, dado que simplemente
+                    queremos borrar el contenido, utilizamos comillas dobles vacías. Puedes echar un vistazo al código a
+                    continuación o copiarlo para ver el resultado por ti mismo.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Iterando Elementos: El Poder del Método forEach()</h2>
+                <p>
+                    Ahora, el siguiente paso consiste en pintar los elementos que se encuentran dentro del
+                    <strong>array</strong>. Dado que estamos tratando con más de un elemento, utilizaremos el método
+                    <strong>forEach()</strong>. ¿Cuál es la función del método forEach()? Este método ejecuta una
+                    función para cada uno de los elementos que componen un array o una lista de nodos. La estructura se
+                    ve de la siguiente manera: '<strong>letras.forEach(function(elemento){})</strong>'. Aquí es
+                    importante notar que estamos recogiendo el elemento, lo que significa que le estamos diciendo:
+                    Guarda aquí el elemento al que le estás ejecutando la función.
+                </p>
+                <p>
+                    Sin embargo, si intentáramos pasar el elemento directamente a la <strong>caja padre</strong>, solo
+                    se
+                    mostraría el último elemento del array. Esto ocurre porque la función se ejecuta de manera muy
+                    rápida para cada elemento, y solo se puede visualizar cuando deja de ejecutarse. Ejecuta la función
+                    primero para la letra A, la muestra, y luego pasa a B, C y por último D. Puedes realizar una prueba
+                    muy sencilla: si eliminas la letra D, solo se mostrará la letra C porque es la última en ejecutarse.
+                </p>
+
+                <h2>Dinamismo en el DOM: Introducción a createElement()</h2>
+                <p>
+                    Aquí, lo que necesitamos hacer es crear un <strong>contenedor</strong> cada vez que se ejecute la
+                    función, y este contenedor será un div. Luego, debemos colocar el elemento que estamos recogiendo
+                    cada vez que se ejecuta la función dentro de ese div, y finalmente, añadir ese div recién creado
+                    dentro de la <strong>caja padre</strong>. Comprendo que esto puede resultar un poco confuso al
+                    principio, así que vamos a desglosarlo paso a paso. En primer lugar, creamos un div y lo almacenamos
+                    en una variable para poder utilizarlo posteriormente. ¿Cómo logramos esto? Simplemente ejecutamos:
+                    <strong>var cajaHijo = document.createElement(¨div¨)</strong>.
+                </p>
+                <p>
+                    En segundo lugar, para colocar el elemento dentro de ese contenedor, utilizamos la propiedad
+                    <strong>innerHTML</strong>, de manera similar a como limpiamos el contenido de la caja padre
+                    anteriormente. Esto se realiza mediante: <strong>cajaHijo.innerHTML = elemento</strong>. Por último,
+                    en el tercer paso, ponemos ese contenedor, junto con el elemento que le corresponde, dentro de la
+                    caja padre. ¿Cómo lo hacemos? Esto es posible gracias al método <strong>appendChild()</strong>, que
+                    se utiliza de la siguiente manera: <strong>cajaPadre.appendChild(cajaHijo)</strong>. A continuación,
+                    te dejo el código hasta este punto.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Refinando la Manipulación del DOM usando innerHTML</h2>
+                <p>
+                    Si ya has copiado el código, seguramente te habrás dado cuenta de que sí, funciona, pero no
+                    exactamente como esperábamos. Todas las letras están dentro de la <strong>caja padre</strong>, lo
+                    cual es correcto, pero esto no se asemeja en nada a lo que teníamos al principio en el HTML. La
+                    forma correcta de hacer esto se asemeja más a la <strong>estructura HTML original</strong>. Si
+                    revisamos el HTML, recordarás que teníamos la caja padre, seguida de un div con la clase
+                    <strong>caja-hijo</strong>, y dentro de ese div, la letra (elemento). Eso es exactamente lo que
+                    queremos replicar en JavaScript. En lugar de simplemente pasarle a la variable
+                    <strong>cajaHijo</strong> el elemento (o sea, la letra), vamos a crear un div con la clase
+                    caja-hijo, luego lo cerramos y, finalmente, dentro de ese div, colocamos el elemento. Esto se puede
+                    lograr fácilmente copiando la estructura del HTML y pegándola en JavaScript. Debería verse de la
+                    siguiente manera:
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    El siguiente paso consiste en sustituir la letra H por <strong>elemento</strong>, ya que cada vez
+                    que
+                    se ejecute la función, JavaScript colocará el elemento correspondiente. Pero, ¿funcionaría si
+                    corremos el código tal como está? Siento romper tu corazón, pero <strong>NO</strong>, mi querido
+                    <strong>Código-Lover</strong> 😂. Todavía tenemos que hacer algunos ajustes. En primer lugar,
+                    debemos agregar comillas alrededor de cada fragmento de string por separado. Esto significa que
+                    debemos tomar la etiqueta de apertura del div y colocarla completa entre comillas. Además, es
+                    importante destacar que como el atributo <strong>class</strong> ya está dentro de comillas dobles,
+                    debemos usar comillas simples para el interior. Usar las mismas comillas para ambos casos
+                    confundiría a JavaScript, ya que no podría distinguir claramente dónde comienza y termina cada
+                    conjunto de comillas, lo que generaría un error. Luego, debemos agregar el signo de más
+                    (<strong>+</strong>) entre cada fragmento de string para <strong>concatenarlos</strong>
+                    correctamente. Finalmente, no olvidemos poner la etiqueta de cierre del div también entre comillas.
+                    Si aún tienes alguna duda, puedes ver cómo debería quedar la línea de código a continuación.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Reviviendo Nuestra Aventura de Código</h2>
+                <p>
+                    Antes de finalizar, echemos un vistazo rápido a todo lo que hemos abordado en esta entrada. De esta
+                    forma, te aseguras de no perderte de nada y tener una referencia rápida para futuras consultas.
+                    ¡Vamos allá!
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Desglosando nuestro Código</h3>
+                    <ol>
+                        <li><strong>Declaración del Array:</strong> Introdujimos un array llamado "letras" para
+                            almacenar y manipular las letras que deseábamos pintar en nuestro diseño.</li>
+                        <li><strong>Función PintarElementos:</strong> Creamos esta función para pintar elementos del
+                            array y verificamos su contenido a través de la consola.</li>
+                        <li><strong>Manipulación del DOM:</strong> Seleccionamos la caja padre y modificamos su
+                            contenido con la propiedad innerHTML para preparar la pintura de nuevos elementos.</li>
+                        <li><strong>Uso del método forEach():</strong> Implementamos este método para iterar sobre cada
+                            elemento del array y ejecutar una función para cada uno de ellos.</li>
+                        <li><strong>Creación Dinámica de Elementos:</strong> Generamos dinámicamente un contenedor div
+                            para cada elemento del array y ajustamos la estructura de acuerdo al diseño original de
+                            nuestro HTML.</li>
+                    </ol>
+                </div>
+
+                <h2>Finalizando Nuestro Viaje</h2>
+
+                <p>
+                    Con total confianza, copia el código que <strong>debe funcionar</strong>, porque yo mismo lo he
+                    probado y si no funciona, bueno, siempre encontraré a alguien a quien culpar 😂. Solo bromeo,
+                    querido <strong>Código-Lover</strong>. Todas estas líneas de código las he copiado y pegado
+                    directamente desde el editor, así que no deberías tener ningún problema. Recuerda que también puedes
+                    disfrutar de este mismo contenido en formato de video en nuestro canal de <strong>YouTube</strong>.
+                    De hecho, aquí te dejo el enlace para que puedas disfrutar de todo el contenido de
+                    <strong>AprendeCode</strong> en YouTube: <strong>Enlace a AprendeCode en YouTube</strong>. Espero
+                    sinceramente que hayas aprendido algo nuevo y que hayas disfrutado de esta experiencia. Y como ya no
+                    me queda más nada que decir, recuerda que mi nombre es <strong>Braulio</strong> y esto es
+                    <strong>AprendeCode</strong>.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 7;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

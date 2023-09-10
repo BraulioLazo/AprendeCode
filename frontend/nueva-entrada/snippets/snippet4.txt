@@ -1,0 +1,8 @@
+var letras = ["A", "B", "C", "D"];
+
+function PintarElementos()
+  {
+    var cajaPadre = document.querySelector(".caja-padre");
+    cajaPadre.innerHTML = "";
+  }
+PintarElementos();
