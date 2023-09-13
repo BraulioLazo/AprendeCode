@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "",
+        title: "Incorporando y Personalizando Videos en HTML: Una Guía Completa",
+        description: "Descubre cómo incorporar y personalizar videos en HTML eficazmente. Desde formatos hasta controles, esta guía te lleva paso a paso hacia una experiencia web óptima.",
+        imageUrl: "/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/images/equipo-desarrolladores-aplicacion-web.webp",
+        imageAlt: "Equipo de desarrolladores trabajando en una aplicación web, con dos miembros codificando activamente mientras otros discuten temas relacionados.",
+        link: "/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/",
+    },
+    {
         keywords: "Manipulación, del, DOM, Creación, de, elementos, HTML, Adición, JavaScript, dinámicos, innerHTML, Método forEach, Pintar, Técnicas, desarrollo, web, arrays, JS, eficiente, Generación, dinámica, contenidos, Ejemplos",
         title: "Manipulando el DOM: Creación y Adición de Elementos HTML con JavaScript",
         description: "Descubre cómo manipular el DOM con JavaScript de manera eficiente. En esta entrada, profundizamos en la creación y adición dinámica de elementos HTML, proporcionando ejemplos claros y técnicas prácticas.",
