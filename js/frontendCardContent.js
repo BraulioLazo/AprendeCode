@@ -1,6 +1,6 @@
 const frontendCardContent = [
     {
-        keywords: "",
+        keywords: "videos, en, HTML, personalizar, videos, atributo, autoplay, muted, reproducción, automática, bucle, de, video, loop, controles, video, controls, imagen, previa, poster, carga, preload, guía, tutorial",
         title: "Incorporando y Personalizando Videos en HTML: Una Guía Completa",
         description: "Descubre cómo incorporar y personalizar videos en HTML eficazmente. Desde formatos hasta controles, esta guía te lleva paso a paso hacia una experiencia web óptima.",
         imageUrl: "/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/images/equipo-desarrolladores-aplicacion-web.webp",
