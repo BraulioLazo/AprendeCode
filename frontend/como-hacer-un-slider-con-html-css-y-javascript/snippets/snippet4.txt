@@ -1,0 +1,10 @@
+var Slider = document.querySelector(".slider");
+var IconoDerecho = document.querySelector(".icono-derecho");
+Contador = 0;
+
+function MoverDerecha()
+  {
+     Contador++;
+     Slider.style.marginLeft = `-${100 * Contador}%`;
+  }
+IconoDerecho.addEventListener("click", MoverDerecha);

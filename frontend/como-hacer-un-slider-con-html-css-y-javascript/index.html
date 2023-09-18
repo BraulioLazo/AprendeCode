@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende paso a paso cómo crear un elegante y funcional slider utilizando las tecnologías web más populares: HTML, CSS y JavaScript.">
+    <meta name="keywords" content="slider, HTML, CSS, JavaScript, tutorial, AprendeCode, desarrollo web, animaciones web, galería de imágenes">
+    <meta name="author" content="Braulio de AprendeCode">
+    
+    <meta property="og:title" content="¿Cómo hacer un SLIDER con HTML, CSS y JavaScript?">
+    <meta property="og:description" content="Descubre cómo construir un slider efectivo y estilizado utilizando HTML, CSS y JavaScript. Una guía detallada para mejorar tus habilidades en el desarrollo web.">
+    <meta property="og:image" content="/frontend/como-hacer-un-slider-con-html-css-y-javascript/images/slider-con-html-css-javascript.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-hacer-un-slider-con-html-css-y-javascript/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>¿Cómo hacer un SLIDER con HTML, CSS y JavaScript?</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¿Cómo hacer un SLIDER con HTML, CSS y JavaScript?
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <h2>Creando un Slider Dinámico: HTML, CSS & JavaScript en Acción</h2>
+                <p>
+                    En el <strong>blog anterior</strong>, exploramos este mismo tema. Sin embargo, prometí traerte
+                    <strong>dos modelos adicionales de sliders</strong> debido a las diversas formas en que se pueden
+                    crear. Por eso, estoy de vuelta con otro modelo.
+                </p>
+
+                <p>
+                    Entonces, ¿cuál es la <strong>diferencia clave</strong> en este modelo de slider? Bueno, en última
+                    instancia, el <strong>resultado final</strong> que verá el usuario será prácticamente el mismo. Sin
+                    embargo, el <strong>código</strong> que respalda este slider será diferente, lo que nos brinda la
+                    oportunidad de aprender más. La primera diferencia importante es que, en este modelo de slider,
+                    cargaremos las <strong>imágenes a través del HTML</strong>, en lugar de hacerlo mediante
+                    <strong>JavaScript</strong> como lo hicimos en el modelo anterior. Esto cambia completamente el
+                    enfoque del juego. Pero, sin más preámbulos, aquí te dejo un código base para que lo copies y
+                    disfrutes mientras lo desarrollamos juntos. A continuación, explicaré lo que necesitas saber antes
+                    de comenzar a trabajar en el <strong>JavaScript</strong>.
+                </p>
+
+
+                <h2>Empecemos con lo Básico: Código de Inicio para el Slider</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Descifrando el Código: Entendiendo el HTML del Slider</h2>
+                <p>
+                    Lo primero que necesito mencionarte es que todo lo que se encuentra fuera de las <strong>líneas de
+                        comentarios</strong>, tanto en el <strong>HTML</strong> como en el <strong>CSS</strong>, puede
+                    ser descartado. Todo lo que está fuera de esas líneas se ha creado únicamente para darle un aspecto
+                    más atractivo, pero lo que es estrictamente necesario para el funcionamiento del slider se encuentra
+                    <strong>dentro de los comentarios</strong>. Ahora, procedamos a explicar el <strong>HTML</strong>.
+                </p>
+
+                <p>
+                    Dentro de las líneas de comentarios, lo primero que encuentras es el <strong>contenedor del
+                        SLIDER</strong>. Dentro de este contenedor, se encuentra todo lo relacionado con el slider y
+                    lleva la clase <strong>contenedor-slider</strong>. Luego, dentro de este contenedor, tanto al
+                    principio como al final, hay dos contenedores con iconos que, al hacer clic en ellos, permitirán
+                    mostrar la <strong>imagen siguiente o anterior</strong>, dependiendo del ícono seleccionado. Entre
+                    estos dos íconos, se encuentra un contenedor con la clase <strong>slider-screen</strong>,
+                    precisamente porque esta área será donde se visualizarán las imágenes. A continuación, tenemos un
+                    contenedor con la clase <strong>slider</strong>, que contiene todas las imágenes que deseamos
+                    mostrar dentro del slider, en este caso, son cuatro. Estas imágenes poseen la clase
+                    <strong>"img-slider"</strong>, que luego utilizaremos en el <strong>JavaScript</strong>. Ahora que
+                    hemos cubierto esto, continuemos con el <strong>CSS</strong>.
+                </p>
+
+
+                <h2>Vistiendo el Slider: Fundamentos de CSS para Nuestro Diseño</h2>
+                <p>
+                    En el <strong>CSS</strong>, avanzamos hasta donde se encuentran las <strong>líneas de
+                        comentarios</strong>. Sin embargo, no voy a explicar cada línea de CSS, ya que muchas de ellas
+                    son simplemente estilos comunes. En su lugar, me centraré en explicar los <strong>estilos más
+                        relevantes</strong> para el funcionamiento del <strong>SLIDER</strong>. En primer lugar, tenemos
+                    los estilos del contenedor padre, que lleva la clase <strong>"contenedor-slider"</strong>. Este
+                    contenedor se ha configurado como <strong>flexible (flex)</strong> para que cada ícono y el área
+                    donde se visualiza la imagen se coloquen uno al lado del otro en el orden correspondiente. También
+                    se ha establecido un <strong>ancho máximo de 1200px</strong> para que el diseño sea responsive. A
+                    continuación, encontramos los estilos de los contenedores de los íconos, con un <strong>ancho
+                        (width) del 5%</strong> cada uno. Más abajo, están los estilos de los íconos en sí, que ocupan
+                    el <strong>100% del ancho</strong> de sus contenedores para garantizar que sean responsive.
+                </p>
+
+
+                <h2>Detalles Cruciales en CSS: Garantizando la Efectividad del Slider</h2>
+                <p>
+                    Continuando con los <strong>estilos</strong>, a continuación vienen los estilos del contenedor
+                    <strong>"slider-screen"</strong>, el área donde se visualizan las imágenes. Esta parte es
+                    <strong>crucial</strong> para el correcto funcionamiento del Slider, por lo que la explicaré
+                    detalladamente. El contenedor "slider-screen" tiene un <strong>ancho (width) del 90%</strong> para
+                    asegurarnos de que sea responsive y un "<strong>overflow" oculto (overflow hidden)</strong> para que
+                    no se muestre nada que se salga de sus límites.
+                </p>
+
+                <p>
+                    Luego tenemos el contenedor de las imágenes con la clase <strong>".slider"</strong>, y esto es de
+                    <strong>suma importancia</strong>. En primer lugar, este contenedor se configura como
+                    <strong>flexible (flex)</strong> para que las imágenes se coloquen una al lado de la otra. En
+                    segundo lugar, este contenedor debe tener un <strong>ancho del 100% multiplicado</strong> por la
+                    cantidad de imágenes que deseas mostrar. Por ejemplo, si tienes 4 imágenes, el ancho debe ser del
+                    400%, y si fueran 5 imágenes, sería del 500% (5 x 100% = 500%). Debes ajustar este ancho en función
+                    de la cantidad de imágenes que tenga tu Slider.
+                </p>
+
+                <p>
+                    Por último, están los estilos de las imágenes en sí. Para que el <strong>Slider funcione
+                        correctamente</strong>, estas imágenes deben tener un ancho del 100% dividido por la cantidad de
+                    imágenes que tienes. En este caso, sería del <strong>25% (100% / 4 = 25%)</strong>. Si cambias la
+                    cantidad de imágenes, recuerda ajustar este valor en consecuencia. Con esto, ya tenemos todo listo y
+                    preparado para adentrarnos en la parte más emocionante: <strong>¡el JavaScript!</strong>
+                </p>
+
+
+                <h2>Dando Vida al Slider: Introducción al JavaScript</h2>
+                <p>
+                    El primer paso en <strong>JavaScript</strong> es comprender cómo funcionará nuestro
+                    <strong>Slider</strong>. Su funcionamiento es sencillo: cuando se hace clic en el ícono de la
+                    izquierda, se desplaza una imagen hacia la izquierda, y lo mismo ocurre con el ícono de la derecha,
+                    donde cada clic desplaza una imagen hacia la derecha. Para lograr esto, necesitamos <strong>dos
+                        cosas</strong>. En primer lugar, debemos agregar un <strong>Event Listener</strong> a cada ícono
+                    para que se ejecute la función correspondiente encargada de mover la imagen a la izquierda o derecha
+                    según el ícono clicado. En segundo lugar, debemos declarar una variable llamada
+                    <strong>"Contador"</strong> para llevar un registro de cuántas veces se ejecutan estas funciones, y
+                    ese número determinará qué imagen se visualizará. Si te sientes un poco perdido hasta este punto, no
+                    te preocupes, iremos paso a paso para que no te pierdas, y a continuación, proporcionaré el código
+                    por etapas para que sea <strong>aún más fácil de comprender</strong>.
+                </p>
+
+
+                <h2>Iniciando con Event Listeners y la Variable Contador</h2>
+                <p>
+                    Primero que nada, vamos a desarrollar todo el código para hacer que funcione el ícono de la derecha,
+                    y una vez que esté listo, abordaremos el de la izquierda. Hablando de nuestro <strong>hermoso
+                        código</strong> (¡ja, ja!), primero necesitamos almacenar el ícono de la derecha en una variable
+                    para luego agregarle el <strong>Event Listener</strong> correspondiente. La variable la vamos a
+                    llamar "<strong>IconoDerecho</strong>" y se vería así:
+                    <code>var IconoDerecho = document.querySelector(".icono-derecho")</code>. A continuación, vamos a
+                    declarar la variable "<strong>Contador</strong>" y le asignaremos el valor cero
+                    (<code>var Contador = 0</code>). Ahora, nos desplazamos un poco y declaramos la función que se
+                    ejecutará cada vez que se haga clic en este ícono, llamada "<strong>MoverDerecha</strong>". Luego,
+                    automáticamente le agregamos el <strong>Event Listener</strong> al ícono de la derecha de la
+                    siguiente manera: <code>IconoDerecho.addEventListener("click", MoverDerecha)</code>. Hasta este
+                    punto, no debería haber confusiones, pero de todas formas, a continuación encontrarás el código
+                    hasta este punto para que puedas seguirlo mientras lees.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Mecanismo de Desplazamiento: Moviendo el Slider a la Derecha</h2>
+                <p>
+                    Una vez dentro de la función, necesitamos incrementar en uno la variable
+                    <strong>Contador</strong>. ¿Por qué? Pues cada vez que se haga clic en el ícono, necesito que se
+                    muestre la imagen que sigue, y el valor del contador es equivalente a la posición que ocupa la
+                    imagen dentro del slider. Por ejemplo, el contador está en cero ahora mismo, si hago clic, estará en
+                    uno y esa será la imagen que se visualizará; si vuelvo a hacer clic, el contador estará en dos y esa
+                    será la imagen a mostrar. Para aumentar la variable, simplemente podemos hacerlo de esta manera:
+                    <code>(Contador++)</code>.
+                </p>
+                <p>
+                    Ahora, para desplazar el <strong>slider</strong> como tal, hay dos formas diferentes de hacerlo: una
+                    es utilizando el <strong>Margin Left</strong> y la otra es con <strong>TranslateX()</strong>. En
+                    este blog, vamos a usar Margin Left, y en el video del canal te mostraré cómo hacerlo con ambas
+                    técnicas. Para llevar a cabo cambios en los estilos del Slider, primero, vamos a almacenarlo en una
+                    variable para poder realizar los ajustes necesarios. Lo he llamado "<strong>Slider</strong>", y se
+                    vería de la siguiente manera: <code>var Slider = document.querySelector(".slider")</code>.
+                </p>
+
+
+                <h2>Ajustando el Estilo Margin-Left con JavaScript</h2>
+                <p>
+                    El siguiente paso es modificar el <strong>Margin Left</strong> del Slider. ¿Cómo podemos hacerlo?
+                    ¡Sencillo! Primero, hacemos referencia al elemento al cual queremos modificar los estilos; luego,
+                    mencionamos la propiedad <strong>Style</strong> y, por último, especificamos el estilo que queremos
+                    modificar. Hasta ahora, se vería así: <code>Slider.style.marginLeft</code>. Si tienes alguna duda,
+                    siempre puedes consultar el código que aparece a continuación.
+                </p>
+                <p>
+                    El siguiente paso es indicar cuánto queremos que se modifique y en qué unidad de medida (<strong>%,
+                        px...</strong>). En este caso, preferimos usar porcentajes, ya que al indicar que se desplace un
+                    <strong>100%</strong>, nos referimos al tamaño de su contenedor. Esto significa que no importa el
+                    tamaño del dispositivo en el que se esté visualizando ni el tamaño de la ventana, el diseño siempre
+                    se mantendrá intacto. Hasta aquí todo va bien, pero cada vez que se haga clic, no podemos decirle
+                    que el margen sea del 100%, porque independientemente de cuántas veces se haga clic, el tamaño
+                    seguirá siendo del 100%, es decir, solo se habrá desplazado una imagen. Por lo tanto, necesito que
+                    cada vez que se haga clic en el ícono, multipliquemos la variable <strong>contador</strong> por el
+                    100%, de modo que el <strong>Margin Left</strong> sea mayor en cada clic, mostrando así una imagen
+                    diferente cada vez. Esto nos lleva a la siguiente pregunta: ¿cómo multiplicar la variable por el
+                    <strong>100%</strong>?
+                </p>
+                <p>
+                    Abajo te dejo el código hasta este punto, échale un vistazo si estás con dudas.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Implementación de Condiciones para un Deslizamiento Fluido</h2>
+                <p>
+                    <strong>Si copias el código en tu editor</strong>, verás que ya funciona correctamente.
+                    <strong>Problema:</strong> al llegar a la <strong>última imagen</strong>, el contador sigue
+                    aumentando su valor y, por consiguiente, si sigues haciendo clic, podrías encontrarte con el
+                    <strong>Slider</strong> en algún lugar inesperado, ¡quizás a dos calles de tu casa! 😄. Pero no te
+                    preocupes, podemos solucionarlo de manera muy sencilla. Solo necesitas agregar una condición que
+                    diga que si el <strong>Contador</strong> es mayor que la cantidad de imágenes, el Contador regrese a
+                    cero. De esta manera, cuando llegues a la última imagen, volverás a la primera y el <strong>Slider
+                        seguirá funcionando sin problemas</strong>.
+                </p>
+
+                <p>
+                    <strong>En primer lugar</strong>, voy a recoger las imágenes en una variable. Todas las imágenes
+                    están listas en el HTML con la clase <strong>img-slider</strong>, lo que me permite recogerlas de
+                    manera precisa. Por lo tanto, declaro la variable "<strong>Imagenes</strong>" y utilizo
+                    <strong>querySelectorAll</strong> para crear una Lista de Nodos con todas las imágenes. Luego,
+                    obtengo la propiedad <strong>length</strong> de esta lista, ya que lo que realmente me interesa es
+                    la <strong>cantidad de imágenes</strong>. Puedes seguir echando un vistazo más abajo para ver el
+                    código. Luego, entro en la función <strong>MoverDerecha</strong>, y después de incrementar la
+                    variable <strong>Contador</strong>, agrego una condición que dice lo siguiente: si Contador es
+                    mayor que 'Imagenes - 1', entonces Contador = 0. La resta de uno se debe a que en una Lista de
+                    Nodos o en un Array, la posición comienza desde cero, lo que significa que la posición de la cuarta
+                    imagen es en realidad la 3. Hasta aquí, todo funciona perfectamente, pero <strong>quiero agregarle
+                        una transición para que se vea más elegante</strong>. La verdad es que ese cambio tan brusco no
+                    resulta estético.
+                </p>
+
+                <p>
+                    <strong>Para agregar la transición</strong>, seguimos más o menos los mismos pasos que para
+                    modificar
+                    el <strong>Margin Left</strong>, ya que también se trata de un estilo. Pero no te preocupes, te lo
+                    explicaré igualmente. Primero, hacemos referencia al <strong>Slider</strong>, luego a la propiedad
+                    <strong>style</strong>, y finalmente a la propiedad de CSS que queremos modificar (en este caso,
+                    <strong>transition</strong>). Luego, utilizamos el signo de igual y, entre comillas, definimos las
+                    reglas de la transición, como si estuviéramos escribiendo en CSS. Puedes encontrar el código
+                    completo hasta este punto a continuación.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Creando la Función para Mover a la Izquierda</h2>
+                <p>
+                    <strong>Ahora que tenemos todo listo con el ícono de la derecha</strong>, es hora de comenzar a
+                    trabajar con el <strong>ícono de la izquierda</strong>. Aunque existen algunas diferencias, los
+                    pasos principales son exactamente los mismos. Primero, necesitamos almacenar el ícono de la
+                    izquierda en una variable. Luego, declaramos la función "<strong>MoverIzquierda</strong>" y, por
+                    último, agregamos el <strong>Event Listener</strong> al ícono, indicando que cada vez que se haga
+                    clic en él, se ejecute la función "MoverIzquierda". Creo que esto está bastante claro, así que
+                    pasemos directamente a los pasos dentro de la función.
+                </p>
+                <p>Una vez dentro de la función, el primer paso es <strong>disminuir el Contador</strong> en lugar de
+                    incrementarlo, para que se muestre la imagen anterior. Luego, los dos últimos pasos, que son la
+                    transición y la modificación del "<strong>Margin Left</strong>", son exactamente los mismos, por lo
+                    que podemos copiar y pegar el código. Sin embargo, nos encontramos con un problema: al principio, el
+                    contador está en cero, y si el usuario decide hacer clic en el ícono de la izquierda, el contador se
+                    convertirá en -1 y obtendremos un error bastante incómodo. Notarás que el <strong>Slider realiza un
+                        movimiento extraño</strong>. Por lo tanto, también necesitamos agregar una condición, pero en
+                    este caso, al revés de la condición anterior. Ahora, necesitamos que si el <strong>Contador es menor
+                        que 0</strong>, entonces el Contador sea igual a "Imagenes - 1". Esto significa que, desde la
+                    primera imagen, saltaremos directamente a la última y así evitaremos ese error.
+                </p>
+                <p>A continuación, encontrarás el <strong>código</strong> para que puedas revisarlo.</p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+                <h2>Refinamiento y Organización: Optimizando Nuestro Código</h2>
+                <p>
+                    <strong>Con esto, podríamos dar por terminado el blog</strong>. Sin embargo, nosotros, los
+                    <strong>amantes del código</strong>, sentimos un cariño especial por él y siempre buscamos que se
+                    vea lo más pulido posible 😂. Como puedes notar, hay <strong>mucho código que se repite</strong> en
+                    ambas funciones, por lo que podemos tomar ese código y ponerlo en una función aparte. Luego,
+                    simplemente llamamos a esa función cuando sea necesario, tanto dentro de la función "MoverDerecha"
+                    como en "MoverIzquierda". Así que, ¡comencemos!
+                </p>
+                <p>
+                    <strong>Primero que nada</strong>, antes de ambas funciones, declaro la función
+                    "<strong>MoverSlider</strong>". Dentro de las llaves de esta función, el primer paso es copiar las
+                    líneas que se repiten en ambas funciones. En este caso, serían la transición y el cálculo del
+                    "<strong>Margin Left</strong>". Una vez hecho esto, puedes eliminar esas líneas de las otras dos
+                    funciones, ya que no serán necesarias. Para que quede más organizado, también podemos trasladar las
+                    dos condiciones dentro de esta última función, "MoverSlider". Dentro de la función "MoverDerecha",
+                    corta la condición y pégala al principio de "MoverSlider". Luego, haz lo mismo en la función
+                    "MoverIzquierda". Corta la condición, pégala después de la primera y asegúrate de agregar un
+                    "<strong>else</strong>" entre ambas. De esta manera, habrás completado la función "MoverSlider".
+                </p>
+                <p>
+                    Ahora, dentro de la función "MoverDerecha", solo te quedará la línea de código que
+                    <strong>incrementa
+                        la variable "Contador"</strong>. Debajo de esa línea, llama a la función "MoverSlider()". Luego,
+                    ve dentro de la función "MoverIzquierda" y realiza el mismo proceso. Después de disminuir la
+                    variable "Contador", llama a la función "MoverSlider". Ahora, guarda, actualiza y listo.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Conclusión y Próximos Pasos</h2>
+                <p>
+                    Si <strong>guardas y actualizas</strong>, no deberías notar ningún cambio en la parte visual del
+                    <strong>Slider</strong>. Si algo inusual ocurre, podría ser porque hemos cometido algún error en el
+                    código. Después de revisar esto al menos unas 100 veces, no creo que haya quedado ningún errorcito
+                    suelto por ahí 😂. Y hasta aquí hemos llegado con este <strong>blog</strong>. ¿Qué más puedo desear?
+                    Solo espero que te haya sido de ayuda, que hayas aprendido algo nuevo y que lo hayas disfrutado.
+                    Recuerda que aún nos queda un modelo de <strong>Slider pendiente</strong>, así que cuando esté
+                    listo, te lo compartiré por 
+                    <a href="https://youtu.be/oABYi9nZU2I" target="_blank" rel="noopener noreferrer"><b>AQUI</b></a>. 
+                    ¡Un abrazo! <strong>Braulio</strong> de <strong>AprendeCode</strong>.
+                </p>
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'como-hacer-un-slider-con-html-css-y-javascript';
+        const totalSnippets = 7;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

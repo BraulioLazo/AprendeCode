@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "slider, HTML, CSS, JavaScript, ícono derecha, ícono izquierda, transición, Margin Left, contador, querySelectorAll, Lista de Nodos, MoverDerecha, MoverIzquierda, MoverSlider, img-slider, código",
+        title: "¿Cómo hacer un SLIDER con HTML, CSS y JavaScript?",
+        description: "Descubre paso a paso cómo crear un slider dinámico y responsivo utilizando HTML, CSS y JavaScript. ¡Haz que tus imágenes cobren vida y mejora la interactividad de tu sitio con esta guía detallada!",
+        imageUrl: "/frontend/como-hacer-un-slider-con-html-css-y-javascript/images/slider-con-html-css-javascript.webp",
+        imageAlt: "Desarrollador concentrado mirando la pantalla, revisando el funcionamiento del slider que creó con HTML, CSS y JavaScript.",
+        link: "/frontend/como-hacer-un-slider-con-html-css-y-javascript/",
+    },
+    {
         keywords: "slider, JavaScript, navegación de imágenes, interactividad, dinámica, MoverDerecha, MoverIzquierda, setInterval, event listeners, setTimeout, tutorial, guía, código",
         title: "¿Cómo hacer un Slider con JavaScript?",
         description: "Explora la magia detrás de la creación de sliders con JavaScript. En esta entrada, te guiaremos a través de los fundamentos de la navegación entre imágenes y cómo lograr una experiencia de usuario interactiva y dinámica.",
