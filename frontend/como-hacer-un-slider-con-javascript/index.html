@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Aprende a crear un slider interactivo con JavaScript. Esta guía detalla cómo navegar entre imágenes, implementar automatización, y gestionar la interactividad del usuario. Descubre las posibilidades que ofrece JavaScript para mejorar la experiencia del usuario en tu sitio web.">
+    <meta name="keywords" content="slider, JavaScript, navegación de imágenes, interactividad, dinámica, MoverDerecha, MoverIzquierda, setInterval, event listeners, tutorial, guía, código">
     <meta name="author" content="Braulio de AprendeCode">
 
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="/frontend/">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:title" content="¿Cómo hacer un Slider con JavaScript?">
+    <meta property="og:description" content="Sumérgete en una guía paso a paso sobre cómo crear un slider dinámico e interactivo con JavaScript. Desde la navegación entre imágenes hasta la automatización y la gestión de interacciones del usuario, esta entrada te ofrece todo lo que necesitas saber.">
+
+    <meta property="og:image" content="/frontend/como-hacer-un-slider-con-javascript/images/equipo-desarrollando-un-slider-con-javascript.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-hacer-un-slider-con-javascript/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
@@ -116,6 +117,12 @@
                     los estilos por tu cuenta.
                 </p>
 
+                <div class="image-container">
+                    <img src="/frontend/como-hacer-un-slider-con-javascript/images/como-un-hacer-slider-con-javascript.webp"
+                        loading="lazy" decoding="async"
+                        alt="Captura de pantalla mostrando la ejecución del código de un slider con JavaScript en un navegador.">
+                </div>
+
                 <h2>Dando Vida a tu Slider: Cargando Imágenes con JS</h2>
                 <p>
                     Una vez que hemos explicado el código inicial, es el momento de adentrarnos en el
@@ -127,7 +134,7 @@
                     comas, especificamos la dirección URL de cada imagen. Es exactamente igual que cuando cargas una
                     imagen directamente en el <strong>HTML</strong> utilizando el atributo "src". Abres comillas y
                     dentro de ellas colocas la dirección de la imagen. En mi caso, tengo las imágenes guardadas en una
-                    carpeta llamada "Imagenes", y cada dirección está separada por una barra diagonal, seguida del
+                    carpeta llamada "Imagenes" luego, una barra diagonal, seguida del
                     nombre de la imagen y, finalmente, un punto y el formato de la imagen. Puedes ver un ejemplo en el
                     código de más abajo.
                 </p>
@@ -152,11 +159,10 @@
                     dentro del objeto <strong>Documento</strong> (document)". Ahora, con suerte, todo debería estar
                     claro hasta este punto, y podemos continuar más abajo.
                 </p>
-
-                <h2>¿Prefieres Video? ¡Visita Nuestro Canal!</h2>
                 <p>
                     Antes de continuar, quiero informarte que este contenido también está disponible en nuestro canal de
-                    YouTube. Te invito a echarle un vistazo AQUÍ.
+                    YouTube. Te invito a echarle un vistazo <a href="https://youtu.be/Its-1epV-eQ" target="_blank"
+                        rel="noopener noreferrer"><b>AQUÍ</b></a>.
                 </p>
 
                 <div class="snippets">
@@ -241,7 +247,7 @@
                     no le hemos puesto ningún límite. Esto se soluciona de manera sencilla con una
                     <strong>condición</strong> que dice: si el contador supera la cantidad de imágenes, el contador debe
                     volver a cero. De este modo, cada vez que llegue a la última imagen, volverá a la primera de manera
-                    infinita. Podría quedar de este modo, por ejemplo: <strong>if (Contador > 3) { Contador = 0
+                    infinita. Podría quedar de este modo, por ejemplo: <strong>if (Contador &gt; 3) { Contador = 0
                         }</strong>.
                 </p>
                 <p>
@@ -252,13 +258,13 @@
                     número 1. Entonces, 3 es igual a la imagen número 4.
                 </p>
                 <p>
-                    Ahora bien, realmente no está mal comparar el contador con el número 3 (if (Contador > 3)), pero
+                    Ahora bien, realmente no está mal comparar el contador con el número 3 (if (Contador &gt; 3)), pero
                     esto
                     podría causar problemas cuando decidas cargar más o menos imágenes en tu slider. Tendrías que
                     revisar el código nuevamente y ajustar ese número según la cantidad de imágenes que hayas cargado.
                     Lo más lógico es hacer la comparación con el número de imágenes actual, de este modo no importará la
                     cantidad de imágenes que decidas agregar en el futuro, el código siempre funcionará. Así quedaría:
-                    <strong>if (Contador > imagenes.length – 1)</strong>. ¿Por qué restar 1? Por la razón que se explicó
+                    <strong>if (Contador &gt; imagenes.length – 1)</strong>. ¿Por qué restar 1? Por la razón que se explicó
                     anteriormente (la cantidad de imágenes siempre es 1 más que el número de la última posición de una
                     matriz). A continuación, te dejo el código.
                 </p>
@@ -347,7 +353,9 @@
                     siguiente. Hemos puesto el ejemplo con la imagen anterior, pero lo mismo sucederá si decide ver la
                     siguiente. Esto es fácil de solucionar; simplemente, cada vez que el usuario decida hacer clic en
                     cualquiera de los íconos, reiniciamos el intervalo. Dejemos de hablar y vayamos a la acción, como
-                    dijo <strong>MiduDev</strong> en un podcast: "Hablar es FÁCIL, muéstrame el CÓDIGO" 😂.
+                    dijo <strong>MiduDev</strong> en un podcast: <a
+                        href="https://open.spotify.com/episode/49hzjRhZStHrTZbR6zMRpl?si=I2w4CeN1REeQaK9MIUpTqw"
+                        target="_blank" rel="noopener noreferrer"><b>Hablar es FÁCIL, muéstrame el CÓDIGO</b></a>😂.
                 </p>
 
                 <h2>Reiniciando el Intervalo: ¿Por qué y Cómo?</h2>
@@ -440,8 +448,9 @@
                     eso
                     depende de ti, porque yo ya he cumplido con mi misión 😂. Te dije que haríamos un <strong>Slider con
                         JavaScript</strong>, ¡y lo hemos logrado! Ah, recuerda que puedes ver este mismo blog en formato
-                    de video <strong>AQUÍ</strong>. ¿Quién sabe? Tal vez en el video incluya la transición.
-                    <strong>¡DESCÚBRELO!</strong> ¡Un abrazo!
+                    de video <a href="https://youtu.be/Its-1epV-eQ" target="_blank"
+                        rel="noopener noreferrer"><b>AQUÍ</b></a>. ¿Quién sabe? Tal vez en el video incluya la
+                    transición. <strong>¡DESCÚBRELO!</strong> ¡Un abrazo!
                 </p>
 
 
@@ -455,7 +464,7 @@
     <script src="/js/components/footer.js"></script>
     <script src="/js/entries.js"></script>
     <script>
-        const entryName = 'nueva-entrada';
+        const entryName = 'como-hacer-un-slider-con-javascript';
         const totalSnippets = 8;
         fetchAndDisplayCodeSnippets(entryName, totalSnippets)
     </script>

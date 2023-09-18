@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "slider, JavaScript, navegación de imágenes, interactividad, dinámica, MoverDerecha, MoverIzquierda, setInterval, event listeners, setTimeout, tutorial, guía, código",
+        title: "¿Cómo hacer un Slider con JavaScript?",
+        description: "Explora la magia detrás de la creación de sliders con JavaScript. En esta entrada, te guiaremos a través de los fundamentos de la navegación entre imágenes y cómo lograr una experiencia de usuario interactiva y dinámica.",
+        imageUrl: "/frontend/como-hacer-un-slider-con-javascript/images/equipo-desarrollando-un-slider-con-javascript.webp",
+        imageAlt: "Dos desarrolladores discutiendo detalles sobre la implementación de un slider con JavaScript frente a la pantalla de un ordenador.",
+        link: "/frontend/como-hacer-un-slider-con-javascript/",
+    },
+    {
         keywords: "videos, en, HTML, personalizar, videos, atributo, autoplay, muted, reproducción, automática, bucle, de, video, loop, controles, video, controls, imagen, previa, poster, carga, preload, guía, tutorial",
         title: "Incorporando y Personalizando Videos en HTML: Una Guía Completa",
         description: "Descubre cómo incorporar y personalizar videos en HTML eficazmente. Desde formatos hasta controles, esta guía te lleva paso a paso hacia una experiencia web óptima.",
