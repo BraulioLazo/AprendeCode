@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "almacenamiento web, local storage, session storage, javascript, guía, tutorial, introducción, persistencia de datos, guardar datos, acceder datos, borrar datos, storage en navegador, sessionStorage, localStorage, métodos storage, aprender storage, experiencia de usuario, optimización web, persistencia en web",
+        title: "Dominando el Almacenamiento Web: Local Storage y Session Storage",
+        description: "Sumérgete en el mundo del almacenamiento web con nuestra guía sobre Local Storage y Session Storage. Aprende cómo dominar estos poderosos herramientas de JavaScript y mejora la experiencia de usuario en tus proyectos.",
+        imageUrl: "/frontend/dominando-el-almacenamiento-web-local-storage-y-session-storage/images/desarrollador-trabajando-local-session-storage.webp",
+        imageAlt: "Desarrollador trabajando desde su casa, enfocado en el almacenamiento web con Local Storage y Session Storage",
+        link: "/frontend/dominando-el-almacenamiento-web-local-storage-y-session-storage/",
+    },
+    {
         keywords: "slider, HTML, CSS, JavaScript, ícono derecha, ícono izquierda, transición, Margin Left, contador, querySelectorAll, Lista de Nodos, MoverDerecha, MoverIzquierda, MoverSlider, img-slider, código",
         title: "¿Cómo hacer un SLIDER con HTML, CSS y JavaScript?",
         description: "Descubre paso a paso cómo crear un slider dinámico y responsivo utilizando HTML, CSS y JavaScript. ¡Haz que tus imágenes cobren vida y mejora la interactividad de tu sitio con esta guía detallada!",

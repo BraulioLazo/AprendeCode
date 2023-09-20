@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos.css">
+    <title> Local Storage y Session Storage</title>
+</head>
+<body>
+
+    <h1 class="sesiones">
+        Sesiones:
+    </h1>
+
+    <div class="borrar-datos">
+        Borrar Datos
+    </div>
+
+    <div class="bienvenida">
+        <div class="caja-padre">
+            <h1> ¿Sabes cómo Funciona el programa? </h1>
+            <p>
+                1 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero officia enim maiores eos sunt omnis voluptatum
+                voluptates amet modi commodi dolorem ea quia sequi unde
+                deserunt illo inventore, sed adipisci.
+            </p>
+                <br>
+            <p>
+                2 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero officia enim maiores eos sunt omnis voluptatum
+                voluptates amet modi commodi dolorem ea quia sequi unde
+                deserunt illo inventore, sed adipisci.
+            </p>
+                 <br>
+            <p>
+                3 - Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Libero officia enim maiores eos sunt omnis voluptatum
+                voluptates amet modi commodi dolorem ea quia sequi unde
+                deserunt illo inventore, sed adipisci.
+            </p>
+
+            <div class="caja-mostrar">
+                <h2>¿Volver a Mostrar?</h2>
+                <div class="cont-btn">
+                    <button type="button" class="btn-mostrar">Sí</button>
+                    <button type="button" class="btn-nomostrar">No</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="cont-padre">
+        <div class="circulo circulo-uno">
+            <div class="circulo circulo-dos">
+                <div class="circulo circulo-tres">
+                    CODING
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JavaScript.js"></script>
+</body>
+</html>

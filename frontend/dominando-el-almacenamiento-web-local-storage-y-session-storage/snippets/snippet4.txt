@@ -1,0 +1,5 @@
+function NoMostrarBienvenida()
+{
+   localStorage.setItem("No-Mostrar", "No");
+   OcultarBienvenida();
+}

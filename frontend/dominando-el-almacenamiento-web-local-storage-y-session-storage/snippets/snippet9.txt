@@ -1,0 +1,5 @@
+function LimpiarStorage()
+  {
+    localStorage.removeItem("No-Mostrar");
+  }
+BorrarDatos.addEventListener("click", LimpiarStorage);
