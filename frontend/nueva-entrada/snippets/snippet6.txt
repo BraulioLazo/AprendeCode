@@ -1,0 +1,4 @@
+function MostrarError(evento) {
+  var error = evento.target.error;
+  alert("Tenemos un ERROR: " + error.code + " / " + error.message);
+}

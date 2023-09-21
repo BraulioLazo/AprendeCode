@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>IndexedDB ¡Base de Datos con JavaScript!</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    IndexedDB ¡Base de Datos con JavaScript!
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Sí, lo leíste bien. Es posible crear una base de datos sin necesidad de involucrar el Back-End, solo
+                    usando JavaScript. Esta noticia es un gran alivio para los amantes del Front-End. Sin embargo, es
+                    importante tener en cuenta que esta base de datos tiene sus limitaciones ya que reside en el
+                    navegador. Antes de sumergirnos en este tema, quiero aclarar que este blog será una introducción a
+                    IndexedDB, ya que hay mucho que aprender y no podré cubrirlo todo en una sola entrada. Entonces,
+                    ¿qué aprenderemos en esta publicación?
+                </p>
+                <p>
+                    En primer lugar, aprenderemos cómo abrir la base de datos, lo cual es sorprendentemente sencillo y
+                    requiere solo una propiedad y un método. Pero, antes de profundizar en eso, es importante entender
+                    que, si lo comparamos con el mundo físico, la base de datos sería el terreno donde construiremos
+                    nuestros almacenes. Sin embargo, no podemos guardar nuestros objetos directamente en este terreno.
+                    Después de abrir la base de datos, necesitamos crear un almacén de objetos y es dentro de ese
+                    almacén que podemos guardar nuestros objetos.
+                </p>
+                <p>
+                    En segundo lugar, aprenderemos cómo crear ese almacén de objetos y, finalmente, veremos cómo crear
+                    índices. No te preocupes si no comprendes algunos de los términos o conceptos mencionados
+                    anteriormente; los exploraremos detenidamente a medida que avancemos en este blog. Para comenzar, te
+                    proporciono el código inicial que puedes copiar para que lo desarrollemos juntos.
+                </p>
+
+                <h2>Código de partida: HTML y CSS</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <P>
+                    Quería mencionar que este contenido también está disponible en formato de video en nuestro canal de
+                    YouTube, por si prefieres aprender de esa manera. Puedes encontrarlo
+                    <a href="https://www.youtube.com/watch?v=-ojbAy8zbEY" target="_blank"
+                        rel="noopener noreferrer"><b>AQUÍ</b></a>.
+                </P>
+
+                <h2>Explicando el código inicial</h2>
+                <P>
+                    En el código de partida, solo explicaré lo esencial. La idea central de este blog es preparar una
+                    base de datos para gestionar contactos. En realidad, solo nos interesan tres campos del formulario y
+                    el botón "Guardar". En el formulario, recopilaremos el nombre, el ID (DNI o identificación personal)
+                    y la edad de la persona. Estos datos recopilados son los que almacenaremos en nuestro almacén. Cada
+                    uno de estos campos tiene un ID(#) con el mismo nombre del dato que se está recopilando. Esto
+                    facilitará enormemente la recuperación de estos datos en JavaScript más adelante.
+                </P>
+
+                <h2>¡IdexedDB - Función principal!</h2>
+                <p>
+                    Entrando en el JavaScript, nuestro primer paso es declarar una variable que utilizaremos a lo largo
+                    de toda la base de datos, la llamaremos bd. Aunque no puedo explicarte su uso en este momento,
+                    pronto lo comprenderás mejor. Luego, el segundo paso es declarar la función principal, que he
+                    nombrado (function IniciarBaseDatos()), y de inmediato le agregamos un Event Listener a la ventana
+                    que responderá al evento "load" y ejecutará esta función. El código actualizado se presenta a
+                    continuación:
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB ¿Cómo abrir la Base de Datos?</h2>
+                <p>
+                    Como mencioné antes, abrir la base de datos en IndexedDB es sorprendentemente simple. Requiere solo
+                    una propiedad y un método. La propiedad es indexedDB, y el método es open(). Luego, entre los
+                    paréntesis de este método y entre comillas, asignamos un nombre a la base de datos. La línea de
+                    código se vería así: indexedDB.open("Datos-De-Contactos"). ¡Sorprendentemente, esto es todo lo que
+                    se necesita para abrir la base de datos! Sin embargo, esto nos lleva a la pregunta crucial: ¿Dónde
+                    se abre y almacena esta base de datos de IndexedDB?
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+                <h2>IndexedDB ¿Dónde se abre la Base de Datos?</h2>
+                <p>
+                    Para aquellos que ya han trabajado previamente con el Local Storage, el proceso de encontrar y
+                    explorar la base de datos de IndexedDB será bastante familiar. Pero si este es un territorio nuevo
+                    para ti, no te preocupes, te explicaré los pasos. Además, para que puedas guiarte visualmente,
+                    adjunto una imagen que ilustra los pasos.
+                </p>
+                <p>
+                    Primero, abre el inspector en tu navegador. Luego, dirígete a la pestaña "Application" (Aplicación).
+                    Dentro de esta pestaña, en la parte izquierda de la pantalla, encontrarás una sección llamada
+                    "Storage" (Almacenamiento). Haz clic en "IndexedDB". Si aún no has copiado el código para abrir la
+                    base de datos, esta sección podría estar vacía. Sin embargo, si ya copiaste y ejecutaste el código,
+                    verás una base de datos con el nombre "Datos-De-Contactos", como se muestra en la imagen a
+                    continuación.
+                </p>
+                <h3>Imagen aqui</h3>
+
+                <h2>¡Tipos de Eventos al abrir el IndexedDB!</h2>
+                <p>
+                    Dentro de la función que abre nuestra base de datos, necesitamos almacenar toda esa línea de código
+                    en una variable a la que llamaremos "solicitud" (var solicitud =
+                    indexedDB.open("Datos-De-Contactos")). ¿Por qué hacemos esto? Bueno, cuando abrimos una base de
+                    datos, pueden ocurrir tres eventos diferentes. Así que, vamos a agregar un Event Listener a la
+                    variable "solicitud" para escuchar cada uno de estos eventos y ejecutar una función específica para
+                    cada uno de ellos.
+                </p>
+                <p>
+                    En este punto, mencionaré los tres eventos y luego los explicaré detalladamente más abajo. El primer
+                    evento es "error", para este evento vamos a crear la función "MostrarError". El segundo evento es
+                    "success", y para este evento crearemos la función "Comenzar". Por último, tenemos el evento
+                    "upgradeneeded", para el cual vamos a crear la función "CrearAlmacen".
+                </p>
+                <p>
+                    A continuación, encontrarás el código hasta este punto, el cual puedes copiar y revisar. Después de
+                    esto, comenzaremos a explicar detenidamente cada uno de los eventos mencionados anteriormente.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Evento ERROR al abrir el IndexedDB!</h2>
+                <p>
+                    Lo primero que haremos es definir la función MostrarError. Es crucial capturar el objeto EVENTO
+                    entre los paréntesis de la función, ya que es ahí donde obtendremos los detalles del error. En
+                    realidad, con el objeto EVENTO del error no hay mucho margen de maniobra; sin embargo, es la clave
+                    para entender por qué estamos enfrentando dicho error. Para profundizar en los detalles, lo que
+                    haremos es almacenar este objeto EVENTO en una variable y luego acceder a las propiedades code y
+                    message a través de event.target.error. Podríamos embellecer esto de diversas maneras, pero para
+                    mantener las cosas sencillas en este ejemplo, utilizaremos un simple alert(). Así que, dentro de la
+                    función, abrimos el alert con la información del error, tal como lo verás más adelante.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Evento SUCCESS al abrir el IndexedDB!</h2>
+                <p>
+                    Este evento se desencadena cuando tenemos éxito en la creación de la base de datos. Para manejarlo,
+                    primero declaramos la función "Comenzar" (RECUERDA recoger el evento) y luego comenzamos a trabajar
+                    dentro de ella.
+                    Ahora, el evento SUCCESS es mucho más sencillo que el evento ERROR, ya que lo único que necesitamos
+                    hacer es almacenar el resultado de este evento en la variable "bd" que hemos declarado en el ámbito
+                    global. Para acceder al resultado de este evento, primero mencionamos el evento, luego usamos la
+                    propiedad "target" y, por último, la propiedad "result". Si traducimos la palabra "target" al
+                    español, sería "objetivo". En otras palabras, con esta línea de código, le estamos diciendo
+                    literalmente que dentro de ese evento, nuestro objetivo es acceder al resultado.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Evento UPGRADENEEDED al abrir el IndexedDB!</h2>
+                <p>
+                    Este evento se desencadena cuando el método "open" intenta abrir una base de datos que no existe.
+                    Como mencionamos al inicio, aunque ya tengamos la base de datos abierta, esto no significa que
+                    podamos comenzar a almacenar información en ella, sino que tenemos el terreno listo para construir
+                    el almacén. Es en este evento en específico donde creamos dicho almacén.
+                </p>
+                <p>
+                    Ahora, vamos a declarar la última función que nos falta, "CrearAlmacen", y comenzamos a trabajar
+                    dentro de ella. Antes de continuar, quiero recordarte que como estas tres funciones se ejecutan
+                    cuando se desencadena un evento específico, es sumamente importante recoger dicho evento, ya que
+                    siempre lo utilizamos dentro de la función que le corresponde. Dicho esto, lo primero que hacemos
+                    dentro de esta función es declarar una variable para almacenar el evento. La llamaremos
+                    "basededatos". Para recoger el evento, es exactamente igual que como lo hicimos en la función
+                    "Comenzar". Mencionamos el evento, luego la propiedad "target" y, por último, la propiedad "result".
+                    ¡Y eso es todo!
+                </p>
+
+                <h2>¡Método createObjectStore() - IndexedDB!</h2>
+                <p>
+                    El siguiente paso consiste en crear el ALMACÉN de objetos. ¿Cómo podemos lograrlo? Utilizamos el
+                    método createObjectStore(). Dentro de los paréntesis de este método y entre comillas, primero
+                    especificamos el nombre que deseamos darle a nuestro almacén, que en este caso es "Contactos". En
+                    segundo lugar, y esto es crucial, definimos entre llaves ({}), la propiedad keyPath, que nos permite
+                    establecer el identificador único para cada objeto almacenado.
+                </p>
+                <p>
+                    Para aclararlo mejor: si ya estás familiarizado con el Local Storage, este identificador actúa como
+                    la "llave" (Key) que utilizamos para acceder a los valores almacenados. Debe ser único y desempeña
+                    un papel importante, ya que también actúa como un índice para ordenar la información en la Base de
+                    Datos (denominada "Contactos" en este caso). Más adelante, cuando aprendamos cómo almacenar los
+                    contactos, verás cómo esto se aplica en la práctica.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Método createIndex() - IndexedDB!</h2>
+                <p>
+                    Ahora que tenemos un índice para ordenar nuestros contactos, es importante saber que podemos crear
+                    otros índices si es necesario, gracias al método createIndex(). Como puedes ver en el código
+                    anterior, ya hemos almacenado el almacén de objetos recién creado en la variable "almacen". Para
+                    crear otro índice, el primer paso es referirse al almacén y luego utilizar el método createIndex().
+                    La estructura se vería así: almacen.createIndex().
+                </p>
+                <p>
+                    Dentro de las llaves de este método, proporcionamos tres valores entre comillas. En primer lugar,
+                    establecemos el nombre que deseamos asignar a este índice; en este caso, lo llamaremos
+                    "BuscarNombre". En segundo lugar, especificamos el identificador que vamos a utilizar, que en este
+                    caso será el "nombre". Por último, entre llaves, definimos la propiedad "unique". Esta propiedad es
+                    de tipo booleano y puede tomar los valores "true" o "false". En este caso, será "false" ya que el
+                    nombre podría repetirse en diferentes contactos a lo largo de la lista de contactos. A continuación,
+                    tienes la función completa (CrearAlmacen).
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Código completo del IndexedDB!</h2>
+                <p>
+                    Aquí, al final, te proporcionaré el código completo hasta este punto junto con una imagen para que
+                    puedas verificar cómo debería lucir la Base de Datos. Copia y pega este código en tu editor, y verás
+                    que obtendrás el mismo resultado. Es importante aclarar que al trabajar con IndexedDB y desarrollar
+                    diferentes partes del código mientras lo actualizas, a veces parece que hay un problema cuando en
+                    realidad no lo hay. Solo necesitas borrar la Base de Datos y, al volver a actualizar, el problema
+                    desaparecerá (siempre y cuando el código esté correctamente escrito).
+                </p>
+                <p>
+                    Para borrar la Base de Datos, nosotros, como programadores, solo necesitamos hacer clic en su
+                    nombre, lo que desencadenará la aparición de dos botones: uno para borrarla y otro para
+                    actualizarla. Puedes intentar actualizarla primero, y si eso no funciona, simplemente bórrala.
+                    Después de hacerlo, todo debería funcionar correctamente al volver a actualizar la página.
+                    Recuerda que este proceso puede ser útil durante el desarrollo para depurar y solucionar problemas
+                    temporales. Aquí te dejo el código y la imagen correspondiente.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+                <h3>Imagen aqui</h3>
+
+                <h2>Despedida</h2>
+                <p>
+                    Estoy realmente emocionado por la llegada de este nuevo contenido a nuestra escuela. Cada vez
+                    estamos entregando material de mayor calidad y valor. Mantente atento porque los próximos blogs
+                    también estarán enfocados en IndexedDB. En el siguiente, aprenderemos cómo almacenar información
+                    dentro del Almacén de Objetos que acabamos de crear.
+                    Por ahora, quiero expresar mi deseo de que hayas disfrutado de este blog y que hayas aprendido algo
+                    nuevo. ¡Nos vemos en el siguiente! <br>
+                    <br>
+                    Braulio de AprendeCode.
+                </p>
+                
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/entries.js"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 10;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+    </script>
+</body>
+
+</html>

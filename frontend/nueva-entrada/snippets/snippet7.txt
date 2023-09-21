@@ -1,0 +1,3 @@
+function Comenzar(evento) {
+    bd = evento.target.result;
+}
