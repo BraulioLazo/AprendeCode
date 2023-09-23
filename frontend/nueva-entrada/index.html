@@ -24,7 +24,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Nueva Entrada</title>
+    <title>IndexeDB ¿Cómo almacenar OBJETOS?</title>
 </head>
 
 <body>
@@ -34,13 +34,275 @@
         <section class="header-section header-blog-entry-section">
             <div class="header-container section-container">
                 <h1 class="header-title">
-                    Nueva Entrada
+                    IndexeDB ¿Cómo almacenar OBJETOS?
                 </h1>
             </div>
         </section>
 
         <section class="blog-content-section">
-            <div class="blog-content-section-container section-container"></div>
+            <div class="blog-content-section-container section-container">
+                <p>
+                    En nuestro viaje a través de IndexedDB, nos sumergimos en el mundo de las transacciones. ¿Qué son
+                    estas transacciones? En esencia, cualquier operación que realicemos con la información almacenada o
+                    que planeamos almacenar en la base de datos se considera una transacción. Algunos ejemplos de
+                    transacciones incluyen guardar un objeto, editar la información dentro de ese objeto, eliminarlo o
+                    simplemente leer la información que ya está almacenada.
+                </p>
+                <p>
+                    En este blog, exploraremos dos tipos de transacciones: readonly (solo lectura) y readwrite (lectura
+                    y escritura). ¿Cómo determinamos qué tipo de transacción necesitamos? La respuesta es simple: las
+                    transacciones readonly se utilizan exclusivamente cuando necesitamos acceder a información
+                    almacenada en la base de datos, por ejemplo, para mostrar una lista de contactos. Por otro lado, las
+                    transacciones readwrite se emplean cuando se realizarán cambios en los datos, lo que significa que
+                    no solo estamos leyendo información.
+                </p>
+                <p>
+                    Si has seguido el blog anterior, el código de partida de esta entrada será familiar para ti. Este
+                    código es una continuación de nuestro trabajo anterior en IndexedDB. Si aún no has tenido la
+                    oportunidad de leerlo, te recomiendo que lo hagas antes de continuar aquí, ya que este blog es una
+                    extensión del anterior. Puedes encontrar la primera parte aquí.
+                </p>
+
+                <h2>Código de partida: HTML y CSS</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>JavaScript</h2>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Botón Guardar y el Event Listener!</h2>
+                <p>
+                    Para seguir adelante, primero, haremos una pequeña modificación en la función IniciarBaseDatos. Lo
+                    que necesitamos hacer es almacenar el botón "Guardar" en una variable y luego agregarle un Event
+                    Listener para que, al hacer clic en él, se ejecute la función AlmacenarContacto. El botón "Guardar"
+                    se identifica con el id "btn-guardar". A continuación, te presento la función IniciarBaseDatos con
+                    los cambios realizados. No profundizaré en los detalles de este proceso, ya que estamos
+                    familiarizados con el funcionamiento de los Event Listeners desde blogs anteriores
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB - Función AlmacenarContacto.</h2>
+
+                <p>
+                    Ahora, en el código, declararemos la función AlmacenarContacto y comenzaremos a trabajar en su
+                    interior. El primer paso dentro de esta función es buscar cada uno de los campos en el HTML. Sin
+                    embargo, en lugar de simplemente obtener los elementos de entrada (input), necesitamos capturar los
+                    valores que estos contienen, ya que son los datos que deseamos almacenar para cada contacto.
+                </p>
+                <p>
+                    Permíteme mostrarte un ejemplo utilizando el primer campo, que es el "nombre". Los otros dos campos
+                    se manejan de la misma manera, por lo que no es necesario explicarlos nuevamente. A cada variable,
+                    le asignaremos una letra inicial basada en el ID correspondiente. Por ejemplo, para el campo
+                    "nombre", utilizaremos: var N = document.querySelector("#nombre"). Esto nos ayudará a simplificar
+                    algunas operaciones más adelante.
+                </p>
+                <p>
+                    Además, al finalizar la función, una vez que hayamos guardado la información del contacto, es
+                    importante que los campos queden vacíos para que estén listos para el próximo contacto que deseemos
+                    almacenar. Aunque abordaremos esto más adelante en la función, es importante recordar que cualquier
+                    acción que realicemos a partir de este punto debe estar antes de la parte donde limpiamos los
+                    campos. Puedes ver el código completo a continuación para una mejor comprensión.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB - ¡Método transaction()!</h2>
+                <p>
+                    El siguiente paso en nuestro proceso esencial para trabajar con IndexedDB involucra tres líneas de
+                    código que son cruciales en este blog. En este punto, debemos comunicarle a IndexedDB que deseamos
+                    realizar una transacción y especificar su tipo. Luego, abriremos el almacén de la base de datos
+                    donde realizaremos esta transacción y, finalmente, procederemos a guardar la información, que en
+                    este caso corresponde a un nuevo contacto.
+                </p>
+                <p>
+                    Primero, vamos a declarar una variable llamada "transaccion" para capturar este evento específico:
+                    var transaccion =. A continuación, mencionamos la variable global "bd" que hemos definido
+                    previamente. Luego, utilizando el método "transaction()", especificamos en qué almacén deseamos
+                    realizar la transacción y qué tipo de transacción será (readonly o readwrite).
+                </p>
+                <p>
+                    Es fundamental que el nombre del almacén esté entre corchetes y comillas, seguido de una coma y,
+                    también entre comillas, especificamos el tipo de transacción. Puedes ver cómo se implementa en el
+                    código a continuación para tener una comprensión más clara.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB - ¡Método objectStore()!</h2>
+                <p>
+                    Antes de continuar, quiero mencionar que si prefieres aprender mediante contenido en formato de
+                    video, este tutorial ya está disponible en nuestro canal de YouTube. Puedes encontrarlo
+                    [aquí](enlace al video en YouTube).
+                </p>
+                <p>
+                    Hasta este punto, ya hemos informado a IndexedDB en qué almacén deseamos realizar la transacción
+                    (Contactos) y qué tipo de transacción será (readwrite). Sin embargo, aún nos falta un paso esencial:
+                    abrir el almacén para poder guardar los datos correspondientes a un nuevo contacto.
+                    Para lograr esto, utilizamos el método "objectStore()". Primero, declaramos una variable llamada
+                    "almacen" que almacenará la operación que vamos a ejecutar a continuación (var almacen =). A
+                    continuación, mencionamos la variable previa que representa nuestra transacción (transaccion) y
+                    luego aplicamos el método "objectStore()". Entre los paréntesis, y entre comillas, proporcionamos el
+                    nombre del almacén que deseamos abrir, que en este caso es "Contactos". Esto completa el proceso de
+                    apertura del almacén.
+                </p>
+                <p>
+                    Puedes observar cómo se implementa en el código a continuación para tener una visión más clara de
+                    este paso crucial.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB - ¡Método add()!</h2>
+                <p>
+                    Ahora, con todos los preparativos completados, estamos listos para almacenar el contacto, y te
+                    alegrará saber que esta es la parte más sencilla. Todo lo que necesitas para agregar el contacto es
+                    conocer el método "add()". Este método se encarga de agregar un nuevo objeto a la base de datos.
+                    Permíteme mostrarte cómo se hace. Primero, hacemos referencia a la variable "almacen" y luego
+                    aplicamos el método "add()". Dentro de los paréntesis y entre llaves (ya que estamos trabajando con
+                    un objeto), proporcionamos los datos del contacto.
+                </p>
+                <p>
+                    Dentro de estas llaves, simplemente asignamos un nombre a cada propiedad y luego le pasamos la
+                    variable que contiene la información correspondiente. Por ejemplo, para el nombre, lo nombramos
+                    "nombre" y, a continuación, utilizamos dos puntos para asignarle el valor contenido en la variable
+                    "N" (nombre: N). Esto se puede apreciar claramente en el código a continuación, por lo que no
+                    considero necesario explicar cómo almacenar los otros datos del contacto, ya que el proceso es el
+                    mismo.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código completo para almacenar Contactos - IndexedDB</h2>
+                <p>
+                    A continuación, te proporciono el código completo hasta este punto, para que puedas copiarlo
+                    fácilmente y agregar tu primer contacto a la Base de Datos. Después de añadir el nuevo contacto,
+                    abre el inspector y verifica si se ha almacenado correctamente. Si por alguna razón no funciona como
+                    se esperaba, simplemente borra la base de datos por completo y, después de hacerlo, actualiza la
+                    página. Esto debería resolver cualquier problema que puedas encontrar.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>IndexedDB - ¿Cuál es la Key, la variable o la propiedad?</h2>
+                <p>
+                    Ahora, retrocediendo un poco, mencioné que había nombrado las variables solo con sus iniciales para
+                    explicarte algo importante más adelante. Lo que necesito explicarte es acerca de la clave o "key"
+                    del objeto que se almacena en la Base de Datos. Para entender esto mejor, te proporciono una imagen
+                    a continuación. Cuando estamos asignando una clave tanto al crear un nuevo índice en el almacén,
+                    como al definir la clave principal del objeto, es importante entender la diferencia entre la
+                    propiedad y la variable que estamos utilizando.
+                </p>
+                <p>
+                    Por ejemplo, si consideramos la clave principal "id", en el objeto almacenado tenemos { id: I }.
+                    Aquí, "id" es la propiedad (el nombre que le damos) y "I" es la variable que contiene la información
+                    a almacenar. Si hubiera utilizado el mismo nombre tanto para la variable como para la propiedad (lo
+                    cual es posible), este punto no sería tan claro. He hecho esto para facilitar la comprensión, ya que
+                    a menudo puede resultar confuso, especialmente al principio.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Despedida</h2>
+                <p>
+                    Pues bien, querido coder, llegamos al final de este blog. Recuerda que los siguientes seguirán
+                    tratando el mismo tema, y es absolutamente necesario que los leas en el orden en que se publiquen
+                    para comprenderlos plenamente. Espero sinceramente que esta información te haya sido de gran ayuda
+                    en tu viaje. Si en algún momento te quedas con alguna duda, no dudes en dejarme un comentario.
+                    Estaré encantado de brindarte la ayuda que necesitas lo más rápido posible. Así que, con esto dicho,
+                    espero que hayas disfrutado de la lectura, que hayas aprendido algo nuevo y espero verte en el
+                    próximo blog.
+                </p>
+
+
+
+            </div>
         </section>
     </main>
 
@@ -51,7 +313,7 @@
     <script rel="preload" src="/js/entries.js" as="script"></script>
     <script>
         const entryName = 'nueva-entrada';
-        const totalSnippets = 0;
+        const totalSnippets = 10;
         fetchAndDisplayCodeSnippets(entryName, totalSnippets);
     </script>
 </body>
