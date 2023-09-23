@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Descubre cómo crear y gestionar una base de datos directamente en el Front-End utilizando IndexedDB y JavaScript. Ideal para amantes del desarrollo web.">
+    <meta name="description"
+        content="Descubre cómo crear y gestionar una base de datos directamente en el Front-End utilizando IndexedDB y JavaScript. Ideal para amantes del desarrollo web.">
     <meta name="keywords" content="IndexedDB, JavaScript, base de datos, Front-End, desarrollo web">
     <meta name="author" content="Braulio de AprendeCode">
-    
+
     <meta property="og:title" content="Aprende a Crear una Base de Datos con IndexedDB y JavaScript">
-    <meta property="og:description" content="Adéntrate en el mundo del Front-End y aprende a crear y gestionar bases de datos con IndexedDB y JavaScript. Un tutorial esencial para cualquier amante del desarrollo web.">
-    <meta property="og:image" content="/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/images/desarrolladoras-revisando-indexeddb-en-pantalla-y-movil.webp">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/">
+    <meta property="og:description"
+        content="Adéntrate en el mundo del Front-End y aprende a crear y gestionar bases de datos con IndexedDB y JavaScript. Un tutorial esencial para cualquier amante del desarrollo web.">
+    <meta property="og:image"
+        content="/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/images/desarrolladoras-revisando-indexeddb-en-pantalla-y-movil.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
@@ -112,7 +116,7 @@
                         variable</strong> que utilizaremos a lo largo de toda la base de datos, la llamaremos
                     <strong>bd</strong>. Aunque no puedo explicarte su uso en este momento, pronto lo comprenderás
                     mejor. Luego, el segundo paso es <strong>declarar la función principal</strong>, que he nombrado
-                    <strong>(function IniciarBaseDatos())</strong>, y de inmediato le agregamos un <strong>Event
+                    <strong>IniciarBaseDatos()</strong>, y de inmediato le agregamos un <strong>Event
                         Listener</strong> a la ventana que responderá al evento "<strong>load</strong>" y ejecutará esta
                     función. El código actualizado se presenta a continuación:
                 </p>
@@ -170,7 +174,7 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/frontend/nueva-entrada/images/localizar-base-de-datos-indexeddb-inspector.webp"
+                    <img src="/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/images/localizar-base-de-datos-indexeddb-inspector.webp"
                         loading="lazy" decoding="async"
                         alt="Pasos para localizar la base de datos de IndexedDB en la pestaña 'Application' del inspector del navegador">
                 </div>
@@ -235,9 +239,10 @@
 
                 <h2>Qué Hacer Cuando se Abre Exitosamente IndexedDB - Evento SUCCESS</h2>
                 <p>
-                    Este evento se desencadena cuando tenemos <strong>éxito</strong> en la creación de la base de datos.
-                    Para manejarlo, primero declaramos la función <strong>"Comenzar"</strong> (RECUERDA recoger el
-                    evento) y luego comenzamos a trabajar dentro de ella. Ahora, el evento <strong>SUCCESS</strong> es
+                    Este evento se desencadena cuando tenemos <strong>éxito</strong> tanto en la creación como en la
+                    apertura de una base de datos existente. Para manejarlo, primero declaramos la función
+                    <strong>"Comenzar"</strong> (RECUERDA recoger el evento) y luego comenzamos a trabajar dentro de
+                    ella. Ahora, el evento <strong>SUCCESS</strong> es
                     mucho más sencillo que el evento <strong>ERROR</strong>, ya que lo único que necesitamos hacer es
                     almacenar el resultado de este evento en la variable <strong>"bd"</strong> que hemos declarado en el
                     ámbito global. Para acceder al resultado de este evento, primero mencionamos el evento, luego usamos
@@ -319,7 +324,7 @@
                     almacen.createIndex().
                 </p>
                 <p>
-                    Dentro de las llaves de este método, proporcionamos tres valores entre comillas. En primer lugar,
+                    Dentro de las llaves de este método, proporcionamos tres valores. En primer lugar,
                     establecemos el nombre que deseamos asignar a este índice; en este caso, lo llamaremos
                     <strong>"BuscarNombre"</strong>. En segundo lugar, especificamos el identificador que vamos a
                     utilizar, que en este caso será el <strong>"nombre"</strong>. Por último, entre llaves, definimos la
@@ -373,7 +378,7 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/frontend/nueva-entrada/images/codigo-completo-para-abrir-base-de-datos-indexeddb.webp"
+                    <img src="/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/images/codigo-completo-para-abrir-base-de-datos-indexeddb.webp"
                         loading="lazy" decoding="async"
                         alt="Código completo para abrir una base de datos en IndexedDB y botones para borrar o actualizar la base de datos">
                 </div>
