@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, Front-End, JavaScript, gestionar, Application tab, navegador, tutorial, abrir, Indexeddb, base, de, datos, crear, almacén, almacen",
+        title: "¿Cómo crear una Base de Datos en el Front-End con IndexedDB y JavaScript?",
+        description: "Descubre cómo crear y gestionar una base de datos directamente en el Front-End utilizando IndexedDB y JavaScript. Ideal para amantes del desarrollo web.",
+        imageUrl: "/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/images/desarrolladoras-revisando-indexeddb-en-pantalla-y-movil.webp",
+        imageAlt: "Dos desarrolladoras revisando el uso de IndexedDB en pantalla y móvil",
+        link: "/frontend/como-crear-una-base-de-datos-en-el-front-end-con-indexeddb-y-javascript/",
+    },
+    {
         keywords: "almacenamiento web, local storage, session storage, javascript, guía, tutorial, introducción, persistencia de datos, guardar datos, acceder datos, borrar datos, storage en navegador, sessionStorage, localStorage, métodos storage, aprender storage, experiencia de usuario, optimización web, persistencia en web",
         title: "Dominando el Almacenamiento Web: Local Storage y Session Storage",
         description: "Sumérgete en el mundo del almacenamiento web con nuestra guía sobre Local Storage y Session Storage. Aprende cómo dominar estos poderosos herramientas de JavaScript y mejora la experiencia de usuario en tus proyectos.",
