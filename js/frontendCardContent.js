@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, almacenar, objetos, base, de, datos, cliente, key, clave, objeto, almacén, índice, transacción, transacion, transaction, almacenamiento, web, operaciones, con, métodos, guardar, IDBDatabase, IDBTransaction, IDBObjectStore",
+        title: "IndexedDB y el Arte de Almacenar Objetos: Todo lo que Necesitas Saber",
+        description: "Aprende cómo almacenar objetos y desentraña las complejidades del almacenamiento en bases de datos del lado del cliente. ¡Descubre los secretos del IndexedDB y potencia tus habilidades en desarrollo web!",
+        imageUrl: "/frontend/indexeddb-y-el-arte-de-almacenar-objetos-todo-lo-que-necesitas-saber/images/desarrollador-indexeddb-codigo.webp",
+        imageAlt: "Desarrollador analizando código relacionado con IndexedDB en su computadora.",
+        link: "/frontend/indexeddb-y-el-arte-de-almacenar-objetos-todo-lo-que-necesitas-saber/",
+    },
+    {
         keywords: "IndexedDB, Front-End, JavaScript, gestionar, Application tab, navegador, tutorial, abrir, Indexeddb, base, de, datos, crear, almacén, almacen",
         title: "¿Cómo crear una Base de Datos en el Front-End con IndexedDB y JavaScript?",
         description: "Descubre cómo crear y gestionar una base de datos directamente en el Front-End utilizando IndexedDB y JavaScript. Ideal para amantes del desarrollo web.",
@@ -71,7 +79,7 @@ const frontendCardContent = [
         imageAlt: "Chica sentada en su escritorio mirando el efecto de desplazamiento que ha implementado en su sitio web.",
         link: "/frontend/como-hacer-efecto-scroll-con-javascript/",
     },
-    
+
     {
         keywords: "css, grid, galería, galeria, responsive, design, desarrollo, web, html, css, tutorial, guía, paso, a, media, queries, posicionamiento, layout, adaptabilidad, diseño, web, imágenes, imagenes",
         title: "Cómo Crear una Galería Responsive con CSS Grid: Guía Paso a Paso",
