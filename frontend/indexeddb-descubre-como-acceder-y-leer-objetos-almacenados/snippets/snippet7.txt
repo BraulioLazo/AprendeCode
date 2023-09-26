@@ -1,0 +1,8 @@
+function MostrarContactos(evento)
+{
+   var puntero = evento.target.result;
+   if(puntero)
+     {
+       cajaContactos.innerHTML += "";
+     }
+}

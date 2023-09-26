@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, leer, objetos, almacenamiento, puntero, almacén, puntero.value, método continue(), base, de, datos, puntero.target, lista, contactos, mostrar, actualizar, lista",
+        title: "IndexedDB: Descubre cómo acceder y leer OBJETOS almacenados",
+        description: "Descubre cómo utilizar IndexedDB para acceder, leer y gestionar los objetos almacenados en tu base de datos. Sumérgete en el mundo de las bases de datos del lado del cliente.",
+        imageUrl: "/frontend/indexeddb-descubre-como-acceder-y-leer-objetos-almacenados/images/Desarrolladores-asombrados-indexeddb.webp",
+        imageAlt: "Desarrolladores asombrados mirando resultados de IndexedDB.",
+        link: "/frontend/indexeddb-descubre-como-acceder-y-leer-objetos-almacenados/",
+    },
+    {
         keywords: "IndexedDB, almacenar, objetos, base, de, datos, cliente, key, clave, objeto, almacén, índice, transacción, transacion, transaction, almacenamiento, web, operaciones, con, métodos, guardar, IDBDatabase, IDBTransaction, IDBObjectStore",
         title: "IndexedDB y el Arte de Almacenar Objetos: Todo lo que Necesitas Saber",
         description: "Aprende cómo almacenar objetos y desentraña las complejidades del almacenamiento en bases de datos del lado del cliente. ¡Descubre los secretos del IndexedDB y potencia tus habilidades en desarrollo web!",
