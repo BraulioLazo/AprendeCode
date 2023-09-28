@@ -1,0 +1,20 @@
+function actualizarContacto()
+{
+  var N = document.querySelector("#nombre").value;
+  var I = document.querySelector("#id").value;
+  var E = document.querySelector("#edad").value;
+
+  var transaccion = bd.transaction(["Contactos"], "readwrite");
+  var almacen = transaccion.objectStore("Contactos");
+  transaccion.addEventListener("complete", Mostrar)
+
+  almacen.put({
+               nombre: N,
+               id: I,
+               edad: E
+             });
+
+  document.querySelector("#nombre").value = "";
+  document.querySelector("#id").value = "";
+  document.querySelector("#edad").value = "";
+}

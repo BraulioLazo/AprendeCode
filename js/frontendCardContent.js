@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, edición, objetos, actualizar, función seleccionarContacto, método get, botón actualizar, función actualizarContacto, método put, clave, base de datos web, tutorial IndexedDB, pasos detallados",
+        title: "Editar Objetos en IndexedDB: Pasos Simples y Detallados",
+        description: "Descubre cómo editar objetos en IndexedDB de forma sencilla. ¡Adéntrate en pasos claros y detallados para manejar tus bases de datos con facilidad!",
+        imageUrl: "/frontend/editar-objetos-en-indexeddb-pasos-simples-y-detallados/images/editar-objetos-indexeddb.webp",
+        imageAlt: "Desarrolladores trabajando en bases de datos con enfoque en IndexedDB.",
+        link: "/frontend/editar-objetos-en-indexeddb-pasos-simples-y-detallados/",
+    },
+    {
         keywords: "IndexedDB, leer, objetos, almacenamiento, puntero, almacén, puntero.value, método continue(), base, de, datos, puntero.target, lista, contactos, mostrar, actualizar, lista",
         title: "IndexedDB: Descubre cómo acceder y leer OBJETOS almacenados",
         description: "Descubre cómo utilizar IndexedDB para acceder, leer y gestionar los objetos almacenados en tu base de datos. Sumérgete en el mundo de las bases de datos del lado del cliente.",

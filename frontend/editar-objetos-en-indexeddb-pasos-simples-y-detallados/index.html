@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre cómo editar objetos en IndexedDB de forma sencilla. ¡Adéntrate en pasos claros y detallados para manejar tus bases de datos con facilidad!">
+    <meta name="keywords" content="IndexedDB, editar objetos, bases de datos, web development, AprendeCode, tutorial">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="Editar Objetos en IndexedDB: Pasos Simples y Detallados">
+    <meta property="og:description" content="Descubre cómo editar objetos en IndexedDB con claridad. Adéntrate en un tutorial fácil de seguir y potencia tus habilidades en bases de datos.">
+    <meta property="og:image" content="/frontend/editar-objetos-en-indexeddb-pasos-simples-y-detallados/images/editar-objetos-indexeddb.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/editar-objetos-en-indexeddb-pasos-simples-y-detallados/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Editar Objetos en IndexedDB: Pasos Simples y Detallados</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Editar Objetos en IndexedDB: Pasos Simples y Detallados
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Ya tenemos a nuestros contactos <strong>almacenados en la base de datos</strong>, pero, ¿qué sucede
+                    si necesitamos <strong>editar su información</strong> en el futuro? Imagina que un contacto cambia
+                    su número de teléfono. ¡No te preocupes! En el blog de hoy, te mostraremos cómo <strong>editar los
+                        objetos almacenados</strong>. Para lograrlo, utilizaremos dos <strong>funciones clave</strong>.
+                    La primera se encargará de recopilar los datos del contacto que deseamos editar y colocarlos en un
+                    formulario. La segunda será la responsable de guardar esos nuevos datos en nuestro almacén.
+                </p>
+                <p>
+                    Pero, ¡vamos al grano! A continuación, encontrarás el <strong>código de inicio</strong> para esta
+                    tarea. Incluso si has estado siguiendo nuestros blogs en orden, te recomiendo copiar este código, ya
+                    que hemos realizado algunos cambios en el <strong>HTML y el CSS</strong>. Sin más preámbulos, aquí
+                    está el código. ¡Comencemos!
+                </p>
+
+
+                <h2>Código de partida: HTML y CSS</h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código de partida: JavaScript</h2>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>
+                    <h2>IndexedDB: Pasando la KEY como parámetro</h2>
+                </h2>
+                <p>
+                    Una vez que hayas copiado el <strong>código de inicio</strong>, el primer paso es generar un
+                    <strong>botón para cada contacto almacenado</strong>, además de asegurarnos de que se genere uno
+                    nuevo cada vez que añadamos un contacto. Afortunadamente, esto es más sencillo de lo que parece.
+                    Solo necesitas realizar un pequeño cambio en la función <strong>'MostrarContactos'</strong>.
+                    Dirígete dentro de esta función y, después de mostrar los datos del contacto, modifica el DOM para
+                    insertar el nuevo botón.
+                </p>
+                <p>
+                    El botón que vamos a agregar es un elemento 'input' de tipo 'button', con la clase
+                    <strong>'btn-editar'</strong> y el valor 'Editar'. Lo más importante es que este botón tenga un
+                    <strong>Event Listener</strong> que detecte el evento <strong>'CLICK'</strong> y ejecute la función
+                    <strong>'seleccionarContacto'</strong>. Además, necesitamos pasarle como parámetro la <strong>llave
+                        del contacto</strong>, que en este caso es el ID. Para hacerlo, sigue estos pasos: una vez
+                    dentro de los paréntesis de la función, coloca el signo ( \¨¨ ) en la apertura y este ( ¨\¨ )
+                    cierre. Esto no es más que una barra diagonal invertida y comillas. Entre ambos signos, pasa el
+                    parámetro, que en este caso es el ID.
+                </p>
+                <p>
+                    Aquí abajo, puedes ver el cambio implementado. Reemplaza este código en tu editor, y verás cómo
+                    aparece un <strong>botón al lado de cada contacto almacenado</strong> o que almacenes a partir de
+                    ahora.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+                <p>
+                    Antes de pasar al siguiente paso, es importante hacer un <strong>breve repaso</strong> de lo que
+                    acabamos de hacer, ya que a veces el <strong>por qué</strong> es más importante que el
+                    <strong>cómo</strong>. El botón que estamos generando siempre está vinculado directamente al
+                    contacto. Por lo tanto, cada vez que hacemos clic en el botón <strong>EDITAR</strong>, sin importar
+                    qué contacto sea, estamos pasando la <strong>llave (key)</strong> de ese contacto en específico.
+                    Gracias a esto, tenemos acceso a los datos de ese contacto. Sin la <strong>llave (key)</strong>, no
+                    podríamos hacer nada.
+                </p>
+
+
+
+                <h2>Todo sobre "seleccionarContacto": ¿Cómo funciona?</h2>
+                <p>
+                    Ahora bien, continuemos con el siguiente paso, que implica declarar la función
+                    <strong>seleccionarContacto</strong>. Como recordarás, le estamos pasando un parámetro, que en este
+                    caso es la <strong>clave</strong> que nos permitirá acceder a los datos del contacto en cuestión.
+                    Siguiendo esta lógica, nombraremos el parámetro de esta manera. Como mencioné anteriormente, esta
+                    función tiene la importante tarea de <strong>recopilar los datos</strong> del contacto que deseamos
+                    editar y luego colocarlos nuevamente en el formulario.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¿Cómo solicitar la KEY del objeto?</h2>
+                <p>
+                    Una vez adentrados en esta función, lo primero que debemos hacer es realizar una
+                    <strong>transacción</strong> para obtener la clave del contacto. No me detendré en explicar los
+                    detalles de cómo se lleva a cabo una transacción, ya que tenemos una entrada previa dedicada a ese
+                    tema. En resumen, para lograrlo, primero especificamos en qué almacén se realizará la transacción y
+                    qué tipo de transacción será, utilizando el método <strong>transaction()</strong>. En segundo lugar,
+                    abrimos el almacén con el método <strong>objectStore()</strong>, y, en tercer lugar, ejecutamos la
+                    transacción que, en este caso, tiene como objetivo obtener la clave del contacto.
+                </p>
+                <p>
+                    Para ello, comenzamos declarando la variable <strong>solicitud</strong> (var solicitud) y luego
+                    aplicamos el método <strong>get()</strong> a la variable almacen. Dentro de este método, como
+                    parámetro, pasamos la clave que habíamos previamente obtenido en la función seleccionarContacto. Así
+                    es como avanzamos hasta este punto.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¿Cómo DEVOLVER los datos al formulario?</h2>
+                <p>
+                    Ahora, agregaremos un <strong>event listener</strong> a la variable solicitud que responderá al
+                    evento <strong>SUCCESS</strong> y ejecutará una función anónima. Esta función será la encargada de
+                    insertar los datos del contacto nuevamente en el formulario. Para asignar cada dato a su campo
+                    correspondiente, primero identificamos el campo en el formulario y luego le asignamos el valor
+                    correspondiente.
+                </p>
+                <p>
+                    Es importante recordar que, dentro de esta función, todos los datos del contacto se encuentran en la
+                    variable <strong>solicitud</strong>. Por lo tanto, mencionamos esta variable y, a continuación,
+                    accedemos a la propiedad <strong>result</strong> y, finalmente, a la propiedad que contiene el dato
+                    que queremos asignar. A continuación, puedes ver claramente todo lo explicado hasta este punto.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Renovación en marcha: Introduciendo el botón "Actualizar"</h2>
+                <p>
+                    Si copias el código anterior en tu editor, notarás que cada vez que haces clic en el botón de
+                    editar,
+                    los datos de ese contacto en particular se envían de vuelta al formulario. Sin embargo, en este
+                    punto nos encontramos con un problema: necesitamos un botón que ejecute la función encargada de
+                    <strong>actualizar esos datos</strong>. Hay dos formas diferentes de abordar esto. La primera es
+                    tener dos botones en nuestro programa, uno para guardar y otro para actualizar. La segunda opción es
+                    <strong>modificar dinámicamente el botón</strong> cada vez que se necesite actualizar un contacto.
+                    Personalmente, prefiero la segunda opción, ya que es más limpia y evita la posibilidad de hacer clic
+                    en el botón incorrecto y generar un error.
+                </p>
+                <p>
+                    Para lograr esto, vamos a almacenar en una variable el contenedor padre del botón "Guardar". Este
+                    contenedor se identifica mediante la clase <strong>"padre-boton"</strong>. Más abajo puedes verlo en
+                    el código. Luego, modificamos el contenido de dicho contenedor y creamos un nuevo botón que será un
+                    elemento de tipo input de tipo "button". Este nuevo botón tendrá la clase
+                    <strong>"btn-actualizar"</strong> y le asignamos un event listener que ejecutará la función
+                    <strong>"actualizarContacto"</strong>
+                </p>
+                <p>
+                    Si copias el código a continuación en tu editor, verás cómo se modifica el <strong>DOM</strong>,
+                    reemplazando un botón por otro.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>La magia del método "put()" en IndexedDB</h2>
+                <p>
+                    Si copias el código anterior y haces clic en el botón Editar de cualquiera de los contactos
+                    almacenados, verás que los datos de ese contacto efectivamente se devuelven al formulario y que se
+                    modifica el <strong>DOM</strong>, reemplazando el botón Guardar por el botón Actualizar. Ahora,
+                    lo que nos queda es declarar la última función, <strong>actualizarContacto</strong>, y empezar a
+                    trabajar dentro de ella.
+                </p>
+                <p>
+                    Hasta aquí, tenemos esto: (function actualizarContacto(){}). Lo que necesitamos hacer dentro de esta
+                    función es exactamente lo mismo que hicimos en la función AlmacenarContacto. Por lo tanto,
+                    simplemente vamos a copiar y pegar todo lo que hay dentro de esa función, pero necesitamos hacer una
+                    pequeña modificación. En la función AlmacenarContacto, almacenamos los contactos con el método
+                    <strong>add()</strong>, pero en la función actualizarContacto, vamos a sustituirlo por el método
+                    <strong>put()</strong>. Ahí lo tienes. Ahora, es probable que te estés preguntando: ¿Por qué?
+                </p>
+                <p>
+                    El método <strong>add()</strong> solo agrega la información a la base de datos si no existe la
+                    llave que se está utilizando para almacenar esa información. En cambio, el método
+                    <strong>put()</strong>, si la llave que se está utilizando no existe, la almacena, pero si ya
+                    existe en el almacén, entonces solo actualiza el objeto almacenado.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>El baile de los botones: De "Actualizar" a "Guardar"</h2>
+                <p>
+                    Ahora sí, aquí arriba tienes la última función con esos cambios implementados para que veas que
+                    efectivamente funciona. Sin embargo, aquí nos encontramos con un problema. Cuando hacemos clic en
+                    <strong>Editar</strong>, se modifica el <strong>DOM</strong> y se reemplaza el botón Guardar por
+                    el botón Actualizar. Pero una vez que actualizamos el contacto, necesitamos volver a modificar el
+                    <strong>DOM</strong>, esta vez sustituyendo el botón Actualizar por el botón 'Guardar'
+                </p>
+
+                <p>
+                    Para hacer esta modificación en el <strong>DOM</strong>, seguimos los mismos pasos. Primero,
+                    almacenamos el contenedor del botón que tiene la clase <strong>padre-boton</strong>, y luego le
+                    pasamos un input de tipo button, con el id btn-guardar, el valor Guardar, y un <strong>Event
+                        Listener</strong> que responde al evento click y ejecuta la función almacenarContacto. No te
+                    preocupes, a continuación te dejo este cambio implementado para que puedas verlo y copiarlo, y así
+                    comprobar su funcionamiento.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Lo más destacado de esta entrada</h2>
+                <p>
+                    En esta publicación, te guié a través del proceso de edición y actualización de contactos en una
+                    Base de Datos usando IndexedDB. Pasamos de simples conceptos a implementaciones prácticas,
+                    entendiendo cómo manejar cada paso del proceso. Aquí hay un rápido repaso de los puntos más
+                    esenciales que abordamos.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Editando y Actualizando Contactos con IndexedDB</h3>
+                    <ol>
+                        <li><strong>Generación de botones para cada contacto:</strong> Explicamos cómo generar un botón
+                            para cada contacto y asegurarnos de que se cree uno nuevo con cada nuevo contacto.</li>
+                        <li><strong>Modificación del DOM:</strong> Abordamos cómo insertar un nuevo botón en el DOM y
+                            asociarlo con un evento 'CLICK' para la edición.</li>
+                        <li><strong>Función 'seleccionarContacto':</strong> Profundizamos en la creación y estructura de
+                            esta función para recoger datos de un contacto y devolverlos al formulario.</li>
+                        <li><strong>Uso de transacciones y el método get():</strong> Detallamos cómo realizar una
+                            transacción para obtener la clave del contacto y usar el método get() para lograrlo.</li>
+                        <li><strong>Introducción de datos en el formulario:</strong> Discutimos cómo acceder a los datos
+                            del contacto y ponerlos en el formulario correspondiente.</li>
+                        <li><strong>Alternar entre botones 'Guardar' y 'Actualizar':</strong> Hablamos sobre cómo
+                            modificar dinámicamente el DOM para cambiar entre estos botones según sea necesario.</li>
+                        <li><strong>Diferencia entre métodos 'add()' y 'put()':</strong> Explicamos las diferencias
+                            clave entre estos dos métodos y cuándo usar cada uno.</li>
+                    </ol>
+                </div>
+
+
+                <h2>Hasta pronto: Gracias por acompañarnos en esta aventura</h2>
+                <p>
+                    Y eso es todo por hoy. No te pierdas el próximo blog, ya que estará <strong>sumamente
+                        interesante</strong>. Aprenderemos a buscar datos dentro de la <strong>Base de Datos</strong> y
+                    a mostrarlos en pantalla. Ahora, no me queda más que despedirme. Espero que hayas aprendido algo
+                    nuevo y que hayas disfrutado de esta entrada. Nos leemos en el siguiente.
+                </p>
+
+                <p><strong>¡Un Abrazo!</strong> Braulio de <strong>AprendeCode</strong></p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script>
+        const entryName = 'editar-objetos-en-indexeddb-pasos-simples-y-detallados';
+        const totalSnippets = 10;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+    </script>
+</body>
+
+</html>
