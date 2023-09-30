@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, implementar, búsqueda, objetos, consejos, trucos, desarrollo, base, de, datos, almacenar, minúsculas, mayúsculas, experiencia, del, usuario, buscarContacto, AlmacenarContacto, código, tutorial, práctico",
+        title: "¿Cómo Buscar Objetos en IndexedDB? Consejos y Trucos Prácticos",
+        description: "Adéntrate en el fascinante mundo de IndexedDB y descubre trucos prácticos para buscar objetos eficientemente. ¡Haz clic y eleva tus habilidades de desarrollo!",
+        imageUrl: "/frontend/como-buscar-objetos-en-indexeddb-consejos-y-trucos-practicos/images/busqueda-indexeddb-desarrolladores.webp",
+        imageAlt: "Desarrollador explicando a colega sobre cómo realizar búsquedas en IndexedDB frente a una PC de escritorio.",
+        link: "/frontend/como-buscar-objetos-en-indexeddb-consejos-y-trucos-practicos/",
+    },
+    {
         keywords: "IndexedDB, edición, objetos, actualizar, función seleccionarContacto, método get, botón actualizar, función actualizarContacto, método put, clave, base de datos web, tutorial IndexedDB, pasos detallados",
         title: "Editar Objetos en IndexedDB: Pasos Simples y Detallados",
         description: "Descubre cómo editar objetos en IndexedDB de forma sencilla. ¡Adéntrate en pasos claros y detallados para manejar tus bases de datos con facilidad!",
