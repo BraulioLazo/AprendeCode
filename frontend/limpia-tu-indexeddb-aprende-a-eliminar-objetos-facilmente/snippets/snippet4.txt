@@ -1,0 +1,15 @@
+function MostrarContactos(evento)
+{
+   var puntero = evento.target.result;
+   if(puntero)
+     {
+       cajaContactos.innerHTML += "<div>" +
+                                         puntero.value.nombre + " / " +
+                                         puntero.value.id + " / " +
+                                         puntero.value.edad +
+                                         "<input type='button' class='btn-editar' value='Editar' onclick='seleccionarContacto(\"" + puntero.value.id + "\")'>" +
+                                         "<input type='button' class='btn-borrar' value='Borrar' onclick='eliminarContacto(\"" + puntero.value.id + "\")'>" +
+                                  "</div>";
+       puntero.continue();
+     }
+}

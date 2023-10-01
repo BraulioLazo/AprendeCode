@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "IndexedDB, Eliminación, eliminar, objeto, Objetos almacenados, metodo, Método delete, delete, delete(), Transacción, Base, de, datos, Borrar, Llave del objeto, Almacén, Solicitud",
+        title: "¡Limpia tu IndexedDB! Aprende a Eliminar Objetos Fácilmente",
+        description: "Descubre cómo eliminar objetos almacenados sin esfuerzo. Nuestra guía te guiará paso a paso, garantizando una experiencia clara y fluida. ¡No dejes datos no deseados! Límpialos ahora.",
+        imageUrl: "/frontend/limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente/images/eliminar-objetos-indexeddb.webp",
+        imageAlt: "Desarrollador escribiendo código relacionado con la eliminación de objetos en IndexedDB.",
+        link: "/frontend/limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente/",
+    },
+    {
         keywords: "IndexedDB, implementar, búsqueda, objetos, consejos, trucos, desarrollo, base, de, datos, almacenar, minúsculas, mayúsculas, experiencia, del, usuario, buscarContacto, AlmacenarContacto, código, tutorial, práctico",
         title: "¿Cómo Buscar Objetos en IndexedDB? Consejos y Trucos Prácticos",
         description: "Adéntrate en el fascinante mundo de IndexedDB y descubre trucos prácticos para buscar objetos eficientemente. ¡Haz clic y eleva tus habilidades de desarrollo!",
