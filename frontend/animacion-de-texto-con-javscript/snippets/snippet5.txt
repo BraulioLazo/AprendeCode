@@ -1,0 +1,12 @@
+function pintarTexto() {
+    letraContador++;
+    contenedorAnimacion.innerHTML += textoAnimacion[posicionArray][letraContador];
+
+    if (letraContador === textoAnimacion[posicionArray].length - 1) {
+        clearInterval(intervalo);
+
+        setTimeout(() => {
+            // Aquí se ejecutará otro intervalo que borra las letras de la palabra actual.
+        }, 1000);
+    }
+}

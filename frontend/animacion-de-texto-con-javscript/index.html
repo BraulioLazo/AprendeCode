@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre cómo crear animaciones de texto llamativas con JavaScript. Aprende paso a paso cómo hacer que las letras aparezcan y desaparezcan de manera ordenada en tu sitio web. ¡No te pierdas este tutorial de AprendeCode!">
+    <meta name="keywords" content="JavaScript, animación, texto, efectos, tutorial, letras, código, web, sitio, paso a paso, array, bucle, intervalo, setInterval, setTimeout, método pop, animación de letras, tutorial de animación, desarrollo web, efecto llamativo">
+    <meta name="author" content="Braulio de AprendeCode">
+    
+    <meta property="og:title" content="Animación de texto con JavaScript">
+    <meta property="og:description" content="Descubre cómo crear animaciones de texto llamativas en tu página web con JavaScript. ¡Sigue el tutorial de AprendeCode y añade un efecto visual impresionante a tu proyecto!">    
+    <meta property="og:image" content="/frontend/animacion-de-texto-con-javscript/images/animacion-texto-javascript.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/animacion-de-texto-con-javscript/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Animación de texto con JavaScript</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Animación de texto con JavaScript
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    ¿Alguna vez has visto esas <strong>animaciones de texto geniales</strong> en sitios web, donde las
+                    letras aparecen y desaparecen de manera ordenada, creando una <strong>experiencia atractiva y
+                        llamativa</strong>? Pues hoy te voy a enseñar cómo lograr este efecto utilizando
+                    <strong>JavaScript</strong>. El código que te voy a mostrar es <strong>sencillo de entender</strong>
+                    y fácil de adaptar a tus propios proyectos. Aquí abajo te voy a dejar el código <strong>HTML, el CSS
+                        y el JavaScript</strong>. El código JavaScript ya está completo. Esta vez quiero darle un
+                    formato algo diferente al blog. Puedes copiar esté código por completo y ya estará funcionando en tu
+                    editor. Luego de que lo copies, lo iremos revisando <strong>paso por paso</strong> para que no te
+                    quedes con ninguna duda. Si te gusta más este formato déjame un comentario aquí abajo dejándome
+                    saber. ¡Vamos a ello!
+                </p>
+
+                <h2>Código de Partida: HTML y CSS</h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+                
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código Completo: JavaScript</h2>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Configuración Inicial: Declarando Variables</h2>
+                <p>
+                    Aquí, definimos la variable <strong>textoAnimacion</strong>, un <strong>array bidimensional</strong>
+                    que contiene dos arrays con las letras de las palabras que queremos animar. En este caso, las
+                    palabras son <strong>¨Braulio¨</strong> y <strong>¨a Developer¨</strong>. También declaramos la
+                    variable <strong>letraContador</strong> para llevar la cuenta de las letras,
+                    <strong>posicionArray</strong> para movernos entre las palabras en el array
+                    <strong>textoAnimacion</strong> y por último, <strong>contenedorAnimacion</strong> que hace
+                    referencia al elemento HTML donde se mostrará la animación.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Función Principal: pintarTexto()</h2>
+                <p>
+                    Dentro de esta función, incrementamos <strong>letraContador</strong> y luego <strong>modificamos el
+                        DOM</strong> añadiendo la letra correspondiente del array <strong>textoAnimacion</strong> al
+                    <strong>contenedorAnimacion</strong>. Luego abrimos una condición que dice que, si
+                    <strong>letraContador</strong> alcanza el final de la palabra actual, detenemos el intervalo y
+                    configuramos un <strong>temporizador (setTimeout())</strong> para borrar la palabra de manera
+                    ordenada.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Estableciendo el Temporizador para Borrar el Texto</h2>
+                <p>
+                    En este punto necesitamos <strong>configurar un temporizador</strong> que se ejecutará después de 1
+                    segundo (1000 milisegundos) para comenzar a borrar la palabra actual. El temporizador utiliza la
+                    función <strong>setTimeout()</strong> que recibe dos argumentos: una función anónima y el tiempo de
+                    espera en milisegundos. Dentro del temporizador, creamos un nuevo intervalo usando
+                    <strong>setInterval()</strong> que se ejecuta cada 150 milisegundos. La función
+                    <strong>setInterval()</strong> también recibe dos argumentos: una función anónima y el tiempo entre
+                    cada ejecución en milisegundos.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>En cada iteración del intervalo, realizamos las siguientes acciones:</h3>
+                    <ol>
+                        <li><strong>Limpiamos el contenido</strong> de contenedorAnimacion con la propiedad
+                            <strong>innerHTML</strong> y le pasamos una
+                            cadena vacía(=¨¨).
+                        </li>
+                        <li><strong>Disminuimos el contador letraContador</strong> en uno para movernos hacia la letra
+                            anterior en el
+                            array.</li>
+                        <li>Utilizamos el método <strong>pop()</strong> en el array textoAnimacion[posicionArray]. Y
+                            para que no te
+                            quedes con dudas te cuento que el método <strong>pop()</strong> elimina el último elemento
+                            del array y
+                            devuelve el valor eliminado. En este caso, estamos eliminando la última letra del array
+                            textoAnimacion[posicionArray]. Al hacer esto, estamos efectivamente borrando la última letra
+                            de la palabra actual.</li>
+                        <li>Después de eliminar la última letra usando el método <strong>pop()</strong>, utilizamos un
+                            bucle <strong>forEach</strong> para
+                            iterar a través de las letras restantes en el array textoAnimacion[posicionArray]. Y dentro
+                            de este forEach, agregamos esa letra al contenido de contenedorAnimacion utilizando ( += ).
+                        </li>
+                    </ol>
+                </div>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Cambio de Palabras y Reiniciando la Animación</h2>
+                <p>
+                    Ahora, necesitamos verificar si <strong>letraContador</strong> es menor que 0, lo que indica que
+                    todas las letras de la palabra actual han sido borradas. Si es así, realizamos las siguientes
+                    acciones:
+                </p>
+
+                <div class="custom-list-container">
+                    <ol>
+                        <li><strong>Detenemos el intervalo</strong> actual usando
+                            <strong>clearInterval(intervalo)</strong> para detener el proceso de borrado de letras.
+                        </li>
+                        <li><strong>Incrementamos el contador posicionArray</strong> en uno para pasar a la siguiente
+                            palabra en el array <strong>textoAnimacion</strong>.</li>
+                        <li>Creamos un nuevo intervalo llamando a <strong>setInterval(pintarTexto, 150)</strong>, donde
+                            la función <strong>pintarTexto</strong> se ejecutará cada 150 milisegundos para escribir la
+                            siguiente palabra letra por letra.</li>
+                    </ol>
+                </div>
+
+                <p>
+                    Luego, verificamos si el contador <strong>posicionArray</strong> es mayor que
+                    <strong>textoAnimacion.length – 1</strong>. Si es así, significa que hemos pasado por todas las
+                    palabras en el array <strong>textoAnimacion</strong>. En este caso, realizamos las siguientes
+                    acciones:
+                </p>
+
+                <div class="custom-list-container">
+                    <ol>
+                        <li><strong>Detenemos el intervalo</strong> actual usando
+                            <strong>clearInterval(intervalo)</strong> para detener el proceso de escritura de letras de
+                            la última palabra.
+                        </li>
+                        <li><strong>Reiniciamos posicionArray</strong> a 0 para comenzar desde la primera palabra del
+                            array <strong>textoAnimacion</strong>.</li>
+                        <li>Llamamos a la función <strong>animacion()</strong> nuevamente para reiniciar todo el proceso
+                            de animación.</li>
+                    </ol>
+                </div>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Repasando lo Aprendido</h2>
+                <p>
+                    A lo largo de este artículo, exploramos cómo crear animaciones de texto con JavaScript, logrando un
+                    efecto atractivo letra por letra. A continuación, te presento un resumen de los aspectos clave
+                    abordados para que tengas una visión clara y rápida de todo lo discutido.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Animando Texto con JavaScript</h3>
+                    <ol>
+                        <li><strong>Introducción:</strong> Explicación sobre las animaciones de texto en sitios web y su
+                            impacto visual.</li>
+                        <li><strong>Inicialización de Variables:</strong> Configuración de las variables necesarias para
+                            la animación, incluyendo el array bidimensional de palabras.</li>
+                        <li><strong>Función pintarTexto():</strong> Método principal para agregar letras al contenedor
+                            de animación y controlar el flujo del texto.</li>
+                        <li><strong>Configuración del Temporizador:</strong> Establecimiento de un temporizador para
+                            comenzar a borrar las palabras de manera ordenada.</li>
+                        <li><strong>Dinámica del Borrado:</strong> Proceso de eliminación de letras usando intervalos,
+                            incluyendo el uso del método pop() y el bucle forEach.</li>
+                        <li><strong>Cambios en las Palabras:</strong> Lógica para cambiar entre las palabras del array y
+                            reiniciar la animación de escritura.</li>
+                    </ol>
+                </div>
+
+                <h2>Finalizando: La Magia de Animar Texto con JavaScript</h2>
+                <p>
+                    En general, este código utiliza una combinación de <strong>métodos</strong> y <strong>funciones de
+                        JavaScript</strong> para crear una <strong>animación de escritura de letras</strong> en una
+                    página web. Cada letra se escribe una por una utilizando <strong>intervalos</strong> y la animación
+                    continúa hasta que se han escrito todas las palabras en el <strong>array textoAnimacion</strong>.
+                    Este código es una buena muestra de cómo se pueden utilizar las funciones y los métodos de
+                    JavaScript para crear <strong>animaciones simples pero efectivas</strong> en una página web. Pues
+                    nada coder, hemos llegado al final y no me queda más que despedirme. Espero que lo hayas disfrutado
+                    que hayas aprendido algo nuevo y nos leemos en el siguiente.
+                </p>
+                <p>
+                    ¡Un Abrazo! Braulio de <strong>AprendeCode</strong>.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 7;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+    </script>
+</body>
+
+</html>

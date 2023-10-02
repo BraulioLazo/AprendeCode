@@ -1,0 +1,11 @@
+setTimeout(() => {
+    intervalo = setInterval(() => {
+        contenedorAnimacion.innerHTML = "";
+        letraContador--;
+        textoAnimacion[posicionArray].pop();
+        textoAnimacion[posicionArray].forEach((elemento) => {
+            contenedorAnimacion.innerHTML += elemento;
+        });
+        // Continuará...
+    }, 150);
+}, 1000);

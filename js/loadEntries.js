@@ -1,4 +1,3 @@
-
 let loaded = 0;
 
 const container = document.querySelector('.cards');
@@ -35,11 +34,10 @@ function renderEntry(entry) {
 
     const image = document.createElement('img');
     image.src = entry.imageUrl;
-    image.alt = entry.altText;
     image.classList.add('card__image');
     image.setAttribute('decoding', 'async');
     image.setAttribute('loading', 'lazy');
-    image.setAttribute('alt', entry.imageAlt)
+    image.setAttribute('alt', entry.imageAlt); // Eliminado el duplicado
 
     imageContainer.appendChild(image);
     anchorForImage.appendChild(imageContainer);
@@ -77,32 +75,44 @@ function renderEntry(entry) {
     }
 }
 
+function initializeObserver() {
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observerInstance = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                loadMoreCards();
+            }
+        });
+    }, options);
+
+    observerInstance.observe(loader);
+
+    return observerInstance;
+}
+const observer = initializeObserver();
+
+
 function loadMoreCards() {
-    let cardsToLoad = window.matchMedia("(max-width: 768px)").matches ? 3 : 6; 
+    let cardsToLoad = window.matchMedia("(max-width: 768px)").matches ? 3 : 6;
+
+    if (loaded + cardsToLoad > entriesElements.length) {
+        cardsToLoad = entriesElements.length - loaded;
+    }
 
     const newEntries = entriesElements.slice(loaded, loaded + cardsToLoad);
     newEntries.forEach(renderEntry);
     loaded += newEntries.length;
 
-    if (loaded >= entriesElements.length) {
+    if (loaded >= entriesElements.length && observer) { // Verificación adicional aquí
         observer.unobserve(loader);
     }
 }
 
 loadMoreCards();
 
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            loadMoreCards();
-        }
-    });
-}, options);
-
-observer.observe(loader);

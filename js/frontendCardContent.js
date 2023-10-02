@@ -1,6 +1,14 @@
 const frontendCardContent = [
     {
-        keywords: "IndexedDB, Eliminación, eliminar, objeto, Objetos almacenados, metodo, Método delete, delete, delete(), Transacción, Base, de, datos, Borrar, Llave del objeto, Almacén, Solicitud",
+        keywords: "JavaScript, animación, animacion, texto, efectos, tutorial, letras, web, sitio, paso a paso, array, bucle, intervalo, setInterval, setTimeout, método, metodo, pop, tutorial, de, animación, desarrollo, web, efecto, llamativo",
+        title: "Animación de texto con JavaScript",
+        description: "Adéntrate en el fascinante mundo de las animaciones de texto en JavaScript. Descubre cómo crear efectos llamativos en tu sitio web con la guía de nuestro tutorial paso a paso. ¡No te lo pierdas!",
+        imageUrl: "/frontend/animacion-de-texto-con-javscript/images/animacion-texto-javascript.webp",
+        imageAlt: "Desarrollador sentado frente a una PC de escritorio mientras una desarrolladora le explica, algo relacionado con animaciones de texto en JavaScript.",
+        link: "/frontend/animacion-de-texto-con-javscript/",
+    },
+    {
+        keywords: "IndexedDB, Eliminación, eliminar, objeto, Objetos almacenados, metodo, Método delete, delete,delete(), Transacción, Base, de, datos, Borrar, Llave del objeto, Almacén, Solicitud",
         title: "¡Limpia tu IndexedDB! Aprende a Eliminar Objetos Fácilmente",
         description: "Descubre cómo eliminar objetos almacenados sin esfuerzo. Nuestra guía te guiará paso a paso, garantizando una experiencia clara y fluida. ¡No dejes datos no deseados! Límpialos ahora.",
         imageUrl: "/frontend/limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente/images/eliminar-objetos-indexeddb.webp",

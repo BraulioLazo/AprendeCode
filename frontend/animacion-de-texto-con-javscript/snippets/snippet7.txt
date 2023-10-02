@@ -1,0 +1,11 @@
+if(letraContador < 0){
+    clearInterval(intervalo);
+    posicionArray++;
+    intervalo = setInterval(pintarTexto, 150);
+
+    if(posicionArray > textoAnimacion.length - 1){
+        clearInterval(intervalo);
+        posicionArray = 0;
+        animacion();
+    }
+}

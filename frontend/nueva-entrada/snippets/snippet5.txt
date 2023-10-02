@@ -1,0 +1,48 @@
+function comenzarTemporizador() {
+    let segundos = 5;
+    const segundosContainer = document.querySelector(".segundos__container");
+
+    solicitarBloqueoPantalla();  // Petición de BLOQUEO
+
+    function disminuiTemporizador() {
+        segundos--;
+        if (segundos < 0) {
+            clearInterval(intervalo);
+            segundos = 5;
+            desbloquearPantalla(); // Petición de DESBLOQUEO
+        }
+        segundosContainer.innerHTML = "0" + segundos;
+    }
+    const intervalo = setInterval(disminuiTemporizador, 1000);
+}
+document.querySelector("#btn__start").onclick = () => {
+    comenzarTemporizador();
+};
+
+
+// Función para Bloquear la Pantalla
+
+let wakeLock = null;
+async function solicitarBloqueoPantalla() {
+    try {
+        wakeLock = await navigator.wakeLock.request("screen");
+        console.log("La pantalla ha sido bloqueada");
+        console.log(wakeLock);
+    } catch (error) {
+        console.error("Error al bloquear pantalla: " + error);
+    }
+}
+
+
+// Función para DESBLOQUEAR la pantalla
+
+async function desbloquearPantalla() {
+    try {
+        await wakeLock.release();
+        console.log("La pantalla ha sido desbloqueada");
+        console.log(wakeLock);
+        wakeLock = null;
+    } catch (error) {
+        console.error("Error al desbloquear Pantalla: " + error);
+    }
+}

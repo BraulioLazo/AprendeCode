@@ -1,0 +1,17 @@
+function comenzarTemporizador() {
+    let segundos = 5;
+    const segundosContainer = document.querySelector(".segundos__container");
+
+    function disminuiTemporizador() {
+        segundos--;
+        if (segundos < 0) {
+            clearInterval(intervalo);
+            segundos = 5;
+        }
+        segundosContainer.innerHTML = "0" + segundos;
+    }
+    const intervalo = setInterval(disminuiTemporizador, 1000);
+}
+document.querySelector("#btn__start").onclick = () => {
+    comenzarTemporizador();
+};

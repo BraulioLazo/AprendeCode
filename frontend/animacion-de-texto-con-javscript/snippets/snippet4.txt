@@ -1,0 +1,9 @@
+let textoAnimacion = [
+    ["B", "r", "a", "u", "l", "i", "o"],
+    ["a", " ", "D", "e", "v", "e", "l", "o", "p", "e", "r"]
+];
+
+let letraContador = -1;
+let posicionArray = 0;
+
+const contenedorAnimacion = document.querySelector(".contenedor__texto__animacion");

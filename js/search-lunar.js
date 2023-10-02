@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     const cardContainer = document.querySelector(".cards");
 
@@ -40,21 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // Limpiar tarjetas anteriores
         cardContainer.innerHTML = "";
 
-        results.forEach((result) => {
-            renderEntry(documents[result.ref]); // Usar la función renderEntry que ya tienes definida
-        });
+        if (results.length > 0) {
+            results.forEach((result) => {
+                renderEntry(documents[result.ref]); // Usar la función renderEntry que ya tienes definida
+            });
+        } else {
+            cardContainer.innerHTML = "<p>¡Hey, <strong>Coder</strong>! Parece que no hay <strong>coincidencias</strong> para tu búsqueda. ¿Qué tal si <strong>pruebas</strong> con otra <strong>palabra clave</strong>?</p>";
+        }
 
         document.querySelector('#search-input').value = "";
     });
-
-    function performSearch(category) {
-        const results = idx.search(category);
-
-        // Limpiar tarjetas anteriores
-        cardContainer.innerHTML = "";
-
-        results.forEach(result => {
-            renderEntry(documents[result.ref]);
-        });
-    }
 });
