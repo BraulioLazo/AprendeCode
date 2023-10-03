@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "API, Wake, Lock, JavaScript, pantalla, evitar, dormir, bloqueo, desbloqueo, compatibilidad, navegador, solicitud, de, función, código, temporizador, batería, dispositivo, pantalla, activa, navigator.wakeLock, released, release()",
+        title: "¿Cómo utilizar la API Wake Lock con JavaScript?",
+        description: "Descubre el poder del API Wake Lock y cómo puede mejorar la experiencia del usuario al evitar que la pantalla de su dispositivo se duerma mientras utiliza tu aplicación. Acompaña a nuestros desarrolladores en un viaje detallado a través de este recurso esencial.",
+        imageUrl: "/frontend/como-utilizar-la-api-wake-lock-con-javascript/images/api-wake-lock-javascript.webp",
+        imageAlt: "Tres desarrolladores, un chico y dos chicas, trabajando juntos frente a un ordenador, explorando el API Wake Lock.",
+        link: "/frontend/como-utilizar-la-api-wake-lock-con-javascript/",
+    },
+    {
         keywords: "JavaScript, animación, animacion, texto, efectos, tutorial, letras, web, sitio, paso a paso, array, bucle, intervalo, setInterval, setTimeout, método, metodo, pop, tutorial, de, animación, desarrollo, web, efecto, llamativo",
         title: "Animación de texto con JavaScript",
         description: "Adéntrate en el fascinante mundo de las animaciones de texto en JavaScript. Descubre cómo crear efectos llamativos en tu sitio web con la guía de nuestro tutorial paso a paso. ¡No te lo pierdas!",
