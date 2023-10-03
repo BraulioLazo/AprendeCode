@@ -1,8 +1,16 @@
 const frontendCardContent = [
     {
+        keywords: "JavaScript, automatización, pie de página, año, actualizar, código, Date, modificarFecha, Event Listener, load, querySelector, getFullYear, sitio web, tutorial, truco",
+        title: "Automatiza el año de tu pie de página con JavaScript",
+        description: "¿Cansado de cambiar manualmente el año en el pie de página cada enero? Descubre cómo automatizar esta tarea y olvídate de esa molestia anual. ¡Dale un respiro a tu rutina y ahorra tiempo con este sencillo truco de JavaScript!",
+        imageUrl: "/frontend/automatiza-el-año-de-tu-pie-de-pagina-con-javascript/images/automatizar-pie-de-pagina-con-javascript.webp",
+        imageAlt: "Desarrolladora sonriendo mientras trabaja en su computadora, implementando la automatización del año en el pie de página de su sitio web.",
+        link: "/frontend/automatiza-el-año-de-tu-pie-de-pagina-con-javascript/",
+    },
+    {
         keywords: "API, Wake, Lock, JavaScript, pantalla, evitar, dormir, bloqueo, desbloqueo, compatibilidad, navegador, solicitud, de, función, código, temporizador, batería, dispositivo, pantalla, activa, navigator.wakeLock, released, release()",
         title: "¿Cómo utilizar la API Wake Lock con JavaScript?",
-        description: "Descubre el poder del API Wake Lock y cómo puede mejorar la experiencia del usuario al evitar que la pantalla de su dispositivo se duerma mientras utiliza tu aplicación. Acompaña a nuestros desarrolladores en un viaje detallado a través de este recurso esencial.",
+        description: "Descubre el poder del API Wake Lock y cómo puede mejorar la experiencia del usuario al evitar que la pantalla de su dispositivo se duerma mientras utiliza tu aplicación. Acompañanos en un viaje detallado a través de este recurso esencial.",
         imageUrl: "/frontend/como-utilizar-la-api-wake-lock-con-javascript/images/api-wake-lock-javascript.webp",
         imageAlt: "Tres desarrolladores, un chico y dos chicas, trabajando juntos frente a un ordenador, explorando el API Wake Lock.",
         link: "/frontend/como-utilizar-la-api-wake-lock-con-javascript/",
