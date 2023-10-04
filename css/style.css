@@ -1522,5 +1522,13 @@ button {
     transform: translateY(-30px);
   }
 }
+@media screen and (max-width: 768px) {
+  .error-section {
+    padding: 150px 20px 50px 20px;
+  }
+  .error-section .error-section-container .error-image-container {
+    max-width: 250px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

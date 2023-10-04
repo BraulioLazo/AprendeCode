@@ -1,7 +1,6 @@
 .error-section {
     position: relative;
     padding: 300px 20px 200px 20px;
-    
 
     .error-section-container {
         justify-content: center;
@@ -23,7 +22,7 @@
             }
         }
 
-        .error-description{
+        .error-description {
             max-width: 700px;
             font-size: 20px;
             text-align: center;
@@ -48,7 +47,7 @@
 
 }
 
-.error-section::before{
+.error-section::before {
     content: '';
     position: absolute;
     top: 0;
@@ -62,12 +61,24 @@
     z-index: -1;
 }
 
-.cosmonaut{
+.cosmonaut {
     animation: cosmonaut-floating 5s ease-in-out infinite;
 }
 
 @keyframes cosmonaut-floating {
-    50%{
+    50% {
         transform: translateY(-30px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error-section {
+        padding: 150px 20px 50px 20px;
+
+        .error-section-container {
+            .error-image-container {
+                max-width: 250px;
+            }
+        }
     }
 }
