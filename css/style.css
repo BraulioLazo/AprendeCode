@@ -16,8 +16,9 @@
   --color-text-white: #ffffff;
   --color-text-dark: #181818;
   --color-text-medium: #606060;
-  --color-text-placeholder: #777777d2;
+  --color-text-placeholder: #7777778c;
   --radius-main: 7px;
+  --circular-border-radius: 100px;
   --color-background-white: #ffffff;
   --color-background-light: #FBFBFB;
   --color-background-snippet: #F5F2F0;
@@ -66,6 +67,10 @@ span.skill-counter {
 
 a {
   text-decoration: none;
+}
+
+::placeholder {
+  color: var(--color-text-placeholder);
 }
 
 ::-webkit-scrollbar {
@@ -1451,6 +1456,70 @@ button {
     min-height: none;
     max-height: 250px;
     max-width: 768px;
+  }
+}
+.error-section {
+  position: relative;
+  padding: 300px 20px 200px 20px;
+}
+.error-section .error-section-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.error-section .error-section-container .error-heading,
+.error-section .error-section-container .error-search-container,
+.error-section .error-section-container .error-home-link-container {
+  width: 100%;
+  text-align: center;
+}
+.error-section .error-section-container .error-image-container {
+  max-width: 350px;
+}
+.error-section .error-section-container .error-image-container img {
+  width: 100%;
+}
+.error-section .error-section-container .error-description {
+  max-width: 700px;
+  font-size: 20px;
+  text-align: center;
+}
+.error-section .error-section-container .link-to-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-text-medium);
+}
+.error-section .error-section-container .link-to-home img {
+  width: 18px;
+}
+
+.error-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("/assets/404/fondo-estrellas-404-aprendecode.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.cosmonaut {
+  animation: cosmonaut-floating 5s ease-in-out infinite;
+}
+
+@keyframes cosmonaut-floating {
+  50% {
+    transform: translateY(-30px);
   }
 }
 

@@ -1,0 +1,73 @@
+.error-section {
+    position: relative;
+    padding: 300px 20px 200px 20px;
+    
+
+    .error-section-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .error-heading,
+        .error-search-container,
+        .error-home-link-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .error-image-container {
+            max-width: 350px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .error-description{
+            max-width: 700px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .link-to-home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            max-width: 200px;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--color-text-medium);
+
+            img {
+                width: 18px;
+            }
+        }
+    }
+
+}
+
+.error-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/assets/404/fondo-estrellas-404-aprendecode.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.cosmonaut{
+    animation: cosmonaut-floating 5s ease-in-out infinite;
+}
+
+@keyframes cosmonaut-floating {
+    50%{
+        transform: translateY(-30px);
+    }
+}

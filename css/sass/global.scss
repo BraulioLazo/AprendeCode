@@ -17,9 +17,10 @@
     --color-text-white: #ffffff;
     --color-text-dark: #181818;
     --color-text-medium: #606060;
-    --color-text-placeholder: #777777d2;
+    --color-text-placeholder: #7777778c;
 
     --radius-main: 7px;
+    --circular-border-radius: 100px;
 
     --color-background-white: #ffffff;
     --color-background-light: #FBFBFB;
@@ -73,6 +74,10 @@ span.skill-counter {
 
 a {
     text-decoration: none;
+}
+
+::placeholder{
+    color: var(--color-text-placeholder);
 }
 
 ::-webkit-scrollbar {
