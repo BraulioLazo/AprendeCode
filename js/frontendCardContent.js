@@ -269,7 +269,7 @@ const frontendCardContent = [
         keywords: "flexbox, flex, contenido, flex-box, flexible, maquetación, web, diseño, responsivo, responsive, CSS, técnicas, avanzadas, flexible, adaptable",
         title: "¡Convierte tu Web en un Espacio Dinámico con Flexbox!",
         description: "Descubre cómo crear contenedores y elementos flexibles con Flexbox, una poderosa herramienta de CSS para el diseño web moderno ...",
-        imageUrl: "/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/Flexbox-Maquetado-Responsivo.jpg",
+        imageUrl: "/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/Flexbox-Maquetado-Responsivo.webp",
         imageAlt: "Cómo usar Flexbox para organizar elementos en CSS",
         link: "/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/",
     },
