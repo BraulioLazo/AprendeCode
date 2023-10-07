@@ -261,7 +261,7 @@ const frontendCardContent = [
         keywords: "cajas, flotantes, float, maquetación, web, diseño, responsivo, flexible, CSS, técnicas, avanzadas, estructura, de, página",
         title: "Cajas Flotantes: Un Vistazo a su Versatilidad en el Diseño Web",
         description: "Explora la magia de crear diseños responsivos con cajas flotantes en tu sitio web, gracias a un enfoque innovador de maquetación web en CSS...",
-        imageUrl: "/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/Diseno-Responsivo-Con-Cajas-Flotantes.jpg",
+        imageUrl: "/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/Diseno-Responsivo-Con-Cajas-Flotantes.webp",
         imageAlt: "Diseño Responsivo con Cajas Flotantes",
         link: "/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/",
     },
