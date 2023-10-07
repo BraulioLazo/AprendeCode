@@ -7,16 +7,21 @@ const loader = document.createElement('div');
 loader.id = 'loader';
 container.appendChild(loader);
 
+function getStorageKeyPrefix() {
+    const pathName = window.location.pathname.split("/").filter(part => part !== "").pop();
+    return pathName + "_";
+}
+
 function getEntriesByURL() {
     const pathName = window.location.pathname.split("/").filter(part => part !== "").pop();
 
-    switch(pathName) {
+    switch (pathName) {
         case "frontend":
             return frontendCardContent;
         case "arduino":
             return arduinoCardContent;
         default:
-            return []; 
+            return [];
     }
 }
 
@@ -37,7 +42,7 @@ function renderEntry(entry) {
     image.classList.add('card__image');
     image.setAttribute('decoding', 'async');
     image.setAttribute('loading', 'lazy');
-    image.setAttribute('alt', entry.imageAlt); // Eliminado el duplicado
+    image.setAttribute('alt', entry.imageAlt);
 
     imageContainer.appendChild(image);
     anchorForImage.appendChild(imageContainer);
@@ -96,6 +101,36 @@ function initializeObserver() {
 }
 const observer = initializeObserver();
 
+function loadInitialCards() {
+    // Obtener el número de tarjetas cargadas previamente
+    const previouslyLoaded = parseInt(sessionStorage.getItem(getStorageKeyPrefix() + 'cardsLoaded') || "0");
+
+    // Si el usuario ya había cargado algunas tarjetas, cargar ese número. Si no, cargar el valor predeterminado.
+    let cardsToLoad = previouslyLoaded > 0 ? previouslyLoaded : (window.matchMedia("(max-width: 768px)").matches ? 3 : 6);
+
+    if (loaded + cardsToLoad > entriesElements.length) {
+        cardsToLoad = entriesElements.length - loaded;
+    }
+
+    const newEntries = entriesElements.slice(loaded, loaded + cardsToLoad);
+    newEntries.forEach(renderEntry);
+    loaded += newEntries.length;
+
+    if (loaded >= entriesElements.length && observer) {
+        observer.unobserve(loader);
+    }
+
+    // Si ya hemos visitado la página y hemos hecho scroll, ir a esa posición
+    if (previouslyLoaded > 0 && sessionStorage.getItem(getStorageKeyPrefix() + 'userScroll')) {
+        const userScroll = parseInt(sessionStorage.getItem(getStorageKeyPrefix() + 'userScroll'));
+        setTimeout(() => {
+            window.scrollTo({
+                top: userScroll,
+                behavior: 'smooth'
+            });
+        }, 100);
+    }
+}
 
 function loadMoreCards() {
     let cardsToLoad = window.matchMedia("(max-width: 768px)").matches ? 3 : 6;
@@ -108,11 +143,20 @@ function loadMoreCards() {
     newEntries.forEach(renderEntry);
     loaded += newEntries.length;
 
-    if (loaded >= entriesElements.length && observer) { // Verificación adicional aquí
+    if (loaded >= entriesElements.length && observer) {
         observer.unobserve(loader);
     }
+
+    // Guardar el número de tarjetas cargadas en sessionStorage
+    sessionStorage.setItem(getStorageKeyPrefix() + 'cardsLoaded', loaded);
 }
 
-loadMoreCards();
+// Cargar tarjetas iniciales
+loadInitialCards();
+
+// Escuchar scroll para almacenar la posición
+window.addEventListener('scroll', () => {
+    sessionStorage.setItem(getStorageKeyPrefix() + 'userScroll', window.scrollY);
+});
 
 
