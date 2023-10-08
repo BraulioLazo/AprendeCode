@@ -253,7 +253,7 @@ const frontendCardContent = [
         keywords: "css, imágenes, imagenes, imagen, background, diseño, web, estilos, background-clip, background-size, background-position, responsive, design",
         title: "Dominando las Imágenes de Fondo en CSS: Guía Paso a Paso",
         description: "Sumérgete en el mundo del CSS y aprende a dominar las imágenes de fondo con nuestra guía completa. Desde lo básico hasta lo avanzado, ¡aquí lo encontrarás todo!",
-        imageUrl: "/frontend/dominando-las-imagenes-de-fondo-en-css-guia-paso-a-paso/images/dominar-imagenes-fondo-css.jpg",
+        imageUrl: "/frontend/dominando-las-imagenes-de-fondo-en-css-guia-paso-a-paso/images/dominar-imagenes-fondo-css.webp",
         imageAlt: "Desarrolladora sonriendo hacia la cámara con código en pantalla, acompañada de otro desarrollador enfocado en su trabajo.",
         link: "/frontend/dominando-las-imagenes-de-fondo-en-css-guia-paso-a-paso/",
     },
