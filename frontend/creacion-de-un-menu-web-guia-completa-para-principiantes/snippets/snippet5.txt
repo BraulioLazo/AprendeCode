@@ -2,21 +2,26 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Estilos.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+        <title> Creación de un Menú Web: Guía Completa para Principiantes </title>
     </head>
 
     <body>
-       <nav>
-           <div id="menu">
-               <div id="nombre_web"> Nombre Del Proyecto </div>
-               <div id="inicio"> <a href="index.html"> <p> Inicio </p> </a>   </div>
-               <div id="sobre_mi">  <a href="sobre-mi.html"> <p> Sobre Mí </p> </a>  </div>
-               <div id="contacto"> <a href="contacto.html"> <p> Contacto </p> </a> </div>
-               <div id="redes_sociales"> <img decoding="async" src="Imagenes/Facebook.png" id="facebook"> <img decoding="async" src="Imagenes/Instagram.png" id="instagram"> </div>
-           </div>
-      </nav>
+        <nav>
+           <ul class="menu">
+               <li class="nombre-web">Nombre Del Proyecto</li>
+               <li class="opcion-menu"><a href="index.html">Inicio</a></li>
+               <li class="opcion-menu"><a href="sobre-mi.html">Sobre Mí</a></li>
+               <li class="opcion-menu"><a href="contacto.html">Contacto</a></li>
+               <li class="redes-sociales"> 
+                   <a href="#"><img src="Imagenes/Facebook.png" alt="Facebook" class="icono-red-social"></a>
+                   <a href="#"><img src="Imagenes/Instagram.png" alt="Instagram" class="icono-red-social"></a>
+               </li>
+           </ul>
+       </nav>
     </body>
 </html>

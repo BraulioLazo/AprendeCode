@@ -5,12 +5,18 @@
 }
 
 
-#menu{
-   margin-top: 120px;
-   display: flex;
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    width: 90%;
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
 }
 
-#menu div{
+.menu li {
     height: 60px;
     border: 1px solid black;
     padding-top: 20px;
@@ -18,22 +24,14 @@
     text-align: center;
 }
 
-#nombre_web{
+.nombre-web {
     width: 35%;
 }
 
-#inicio{
+.opcion-menu {
     width: 10%;
 }
 
-#sobre_mi{
-    width: 10%;
-}
-
-#contacto{
-    width: 10%;
-}
-
-#redes_sociales{
+.redes-sociales {
     width: 35%;
 }

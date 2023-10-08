@@ -6,65 +6,58 @@
 }
 
 
-#menu{
-   margin-top: 120px;
-   display: flex;
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    border-width: 1px 0px;
 }
 
-#menu div{
+.menu li {
     height: 80px;
-    border: 1px solid black;
-    border-left-width: 0px;
+    border-left: 1px solid black;
     text-align: center;
     line-height: 80px;
-
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-#nombre_web{
+.menu .nombre-web {
     width: 35%;
     font-size: 40px;
     font-weight: 400;
-}
-#inicio{
-    width: 10%;
-    font-size: 20px;
-    font-weight: 300;
-
-}
-#sobre_mi{
-    width: 10%;
-    font-size: 20px;
-    font-weight: 300;
-
+    border-left-width: 0;
 }
 
-#contacto{
+.menu .opcion-menu {
     width: 10%;
     font-size: 20px;
     font-weight: 300;
 }
 
-#redes_sociales{
+.menu .redes-sociales {
     position: relative;
     width: 35%;
 }
 
-#redes_sociales img{
+.menu .icono-red-social {
     position: absolute;
     width: 40px;
     top: 20px;
 }
 
-
-#facebook{
+.menu img[alt="Facebook"] {
    right: 80px;
 }
 
-#instagram{
+.menu img[alt="Instagram"] {
     right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

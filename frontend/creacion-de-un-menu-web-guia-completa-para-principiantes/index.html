@@ -96,10 +96,13 @@
                     Aplicando Estilos al Menú: Primeros Pasos
                 </h2>
                 <p>
-                    Ahora, elevemos el diseño de nuestro menú. Aunque el estilo depende del gusto personal, te
-                    presentaré un diseño que considero elegante. Comenzaremos añadiendo un div para cada enlace y dos
-                    contenedores adicionales para el nombre del proyecto y los enlaces de las redes sociales. Te
-                    mostraré el progreso paso a paso para asegurarnos de que todo quede claro.
+                    Continuamos refinando nuestro diseño de menú. En este paso, organizaremos nuestro menú en una
+                    estructura más distintiva y funcional. En lugar de simplemente listar los enlaces, hemos añadido una
+                    sección destacada para el 'Nombre Del Proyecto' y otra para 'Redes Sociales'. Cada enlace de
+                    navegación, como 'Inicio', 'Sobre Mí' y 'Contacto', se ha categorizado como una 'opcion-menu' para
+                    brindar uniformidad. Además, hemos añadido bordes a cada elemento del menú para separarlos
+                    claramente y mejorar la estética general. Vamos a seguir este recorrido juntos, paso a paso, para
+                    que cada mejora quede perfectamente clara.
                 </p>
 
                 <div class="snippets">
@@ -128,41 +131,37 @@
                     Corrigiendo Detalles y Mejorando la Estética
                 </h2>
                 <p>
-                    Si copias el código en tu editor, deberías ver algo similar a la imagen que proporcioné
-                    anteriormente. Observa que declaré la caja principal, denominada <strong>menú</strong>, como flex. A
-                    las cajas
-                    hijas, les di un ancho en porcentaje para que se ajusten automáticamente, evitando problemas al
-                    reducir la ventana del navegador. Hasta este punto, todo parece en orden, pero hay elementos
-                    predeterminados que podríamos mejorar para embellecer nuestro diseño. A continuación, te explico
-                    estos ajustes, y al final te proporciono el código y una imagen de referencia.
+                    Si incorporas este código a tu proyecto, empezarás a apreciar los cambios sustanciales que hemos
+                    llevado a cabo. Para centrarnos en el diseño de nuestro menú principal, denominado menu, lo he
+                    establecido como una caja flexible. Gracias a esta decisión, los elementos hijos se adaptan con una
+                    distribución armoniosa, especialmente cuando redimensionamos la ventana del navegador.
+                    A continuación, vamos a repasar algunas optimizaciones y cambios que hemos realizado:
                 </p>
 
                 <p>
-                    1 - <strong>Bordes Inconsistentes</strong>: A pesar de haberles asignado un borde de 1px a cada
-                    contenedor, notarás
-                    que algunos lucen más gruesos que otros. Este fenómeno ocurre cuando dos bordes se encuentran y, en
-                    lugar de mantener su grosor original de 1px, se fusionan y parecen tener 2px. La solución es
-                    sencilla: eliminamos uno de los bordes utilizando la propiedad border-width.
+                    1 - <strong>Bordes Homogéneos</strong>: Aunque inicialmente se añadió un borde a todos los lados de
+                    nuestro menú principal (menu), decidimos ajustarlo para mantener una estética más pulida. Así,
+                    conservamos solo los bordes superior e inferior del menú, eliminando los bordes izquierdos y
+                    derechos. Para lograr este efecto, utilizamos la propiedad border-width con los valores 1px 0px.
                 </p>
 
                 <p>
-                    2 - <strong>strongEstilo de Enlaces</strong>: Por defecto, los enlaces suelen venir con un color
-                    estándar y una línea
-                    subrayada, lo cual, a mi parecer, no es el estilo más atractivo. Mi propuesta es darles un tono
-                    negro y quitar ese subrayado usando la propiedad text-decoration con el valor none.
+                    2 - <strong>Estilo de Enlaces</strong>: Los enlaces, por defecto, suelen tener un color
+                    predeterminado y una línea subrayada. Sin embargo, en esta ocasión hemos optado por un diseño más
+                    limpio, con un color negro y sin subrayado, utilizando la propiedad text-decoration.
                 </p>
 
                 <p>
-                    3 - <strong>Tipografía</strong>: Otro detalle que vale la pena ajustar es la fuente. Por suerte,
-                    Google Fonts nos
-                    brinda opciones gratuitas y estilizadas para embellecer nuestro sitio.
+                    3 - <strong>Tipografía</strong>: La fuente que utilizamos puede hacer una gran diferencia en la
+                    apariencia de nuestro sitio web. Gracias a Google Fonts, hemos implementado la tipografía 'Oswald',
+                    que proporciona una estética contemporánea y legible a nuestro menú.
                 </p>
 
                 <p>
-                    Adicionalmente, incorporé imágenes de redes sociales. Para lograr una buena disposición de estos
-                    íconos, configuré la caja contenedora #redes_sociales con position: relative y a los propios íconos
-                    con position: absolute. De esta manera, es más sencillo ajustar su posición dentro de la caja usando
-                    márgenes.
+                    Por último, hemos añadido iconos de redes sociales en nuestra sección redes-sociales. A través del
+                    uso de position: relative para el contenedor y position: absolute para cada ícono, hemos conseguido
+                    una disposición precisa de cada imagen. De este modo, podemos ajustar fácilmente su posición con
+                    propiedades como right y top
                 </p>
 
                 <div class="image-container">
@@ -202,17 +201,23 @@
                     Consejos Finales para un Menú Web Óptimo
                 </h2>
                 <p>
-                    Llegamos a un punto donde el cambio es realmente notable. Ahora, solo nos queda añadir algunas
-                    transiciones a las cajas que contienen los enlaces, y con eso estaríamos. El primer ajuste que
-                    quiero hacer es que, al desplazar el cursor sobre uno de los enlaces, tanto el color del contenedor
-                    como el del texto cambien. Mi idea es poner un fondo negro y letras blancas, creando un contraste
-                    llamativo y elegante. Hacer esto es bastante sencillo: solo tenemos que añadir la pseudo-clase
-                    :hover a las etiquetas párrafo, así: <strong>p:hover</strong>. Pero aún hay más: quiero que la página en la que
-                    estemos se distinga con ese fondo negro y texto blanco. Para conseguirlo, podemos agregar una clase
-                    o un id <strong>activo</strong> al párrafo correspondiente a la página en uso. Por ejemplo, si estamos en <strong>Inicio</strong>,
-                    lo marcaríamos con <strong>id="activo"</strong>. Las demás etiquetas se mantendrán tal como están. Luego, en el CSS,
-                    definimos el id 'activo' con las mismas propiedades que cuando pasamos el cursor, quedando de esta
-                    manera: <strong>#activo { background-color: black; color: white; }</strong>.
+                    Hemos avanzado significativamente en nuestro diseño, y ahora es el momento de agregar ese toque
+                    final para mejorar la interacción con el usuario. Para ello, vamos a implementar dos características
+                    clave:
+                </p>
+                <p>
+                    1 - <strong>Interactividad en el Menú</strong>: Buscamos que, al pasar el cursor sobre un ítem del menú, éste cambie su
+                    apariencia para indicar al usuario que puede interactuar con él. En nuestro caso, queremos que el
+                    fondo del ítem se vuelva negro y que el texto sea blanco, logrando así un contraste visual efectivo
+                    y atractivo. Para lograrlo, añadimos las reglas .menu .opcion-menu:hover y .menu .opcion-menu:hover
+                    a al CSS.
+                </p>
+                <p>
+                    2- <strong>Página Activa</strong>: Además de la interactividad, es esencial que el usuario sepa en qué sección o página
+                    del sitio web se encuentra. Para ello, marcaremos la opción activa del menú con un fondo negro y
+                    texto blanco, similar al efecto :hover. En el código HTML, hemos asignado la clase activo a la
+                    opción "Inicio". Esta clase, junto con su estilo en el CSS, garantiza que siempre sepamos cuál es la
+                    página activa.
                 </p>
                 <p>
                     Aquí te dejo el código y la imagen para que observes cómo queda. Y recuerda, si deseas usar este

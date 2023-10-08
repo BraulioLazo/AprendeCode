@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
     padding: 0px;
@@ -6,73 +6,74 @@
 }
 
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
-p:hover{
-    background-color: black;
-    color: white;
-}
-
-#activo{
-    background-color: black;
-    color: white;
-}
-#menu{
+.menu {
     display: flex;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+    border: 1px solid black;
+    border-width: 1px 0px;
 }
 
-#menu div{
+.menu .opcion-menu:hover {
+    background-color: black;
+}
+
+.menu .opcion-menu:hover a {
+    color: white;
+}
+
+.menu li {
     height: 80px;
-    border: 1px solid black;
+    border-left: 1px solid black;
     text-align: center;
     line-height: 80px;
-    border-left-width: 0px;
 }
 
-#nombre_proyecto{
+.opcion-menu.activo {
+    background-color: black;
+}
+
+.opcion-menu.activo a{
+    color: white;
+}
+
+.menu .nombre-web {
     width: 35%;
     font-size: 40px;
     font-weight: 400;
-
+    border-left-width: 0;
 }
 
-#inicio{
+.menu .opcion-menu {
     width: 10%;
     font-size: 20px;
-    font-weight: 300px;
+    font-weight: 300;
 }
 
-#sobre_mi{
-    width: 10%;
-    font-size: 20px;
-    font-weight: 300px;
-}
-
-#contacto{
-    width: 10%;
-    font-size: 20px;
-    font-weight: 300px;
-}
-
-#redes_sociales{
+.menu .redes-sociales {
     position: relative;
     width: 35%;
 }
 
-#redes_sociales img{
-        position: absolute;
-        width: 40px;
-        margin-top: 20px;
+.menu .icono-red-social {
+    position: absolute;
+    width: 40px;
+    top: 20px;
 }
 
+.menu img[alt="Facebook"] {
+    right: 80px;
+}
 
-#facebook{
+.menu img[alt="Instagram"] {
     right: 20px;
 }
 
-#instagram{
-    right: 80px;
+a {
+    text-decoration: none;
+    color: black;
 }

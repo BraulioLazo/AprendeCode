@@ -2,16 +2,18 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Estilos.css">
+        <title> Creación de un Menú Web: Guía Completa para Principiantes </title>
     </head>
     
     <body>
        <nav>
-           <div id="menu">
-                  <a href="index.html"> Inicio  </a> /
-                  <a href="sobre-mi.html">  Sobre Mí  </a> /
-                  <a href="contacto.html">  Contacto  </a>
-           </div>
+           <ul class="menu">
+               <li><a href="index.html">Inicio</a></li>
+               <li><a href="sobre-mi.html">Sobre Mí</a></li>
+               <li><a href="contacto.html">Contacto</a></li>
+           </ul>
       </nav>
     </body>
 </html>
