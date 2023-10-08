@@ -156,7 +156,6 @@ function loadMoreCards() {
     // Guardar el número de tarjetas cargadas en sessionStorage
     sessionStorage.setItem(getStorageKeyPrefix() + 'cardsLoaded', loaded);
 }
-loadMoreCards();
 
 // Cargar tarjetas iniciales
 loadInitialCards();
