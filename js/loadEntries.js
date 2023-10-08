@@ -13,7 +13,13 @@ function getStorageKeyPrefix() {
 }
 
 function getEntriesByURL() {
-    const pathName = window.location.pathname.split("/").filter(part => part !== "").pop();
+    let pathName = window.location.pathname.split("/").filter(part => part !== "");
+    
+    if(pathName[pathName.length - 1] === "index.html") {
+        pathName.pop();
+    }
+
+    pathName = pathName.pop();
 
     switch (pathName) {
         case "frontend":
@@ -150,6 +156,7 @@ function loadMoreCards() {
     // Guardar el número de tarjetas cargadas en sessionStorage
     sessionStorage.setItem(getStorageKeyPrefix() + 'cardsLoaded', loaded);
 }
+loadMoreCards();
 
 // Cargar tarjetas iniciales
 loadInitialCards();

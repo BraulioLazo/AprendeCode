@@ -245,7 +245,7 @@ const frontendCardContent = [
         keywords: "object-fit, object, fit, CSS, adaptar, imágenes, diseño, responsive, contenido, visual, ajustar, tamaño, cover, fill, contain",
         title: "Domina la Propiedad object-fit en CSS",
         description: "Sumérgete dentro del CSS con object-fit y descubre cómo transformar tus imágenes. Aprende a ajustar y posicionar sin distorsiones. ¡Transforma tus diseños ahora!",
-        imageUrl: "/frontend/domina-la-propiedad-object-fit-en-css/images/desarrollador-codificando-tarjeta-blog.jpg",
+        imageUrl: "/frontend/domina-la-propiedad-object-fit-en-css/images/desarrollador-codificando-tarjeta-blog.webp",
         imageAlt: "Desarrollador mirando a la cámara con una computadora detrás mostrando código en la pantalla.",
         link: "/frontend/domina-la-propiedad-object-fit-en-css/",
     },
@@ -273,5 +273,4 @@ const frontendCardContent = [
         imageAlt: "Cómo usar Flexbox para organizar elementos en CSS",
         link: "/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/",
     },
-
 ];
