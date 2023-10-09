@@ -1,79 +1,86 @@
+/* Estilos globales */
+
 * {
     font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
-
-.menu {
-    display: flex;
-    justify-content: center;
-    margin: 120px auto 0 auto;
-    width: 90%;
-    font-size: 20px;
-    text-align: center;
-    list-style: none;
-    border: 1px solid black;
-    border-width: 1px 0px;
-}
-
-.menu .opcion-menu:hover {
-    background-color: black;
-}
-
-.menu .opcion-menu:hover a {
-    color: white;
-}
-
-.menu li {
-    height: 80px;
-    border-left: 1px solid black;
-    text-align: center;
-    line-height: 80px;
-}
-
-.opcion-menu.activo {
-    background-color: black;
-}
-
-.opcion-menu.activo a{
-    color: white;
-}
-
-.menu .nombre-web {
-    width: 35%;
-    font-size: 40px;
-    font-weight: 400;
-    border-left-width: 0;
-}
-
-.menu .opcion-menu {
-    width: 10%;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-.menu .redes-sociales {
-    position: relative;
-    width: 35%;
-}
-
-.menu .icono-red-social {
-    position: absolute;
-    width: 40px;
-    top: 20px;
-}
-
-.menu img[alt="Facebook"] {
-    right: 80px;
-}
-
-.menu img[alt="Instagram"] {
-    right: 20px;
+body {
+    padding: 0 30px;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+/* Estilos para el menú */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto 0;
+    max-width: 1400px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-width: 1px 0;
+}
+
+.nombre-web,
+.redes-sociales {
+    width: 30%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.nombre-web {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+nav {
+    width: 40%;
+}
+
+.navegacion {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.navegacion li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-left: 1px solid black;
+    padding: 20px 0;
+}
+
+.opcion-menu {
+    width: 33.333%;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.opcion-menu:hover,
+.opcion-menu.activo {
+    background-color: black;
+}
+
+.opcion-menu:hover a,
+.opcion-menu.activo a {
+    color: white;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-right: 20px;
+    border-left: 1px solid black;
 }

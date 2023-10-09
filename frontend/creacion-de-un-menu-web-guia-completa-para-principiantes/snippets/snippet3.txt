@@ -4,18 +4,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Estilos.css">
-        <title> Creación de un Menú Web: Guía Completa para Principiantes </title>
+        <title>Creación de un Menú Web: Guía Completa para Principiantes</title>
     </head>
 
     <body>
-       <nav>
-           <ul class="menu">
-               <li class="nombre-web"> Nombre Del Proyecto </li>
-               <li class="opcion-menu"> <a href="index.html">Inicio</a> </li>
-               <li class="opcion-menu"> <a href="sobre-mi.html">Sobre Mí</a> </li>
-               <li class="opcion-menu"> <a href="contacto.html">Contacto</a> </li>
-               <li class="redes-sociales"> Redes Sociales </li>
-           </ul>
-      </nav>
+       <!-- Encabezado Principal -->
+       <header class="menu">
+            <!-- Nombre del Sitio Web -->
+            <div class="nombre-web">AprendeCode</div>
+            
+            <!-- Navegación Principal -->
+            <nav>
+                <ul class="navegacion">
+                    <li class="opcion-menu"><a href="index.html">Inicio</a></li>
+                    <li class="opcion-menu"><a href="sobre-mi.html">Sobre Mí</a></li>
+                    <li class="opcion-menu"><a href="contacto.html">Contacto</a></li>
+                </ul>
+           </nav>
+           
+           <!-- Sección de Redes Sociales -->
+           <div class="redes-sociales">Redes Sociales</div>
+        </header>
     </body>
 </html>
+

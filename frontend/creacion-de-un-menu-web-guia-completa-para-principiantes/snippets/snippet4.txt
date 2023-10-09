@@ -1,22 +1,42 @@
+/* Estilos globales */
 *{
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
+body {
+    padding: 0 30px;
+}
+
+/* Estilos para el menú */
 
 .menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 120px auto 0 auto;
-    width: 90%;
-    padding: 25px;
+    max-width: 1400px;
     font-size: 20px;
     text-align: center;
+    border: 1px solid black;
+}
+
+
+nav {
+    width: 40%;
+}
+
+.navegacion {
+    display: flex;
+    width: 100%;
     list-style: none;
 }
 
-.menu li {
+.navegacion li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 60px;
     border: 1px solid black;
     padding-top: 20px;
@@ -24,14 +44,12 @@
     text-align: center;
 }
 
-.nombre-web {
-    width: 35%;
+.nombre-web,
+.redes-sociales {
+    width: 30%;
 }
+
 
 .opcion-menu {
-    width: 10%;
-}
-
-.redes-sociales {
-    width: 35%;
+    width: 33.333%;
 }
