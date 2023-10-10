@@ -17,7 +17,7 @@
     <meta property="og:description"
         content="Aprende paso a paso cómo crear un menú web desde cero. Una guía detallada para principiantes en el desarrollo frontend.">
     <meta property="og:image"
-        content="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/creacion-menu-web-desarrolladores.jpg">
+        content="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/creacion-menu-web-desarrolladores.webp">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
@@ -88,8 +88,8 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/inicio-menu-ejemplo.jpg"
-                        loading="lazy" alt="Ejemplo inicial del menú web con código básico">
+                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/inicio-menu-ejemplo.webp"
+                        loading="lazy" decoding="async" alt="Ejemplo inicial del menú web con código básico">
                 </div>
 
                 <h2>
@@ -98,7 +98,8 @@
                 <p>
                     Continuamos refinando nuestro diseño de menú. En este paso, organizaremos nuestro menú en una
                     estructura más distintiva y funcional. En lugar de simplemente listar los enlaces, hemos añadido una
-                    sección destacada para el Nombre Del Proyecto (AprendeCode) y otra para Redes Sociales. Cada enlace de
+                    sección destacada para el Nombre Del Proyecto (AprendeCode) y otra para Redes Sociales. Cada enlace
+                    de
                     navegación, como 'Inicio', 'Sobre Mí' y 'Contacto', se ha categorizado como una 'opcion-menu' para
                     brindar uniformidad. Además, hemos añadido bordes a cada elemento del menú para separarlos
                     claramente y mejorar la estética general. Vamos a seguir este recorrido juntos, paso a paso, para
@@ -123,8 +124,9 @@
                 </div>
 
                 <div class="image-container">
-                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-contenedores.jpg"
-                        loading="lazy" alt="Menú con contenedores individuales para enlaces y secciones">
+                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-contenedores.webp"
+                        loading="lazy" decoding="async"
+                        alt="Menú con contenedores individuales para enlaces y secciones">
                 </div>
 
                 <h2>
@@ -139,10 +141,13 @@
                 </p>
 
                 <p>
-                    1 - <strong>Bordes Homogéneos</strong>: Aunque inicialmente se añadió un borde a todos los lados de
-                    nuestro menú principal (menu), decidimos ajustarlo para mantener una estética más pulida. Así,
-                    conservamos solo los bordes superior e inferior del menú, eliminando los bordes izquierdos y
-                    derechos. Para lograr este efecto, utilizamos la propiedad border-width con los valores 1px 0px.
+                    1 - <strong>Bordes Homogéneos</strong>: Aunque inicialmente añadimos bordes a todos los lados de
+                    nuestro menú (.menu), optamos por ajustarlos para lograr una estética más pulida. De esta manera,
+                    conservamos únicamente los bordes superior e inferior, eliminando los bordes laterales. Para
+                    conseguir este diseño, empleamos la propiedad border-width con los valores 1px 0px. Realizamos un
+                    ajuste similar en otros elementos del menú. Tanto a los ítems de la lista como al espacio donde
+                    están los iconos de las redes sociales, les retiramos todos los bordes, manteniendo solo el
+                    izquierdo, para evitar redundancias en los bordes.
                 </p>
 
                 <p>
@@ -165,8 +170,9 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-estilizado.jpg"
-                        loading="lazy" alt="Menú estilizado con cambios en bordes, enlaces y tipografía">
+                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-estilizado.webp"
+                        loading="lazy" decoding="async"
+                        alt="Menú estilizado con cambios en bordes, enlaces y tipografía">
                 </div>
 
                 <div class="snippets">
@@ -192,7 +198,7 @@
                             <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
                             <img src="/assets/global/aprendecode-canal-youtube.webp"
                                 alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
-                                loading="lazy">
+                                loading="lazy" decoding="async">
                         </picture>
                     </div>
                 </a>
@@ -209,16 +215,15 @@
                     1 - <strong>Interactividad en el Menú</strong>: Buscamos que, al pasar el cursor sobre un ítem del
                     menú, éste cambie su apariencia para indicar al usuario que puede interactuar con él. En nuestro
                     caso, queremos que el fondo del ítem se vuelva negro y que el texto sea blanco, logrando así un
-                    contraste visual efectivo y atractivo. Para lograrlo, añadimos las reglas .opcion-menu:hover y
-                    .opcion-menu.activo al CSS.
+                    contraste visual efectivo y atractivo. Para lograrlo, añadimos las reglas .opcion-menu:hover al CSS.
                 </p>
                 <p>
                     2- <strong>Página Activa</strong>: Además de la interactividad, es esencial que el usuario sepa en
                     qué sección o página
                     del sitio web se encuentra. Para ello, marcaremos la opción activa del menú con un fondo negro y
                     texto blanco, similar al efecto :hover. En el código HTML, hemos asignado la clase activo a la
-                    opción "Inicio". Esta clase, junto con su estilo en el CSS, garantiza que siempre sepamos cuál es la
-                    página activa.
+                    opción "Inicio". Esta clase, junto con su estilo en el CSS (.opcion-menu.activo), garantiza que
+                    siempre sepamos cuál es la página activa.
                 </p>
 
                 <p>
@@ -226,8 +231,8 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-finalizado.jpg"
-                        loading="lazy"
+                    <img src="/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-finalizado.webp"
+                        loading="lazy" decoding="async"
                         alt="Menú web completamente estilizado y funcional con interacción al pasar el cursor">
                 </div>
 
@@ -261,7 +266,8 @@
                             del usuario en una página web.</li>
                         <li><strong>Páginas Base:</strong> Seleccionamos tres páginas esenciales: Inicio, Sobre Mí y
                             Contacto.</li>
-                        <li><strong>Estructura del Menú:</strong> Organización clara con secciones para 'AprendeCode' y
+                        <li><strong>Estructura del Menú:</strong> Organización clara con secciones para el Nombre del
+                            Proyecto (AprendeCode) y
                             'Redes Sociales'.</li>
                         <li><strong>Optimizaciones Estéticas:</strong> Ajuste de bordes, estilo de enlaces y selección
                             de tipografía 'Oswald' para un diseño más pulido.</li>
