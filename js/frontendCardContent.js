@@ -213,7 +213,7 @@ const frontendCardContent = [
         keywords: "CSS, variables, propiedades, personalizadas, diseño, web, programación, programacion, estilos, :root, custom, properties, desarrollo",
         title: "Variables en CSS: Un Vistazo a las Propiedades Personalizadas",
         description: "Explora el poder de las Propiedades Personalizadas en CSS y descubre cómo simplificar y optimizar tus estilos para un desarrollo web más ágil.",
-        imageUrl: "/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/css-variables-cover.jpg",
+        imageUrl: "/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/css-variables-cover.webp",
         imageAlt: "Desarrolladora programando en su PC de escritorio mientras trabaja con variables en CSS",
         link: "/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/",
     },

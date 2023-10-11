@@ -4,6 +4,10 @@
     margin: 0px;
 }
 
+body{
+   padding: 0 30px;
+}
+
 #contenedor_principal{
     display: flex;
     text-align: center;

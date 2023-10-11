@@ -13,6 +13,9 @@
 
 /*----------------  Declarando las Variables  ---------------------*/
 
+body{
+   padding: 0 30px;
+}
 
 #contenedor_principal{
     display: flex;
