@@ -204,7 +204,7 @@ const frontendCardContent = [
         keywords: "tablas, html, crear, estructura, en, tabla, etiquetas, diseño, estilos, css",
         title: "¿Cómo crear una tabla en HTML?",
         description: "Adéntrate en el mundo del diseño web con este tutorial completo sobre cómo crear y estilizar tablas en HTML. Desde los fundamentos básicos hasta los estilos más avanzados con CSS.",
-        imageUrl: "/frontend/como-crear-una-tabla-en-html/images/mujer-hombre-desarrolladores-discusion.jpg",
+        imageUrl: "/frontend/como-crear-una-tabla-en-html/images/mujer-hombre-desarrolladores-discusion.webp",
         imageAlt: "Dos desarrolladores colaborando, con la chica explicando algo",
         link: "/frontend/como-crear-una-tabla-en-html/",
 
