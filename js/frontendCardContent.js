@@ -221,7 +221,7 @@ const frontendCardContent = [
         keywords: "clip-path, clip, path, diseño, web, formas, creativas, CSS, tutorial, guía, personalización, clippy, design",
         title: "Introducción al Clip-Path: Dando Formas Creativas a Tu Página Web",
         description: "Descubre el poder del clip-path en el diseño web. Aprende a darle formas creativas y únicas a tus contenidos, desde círculos simples hasta polígonos complejos ...",
-        imageUrl: "/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/clip-path-tutorial-header.jpg",
+        imageUrl: "/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/clip-path-tutorial-header.webp",
         imageAlt: "Desarrolladora revisando líneas de código en su monitor y apuntando con un bolígrafo",
         link: "/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/",
     },

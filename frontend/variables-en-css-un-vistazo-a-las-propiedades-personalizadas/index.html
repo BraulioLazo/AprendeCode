@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Descubre cómo trabajar eficientemente con variables en CSS y cómo las Propiedades Personalizadas pueden mejorar tu flujo de trabajo en diseño web.">
-    <meta name="keywords" content="CSS, variables, propiedades personalizadas, diseño web, frontend, programación, estilos, :root, custom properties, desarrollo web">
+    <meta name="description"
+        content="Descubre cómo trabajar eficientemente con variables en CSS y cómo las Propiedades Personalizadas pueden mejorar tu flujo de trabajo en diseño web.">
+    <meta name="keywords"
+        content="CSS, variables, propiedades personalizadas, diseño web, frontend, programación, estilos, :root, custom properties, desarrollo web">
 
     <meta property="og:title" content="Variables en CSS: Un Vistazo a las Propiedades Personalizadas">
-    <meta property="og:description" content="Descubre cómo trabajar eficientemente con variables en CSS y cómo las Propiedades Personalizadas pueden mejorar tu flujo de trabajo en diseño web.">
-    <meta property="og:image" content="/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/css-variables-cover.jpg">
-    <meta property="og:url" content="https://www.aprendecode.com/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/">
+    <meta property="og:description"
+        content="Descubre cómo trabajar eficientemente con variables en CSS y cómo las Propiedades Personalizadas pueden mejorar tu flujo de trabajo en diseño web.">
+    <meta property="og:image"
+        content="/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/css-variables-cover.jpg">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Braulio de AprendeCode">
 
@@ -42,10 +47,13 @@
         <section class="blog-content-section">
             <div class="blog-content-section-container section-container">
                 <p>
-                    Las <strong>variables en CSS</strong> son una herramienta poderosa. A pesar de que comúnmente las llamamos
-                    variables, su nombre técnico es <strong>Propiedades Personalizadas</strong> o <strong>Custom Properties</strong> en inglés. ¿Por qué son tan
+                    Las <strong>variables en CSS</strong> son una herramienta poderosa. A pesar de que comúnmente las
+                    llamamos
+                    variables, su nombre técnico es <strong>Propiedades Personalizadas</strong> o <strong>Custom
+                        Properties</strong> en inglés. ¿Por qué son tan
                     relevantes? Pensemos en cuánto código CSS se repite constantemente en un sitio web: colores,
-                    tipografías, estilos de encabezados y muchos más. Si, por ejemplo, decidimos cambiar el color del texto
+                    tipografías, estilos de encabezados y muchos más. Si, por ejemplo, decidimos cambiar el color del
+                    texto
                     de nuestras publicaciones en el blog, tendríamos que revisar cada sección y modificar cada propiedad
                     individualmente. ¡Qué tedioso! Aquí es donde las Propiedades Personalizadas vienen al rescate,
                     ayudándonos a mantener nuestro código limpio y eficiente.
@@ -70,22 +78,26 @@
 
                 <div class="image-container">
                     <img src="/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/diseno-original-sombra-bordes.jpg"
-                         alt="Caja padre con tres cajas hijos, cada una con sombra y bordes redondeados" loading="lazy" decoding="async">
+                        alt="Caja padre con tres cajas hijos, cada una con sombra y bordes redondeados" loading="lazy"
+                        decoding="async">
                 </div>
 
                 <h2>
                     ¿Por qué son útiles las Propiedades Personalizadas?
                 </h2>
                 <p>
-                    Imaginemos que estamos diseñando las tarjetas de nuestro blog. Tenemos una <strong>caja padre</strong> que contiene
-                    <strong>tres cajas hijas</strong>. Estas cajas hijas comparten estilos, <strong>como sombras y radios en las esquinas</strong>. En
+                    Imaginemos que estamos diseñando las tarjetas de nuestro blog. Tenemos una <strong>caja
+                        padre</strong> que contiene
+                    <strong>tres cajas hijas</strong>. Estas cajas hijas comparten estilos, <strong>como sombras y
+                        radios en las esquinas</strong>. En
                     este contexto, usaríamos el código una y otra vez para cada caja. Pero, ¿qué sucede si queremos
                     cambiar un estilo que se repite en todas las cajas? Sería una tarea repetitiva y tediosa. Esto se
                     vuelve aún más problemático si consideramos una página web con cientos de elementos similares. Aquí
                     es donde las variables CSS o Propiedades Personalizadas pueden ser nuestras grandes aliadas.
                 </p>
 
-                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
                     <div class="image-container">
                         <picture>
                             <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
@@ -100,11 +112,14 @@
                     Declarando y Utilizando Variables en CSS
                 </h2>
                 <p>
-                    Implementar estas variables es sencillo. Primero, usamos el <strong>selector :root</strong> (que se refiere al
+                    Implementar estas variables es sencillo. Primero, usamos el <strong>selector :root</strong> (que se
+                    refiere al
                     elemento HTML) y dentro de este, definimos nuestras variables. Se inicia con dos guiones (--)
-                    seguidos del nombre que queremos para la variable. Por ejemplo: <strong>:root { --miColor: red; }</strong>. Cabe
+                    seguidos del nombre que queremos para la variable. Por ejemplo: <strong>:root { --miColor: red;
+                        }</strong>. Cabe
                     señalar que son dos guiones, no uno. Una vez definida la variable, podemos utilizarla en nuestro CSS
-                    con la función var(). Si tomamos el ejemplo anterior, usaríamos <strong>color: var(--miColor);</strong> para aplicar
+                    con la función var(). Si tomamos el ejemplo anterior, usaríamos <strong>color:
+                        var(--miColor);</strong> para aplicar
                     el color que hemos definido a cualquier texto.
 
                     Con estas variables en su lugar, ahora es mucho más fácil hacer cambios de diseño globales,
@@ -131,22 +146,51 @@
 
                 <div class="image-container">
                     <img src="/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/images/diseno-modificado-propiedades-personalizadas.jpg"
-                         alt="Cajas modificadas con sombra y bordes redondeados tras usar Variables en CSS." loading="lazy" decoding="async">
+                        alt="Cajas modificadas con sombra y bordes redondeados tras usar Variables en CSS."
+                        loading="lazy" decoding="async">
                 </div>
 
                 <h2>Modificando Diseños con Facilidad</h2>
                 <p>
                     El poder real de las variables CSS se manifiesta cuando necesitas hacer cambios. Imagina que,
-                    después de diseñar varias secciones, decides que quieres un cambio de color o de cualquier otro estilo. Con las
+                    después de diseñar varias secciones, decides que quieres un cambio de color o de cualquier otro
+                    estilo. Con las
                     Propiedades Personalizadas, este cambio es sencillo: actualizas el valor de la variable dentro del
-                    <strong>selector :root</strong> y, como magia, el cambio se refleja en todas las partes donde se usa esa variable.
+                    <strong>selector :root</strong> y, como magia, el cambio se refleja en todas las partes donde se usa
+                    esa variable.
                     ¡Es la eficiencia en su máxima expresión!
+                </p>
 
-                    Más allá de la lectura, <strong>te invito a que juegues con el código</strong>, a que experimentes y pruebes por ti
-                    mismo. Es al escribir y manipular el código donde realmente se afianzan los conceptos. Espero
-                    sinceramente que este blog haya sido tan placentero para ti como lo ha sido para mí escribirlo. No
-                    olvides que detrás de estas líneas está Braulio, y que estás en <strong>AprendeCode</strong>. ¡Hasta la próxima y un
-                    fuerte abrazo!
+                <h2>Resumen de las Variables en CSS</h2>
+                <p>
+                    En esta entrada, exploramos las Propiedades Personalizadas en CSS, conocidas también como variables
+                    CSS, y cómo nos permiten mantener un diseño más limpio y eficiente. A continuación, repasamos los
+                    puntos clave que hemos discutido.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Propiedades Personalizadas en CSS</h3>
+                    <ol>
+                        <li><strong>Introducción:</strong> Las variables CSS, técnicamente llamadas Propiedades
+                            Personalizadas, optimizan la repetición de código CSS.</li>
+                        <li><strong>Utilidad:</strong> Facilitan el diseño al permitir cambios globales sin modificar
+                            estilos individualmente en múltiples lugares.</li>
+                        <li><strong>Declaración de Variables:</strong> Se usan dentro del selector :root y se inician
+                            con dos guiones (e.g., --miColor).</li>
+                        <li><strong>Uso de Variables:</strong> Se implementan en el CSS mediante la función var() para
+                            aplicar estilos definidos previamente.</li>
+                        <li><strong>Modificación Eficiente:</strong> Actualizar un valor de variable cambia
+                            automáticamente todos los estilos donde se usa, facilitando los ajustes de diseño.</li>
+                    </ol>
+                </div>
+
+
+                <h2>¡Nos leemos en el siguiente, Código-Lover!</h2>
+                <p>
+                    Más allá de la lectura, <strong>te invito a que juegues con el código</strong>, a que experimentes y
+                    pruebes por ti mismo. Es al escribir y manipular el código donde realmente se afianzan los
+                    conceptos. Espero sinceramente que este blog haya sido tan placentero para ti como lo ha sido para
+                    mí escribirlo. No olvides que detrás de estas líneas está Braulio, y que estás en
+                    <strong>AprendeCode</strong>. ¡Hasta la próxima y un fuerte abrazo!
                 </p>
             </div>
         </section>
