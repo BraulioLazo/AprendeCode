@@ -188,7 +188,7 @@ const frontendCardContent = [
         keywords: "enlaces, enlace, HTML, CSS, diseño, web, guía, completa, creación, de, internos, externos, enlaces, correo electrónico, teléfono, usabilidad",
         title: "Navegando el Diseño Web: Guía Completa sobre Enlaces en HTML y CSS",
         description: "Descubre cómo crear enlaces impactantes en tu diseño web con nuestra guía completa sobre enlaces en HTML y CSS.",
-        imageUrl: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/desarrollador-desarrolladora-mirando-pantalla.jpg",
+        imageUrl: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/images/desarrollador-desarrolladora-mirando-pantalla.webp",
         imageAlt: "Desarrollador y desarrolladora mirando la pantalla, con expresiones concentradas mientras intentan solucionar un error en el código.",
         link: "/frontend/navegando-el-diseno-web-guia-completa-sobre-enlaces-en-html-y-css/",
     },
