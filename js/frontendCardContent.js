@@ -196,7 +196,7 @@ const frontendCardContent = [
         keywords: "css, clear, propiedad, cajas, flotantes, diseño, web, control, layout, flujo",
         title: "Entendiendo la Propiedad 'Clear' en CSS: Controla Tus Cajas Flotantes",
         description: "Sumérgete en el mundo de CSS y descubre el poder de la propiedad Clear. Aprende a dominar las cajas flotantes y evitar problemas comunes de diseño",
-        imageUrl: "/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.jpg",
+        imageUrl: "/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.webp",
         imageAlt: "Hombre explicando algo de programación a una chica mientras ambos miran atentamente la pantalla del ordenador.",
         link: "/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/",
     },
