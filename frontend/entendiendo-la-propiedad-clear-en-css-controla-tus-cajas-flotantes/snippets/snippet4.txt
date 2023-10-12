@@ -5,13 +5,14 @@
 
 }
 
+body{
+    padding: 0 30px;
+}
+
 #caja_padre{
-    width: 90%;
+    max-width: 1400px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 100px;
+    margin: 100px auto;
     padding: 20px;
     background-color: white;
 }
