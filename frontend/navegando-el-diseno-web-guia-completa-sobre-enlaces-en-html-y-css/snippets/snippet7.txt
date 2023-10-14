@@ -7,9 +7,9 @@
     </head>
 
     <body>
-        <footer id="caja_padre"> <br />
-            <address> Florida, Estados Unidos. </address>
+        <footer class="footer">
+            <address class="direccion"> Florida, Estados Unidos. </address>
             <small> AprendeCode &copy 2022 Derechos Reservados. <a href="mailto:info@aprendecode.com"> Envíame un correo </a> </small>
-        </footer>
+         </footer>
     </body>
 </html>
