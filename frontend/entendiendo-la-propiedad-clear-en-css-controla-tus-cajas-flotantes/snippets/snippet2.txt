@@ -26,18 +26,12 @@ body{
     background-color: white;
 }
 
-.caja_1{
-    float: left;
-}
-
+.caja_1,
 .caja_2{
     float: left;
 }
 
-.caja_3{
-    float: right;
-}
-
+.caja_3,
 .caja_4{
     float: right;
 }
