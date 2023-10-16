@@ -1,4 +1,4 @@
-const cacheImagesName = 'CACHE_IMAGES_V0.1';
+const cacheImagesName = 'CACHE_IMAGES_V0.2';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -31,8 +31,45 @@ const arduinoImages = [
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/muchacho-trabajando-robot-arduino.webp'
 ];
 
+const frontendImages = [
+    '/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/Flexbox-Maquetado-Responsivo.webp',
+    '/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/estructura-cajas-position.webp',
+    '/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/cajas-flex-1-ejemplo.webp',
+    '/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/cajas-flex-2-centro-ejemplo.webp',
 
-const cachingResources = [...arduinoImages, ...globalImages];
+    '/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/Diseno-Responsivo-Con-Cajas-Flotantes.webp',
+    '/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/estructura-cajas-flotantes.webp',
+    '/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/tres-cajas-flotantes-contenedor.webp',
+    '/frontend/cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web/images/centrando-cajas-flotantes-truco.webp',
+
+    '/frontend/dominando-las-imagenes-de-fondo-en-css-guia-paso-a-paso/images/dominar-imagenes-fondo-css.webp',
+
+    '/frontend/domina-la-propiedad-object-fit-en-css/images/desarrollador-codificando-tarjeta-blog.webp',
+    '/frontend/domina-la-propiedad-object-fit-en-css/images/imagenes-antes-object-fit.webp',
+    '/frontend/domina-la-propiedad-object-fit-en-css/images/comparacion-object-fit.webp',
+    '/frontend/domina-la-propiedad-object-fit-en-css/images/imagenes-con-object-fit-aplicado.webp',
+
+    '/frontend/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/desarrollador-trabajando-en-columnas-css.webp',
+    '/frontend/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/parrafo-comun-css.webp',
+    '/frontend/creando-columnas-estilizadas-en-css-una-guia-paso-a-paso/images/parrafo-estilizado-columnas-css.webp',
+
+    '/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/creacion-menu-web-desarrolladores.webp',
+    '/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/inicio-menu-ejemplo.webp',
+    '/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-contenedores.webp',
+    '/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-estilizado.webp',
+    '/frontend/creacion-de-un-menu-web-guia-completa-para-principiantes/images/menu-finalizado.webp',
+
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/clip-path-tutorial-header.webp',
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/codigo-partida-contenedor.webp',
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/imagen-circular-clip-path.webp',
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/interfaz-clippy-tool.webp',
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/imagen-poligono-clip-path.webp',
+    '/frontend/introduccion-al-clip-path-dando-formas-creativas-a-tu-pagina-web/images/resultado-final-clip-path.webp'
+
+];
+
+
+const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
