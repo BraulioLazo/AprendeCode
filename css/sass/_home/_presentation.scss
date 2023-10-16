@@ -55,6 +55,10 @@
                 width: 100%;
                 color: var(--color-text-white);
             }
+
+            .subheadline{
+                font-size: 22px;
+            }
         }
     }
 }
@@ -75,16 +79,6 @@
 
 /*------------------------------------------------*/
 
-@media screen and (max-width: 1650px) {
-    .section-presentation {
-        .presentation-container {
-            .text-container {
-                padding-left: 90px;
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .section-presentation {
         border-radius: 0;
@@ -92,22 +86,5 @@
 
     .section-presentation::before {
         border-radius: 0;
-    }
-}
-
-
-@media screen and (max-width: 850px) {
-    .section-presentation {
-        .presentation-container {
-            .text-container {
-                padding-left: 0;
-            }
-        }
-
-        .background-changer {
-            display: none;
-        }
-
-
     }
 }

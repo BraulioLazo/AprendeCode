@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
     <link rel="manifest" href="/assets/logo/site.webmanifest">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <title>AprendeCode - Blog y Canal de YouTube sobre Frontend y Arduino</title>
 </head>
@@ -26,9 +26,6 @@
 
     <main>
         <section class="section-presentation">
-            <button class="button-prev background-changer">
-                <img src="/assets/global/arrow.png" alt="Botón para cambiar al fondo anterior">
-            </button>
 
             <div class="presentation-container section-container">
                 <div class="text-container">
@@ -38,21 +35,17 @@
                         La Pasión Nuestra Guía
                     </h1>
 
-                    <h3 class="subheadline">
+                    <h2 class="subheadline">
                         Adéntrate en el fascinante mundo del desarrollo web y Arduino
-                    </h3>
+                    </h2>
 
-                    <a href="#benefits-section" class="btn-link"><span>Descubre más</span></a>
+                    <button class="btn-link scrollTo" data-target="#benefits-section"><span>Descubre más</span></button>
                 </div>
             </div>
 
-            <button class="button-next background-changer">
-                <img src="/assets/global/arrow.png" alt="Botón para cambiar al siguiente fondo">
-            </button>
-
         </section>
 
-        <section class="topics-section">
+        <section id="topics-section" class="topics-section">
             <div class="topics-section-container section-container">
                 <div class="topics-container">
 
@@ -73,7 +66,7 @@
                                     Sumérgete en artículos y tutoriales que te proporcionan las bases para iniciar tu
                                     camino en el mundo del desarrollo frontend
                                 </p>
-                                <a href="#" class="btn-link"><span>Leer más</span></a>
+                                <a href="/frontend/" class="btn-link"><span>Ver más</span></a>
                             </div>
                         </div>
                     </div>
@@ -95,34 +88,10 @@
                                     Descubre cómo realizar proyectos interesantes con Arduino, perfectos para aprender a
                                     tu propio ritmo y dar tus primeros pasos en el mundo de la electrónica.
                                 </p>
-                                <a href="#" class="btn-link"><span>Leer más</span></a>
+                                <a href="/arduino/" class="btn-link"><span>Ver más</span></a>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="topic-card-container">
-                        <div class="topic-card rotate-y-transition topic-resources">
-                            <div class="topic-container topic-front">
-                                <img src="/assets/topics/icono-herramientas.webp" loading="lazy"
-                                    alt="Icono de Recursos y Herramientas">
-                                <h3>Recursos y Herramientas</h3>
-                                <p>
-                                    Te ofrecemos una selección de herramientas y recursos que te pueden ser útiles en tu
-                                    camino de aprendizaje y desarrollo de proyectos.
-                                </p>
-                            </div>
-                            <div class="topic-container topic-back">
-                                <h3>Recursos y Herramientas</h3>
-                                <p>
-                                    Te ofrecemos una selección de herramientas y recursos que te pueden ser útiles en tu
-                                    camino de aprendizaje y desarrollo de proyectos.
-                                </p>
-                                <a href="#" class="btn-link"><span>Leer más</span></a>
-                            </div>
-                        </div>
-                    </div>
-
 
                     <div class="topic-card-container">
                         <div class="topic-card rotate-x-transition topic-community">
@@ -140,10 +109,34 @@
                                     Únete a una comunidad de aprendices y entusiastas del código. Comparte tus dudas,
                                     tus logros y tus experiencias.
                                 </p>
-                                <a href="#" class="btn-link"><span>Leer más</span></a>
+                                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                                    rel="noopener noreferrer" class="btn-link"><span>Ver más</span></a>
                             </div>
                         </div>
                     </div>
+
+                    <div class="topic-card-container">
+                        <div class="topic-card rotate-y-transition topic-resources">
+                            <div class="topic-container topic-front">
+                                <img src="/assets/topics/contacto-aprendecode.webp" loading="lazy"
+                                    alt="Icono de Notificaciones de AprendeCode">
+                                <h3>Construyamos Juntos</h3>
+                                <p>
+                                    Siempre estoy buscando formas de mejorar y proporcionar el mejor contenido. ¿Hay
+                                    algo que quieras comentar sobre el sitio? ¡Déjame saber! Tu voz es esencial.
+                                </p>
+                            </div>
+                            <div class="topic-container topic-back">
+                                <h3>Construyamos Juntos</h3>
+                                <p>
+                                    Siempre estoy buscando formas de mejorar y proporcionar el mejor contenido. ¿Hay
+                                    algo que quieras comentar sobre el sitio? ¡Déjame saber! Tu voz es esencial.
+                                </p>
+                                <a href="/contacto/" class="btn-link"><span>Ver más</span></a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -241,7 +234,7 @@
             <div class="latest-entries-arduino__container section-container">
                 <div class="latest-entries-arduino__cards-container">
 
-                
+
                 </div>
             </div>
         </section>
@@ -259,7 +252,7 @@
                     <span class="line-animation line-animation-four"></span>
                     <span class="line-animation line-animation-five"></span>
                     <span class="line-animation line-animation-six"></span>
-                    <img class="about__image" src="/assets/about/founder-image.png" loading="lazy"
+                    <img class="about__image" src="/assets/about/founder-image.webp" loading="lazy"
                         alt="Foto de Braulio, el Fundador de AprendeCode">
                 </div>
                 <div class="about__description">
@@ -342,6 +335,8 @@
     <script src="/js/components/menu.js"></script>
     <script rel="preload" src="/js/components/footer.js" as="script"></script>
     <script rel="preload" src="js/renderLastEntries.js" as="script"></script>
+    <script rel="preload" src="/js/globals/scrollIntoView.js" as="script"></script>
+    <script src="/js/globals/registerServiceWorkers.js"></script>
 </body>
 
 </html>

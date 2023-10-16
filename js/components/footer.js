@@ -407,12 +407,12 @@ button {
             <div class="social-links">
                 <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
                    <div class="social-link">
-                       <img class="social-link__img" src="/assets/global/youtube-icono.png" alt="Logo de YouTube de AprendeCode" loading="lazy">
+                       <img class="social-link__img" src="/assets/global/youtube-icono.webp" alt="Logo de YouTube de AprendeCode" loading="lazy">
                    </div>
                 </a>
                 <a href="/frontend/">
                    <div class="social-link">
-                       <img class="social-link__img" src="/assets/global/blog-icono.png" alt="Enlace al blog de AprendeCode" loading="lazy">
+                       <img class="social-link__img" src="/assets/global/blog-icono.webp" alt="Enlace al blog de AprendeCode" loading="lazy">
                    </div>
                 </a>
             </div>
@@ -431,7 +431,7 @@ button {
         <div class="footer__contact">
             <div class="contact-item">
                 <div class="contact-item__img-container">
-                    <img class="contact-item__img" src="/assets/global/email-icono.png" alt="Icono de correo electrónico" loading="lazy">
+                    <img class="contact-item__img" src="/assets/global/email-icono.webp" alt="Icono de correo electrónico" loading="lazy">
                 </div>
                 <div class="contact-item__details">
                     <p class="contact-item__type">Correo electrónico</p>
@@ -441,7 +441,7 @@ button {
         
             <div class="contact-item">
                 <div class="contact-item__img-container">
-                    <img class="contact-item__img" src="/assets/global/atencion-icono.png" alt="Icono de horario" loading="lazy">
+                    <img class="contact-item__img" src="/assets/global/atencion-icono.webp" alt="Icono de horario" loading="lazy">
                 </div>
                 <div class="contact-item__details">
                     <p class="contact-item__type">Horario de atención</p>
@@ -451,7 +451,7 @@ button {
         
             <a href="/contacto/" class="contact-item contact-item__link">
                 <div class="contact-item__img-container">
-                    <img class="contact-item__img" src="/assets/global/contacto-icono.png" alt="Icono del formulario de contacto" loading="lazy">
+                    <img class="contact-item__img" src="/assets/global/contacto-icono.webp" alt="Icono del formulario de contacto" loading="lazy">
                 </div>
                 <div class="contact-item__details">
                     <p class="contact-item__type">Formulario de contacto</p>

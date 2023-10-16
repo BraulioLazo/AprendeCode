@@ -111,6 +111,7 @@ section {
   background-color: var(--color-primary);
   border-radius: var(--radius-main);
   overflow: hidden;
+  cursor: pointer;
 }
 
 .btn-link span {
@@ -299,6 +300,9 @@ button {
   width: 100%;
   color: var(--color-text-white);
 }
+.section-presentation .presentation-container .text-container .subheadline {
+  font-size: 22px;
+}
 
 .section-presentation::before {
   content: "";
@@ -315,25 +319,12 @@ button {
 }
 
 /*------------------------------------------------*/
-@media screen and (max-width: 1650px) {
-  .section-presentation .presentation-container .text-container {
-    padding-left: 90px;
-  }
-}
 @media screen and (max-width: 1024px) {
   .section-presentation {
     border-radius: 0;
   }
   .section-presentation::before {
     border-radius: 0;
-  }
-}
-@media screen and (max-width: 850px) {
-  .section-presentation .presentation-container .text-container {
-    padding-left: 0;
-  }
-  .section-presentation .background-changer {
-    display: none;
   }
 }
 .topics-section .topics-section-container .topics-container {
@@ -1456,6 +1447,78 @@ button {
     min-height: none;
     max-height: 250px;
     max-width: 768px;
+  }
+}
+.error-section {
+  position: relative;
+  padding: 300px 20px 200px 20px;
+}
+.error-section .error-section-container {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.error-section .error-section-container .error-heading,
+.error-section .error-section-container .error-search-container,
+.error-section .error-section-container .error-home-link-container {
+  width: 100%;
+  text-align: center;
+}
+.error-section .error-section-container .error-image-container {
+  max-width: 350px;
+}
+.error-section .error-section-container .error-image-container img {
+  width: 100%;
+}
+.error-section .error-section-container .error-description {
+  max-width: 700px;
+  font-size: 20px;
+  text-align: center;
+}
+.error-section .error-section-container .link-to-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 200px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-text-medium);
+}
+.error-section .error-section-container .link-to-home img {
+  width: 18px;
+}
+
+.error-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("/assets/404/fondo-estrellas-404-aprendecode.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.cosmonaut {
+  animation: cosmonaut-floating 5s ease-in-out infinite;
+}
+
+@keyframes cosmonaut-floating {
+  50% {
+    transform: translateY(-30px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .error-section {
+    padding: 150px 20px 50px 20px;
+  }
+  .error-section .error-section-container .error-image-container {
+    max-width: 250px;
   }
 }
 .error-section {
