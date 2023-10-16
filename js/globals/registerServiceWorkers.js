@@ -1,6 +1,6 @@
 function registerServiceWorkers() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/js/globals/serviceWorkers.js').then(function () {
+        navigator.serviceWorker.register('/serviceWorkers.js', { scope: '/' }).then(function () {
             console.log("Registro Exitoso");
         }).catch(error => {
             console.error(`Hemos tenido un inconveniente al registrar el service Worker: `, error);
