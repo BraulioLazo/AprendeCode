@@ -134,7 +134,7 @@ function loadInitialCards() {
                 top: userScroll,
                 behavior: 'smooth'
             });
-        }, 100);
+        }, 200);
     }
 }
 
