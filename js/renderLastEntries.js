@@ -2,9 +2,9 @@ const lastEntriesFrontend = [
     {
         title: "Automatiza el año de tu pie de página con JavaScript",
         description: "¿Cansado de cambiar manualmente el año en el pie de página cada enero? Descubre cómo automatizar esta tarea y olvídate de esa molestia anual. ¡Dale un respiro a tu rutina y ahorra tiempo con este sencillo truco de JavaScript!",
-        imageUrl: "/frontend/automatiza-el-año-de-tu-pie-de-pagina-con-javascript/images/automatizar-pie-de-pagina-con-javascript.webp",
+        imageUrl: "/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/images/automatizar-pie-de-pagina-con-javascript.webp",
         imageAlt: "Desarrolladora sonriendo mientras trabaja en su computadora, implementando la automatización del año en el pie de página de su sitio web.",
-        link: "/frontend/automatiza-el-año-de-tu-pie-de-pagina-con-javascript/",
+        link: "/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/",
     },
     {
         title: "¿Cómo utilizar la API Wake Lock con JavaScript?",
