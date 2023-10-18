@@ -134,8 +134,13 @@ function loadInitialCards() {
                 top: userScroll,
                 behavior: 'smooth'
             });
+            shouldStoreScrollPosition = false; // Desactivar almacenamiento temporalmente
+            setTimeout(() => {
+                shouldStoreScrollPosition = true; // Reactivar almacenamiento después de 2 segundos
+            }, 3000);
         }, 200);
     }
+    
 }
 
 function loadMoreCards() {
@@ -161,8 +166,13 @@ function loadMoreCards() {
 loadInitialCards();
 
 // Escuchar scroll para almacenar la posición
+
+let shouldStoreScrollPosition = true;
+
 window.addEventListener('scroll', () => {
-    sessionStorage.setItem(getStorageKeyPrefix() + 'userScroll', window.scrollY);
+    if (shouldStoreScrollPosition) {
+        sessionStorage.setItem(getStorageKeyPrefix() + 'userScroll', window.scrollY);
+    }
 });
 
 
