@@ -1292,6 +1292,10 @@ button {
   text-align: center;
   font-size: 32px;
 }
+.blog-content-section .blog-content-section-container h3 {
+  padding-top: var(--entries-h2-pad-top);
+  font-size: 28px;
+}
 .blog-content-section .blog-content-section-container p {
   width: 100%;
   font-size: 20px;

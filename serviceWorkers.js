@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.3';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.4';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -28,7 +28,12 @@ const arduinoImages = [
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/unirse-tinkercad.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/tinkercad-vista-crear-circuito.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/tinkercad-opcion-crear-circuito.webp',
-    '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/muchacho-trabajando-robot-arduino.webp'
+    '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/muchacho-trabajando-robot-arduino.webp',
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Componentes-Placa-Arduino-UNO.webp',
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/MicroControlador-Arduino-UNO.webp',
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Pines-Arduino-Digitales-Analogicos.webp',
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Pines-Alimentacion-Arduino.webp',
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Puerto-USB-Boton-Reset-Arduino-UNO.webp'
 ];
 
 const frontendImages = [
@@ -452,9 +457,14 @@ const snippetsFrontend = [
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet1.txt',
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet2.txt',
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet3.txt',
-]
+];
 
-const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend];
+const mainResources = [
+    '/js/components/menu.js',
+    '/js/components/footer.js'
+];
+
+const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...mainResources];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
