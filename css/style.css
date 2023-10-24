@@ -630,6 +630,25 @@ button {
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p {
   color: var(--color-text-white);
 }
+.latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+.latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+.latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+.latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+.latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+.latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+.latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+.latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+.latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+.latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+.latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+.latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+.latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+.latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+.latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+.latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p {
+  max-width: 850px;
+  padding-right: 20px;
+}
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container,
@@ -648,7 +667,7 @@ button {
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container {
   display: flex;
   align-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   min-width: 171px;
 }
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container .btn-link,

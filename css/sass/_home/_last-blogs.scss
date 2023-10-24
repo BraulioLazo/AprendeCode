@@ -26,13 +26,18 @@
                 p {
                     color: var(--color-text-white);
                 }
+
+                p{
+                    max-width: 850px;
+                    padding-right: 20px;
+                }
             }
 
             .latest-entries-frontend__button-container,
             .latest-entries-arduino__button-container {
                 display: flex;
                 align-content: flex-start;
-                align-items: flex-start;
+                align-items: center;
                 min-width: 171px;
 
                 .btn-link {
