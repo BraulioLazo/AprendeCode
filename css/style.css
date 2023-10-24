@@ -1324,6 +1324,7 @@ button {
 }
 .blog-content-section .blog-content-section-container .custom-list-container h3 {
   padding-top: 20px;
+  font-size: 22px;
 }
 .blog-content-section .blog-content-section-container .custom-list-container ul,
 .blog-content-section .blog-content-section-container .custom-list-container ol {
@@ -1413,6 +1414,9 @@ button {
   }
 }
 @media screen and (max-width: 1024px) {
+  .blog-content-section .blog-content-section-container h3 {
+    font-size: 25px;
+  }
   .blog-content-section .blog-content-section-container .snippets {
     display: flex;
   }

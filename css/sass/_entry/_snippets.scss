@@ -11,7 +11,7 @@
             font-size: 32px;
         }
 
-        h3{
+        h3 {
             padding-top: var(--entries-h2-pad-top);
             font-size: 28px;
         }
@@ -50,6 +50,7 @@
 
             h3 {
                 padding-top: 20px;
+                font-size: 22px;
             }
 
             ul,
@@ -139,7 +140,7 @@
                 ;
             }
 
-            .snippet-alone{
+            .snippet-alone {
                 width: 90%;
                 margin: 0 auto;
 
@@ -164,6 +165,11 @@
 @media screen and (max-width: 1024px) {
     .blog-content-section {
         .blog-content-section-container {
+
+            h3 {
+                font-size: 25px;
+            }
+
             .snippets {
                 display: flex;
 
@@ -174,10 +180,11 @@
                         max-width: 500px;
                     }
                 }
+
                 .snippet-alone {
                     width: 90%;
                     margin: 0 auto;
-    
+
                     pre {
                         width: 100%;
                         min-height: auto;
@@ -187,10 +194,10 @@
             }
 
             .custom-list-container {
+
                 ul,
                 ol {
                     padding-left: 35px;
-    
                 }
             }
         }
