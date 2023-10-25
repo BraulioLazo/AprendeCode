@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacta con AprendeCode para obtener más información sobre desarrollo frontend, proyectos Arduino y recursos tecnológicos. Únete a nuestra comunidad de aprendices y expertos.">
-    <meta name="keywords" content="AprendeCode, contacto, desarrollo frontend, proyectos Arduino, recursos tecnológicos, comunidad, aprender, expertos">
+    <meta name="description"
+        content="Contacta con AprendeCode para obtener más información sobre desarrollo frontend, proyectos Arduino y recursos tecnológicos. Únete a nuestra comunidad de aprendices y expertos.">
+    <meta name="keywords"
+        content="AprendeCode, contacto, desarrollo frontend, proyectos Arduino, recursos tecnológicos, comunidad, aprender, expertos">
     <meta name="author" content="AprendeCode">
-    
+
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
@@ -59,22 +61,26 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form action="" class="contact-form">
-
+                    <form action="https://formspree.io/f/xzbqnrzv" method="POST" class="contact-form" id="contact-form">
                         <div class="contact-form__group">
-                            <input type="text" id="user-name" placeholder="Nombre">
+                            <input type="text" id="user-name" name="name" placeholder="Nombre" autocomplete="name"
+                                required>
                         </div>
-
                         <div class="contact-form__group">
-                            <input type="email" id="user-email" placeholder="Email">
+                            <input type="email" id="user-email" name="email" placeholder="Email" autocomplete="email"
+                                required>
                         </div>
-
                         <div class="contact-form__group" id="contact-form__textarea-group">
                             <label for="user-message"></label>
-                            <textarea id="user-message"></textarea>
+                            <textarea id="user-message" name="message" required></textarea>
+                        </div>
+                        <div class="contact-form__group contact-form-submit-container btn-link-container">
+                            <p id="send-status" ></p>
+                            <button type="submit" class="btn-link"><span>¡Enviar Mensaje!</span></button>
                         </div>
                     </form>
                 </div>
+
 
             </div>
         </section>
@@ -85,6 +91,7 @@
 
     <script src="/js/components/menu.js"></script>
     <script src="/js/components/footer.js"></script>
+    <script src="/js/ajaxFormSubmit.js"></script>
 </body>
 
 </html>

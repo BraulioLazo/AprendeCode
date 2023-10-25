@@ -648,6 +648,7 @@ button {
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p {
   max-width: 850px;
   padding-right: 20px;
+  text-indent: 15px;
 }
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
 .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
@@ -686,6 +687,7 @@ button {
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container .btn-link,
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__button-container .btn-link,
 .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__button-container .btn-link {
+  flex: none;
   border: 1px solid var(--color-text-white);
 }
 .latest-entries-frontend .latest-entries-frontend__container,
@@ -849,6 +851,25 @@ button {
   .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header {
     width: 100%;
     text-align: center;
+  }
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+  .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+  .latest-entries-frontend .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+  .latest-entries-arduino .latest-entries-frontend__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__header p,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__header p,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-frontend__header p,
+  .latest-entries-arduino .latest-entries-arduino__top-decoration .latest-entries-arduino__text-container .latest-entries-arduino__header p {
+    text-indent: 0;
+    padding-top: 15px;
   }
   .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-frontend__button-container,
   .latest-entries-frontend .latest-entries-frontend__top-decoration .latest-entries-frontend__text-container .latest-entries-arduino__button-container,
@@ -1064,8 +1085,10 @@ button {
 }
 .contact-section .contact-container .contact-form-container .contact-form .contact-form__group {
   width: calc(50% - 15px);
+  margin: 0 auto;
 }
-.contact-section .contact-container .contact-form-container .contact-form .contact-form__group input {
+.contact-section .contact-container .contact-form-container .contact-form .contact-form__group input[type=text],
+.contact-section .contact-container .contact-form-container .contact-form .contact-form__group input[type=email] {
   width: 100%;
   padding: 20px 20px;
   border: none;
@@ -1077,7 +1100,7 @@ button {
   font-size: 18px;
 }
 .contact-section .contact-container .contact-form-container .contact-form .contact-form__group ::placeholder {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.4);
 }
@@ -1096,6 +1119,19 @@ button {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   border-radius: var(--radius-main);
   font-size: 18px;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form-submit-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form-submit-container #send-status {
+  width: 100%;
+  text-align: center;
+}
+.contact-section .contact-container .contact-form-container .contact-form .contact-form-submit-container .send-status-open {
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 768px) {

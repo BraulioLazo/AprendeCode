@@ -30,6 +30,7 @@
                 p{
                     max-width: 850px;
                     padding-right: 20px;
+                    text-indent: 15px;
                 }
             }
 
@@ -41,6 +42,7 @@
                 min-width: 171px;
 
                 .btn-link {
+                    flex: none;
                     border: 1px solid var(--color-text-white);
                 }
             }
@@ -146,6 +148,11 @@
                 .latest-entries-arduino__header {
                     width: 100%;
                     text-align: center;
+
+                    p{
+                        text-indent: 0;
+                        padding-top: 15px;
+                    }
                 }
 
                 .latest-entries-frontend__button-container,
