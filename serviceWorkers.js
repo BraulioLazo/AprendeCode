@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.4';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.5';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -461,7 +461,8 @@ const snippetsFrontend = [
 
 const mainResources = [
     '/js/components/menu.js',
-    '/js/components/footer.js'
+    '/js/components/footer.js',
+    '/css/style.css'
 ];
 
 const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...mainResources];
