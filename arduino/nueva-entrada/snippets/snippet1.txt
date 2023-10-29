@@ -1,9 +1,8 @@
 void setup() {
-  // put your setup code here, to run once:
-
+  // Esta función se ejecuta una vez al iniciar el programa
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  // Esta función se ejecuta continuamente después del setup
 }
+

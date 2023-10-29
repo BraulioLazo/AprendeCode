@@ -196,6 +196,90 @@
                     </div>
                 </div>
 
+                <h2>Utilizando pinMode() para Configurar Pines</h2>
+                <p>
+                    El siguiente paso, una vez declaradas las funciones principales, es dirigirse a la función setup
+                    para especificar los pines que vamos a utilizar, definiéndolos como INPUT (entrada) o OUTPUT
+                    (salida) según su finalidad en nuestro proyecto. Como mencionamos anteriormente, el pin 13 está
+                    asociado al LED integrado en la placa Arduino, y es precisamente este pin el que vamos a designar
+                    como OUTPUT. Ahora bien, ¿cómo se realiza esto? Contamos con la función pinMode() para tal
+                    propósito. Esta función acepta dos argumentos dentro de sus paréntesis: el número del pin y el modo
+                    del pin (ya sea INPUT o OUTPUT). Si no estás familiarizado con el término "argumento", se refiere a
+                    la información que proporcionamos a una función para que pueda ejecutar su tarea designada. En este
+                    caso, la tarea de pinMode() es establecer el modo del pin 13 como salida. Por lo tanto, le pasamos
+                    el número del pin, que es 13, y luego, separado por una coma, indicamos si será un pin de salida
+                    (OUTPUT) o de entrada (INPUT). En este caso, es OUTPUT. Así, esa línea de código se verá así:
+                    pinMode(13, OUTPUT);. Es crucial incluir el punto y coma final (;), de lo contrario, se producirá un
+                    error. Ahora quiero hacer una pequeña pausa para sugerirte que vayas escribiendo el código en
+                    Tinkercad junto conmigo; de esta manera, te será más sencillo familiarizarte con los conceptos. A
+                    continuación, te presento el código completo hasta este punto para clarificar
+                    totalmente este proceso.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Haciendo Parpadear el LED: Uso de digitalWrite()</h2>
+                <p>
+                    Una vez que hemos declarado el pin a utilizar y su modo (en este caso, OUTPUT), pasamos a la función
+                    loop(), donde haremos parpadear el LED de manera continua. Como se mencionó antes, un pin digital
+                    solo tiene dos estados: HIGH (encendido) o LOW (apagado). Por defecto, el pin está en estado LOW,
+                    así que el primer paso es cambiarlo a HIGH. Aquí es donde la función digitalWrite() entra en acción.
+                    Esta función acepta dos argumentos: el pin (13) y el estado deseado, en este caso, HIGH. La línea
+                    quedaría así: digitalWrite(13, HIGH);. Abajo encontrarás el código completo hasta ahora y, si lo
+                    copias y pegas en el editor de Tinkercad, verás que el LED simplemente permanece encendido.
+                    Necesitamos que se encienda, luego se apague tras un intervalo, y dado que la función loop() se
+                    ejecuta infinitamente, el LED parpadeará sin cesar. En la siguiente sección, te explicaré cómo
+                    utilizar la función delay().
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Completando el Ciclo: Apagar el LED y Usar la Función delay()</h2>
+
+                <p>
+                    Una vez que se ha encendido el LED, para completar el ciclo del parpadeo, necesitamos apagarlo. El
+                    procedimiento para apagar el LED es bastante similar al de encendido, utilizando la función
+                    digitalWrite(), pero en esta ocasión, cambiaremos el estado del pin 13 a LOW. Así la línea quedaría:
+                    digitalWrite(13, LOW);. Sin embargo, la función loop() se ejecuta con tal rapidez que nuestros ojos
+                    no podrían captar estos cambios; básicamente, todo sucede en milésimas de segundo. Aquí es donde la
+                    función delay() se vuelve crucial. La función delay() pausa la ejecución del programa por la
+                    cantidad de milisegundos especificada. Para lograr una pausa de 1 segundo, le pasaríamos el número
+                    1000 como argumento, quedando así: delay(1000);. Entonces, tendríamos que colocar esta línea de
+                    código entre la línea que cambia el estado del pin a HIGH y la que lo cambia a LOW. Además,
+                    deberíamos agregar la misma línea después de cambiar el estado del pin a LOW; de lo contrario, la
+                    función loop() se ejecutaría tan rápidamente que parecería que el LED está constantemente encendido.
+                    Abajo encontrarás el código completo para que puedas revisarlo, y si lo deseas, copiarlo y pegarlo
+                    en el editor de Tinkercad.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -210,7 +294,7 @@
     <script>
         const folder = 'arduino';
         const entryName = 'nueva-entrada';
-        const totalSnippets = 1;
+        const totalSnippets = 4;
         fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 </body>

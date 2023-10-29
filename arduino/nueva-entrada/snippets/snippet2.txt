@@ -1,0 +1,10 @@
+void setup()
+{
+  // Configura el pin 13 como salida (OUTPUT)
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+    // Esta función se ejecuta continuamente después del setup
+}
