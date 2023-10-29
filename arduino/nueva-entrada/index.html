@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.aprendecode.com/arduino/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Un Guiño Luminoso: Aprendiendo a Hacer Parpadear un LED con Arduino</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Un Guiño Luminoso: Aprendiendo a Hacer Parpadear un LED con Arduino
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Aquí nos encontramos con una nueva entrega sobre Arduino. Hasta ahora, hemos estado explorando
+                    conceptos básicos, ya que las entradas anteriores eran, en esencia, introducciones centradas en la
+                    teoría. Por ello, en esta ocasión, vamos a sumergirnos en un proyecto práctico. Aunque se trata de
+                    un proyecto muy básico, es un excelente punto de partida para familiarizarse con la estructura
+                    fundamental de cualquier proyecto de Arduino. Hoy, nuestro foco será aprender cómo hacer parpadear
+                    un LED de manera intermitente e infinita. En este primer proyecto, la intención es que te
+                    familiarices con los entornos de trabajo y su estructura básica, por lo que he decidido utilizar el
+                    LED que viene incorporado en la propia placa de Arduino. ¿La razón? Para utilizar un LED externo (lo
+                    cual aprenderemos en las siguientes entradas), necesitaría introducirte a conceptos que, aunque más
+                    adelante verás como muy básicos, al principio podrían representar una avalancha de información
+                    difícil de digerir, llevándote a un posible bloqueo. Así que, para evitar que este proceso se
+                    perciba como algo complejo y frustrante, y en cambio, lo veas como una experiencia divertida, he
+                    optado por comenzar con el LED incorporado.
+                </p>
+
+                <h2>Descubriendo el LED Incorporado y el Pin 13</h2>
+                <p>
+                    Como mencioné anteriormente, la placa de Arduino viene con un LED incorporado por defecto. Este LED
+                    está conectado al pin 13, y representa una excelente manera de introducirte al aspecto del software
+                    con Arduino, ya que te permitirá entender de manera muy sencilla cómo interactúa el código que vas
+                    escribiendo con el microcontrolador (la placa). Pero primero, permíteme explicarte qué es un LED. Un
+                    LED es, de hecho, un diodo emisor de luz. Resalto "diodo emisor de luz" porque existe una gran
+                    variedad de diodos diferentes, cada uno utilizado para objetivos completamente distintos. En lo que
+                    respecta al uso del LED, en la actualidad, dudo que no estés consciente de algunos de sus usos más
+                    comunes, como en señalización de tránsito, carteles publicitarios, iluminación automotriz,
+                    indicadores en dispositivos electrónicos (para mostrar visualmente si el dispositivo está encendido
+                    o apagado, por ejemplo), y pantallas de televisores y monitores, entre otros.
+                </p>
+
+                <h2>Configurando Nuestro Entorno de Desarrollo</h2>
+                <p>
+                    La verdad es que estoy emocionado porque ha llegado un momento muy esperado para mí: escribir
+                    código. Antes de simplemente lanzarnos a explicar cómo empezar a desarrollar el código, primero
+                    necesito comentarte sobre el entorno de desarrollo que vamos a utilizar. Perfectamente podríamos
+                    usar el Arduino IDE, del cual hicimos una introducción detallada en entradas anteriores, pero, por
+                    cuestiones de simplicidad y en caso de que aún no tengas una placa Arduino en tus manos, vamos a
+                    desarrollar el código en la plataforma de Tinkercad. Si no has creado una cuenta aún, ese será el
+                    primer paso. No entraré en detalles sobre cómo hacerlo, ya que eso lo cubrimos en la segunda
+                    entrada, así que te dejo el enlace aquí: <a href="/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/"
+                    data-target="#tinkercad-interfaz">Crear una cuenta en Tinkercad</a>, para que puedas seguir los
+                    pasos de manera sencilla.
+                </p>
+
+                <h2>Empezando con el Código: Nuestro Primer Guiño a Arduino</h2>
+                <p>
+                    Una vez creada la cuenta, simplemente necesitas ir al botón que dice 'Crear', y al desplegarse el
+                    menú, elegir 'Circuito'. Al abrirse la página para crear el nuevo circuito, primero debes arrastrar
+                    y soltar la placa Arduino al lienzo. Luego, haz clic en el botón 'Código', y al desplegarse el menú,
+                    selecciona el botón 'Bloques', y luego elige la opción 'Texto'. Todo lo que vamos a aprender a hacer
+                    será directamente con el código.
+                </p>
+
+                <p>
+                    Automáticamente, verás el código que viene preinstalado por defecto en el microcontrolador, pero no
+                    te detendrás a revisarlo; simplemente selecciona todo y elimínalo. Como mencioné en la entrada
+                    anterior, este código predeterminado hace parpadear un LED en intervalos de manera infinita, lo cual
+                    utilizaremos como punto de partida para introducirnos en el software. Para simplificar la
+                    explicación que acabo de darte, a continuación te dejo una imagen de la interfaz de Tinkercad, donde
+                    podrás identificar más claramente los botones que mencioné anteriormente.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script src="/js/globals/scrollIntoView.js"></script>
+    <script>
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 0;
+        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+    </script>
+</body>
+
+</html>
