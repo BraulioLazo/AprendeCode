@@ -365,11 +365,12 @@
 
     <script src="/js/components/menu.js"></script>
     <script rel="preload" src="/js/components/footer.js" as="script"></script>
-    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
     <script>
+        const folder = 'frontend';
         const entryName = 'indexeddb-y-el-arte-de-almacenar-objetos-todo-lo-que-necesitas-saber';
         const totalSnippets = 10;
-        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 </body>
 

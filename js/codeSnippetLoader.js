@@ -1,11 +1,9 @@
-
-const fetchAndDisplayCodeSnippets = (entryName, totalSnippets) => {
-
+const fetchAndDisplayCodeSnippets = (folder, entryName, totalSnippets) => {
     const snippets = [];
 
     for (let i = 1; i <= totalSnippets; i++) {
         const snippetId = `snippet${i}`;
-        const snippetUrl = `/frontend/${entryName}/snippets/${snippetId}.txt`;
+        const snippetUrl = `/${folder}/${entryName}/snippets/${snippetId}.txt`;
 
         snippets.push({ snippetId, snippetUrl });
     }
@@ -24,6 +22,7 @@ const fetchAndDisplayCodeSnippets = (entryName, totalSnippets) => {
             .catch(error => console.error('Error:', error));
     });
 };
+
 
 function copyToClipboard() {
     document.querySelectorAll('.copy-button').forEach(button => {

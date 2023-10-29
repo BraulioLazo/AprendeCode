@@ -81,8 +81,9 @@
                     cuestiones de simplicidad y en caso de que aún no tengas una placa Arduino en tus manos, vamos a
                     desarrollar el código en la plataforma de Tinkercad. Si no has creado una cuenta aún, ese será el
                     primer paso. No entraré en detalles sobre cómo hacerlo, ya que eso lo cubrimos en la segunda
-                    entrada, así que te dejo el enlace aquí: <a href="/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/"
-                    data-target="#tinkercad-interfaz">Crear una cuenta en Tinkercad</a>, para que puedas seguir los
+                    entrada, así que te dejo el enlace aquí: <a
+                        href="/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/"
+                        data-target="#tinkercad-interfaz">Crear una cuenta en Tinkercad</a>, para que puedas seguir los
                     pasos de manera sencilla.
                 </p>
 
@@ -94,7 +95,6 @@
                     selecciona el botón 'Bloques', y luego elige la opción 'Texto'. Todo lo que vamos a aprender a hacer
                     será directamente con el código.
                 </p>
-
                 <p>
                     Automáticamente, verás el código que viene preinstalado por defecto en el microcontrolador, pero no
                     te detendrás a revisarlo; simplemente selecciona todo y elimínalo. Como mencioné en la entrada
@@ -103,6 +103,100 @@
                     explicación que acabo de darte, a continuación te dejo una imagen de la interfaz de Tinkercad, donde
                     podrás identificar más claramente los botones que mencioné anteriormente.
                 </p>
+
+                <h2>Del Concepto a la Codificación: Entendiendo las Funciones en Arduino</h2>
+                <p>
+                    Ahora comencemos a hablar sobre una de las partes más emocionantes para
+                    mí de Arduino, que es el código. Lo primero que necesito explicarte en este
+                    punto es qué es una función. Y desviándonos un poquito del mundo virtual y
+                    yéndonos al mundo físico, podríamos comparar una función con una máquina
+                    en una fábrica. En esta &quot;máquina&quot;, lo que vamos a procesar, en vez de
+                    materiales, son líneas de código. Esta &quot;máquina&quot; función puede contener entre
+                    una y, en teoría, infinitas líneas de código. Digo en teoría ya que por cuestiones
+                    de legibilidad nunca van a ser tan extensas. Además, esta &quot;máquina&quot; puede
+                    recibir ciertos insumos (que en programación llamamos argumentos o
+                    parámetros) y proporcionar un resultado (o salida) después de procesar estos
+                    insumos. Es importante mencionar que existen dos categorías de funciones: las
+                    que nosotros vamos a definir (o crear) y las que ya están predefinidas. Las
+                    funciones predefinidas ya tienen una funcionalidad específica asignada y
+                    vienen incorporadas en el entorno de Arduino o en las bibliotecas que podemos
+                    agregar a nuestros proyectos.
+                </p>
+
+                <h3>Las Dos Funciones Esenciales de Arduino</h3>
+                <p>
+                    Ahora ya que sabes qué es una función, quiero comentarte sobre la estructura
+                    básica de cualquier proyecto de Arduino. Pues su estructura está constituida
+                    por dos funciones principales. La primera es la función setup() y la segunda es
+                    loop(). Ahora, no quiero simplemente mencionar nombres sino que darte a
+                    entender el funcionamiento de cada una y así incluso podrás encontrarle el
+                    sentido a sus nombres.
+                </p>
+
+                <h3>Configurando Nuestro Entorno: La Importancia de setup()</h3>
+                <p>
+                    La función setup() se ejecuta solo una vez en cuanto se provee de energía a la
+                    placa Arduino. En esta función vamos a definir, por ejemplo, los pines que
+                    vamos a utilizar en nuestro proyecto y cómo queremos utilizarlos. Aclarando
+                    más aún el ejemplo, podrías definir ciertos pines como INPUT que son los que
+                    reciben información ya sea a través de sensores o botones, solo por poner un
+                    ejemplo. También en setup() es un buen lugar para iniciar comunicaciones,
+                    como la comunicación en serie, que es esencial para depurar programas de
+                    Arduino.
+                </p>
+
+                <h3>El Ciclo Infinito: Explorando la Función loop()</h3>
+                <p>
+                    Ahora expliquemos la función loop(). Pues como su nombre lo indica, esta
+                    función se va a ejecutar una y otra vez de manera infinita mientras la placa
+                    tenga una fuente de alimentación. En esta función es donde se va a escribir el
+                    código que define lo que queremos que haga nuestro programa. En este caso
+                    en particular que vamos a estudiar a continuación, ahí escribiremos el código
+                    que va a hacer parpadear un led.
+                </p>
+
+                <h3>Un Detalle Técnico Importante: Retorno de Funciones</h3>
+                <p>
+                    Aunque ya tienes una noción básica de lo que es una función y conoces la estructura fundamental de
+                    cualquier proyecto Arduino, no puedo avanzar sin explicarte algo más que es sumamente importante.
+                    Cuando declaramos una función o hacemos uso de una que ya está predefinida, como es el caso de
+                    setup() y loop(), además de mencionar su nombre para utilizarlas o, en caso de que las estemos
+                    creando desde cero para definirlas, necesitamos indicar antes del nombre de la función el tipo de
+                    datos que va a devolver dicha función. En estos dos casos específicos, dado que ambas funciones
+                    principales no devuelven ningún valor, se utiliza la palabra clave void. Esta palabra clave indica
+                    que la función no devuelve nada, y es necesario especificarlo así porque el lenguaje en el que está
+                    basado Arduino, que es C++, lo requiere. Quiero destacar que esto es solo un pequeño vistazo para
+                    aclarar cualquier duda sobre lo que veremos hoy, pero profundizaremos en este tema en entradas
+                    futuras. Así que, sin más preámbulos, llegó el momento de hacer lo que hemos venido a hacer...
+                    ¡Escribir código!
+                </p>
+
+                <h2>Declarando las Funciones Principales: setup() y loop()</h2>
+                <p>
+                    Como mencionamos anteriormente, todo proyecto de Arduino se compone de dos funciones principales.
+                    Así que lo primero que vamos a hacer es declarar estas funciones esenciales. Comenzaremos con la
+                    función setup(), que es la primera que se ejecuta. Basándonos en lo que discutimos previamente,
+                    primero colocamos la palabra clave void, seguido del nombre de la función, en este caso setup(),
+                    acompañado de los paréntesis —es crucial no olvidarlos—, y finalmente, abrimos y cerramos las
+                    llaves, quedando de la siguiente manera: void setup() {}. Dentro de estas llaves es donde comenzamos
+                    a escribir nuestras líneas de código que definirán lo que deseamos ejecutar dentro de esa función.
+                    Para la función loop() el procedimiento es exactamente el mismo, por lo que no considero necesario
+                    repetir la explicación para evitar redundancia. Sin embargo, a continuación te dejo un fragmento de
+                    código para que puedas visualizar con mayor claridad cómo va estructurado el código hasta este punto
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+
             </div>
         </section>
     </main>
@@ -111,12 +205,13 @@
 
     <script src="/js/components/menu.js"></script>
     <script rel="preload" src="/js/components/footer.js" as="script"></script>
-    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
     <script src="/js/globals/scrollIntoView.js"></script>
     <script>
+        const folder = 'arduino';
         const entryName = 'nueva-entrada';
-        const totalSnippets = 0;
-        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+        const totalSnippets = 1;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 </body>
 

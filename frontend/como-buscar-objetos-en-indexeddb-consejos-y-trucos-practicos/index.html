@@ -467,11 +467,12 @@
 
     <script src="/js/components/menu.js"></script>
     <script rel="preload" src="/js/components/footer.js" as="script"></script>
-    <script rel="preload" src="/js/entries.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
     <script>
+        const folder = 'frontend';
         const entryName = 'como-buscar-objetos-en-indexeddb-consejos-y-trucos-practicos';
         const totalSnippets = 14;
-        fetchAndDisplayCodeSnippets(entryName, totalSnippets);
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 </body>
 

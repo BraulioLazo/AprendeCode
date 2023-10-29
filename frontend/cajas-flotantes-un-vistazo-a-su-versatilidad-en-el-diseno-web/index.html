@@ -53,7 +53,7 @@
                         Flotantes</strong>. Te
                     preguntarás, ¿por qué es importante este modelo de cajas? Bueno, son una herramienta fantástica para
                     estructurar una página web. Y para ilustrarlo, me basaré en la estructura de la página principal de
-                    esta web. Si bien las <strong>Cajas Flotantes</strong> no son tan flexibles como las 
+                    esta web. Si bien las <strong>Cajas Flotantes</strong> no son tan flexibles como las
                     <a href="/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/" target="_blank">Flex
                         Box</a>, aún pueden brindar
                     resultados impresionantes. Esto es especialmente cierto cuando las cajas hijas tienen un ancho en
@@ -131,7 +131,8 @@
                     dejo el código a continuación.
                 </p>
 
-                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
                     <div class="image-container">
                         <picture>
                             <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
@@ -230,7 +231,7 @@
                         <li><strong>Centrado de Cajas Flotantes:</strong> Es necesario aplicar trucos ya que no cuenta
                             con una propiedad específica.</li>
                         <li><strong>Consideración del Grosor del Borde:</strong> Asegurarse de incluir el grosor del
-                            borde en los cálculos para evitar sobrepasar los límites de la caja padre.</li> 
+                            borde en los cálculos para evitar sobrepasar los límites de la caja padre.</li>
                     </ol>
                 </div>
 
@@ -257,11 +258,12 @@
 
     <script src="/js/components/menu.js"></script>
     <script src="/js/components/footer.js"></script>
-    <script src="/js/entries.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
     <script>
+        const folder = 'frontend';
         const entryName = 'cajas-flotantes-un-vistazo-a-su-versatilidad-en-el-diseno-web';
         const totalSnippets = 8;
-        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
     </script>
 </body>
 

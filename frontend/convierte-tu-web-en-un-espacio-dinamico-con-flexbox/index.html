@@ -131,7 +131,8 @@
                 </p>
 
 
-                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
                     <div class="image-container">
                         <picture>
                             <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
@@ -280,16 +281,16 @@
 
     </main>
 
-
     <my-footer></my-footer>
 
     <script src="/js/components/menu.js"></script>
     <script src="/js/components/footer.js"></script>
-    <script src="/js/entries.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
     <script>
+        const folder = 'frontend';
         const entryName = 'convierte-tu-web-en-un-espacio-dinamico-con-flexbox';
         const totalSnippets = 8;
-        fetchAndDisplayCodeSnippets(entryName, totalSnippets)
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 
 </body>
