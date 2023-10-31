@@ -1,5 +1,13 @@
 const arduinoCardContent = [
     {
+        keywords: "Arduino, LED, parpadeo, digitalRead, digitalWrite, setup, loop, pinMode, INPUT, OUTPUT, HIGH, LOW, delay, función, código, Tinkercad, simulación, proyecto Arduino, microcontrolador",
+        title: "Un Guiño Luminoso: Aprendiendo a Hacer Parpadear un LED con Arduino",
+        description: "En esta entrada, damos nuestros primeros pasos haciendo parpadear un LED. Es simple, divertido y el comienzo de un fascinante viaje. ¡Acompáñame!",
+        imageUrl: "/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Encender-LED-Incorporado-Arduino.webp",
+        imageAlt: "LED encendido junto a una placa Arduino",
+        link: "/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/",
+    },
+    {
         keywords: "Arduino, uno, hardware, pines, digitales, analógicos, microcontrolador, de, alimentación, regulador, voltaje, puertos, comunicación, botón, reset, Puerto,  USB, Voltaje, Input, Vin, Entrada, componentes",
         title: "Explorando el Corazón de Arduino: Un Recorrido por sus Componentes Esenciales",
         description: "¡Da tus primeros pasos en el emocionante mundo de la electrónica y la programación! Explora los componentes esenciales, aprende sobre los pines digitales y analógicos, y abre un mundo lleno de posibilidades.",
