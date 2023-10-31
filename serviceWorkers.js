@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.5';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.6';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -23,17 +23,23 @@ const arduinoImages = [
     '/arduino/arduino-sumergente-en-el-universo-de-la-creacion-electronica/images/Placas-Principales-Arduino.webp',
     '/arduino/arduino-sumergente-en-el-universo-de-la-creacion-electronica/images/Arduino-IDE-Interfaz.webp',
     '/arduino/arduino-sumergente-en-el-universo-de-la-creacion-electronica/images/joven-disenando-carrito-con-Arduino.webp',
+
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/Tinkercad-Interfaz.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/Arduino-IDE-Interfaz.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/unirse-tinkercad.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/tinkercad-vista-crear-circuito.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/tinkercad-opcion-crear-circuito.webp',
     '/arduino/iniciando-con-arduino-preparacion-del-entorno-y-plataformas/images/muchacho-trabajando-robot-arduino.webp',
+
     '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Componentes-Placa-Arduino-UNO.webp',
     '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/MicroControlador-Arduino-UNO.webp',
     '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Pines-Arduino-Digitales-Analogicos.webp',
     '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Pines-Alimentacion-Arduino.webp',
-    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Puerto-USB-Boton-Reset-Arduino-UNO.webp'
+    '/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Puerto-USB-Boton-Reset-Arduino-UNO.webp',
+
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Encender-LED-Incorporado-Arduino.webp',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Interfaz-Nuevo-Proyecto.webp',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Comenzar-Simulacion.jpg',
 ];
 
 const frontendImages = [
@@ -459,13 +465,20 @@ const snippetsFrontend = [
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet3.txt',
 ];
 
+const snippetsArduino = [
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet1.txt',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet2.txt',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet3.txt',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet4.txt',
+]
+
 const mainResources = [
     '/js/components/menu.js',
     '/js/components/footer.js',
     '/css/style.css'
 ];
 
-const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...mainResources];
+const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
