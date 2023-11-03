@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.6';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.7';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -475,7 +475,13 @@ const snippetsArduino = [
 const mainResources = [
     '/js/components/menu.js',
     '/js/components/footer.js',
-    '/css/style.css'
+    '/css/style.css',
+    '/js/globals/scrollIntoView.js',
+    '/js/globals/registerServiceWorkers.js',
+    '/js/node_modules/lunr/lunr.js',
+    '/js/search-lunar.js',
+    '/js/ajaxFormSubmit.js'
+
 ];
 
 const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];
