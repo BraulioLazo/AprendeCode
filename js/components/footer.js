@@ -395,7 +395,7 @@ button {
         <div class="footer__brand">
             <div class="branding">
                <div class="logo-container">
-                  <img class="footer__logo" src="/assets/logo/android-chrome-512x512.png" alt="Logo de AprendeCode - AprendeCode esquina" loading="lazy">
+                  <img class="footer__logo" src="/assets/logo/android-chrome-512x512.webp" alt="Logo de AprendeCode - AprendeCode esquina" loading="lazy">
                 </div>
                 <div class="logo-text-container">
                     <h3 class="brand-name">AprendeCode</h3>

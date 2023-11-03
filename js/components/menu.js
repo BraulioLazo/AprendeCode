@@ -372,7 +372,7 @@ class myMenu extends HTMLElement {
         <div class="menu-container">
 
             <div class="logo-container">
-                <img src="/assets/logo/android-chrome-512x512.png" alt="Logo" class="logo-image">
+                <img src="/assets/logo/android-chrome-512x512.webp" alt="Logo" class="logo-image">
             </div>
 
             <nav class="nav-links">

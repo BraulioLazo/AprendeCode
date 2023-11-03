@@ -1,3 +1,5 @@
+
+
 function registerServiceWorkers() {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/serviceWorkers.js', { scope: '/' }).then(function () {

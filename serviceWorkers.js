@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.7';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.8';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -16,7 +16,15 @@ const globalImages = [
     '/assets/global/global-header-aprendecode.webp',
     '/assets/about/about-aprendecode.webp',
     '/assets/global/aprendecode-canal-youtube.webp',
-    '/assets/global/aprendecode-youtube-canal.webp'
+    '/assets/global/aprendecode-youtube-canal.webp',
+
+    //  -- Head --
+
+    '/assets/logo/android-chrome-192x192.webp',
+    '/assets/logo/apple-touch-icon.webp',
+    '/assets/logo/favicon-32x32.webp',
+    '/assets/logo/favicon-16x16.webp',
+    '/assets/logo/site.webmanifest'
 ];
 
 const arduinoImages = [
@@ -480,7 +488,9 @@ const mainResources = [
     '/js/globals/registerServiceWorkers.js',
     '/js/node_modules/lunr/lunr.js',
     '/js/search-lunar.js',
-    '/js/ajaxFormSubmit.js'
+    '/js/ajaxFormSubmit.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js'
 
 ];
 
