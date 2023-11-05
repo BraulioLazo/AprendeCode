@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://www.aprendecode.com/arduino/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Nueva Entrada</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Nueva Entrada
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Y aquí estamos nuevamente, avanzando con nuestra serie sobre <strong>Arduino</strong>. Dejamos atrás
+                    la <strong>teoría básica</strong> y estamos sumergiéndonos cada vez más en la
+                    <strong>práctica</strong>. En nuestra última sesión, aprendimos a hacer <strong>parpadear de forma
+                        infinita</strong> el LED incorporado a la placa de Arduino, ese que viene conectado por defecto
+                    al <strong>pin 13</strong>. Te adelanté que en esta nueva publicación abordaríamos cómo
+                    <strong>conectar un LED externo</strong>, y para ello, necesitamos comprender algunos
+                    <strong>conceptos fundamentales de electrónica</strong>, como son la <strong>resistencia</strong> y
+                    la <strong>Ley de Ohm</strong>. Te preguntarás, ¿por qué son esenciales estos conceptos para algo
+                    aparentemente sencillo como <strong>iluminar un LED</strong>? Resulta que un LED típico requiere una
+                    <strong>tensión de alimentación de aproximadamente 2V</strong>, y como recordarás, los pines de
+                    salida de una placa Arduino suministran <strong>5V</strong>. Si conectáramos el LED directamente a
+                    uno de estos pines, lo más probable es que el LED se <strong>dañara al instante</strong>. Es aquí
+                    donde la <strong>resistencia cobra protagonismo</strong>, cuya función, en términos simples, es
+                    <strong>limitar la corriente</strong> que fluye hacia el componente, en este caso, nuestro LED.
+                    Ahora bien, ¿en dónde entra la <strong>Ley de Ohm</strong> en todo esto? Esta ley fundamental será
+                    nuestra guía para determinar el <strong>valor adecuado de la resistencia</strong> que debemos usar
+                    con el LED. Pero no hay razón para sentirse abrumado por estos nuevos conceptos; los
+                    <strong>desglosaremos y comprenderemos en detalle</strong> a medida que avancemos en nuestra
+                    exploración.
+                </p>
+
+                <h2>Desentrañando la Ley de Ohm: El ABC de los Circuitos Eléctricos</h2>
+                <p>
+                    Comencemos por adentrarnos en la <strong>Ley de Ohm</strong>, una <strong>piedra angular de la
+                        física y la electrónica</strong> que nos descubre cómo interactúan el <strong>voltaje (V), la
+                        corriente (I) y la resistencia (R)</strong> en cualquier circuito electrónico. La relación se
+                    describe con una <strong>fórmula sencilla: V = I * R</strong>. Esto nos dice que el <strong>voltaje
+                        (V) es directamente proporcional</strong> a la <strong>corriente (I)</strong>, la cual fluye en
+                    amperios, y a la <strong>resistencia (R)</strong> del conductor, medida en ohmios, entre dos puntos
+                    determinados. Ahora, permíteme ilustrarlo de forma más amena. Imagina que la electricidad es como el
+                    agua corriendo por una manguera: la <strong>resistencia sería comparada con el diámetro</strong> de
+                    dicha manguera y el <strong>voltaje sería similar a la presión del agua</strong>. Al incrementar la
+                    presión, sin alterar el diámetro de la manguera, naturalmente, más agua fluye. De la misma forma, en
+                    un circuito eléctrico, al <strong>elevar el voltaje manteniendo la resistencia invariable</strong>,
+                    la <strong>corriente se incrementa proporcionalmente</strong>.
+                </p>
+
+                <h2>Comprendiendo las Resistencias: Los Reguladores del Mundo Electrónico</h2>
+                <p>
+                    La <strong>resistencia es un componente electrónico fundamental</strong> que limita el paso de la
+                    corriente eléctrica. Recordando nuestro ejemplo de la manguera: la corriente de agua se mantiene
+                    constante, igual al flujo con el que inicia su camino. Pero si aprietas la manguera, el flujo de
+                    salida disminuye significativamente. Así opera una resistencia, ejerciendo presión para
+                    <strong>controlar la corriente</strong> que pasa a través de sí misma. Especialmente con los LEDs,
+                    la <strong>precisión es vital</strong>. Estos componentes son delicados frente a la corriente
+                    excesiva; un exceso y se arriesgan a sobrecalentarse y a sufrir <strong>daños irreparables</strong>.
+                    La resistencia, entonces, juega un <strong>papel defensivo</strong>: calibra la corriente a un nivel
+                    que el LED pueda tolerar sin riesgos, asegurando así su <strong>operación óptima y segura</strong>.
+                </p>
+
+                <h2>Voltaje y Corriente: Alimentando LEDs Correctamente</h2>
+
+                <p>
+                    Ya hemos cubierto <strong>dos pilares fundamentales para nuestro proyecto</strong> de hoy:
+                    <strong>la Ley de Ohm y el papel de las resistencias</strong>. Sin embargo, para <strong>iluminar
+                        con éxito un LED</strong> mediante uno de los pines de nuestro microcontrolador, debemos
+                    comprender las <strong>necesidades específicas de voltaje y corriente del LED</strong>. En lo que
+                    respecta al voltaje, los LEDs no operan con un valor fijo; varían típicamente entre <strong>1.8V y
+                        2.2V</strong>. Es importante destacar que estos valores pueden variar según el tipo y color del
+                    LED; por ejemplo, los LEDs azules y blancos suelen requerir un voltaje mayor, alrededor de
+                    <strong>3.0V a 3.3V</strong>. Esta información detallada suele estar especificada en la hoja de
+                    datos proporcionada por el fabricante o el vendedor cuando compras un conjunto de LEDs, por lo que
+                    siempre es recomendable consultarla para ajustar nuestros cálculos a las especificaciones exactas de
+                    nuestros componentes. Como norma general y para fines educativos, tomamos <strong>2V como un valor
+                        promedio</strong> para nuestros cálculos. Por otro lado, la <strong>corriente óptima para un LED
+                        estándar</strong> suele estar entre <strong>15 mA y 20 mA</strong>. Exceder los <strong>20
+                        mA</strong> no solo puede disminuir la longevidad del LED, sino que también corremos el riesgo
+                    de quemarlo si la corriente aplicada es demasiado alta.
+                </p>
+
+                <h2>Calculando la Resistencia Ideal para Nuestro LED</h2>
+
+                <p>
+                    Ahora que conocemos el <strong>voltaje estándar y la corriente necesaria para iluminar un
+                        LED</strong>, es hora de <strong>aplicar los conceptos que hemos aprendido</strong> hoy para
+                    determinar
+                    la resistencia correcta. Como establecimos, para propósitos educativos vamos a asumir
+                    que el <strong>voltaje ideal para el LED es de 2V</strong>. En cuanto a la corriente, hemos
+                    mencionado que lo aconsejable oscila entre <strong>15mA y 20mA</strong>. Personalmente prefiero usar
+                    el límite inferior de <strong>15mA para conservar la vida útil del LED</strong>, evitando así el
+                    máximo de <strong>20mA que podría reducirla</strong>.
+                </p>
+
+                <h2>De la Teoría a la Práctica: Aplicando la Ley de Ohm en Tinkercad</h2>
+                <p>
+                    Refresquemos la <strong>Ley de Ohm</strong> que formula que <strong>V (Voltaje) = I (Corriente) * R
+                        (Resistencia)</strong>, lo que nos permite calcular <strong>R (Resistencia) = V (Voltaje) / I
+                        (Corriente)</strong>. Es importante señalar aquí un detalle crucial: contamos con dos valores de
+                    voltaje a considerar, los <strong>5V suministrados por el pin del microcontrolador</strong> y los
+                    <strong>2V que el LED necesita</strong>. Para la fórmula, usaremos la diferencia entre estos dos, es
+                    decir, los <strong>3V que deseamos 'eliminar' o disipar del circuito</strong>, resultando en:
+                    <strong>R = (5V - 2V) / 0.015A</strong>. Convirtiendo <strong>15mA a amperios para la fórmula nos da
+                        0.015A</strong>, y al resolver encontramos que <strong>R = 200Ω</strong>. Sin embargo, las
+                    resistencias vienen en valores estándar en el mercado, por lo que seleccionaríamos la más próxima a
+                    nuestro cálculo, que sería de <strong>220Ω</strong>. Con este valor, estamos listos para proceder a
+                    <strong>Tinkercad</strong> y realizar las conexiones pertinentes para verificar que todo funcione
+                    correctamente.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
+    <script>
+        const folder = 'arduino';
+        const entryName = 'nueva-entrada';
+        const totalSnippets = 0;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
+    </script>
+</body>
+
+</html>
