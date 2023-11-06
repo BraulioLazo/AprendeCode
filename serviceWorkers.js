@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.8';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.9';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -48,6 +48,14 @@ const arduinoImages = [
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Encender-LED-Incorporado-Arduino.webp',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Interfaz-Nuevo-Proyecto.webp',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Comenzar-Simulacion.jpg',
+
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Encender-LED-Externo-Arduino.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Ley-de-Ohm-Piramide.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Resistencia-o-Resistor.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/conexion-led-tinkercad.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/advertencia-simulacion-tinkercad.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/configuracion-resistencia-circuito.webp',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Conexion_Resistencia_LED_Tinkercad.webp',
 ];
 
 const frontendImages = [
@@ -478,6 +486,10 @@ const snippetsArduino = [
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet2.txt',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet3.txt',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/snippets/snippet4.txt',
+
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/snippets/snippet1.txt',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/snippets/snippet2.txt',
+    '/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/snippets/snippet3.txt'
 ]
 
 const mainResources = [

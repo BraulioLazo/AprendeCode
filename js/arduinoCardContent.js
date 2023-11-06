@@ -1,5 +1,13 @@
 const arduinoCardContent = [
     {
+        keywords: "Arduino, Conexión, LED, externo, Microcontrolador, Ley, de, Ohm, Resistencia, Circuito, Proyecto, Guía, conexión, Componentes, electrónicos, Tutorial, Polaridad, Valor, Práctica, practica, Construcción, de circuitos",
+        title: "Luz a la Obra: Conectando tu Primer LED Externo al Microcontrolador",
+        description: "Aventúrate en el práctico aprendizaje de conectar un LED externo a tu microcontrolador en esta entrada. Cubriremos la aplicación de la Ley de Ohm, la selección de la resistencia adecuada y los pasos detallados para crear un circuito luminoso. ",
+        imageUrl: "/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Encender-LED-Externo-Arduino.webp",
+        imageAlt: "",
+        link: "/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/",
+    },
+    {
         keywords: "Arduino, LED, parpadeo, digitalRead, digitalWrite, setup, loop, pinMode, INPUT, OUTPUT, HIGH, LOW, delay, función, código, Tinkercad, simulación, proyecto Arduino, microcontrolador",
         title: "Un Guiño Luminoso: Aprendiendo a Hacer Parpadear un LED con Arduino",
         description: "En esta entrada, damos nuestros primeros pasos haciendo parpadear un LED. Es simple, divertido y el comienzo de un fascinante viaje. ¡Acompáñame!",

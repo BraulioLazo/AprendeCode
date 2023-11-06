@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Aprende a conectar un LED externo a un microcontrolador Arduino con nuestra guía paso a paso. Explora la Ley de Ohm, elige resistencias adecuadas y da tus primeros pasos en electrónica práctica.">
+    <meta name="keywords" content="conectar LED, Arduino, microcontrolador, electrónica, Ley de Ohm, resistencias, tutorial de Arduino, circuitos electrónicos, proyecto de Arduino, iniciación a la electrónica">
     <meta name="author" content="Braulio de AprendeCode">
 
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://www.aprendecode.com/arduino/">
+    <meta property="og:title" content="Luz a la Obra: Conectando tu Primer LED Externo al Microcontrolador">
+    <meta property="og:description" content="Descubre cómo conectar un LED externo a tu Arduino en esta entrada detallada. Domina la Ley de Ohm y la selección de resistencias para proyectos electrónicos brillantes.">
+    <meta property="og:image" content="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/Encender-LED-Externo-Arduino.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/">
     <meta property="og:type" content="article">
 
     <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
@@ -24,8 +24,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
-
-    <title>Nueva Entrada</title>
+    <title>Luz a la Obra: Conectando tu Primer LED Externo al Microcontrolador</title>
 </head>
 
 <body>
@@ -35,7 +34,7 @@
         <section class="header-section header-blog-entry-section">
             <div class="header-container section-container">
                 <h1 class="header-title">
-                    Nueva Entrada
+                    Luz a la Obra: Conectando tu Primer LED Externo al Microcontrolador
                 </h1>
             </div>
         </section>
@@ -80,17 +79,24 @@
                     la <strong>corriente se incrementa proporcionalmente</strong>.
                 </p>
 
-                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
-                    rel="noopener noreferrer">
-                    <div class="image-container">
-                        <picture>
-                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
-                            <img src="/assets/global/aprendecode-canal-youtube.webp"
-                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
-                                loading="lazy">
-                        </picture>
-                    </div>
-                </a>
+                <p>
+                    En la imagen que encontrarás a continuación, te presento una herramienta visual increíblemente útil
+                    para aplicar la <strong>Ley de Ohm</strong>: la <strong>pirámide de Ohm</strong>. Es muy sencilla de
+                    utilizar. Si cubres con tu dedo la variable que deseas calcular, las otras dos te indicarán la
+                    operación a realizar. Por ejemplo, si ocultas la <strong>V</strong> de voltaje, verás
+                    <strong>I</strong> (corriente) multiplicada por <strong>R</strong> (resistencia). Si tapas la
+                    <strong>I</strong>, obtendrás la división de <strong>V</strong> entre <strong>R</strong>. Y si
+                    es <strong>R</strong> la que cubres, te quedará <strong>V</strong> dividido entre
+                    <strong>I</strong>. Además, al lado he incluido las fórmulas detalladas para calcular cada una de
+                    estas variables, facilitando aún más su comprensión si la representación gráfica no es suficiente.
+                </p>
+
+
+                <div class="image-container">
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Ley-de-Ohm-Piramide.webp"
+                        alt="Diagrama de la pirámide de la Ley de Ohm, detallando las tres fórmulas." loading="lazy"
+                        decoding="async">
+                </div>
 
                 <h2>Comprendiendo las Resistencias: Los Reguladores del Mundo Electrónico</h2>
                 <p>
@@ -104,6 +110,27 @@
                     La resistencia, entonces, juega un <strong>papel defensivo</strong>: calibra la corriente a un nivel
                     que el LED pueda tolerar sin riesgos, asegurando así su <strong>operación óptima y segura</strong>.
                 </p>
+
+                <p>
+                    Te presento a continuación una imagen que te ayudará a reconocer a primera vista una
+                    <strong>resistencia o resistor eléctrico</strong>. La fotografía destaca un
+                    <strong>resistor</strong> con un aumento significativo, preparándote para la sorpresa de su
+                    <strong>diminuto tamaño real</strong>. Tras él, encontrarás paquetes que exhiben algunas de las
+                    <strong>medidas estándar</strong> disponibles comercialmente. Respecto a los colores, si bien el
+                    tono de fondo varía según el fabricante, los <strong>anillos coloreados codifican el valor</strong>
+                    del componente. Existe un <strong>código de colores</strong> para interpretar estos valores, y
+                    aunque memorizarlo no es imprescindible —ya que las resistencias se venden en paquetes de valores
+                    unificados, y un <strong>multímetro</strong> puede determinar su medida fácilmente—, te ofrezco un
+                    enlace para profundizar en este tema. Es una herramienta valiosa para aquellos interesados en
+                    enriquecer su comprensión técnica. Encuentra el enlace para una guía completa sobre la
+                    <strong>codificación por colores</strong> aquí abajo.
+                </p>
+
+                <div class="image-container">
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Resistencia-o-Resistor.webp"
+                        alt="Resistencia individual al lado de paquetes con resistores de distintas medidas"
+                        loading="lazy" decoding="async">
+                </div>
 
                 <h2>Voltaje y Corriente: Alimentando LEDs Correctamente</h2>
 
@@ -124,6 +151,18 @@
                         mA</strong> no solo puede disminuir la longevidad del LED, sino que también corremos el riesgo
                     de quemarlo si la corriente aplicada es demasiado alta.
                 </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
 
                 <h2>Calculando la Resistencia Ideal para Nuestro LED</h2>
 
@@ -268,7 +307,7 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/arduino/nueva-entrada/images/conexion-led-tinkercad.webp"
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/conexion-led-tinkercad.webp"
                         alt="Diagrama de conexión del LED en Tinkercad" loading="lazy" decoding="async">
                 </div>
 
@@ -302,7 +341,7 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/arduino/nueva-entrada/images/advertencia-simulacion-tinkercad.webp"
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/advertencia-simulacion-tinkercad.webp"
                         alt="Advertencia de Tinkercad sobre el riesgo de daño al LED durante la simulación"
                         loading="lazy" decoding="async">
                 </div>
@@ -323,7 +362,7 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/arduino/nueva-entrada/images/configuracion-resistencia-circuito.webp"
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/configuracion-resistencia-circuito.webp"
                         alt="Imagen mostrando la configuración de una resistencia de 220 ohmios en el simulador Tinkercad, con menú de selección de valor y unidad de medida."
                         loading="lazy" decoding="async">
                 </div>
@@ -361,7 +400,7 @@
                 </p>
 
                 <div class="image-container">
-                    <img src="/arduino/nueva-entrada/images/Conexion_Resistencia_LED_Tinkercad.webp"
+                    <img src="/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Conexion_Resistencia_LED_Tinkercad.webp"
                         alt="Diagrama de conexión de la resistencia y el LED en Tinkercad, mostrando la resistencia entre el GND y el LED para regular la corriente."
                         loading="lazy" decoding="async">
                 </div>
@@ -430,7 +469,7 @@
     <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
     <script>
         const folder = 'arduino';
-        const entryName = 'nueva-entrada';
+        const entryName = 'luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador';
         const totalSnippets = 3;
         fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
