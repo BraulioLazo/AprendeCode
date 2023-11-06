@@ -80,6 +80,18 @@
                     la <strong>corriente se incrementa proporcionalmente</strong>.
                 </p>
 
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
                 <h2>Comprendiendo las Resistencias: Los Reguladores del Mundo Electrónico</h2>
                 <p>
                     La <strong>resistencia es un componente electrónico fundamental</strong> que limita el paso de la
@@ -126,7 +138,6 @@
                     máximo de <strong>20mA que podría reducirla</strong>.
                 </p>
 
-                <h2>De la Teoría a la Práctica: Aplicando la Ley de Ohm en Tinkercad</h2>
                 <p>
                     Refresquemos la <strong>Ley de Ohm</strong> que formula que <strong>V (Voltaje) = I (Corriente) * R
                         (Resistencia)</strong>, lo que nos permite calcular <strong>R (Resistencia) = V (Voltaje) / I
@@ -141,6 +152,237 @@
                     <strong>Tinkercad</strong> y realizar las conexiones pertinentes para verificar que todo funcione
                     correctamente.
                 </p>
+
+                <h2>Iniciando Nuestro Circuito en Tinkercad: De Bloques a Código</h2>
+                <p>
+                    Una vez que ingresamos en <strong>Tinkercad</strong>, iniciamos un circuito nuevo y, tal como
+                    aprendimos previamente, arrastramos nuestro microcontrolador al espacio de trabajo. Es importante
+                    recordar que debemos transformar el código de bloques al código escrito, una habilidad esencial para
+                    avanzar en el mundo de la programación. Aunque en nuestra sesión anterior abordamos cómo hacer
+                    parpadear un <strong>LED</strong> y notamos que este es el programa predeterminado en un
+                    microcontrolador recién iniciado, te animo a eliminar ese código inicial. Vamos a escribirlo de
+                    nuevo desde cero. Quiero reiterarte que la práctica constante es el verdadero camino hacia la
+                    maestría. Así, como un ejercicio de repaso, pasaremos brevemente por los pasos para hacer parpadear
+                    el <strong>LED interno</strong>. Posteriormente, realizaremos la conexión de un <strong>LED
+                        externo</strong> a nuestro proyecto. Aquí viene lo interesante: haremos dos ensayos para
+                    observar las diferencias — primero conectaremos el LED directamente y luego añadiremos una
+                    <strong>resistencia</strong> al circuito. Esto nos permitirá ver en la práctica el efecto de la
+                    resistencia y reforzar los conocimientos que hemos estado construyendo juntos.
+                </p>
+
+
+                <h3>Repaso Práctico: Estructura Básica del Código Arduino</h3>
+                <p>
+                    Refresquemos rápidamente cómo logramos que un <strong>LED</strong> parpadee. Recordarás que
+                    cualquier proyecto en <strong>Arduino</strong> se organiza en dos funciones esenciales:
+                    <strong>setup()</strong> y <strong>loop()</strong>. Antes de estas funciones, indicamos el tipo de
+                    retorno con la palabra <strong>void</strong>, ya que estas no devuelven ningún valor. De esta
+                    manera, definimos la estructura básica de nuestro código: <strong>void setup()</strong> { } para la
+                    configuración inicial, y <strong>void loop()</strong> { } para las acciones que se repiten. A
+                    continuación, te presento cómo está quedando nuestro código para que puedas seguir el progreso hasta
+                    este momento.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+                <h3>Asignación de Pines: Cómo Utilizar pinMode()</h3>
+                <p>
+                    Ahora, es momento de decidir cuál <strong>pin</strong> del microcontrolador usaremos y cómo lo vamos
+                    a usar —si será para enviar señales (<strong>OUTPUT</strong>) o para recibir información
+                    (<strong>INPUT</strong>). Esto lo configuramos con la función <strong>pinMode()</strong>, que
+                    necesita saber dos cosas: el número del pin y su modo de uso. Ya practicamos con el <strong>pin
+                        13</strong> y su <strong>LED integrado</strong>, así que ahora vamos a probar con otro pin, por
+                    ejemplo, el <strong>pin 2</strong>. Esta instrucción es parte de la sección <strong>setup()</strong>
+                    de nuestro código y la escribimos así: <strong>pinMode(2, OUTPUT)</strong>. Aquí abajo te muestro
+                    cómo se ve esta parte en nuestro código.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+
+                <h3>Manejando Tiempos con digitalWrite() y delay()</h3>
+                <p>
+                    Ahora que ya hemos definido el <strong>pin 2</strong> como salida, pasemos a la función
+                    <strong>loop()</strong> para crear el efecto de parpadeo en nuestro LED. Aquí, utilizaremos dos
+                    funciones clave. La primera, <strong>digitalWrite()</strong>, se encarga de encender o apagar el
+                    pin: le decimos a qué pin dirigirnos y después, si queremos activarlo (<strong>HIGH</strong>) o
+                    desactivarlo (<strong>LOW</strong>). Para encenderlo escribimos: <strong>digitalWrite(2,
+                        HIGH)</strong>. La segunda función es <strong>delay()</strong>, que pausa el programa el tiempo
+                    que le especifiquemos, medido en milisegundos. Anteriormente usamos 1000 milisegundos, o lo que es
+                    lo mismo, 1 segundo. Hoy, para notar la diferencia, usaremos 2000 milisegundos. Después del primer
+                    retardo, apagamos el LED con <strong>digitalWrite(2, LOW)</strong> y añadimos otro
+                    <strong>delay()</strong> de 2000 milisegundos. Con eso, nuestro código está listo para probar el
+                    LED.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Conectando el LED: Identificando Ánodo y Cátodo</h2>
+                <p>
+                    Con el código ya completo, es hora de enfocarnos en el hardware. Como mencioné, realizaremos dos
+                    pruebas en la simulación de Tinkercad, un entorno seguro donde no hay riesgo de dañar componentes
+                    reales. Empecemos por colocar un LED en el área de trabajo. Pero antes de hacer cualquier conexión,
+                    es crucial entender cómo identificar la terminal positiva, o ánodo, y la terminal negativa, o
+                    cátodo, del LED. El ánodo es la patita más larga y se conectará al pin 2 —es decir, al positivo—.
+                    Por otro lado, el cátodo es la patita más corta y se conectará al ground, o tierra, marcado como GND
+                    en el microcontrolador.
+
+                    Una vez claro esto, conectemos con cuidado el LED al microcontrolador. Dado que es la primera vez
+                    que trabajamos con un componente externo, te mostraré cómo hacerlo paso a paso. Simplemente coloca
+                    el LED cerca del microcontrolador y haz clic en el extremo de la patita que quieras conectar.
+                    Tinkercad generará automáticamente un 'cable' virtual que podrás dirigir hasta el punto de conexión
+                    deseado. En nuestro ejemplo, conectaremos el ánodo al pin 2 y el cátodo al pin GND.
+                </p>
+
+                <p>
+                    Para facilitar tu comprensión, incluyo a continuación una imagen de la interfaz de Tinkercad que
+                    muestra la conexión correcta del LED. Esto servirá como una referencia visual completa para
+                    verificar que tu montaje es el adecuado.
+                </p>
+
+                <div class="image-container">
+                    <img src="/arduino/nueva-entrada/images/conexion-led-tinkercad.webp"
+                        alt="Diagrama de conexión del LED en Tinkercad" loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Antes de iniciar nuestra primera simulación en Tinkercad, es importante señalar un par de detalles
+                    para evitar cualquier confusión. En primer lugar, en el simulador no distinguirás las patas del LED
+                    por su longitud como en la realidad. En lugar de eso, el ánodo (el positivo) se marca con una
+                    pequeña curva. Aunque no puedas apreciar la diferencia de tamaño, Tinkercad te ayuda identificando
+                    cada terminal; si pasas el cursor sobre ellas, el simulador te indicará cuál es el ánodo y cuál el
+                    cátodo, lo que hace imposible conectarlos incorrectamente.
+
+                    El segundo aspecto a considerar es el código de colores utilizado para las conexiones. He conectado
+                    el ánodo al pin 2 utilizando un cable rojo, que es el color estándar para indicar el flujo de
+                    corriente. Por otro lado, para el cátodo, he elegido un cable negro, que comúnmente representa la
+                    conexión a tierra o negativo (GND). Si bien en la práctica los colores de los cables son a elección
+                    del usuario, seguir estos estándares facilita el reconocimiento y seguimiento de las conexiones en
+                    nuestros proyectos.
+                </p>
+
+                <h2>Iniciando la Simulación: Precauciones y Advertencias en Tinkercad</h2>
+                <p>
+                    Con el hardware ya listo, lo siguiente es poner en marcha la simulación. Al seleccionar 'Iniciar
+                    Simulación' en Tinkercad, el sistema emitirá una advertencia referente a la intensidad de corriente
+                    que atraviesa el LED: se mostrará un mensaje alertando que la corriente es de 53.5 mA cuando el
+                    límite recomendado es de 20 mA. Es importante entender que las simulaciones no replican con
+                    exactitud todas las condiciones reales. En un escenario fuera del simulador, aplicar tal intensidad
+                    de corriente a un LED y a un microcontrolador auténticos podría resultar en un breve destello antes
+                    de que el LED se dañe permanentemente, aunque las reacciones pueden variar. A continuación, se
+                    muestra la advertencia generada por el simulador.
+                </p>
+
+                <div class="image-container">
+                    <img src="/arduino/nueva-entrada/images/advertencia-simulacion-tinkercad.webp"
+                        alt="Advertencia de Tinkercad sobre el riesgo de daño al LED durante la simulación"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Integración y Configuración de la Resistencia en el Circuito</h2>
+
+                <p>
+                    Después de observar los efectos en el LED al conectarlo directamente al microcontrolador sin
+                    resistencia, procederemos a la segunda prueba: integrar una resistencia adecuada, previamente
+                    determinada en 220Ω, en el circuito. Comenzaremos por arrastrar la resistencia al área de trabajo y
+                    la posicionaremos junto al LED. Es crucial saber cómo identificar el valor de una resistencia dentro
+                    de Tinkercad. Al hacer clic sobre la resistencia, se despliega un menú que permite ajustar sus
+                    especificaciones. Encontrarás una opción para establecer el valor; aquí, introducirás “220”.
+                    Adicionalmente, necesitarás cambiar la unidad de medida, que por defecto se muestra en KΩ (1kΩ =
+                    1000Ω), a Ω. Más detalles y una visualización clara de este proceso se pueden apreciar en la imagen
+                    que acompaña este texto.
+                </p>
+
+                <div class="image-container">
+                    <img src="/arduino/nueva-entrada/images/configuracion-resistencia-circuito.webp"
+                        alt="Imagen mostrando la configuración de una resistencia de 220 ohmios en el simulador Tinkercad, con menú de selección de valor y unidad de medida."
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Orientación de la Resistencia y Principios de Flujo de Corriente</h2>
+                <p>
+                    Después de preparar la resistencia para su conexión, es natural tener algunas dudas esenciales que
+                    requieren aclaración inmediata. Una de las preguntas más comunes es si la orientación de la
+                    resistencia afecta su función, es decir, si existe una manera correcta de conectarla. La respuesta
+                    es simple: no importa la dirección en la que se coloque la resistencia, su efecto será el mismo en
+                    cualquier sentido.
+                </p>
+                <p>
+                    Una segunda interrogante, quizás menos evidente, concierne al punto de conexión de la resistencia.
+                    Podría parecer lógico suponer que se debe conectar en el lado positivo, donde se origina la
+                    corriente y el voltaje, para regular precisamente estos valores antes de que lleguen al LED. Sin
+                    embargo, este razonamiento es parcialmente erróneo. Sea que conectemos la resistencia al lado
+                    positivo o al negativo (GND), el resultado sobre el LED será idéntico. La clave está en comprender
+                    el flujo de la corriente: un componente solo conduce cuando se completa el circuito, es decir,
+                    cuando se conecta tanto al polo positivo como al negativo.
+                </p>
+                <p>
+                    Un ejemplo práctico muy ilustrativo lo encontramos en los electricistas que, aparentemente de forma
+                    temeraria, tocan cables descubiertos sin recibir descargas eléctricas. Esto se debe a que si no hay
+                    conexión con el GND, ya sea directamente o a través de un conductor como el cuerpo humano hacia la
+                    tierra, no se establece un circuito cerrado y, por lo tanto, la corriente no fluye. (Advertencia:
+                    esta explicación tiene propósitos educativos únicamente. No se debe replicar esta acción, ya que la
+                    seguridad es siempre la prioridad). Volviendo al circuito del LED, gracias a este principio
+                    eléctrico, no importa si la resistencia se coloca antes del ánodo o del cátodo; el efecto sobre la
+                    corriente que llega al LED será el mismo.
+                </p>
+                <p>
+                    A continuación, puedes observar una imagen que ilustra la conexión de la resistencia entre el GND y
+                    el LED.
+                </p>
+
+                <div class="image-container">
+                    <img src="/arduino/nueva-entrada/images/Conexion_Resistencia_LED_Tinkercad.webp"
+                        alt="Diagrama de conexión de la resistencia y el LED en Tinkercad, mostrando la resistencia entre el GND y el LED para regular la corriente."
+                        loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Como habrás notado en la imagen anterior, además de la resistencia, he incluido un multímetro para
+                    que puedas observar el voltaje que recibe el LED, el cual es precisamente el valor que determinamos
+                    que debería tener, 2V. No obstante, mi intención al colocar el multímetro no fue solo para que
+                    visualizaras el voltaje en el LED, sino también para anticiparte que en la siguiente entrada del
+                    blog aprenderemos a manejar esta herramienta. Profundizaremos en cómo medir tanto el voltaje como la
+                    corriente (amperios). Además, no solo nos centraremos en cómo utilizar el multímetro, sino que
+                    exploraremos conceptos sobre circuitos paralelos y en serie, así como el amperaje máximo que debe
+                    fluir a través de cada pin del microcontrolador para no comprometer su integridad y, así, prolongar
+                    su vida útil.
+                </p>
+                <p>
+                    Con esto, llegamos al final de este artículo. Espero sinceramente que hayas aprendido algo nuevo y
+                    que hayas disfrutado el proceso. Recuerda que puedes enviarme un mensaje en cualquier momento a
+                    través del enlace en la pestaña de contacto. Ya sea que tengas alguna duda o solo quieras saludar,
+                    estaré encantado de recibir tu mensaje. ¡Hasta la próxima, amante de Arduino!
+                </p>
+
             </div>
         </section>
     </main>
@@ -153,7 +395,7 @@
     <script>
         const folder = 'arduino';
         const entryName = 'nueva-entrada';
-        const totalSnippets = 0;
+        const totalSnippets = 3;
         fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
     </script>
 </body>

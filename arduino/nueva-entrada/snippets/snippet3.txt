@@ -1,0 +1,13 @@
+void setup()
+{
+  // Configura el pin 2 como salida (OUTPUT)
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(2, HIGH);  // Enciende el LED conectado al pin 2
+  delay(2000);  // Espera 2000 milisegundos (2 segundo)
+  digitalWrite(2, LOW);  // Apaga el LED conectado al pin 2
+  delay(2000);  // Espera 2000 milisegundos (2 segundo) antes de reiniciar el ciclo
+}
