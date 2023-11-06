@@ -247,21 +247,20 @@
 
                 <h2>Conectando el LED: Identificando Ánodo y Cátodo</h2>
                 <p>
-                    Con el código ya completo, es hora de enfocarnos en el hardware. Como mencioné, realizaremos dos
-                    pruebas en la simulación de Tinkercad, un entorno seguro donde no hay riesgo de dañar componentes
-                    reales. Empecemos por colocar un LED en el área de trabajo. Pero antes de hacer cualquier conexión,
-                    es crucial entender cómo identificar la terminal positiva, o ánodo, y la terminal negativa, o
-                    cátodo, del LED. El ánodo es la patita más larga y se conectará al pin 2 —es decir, al positivo—.
-                    Por otro lado, el cátodo es la patita más corta y se conectará al ground, o tierra, marcado como GND
-                    en el microcontrolador.
-
-                    Una vez claro esto, conectemos con cuidado el LED al microcontrolador. Dado que es la primera vez
-                    que trabajamos con un componente externo, te mostraré cómo hacerlo paso a paso. Simplemente coloca
-                    el LED cerca del microcontrolador y haz clic en el extremo de la patita que quieras conectar.
-                    Tinkercad generará automáticamente un 'cable' virtual que podrás dirigir hasta el punto de conexión
-                    deseado. En nuestro ejemplo, conectaremos el ánodo al pin 2 y el cátodo al pin GND.
+                    Con el código ya completo, es hora de enfocarnos en el <strong>hardware</strong>. Como mencioné,
+                    realizaremos dos pruebas en la simulación de <strong>Tinkercad</strong>, un entorno seguro donde no
+                    hay riesgo de dañar componentes reales. Empecemos por colocar un <strong>LED</strong> en el área de
+                    trabajo. Pero antes de hacer cualquier conexión, es crucial entender cómo identificar la terminal
+                    positiva, o <strong>ánodo</strong>, y la terminal negativa, o <strong>cátodo</strong>, del LED. El
+                    ánodo es la patita más larga y se conectará al pin 2 —es decir, al positivo—. Por otro lado, el
+                    cátodo es la patita más corta y se conectará al <strong>ground</strong>, o tierra, marcado como
+                    <strong>GND</strong> en el microcontrolador. Una vez claro esto, conectemos con cuidado el LED al
+                    microcontrolador. Dado que es la primera vez que trabajamos con un componente externo, te mostraré
+                    cómo hacerlo paso a paso. Simplemente coloca el LED cerca del microcontrolador y haz clic en el
+                    extremo de la patita que quieras conectar. Tinkercad generará automáticamente un 'cable' virtual que
+                    podrás dirigir hasta el punto de conexión deseado. En nuestro ejemplo, conectaremos el ánodo al pin
+                    2 y el cátodo al pin GND.
                 </p>
-
                 <p>
                     Para facilitar tu comprensión, incluyo a continuación una imagen de la interfaz de Tinkercad que
                     muestra la conexión correcta del LED. Esto servirá como una referencia visual completa para
@@ -274,31 +273,32 @@
                 </div>
 
                 <p>
-                    Antes de iniciar nuestra primera simulación en Tinkercad, es importante señalar un par de detalles
-                    para evitar cualquier confusión. En primer lugar, en el simulador no distinguirás las patas del LED
-                    por su longitud como en la realidad. En lugar de eso, el ánodo (el positivo) se marca con una
-                    pequeña curva. Aunque no puedas apreciar la diferencia de tamaño, Tinkercad te ayuda identificando
-                    cada terminal; si pasas el cursor sobre ellas, el simulador te indicará cuál es el ánodo y cuál el
-                    cátodo, lo que hace imposible conectarlos incorrectamente.
+                    Antes de iniciar nuestra primera simulación en <strong>Tinkercad</strong>, es importante señalar un
+                    par de detalles para evitar cualquier confusión. En primer lugar, en el simulador no distinguirás
+                    las patas del LED por su longitud como en la realidad. En lugar de eso, el <strong>ánodo</strong>
+                    (el positivo) se marca con una pequeña curva. Aunque no puedas apreciar la diferencia de tamaño,
+                    Tinkercad te ayuda identificando cada terminal; si pasas el cursor sobre ellas, el simulador te
+                    indicará cuál es el ánodo y cuál el cátodo, lo que hace imposible conectarlos incorrectamente. El
+                    segundo aspecto a considerar es el código de colores utilizado para las conexiones. He conectado el
+                    ánodo al pin 2 utilizando un cable <strong>rojo</strong>, que es el color estándar para indicar el
+                    flujo de corriente. Por otro lado, para el cátodo, he elegido un cable <strong>negro</strong>, que
+                    comúnmente representa la conexión a tierra o negativo (<strong>GND</strong>). Si bien en la práctica
+                    los colores de los cables son a elección del usuario, seguir estos estándares facilita el
+                    reconocimiento y seguimiento de las conexiones en nuestros proyectos.
 
-                    El segundo aspecto a considerar es el código de colores utilizado para las conexiones. He conectado
-                    el ánodo al pin 2 utilizando un cable rojo, que es el color estándar para indicar el flujo de
-                    corriente. Por otro lado, para el cátodo, he elegido un cable negro, que comúnmente representa la
-                    conexión a tierra o negativo (GND). Si bien en la práctica los colores de los cables son a elección
-                    del usuario, seguir estos estándares facilita el reconocimiento y seguimiento de las conexiones en
-                    nuestros proyectos.
                 </p>
 
                 <h2>Iniciando la Simulación: Precauciones y Advertencias en Tinkercad</h2>
                 <p>
-                    Con el hardware ya listo, lo siguiente es poner en marcha la simulación. Al seleccionar 'Iniciar
-                    Simulación' en Tinkercad, el sistema emitirá una advertencia referente a la intensidad de corriente
-                    que atraviesa el LED: se mostrará un mensaje alertando que la corriente es de 53.5 mA cuando el
-                    límite recomendado es de 20 mA. Es importante entender que las simulaciones no replican con
-                    exactitud todas las condiciones reales. En un escenario fuera del simulador, aplicar tal intensidad
-                    de corriente a un LED y a un microcontrolador auténticos podría resultar en un breve destello antes
-                    de que el LED se dañe permanentemente, aunque las reacciones pueden variar. A continuación, se
-                    muestra la advertencia generada por el simulador.
+                    Con el <strong>hardware</strong> ya listo, lo siguiente es poner en marcha la
+                    <strong>simulación</strong>. Al seleccionar '<strong>Iniciar Simulación</strong>' en
+                    <strong>Tinkercad</strong>, el sistema emitirá una advertencia referente a la intensidad de
+                    corriente que atraviesa el LED: se mostrará un mensaje alertando que la corriente es de <strong>53.5
+                        mA</strong> cuando el límite recomendado es de <strong>20 mA</strong>. Es importante entender
+                    que las simulaciones no replican con exactitud todas las condiciones reales. En un escenario fuera
+                    del simulador, aplicar tal intensidad de corriente a un LED y a un microcontrolador auténticos
+                    podría resultar en un breve destello antes de que el LED se dañe permanentemente, aunque las
+                    reacciones pueden variar. A continuación, se muestra la advertencia generada por el simulador.
                 </p>
 
                 <div class="image-container">
@@ -311,14 +311,15 @@
 
                 <p>
                     Después de observar los efectos en el LED al conectarlo directamente al microcontrolador sin
-                    resistencia, procederemos a la segunda prueba: integrar una resistencia adecuada, previamente
-                    determinada en 220Ω, en el circuito. Comenzaremos por arrastrar la resistencia al área de trabajo y
-                    la posicionaremos junto al LED. Es crucial saber cómo identificar el valor de una resistencia dentro
-                    de Tinkercad. Al hacer clic sobre la resistencia, se despliega un menú que permite ajustar sus
-                    especificaciones. Encontrarás una opción para establecer el valor; aquí, introducirás “220”.
-                    Adicionalmente, necesitarás cambiar la unidad de medida, que por defecto se muestra en KΩ (1kΩ =
-                    1000Ω), a Ω. Más detalles y una visualización clara de este proceso se pueden apreciar en la imagen
-                    que acompaña este texto.
+                    resistencia, procederemos a la segunda prueba: integrar una <strong>resistencia adecuada</strong>,
+                    previamente determinada en <strong>220Ω</strong>, en el circuito. Comenzaremos por arrastrar la
+                    resistencia al área de trabajo y la posicionaremos junto al LED. Es crucial saber cómo identificar
+                    el valor de una resistencia dentro de <strong>Tinkercad</strong>. Al hacer clic sobre la
+                    resistencia, se despliega un menú que permite ajustar sus especificaciones. Encontrarás una opción
+                    para establecer el valor; aquí, introducirás “<strong>220</strong>”. Adicionalmente, necesitarás
+                    cambiar la unidad de medida, que por defecto se muestra en <strong>KΩ</strong> (1kΩ = 1000Ω), a
+                    <strong>Ω</strong>. Más detalles y una visualización clara de este proceso se pueden apreciar en la
+                    imagen que acompaña este texto.
                 </p>
 
                 <div class="image-container">
@@ -330,19 +331,19 @@
                 <h2>Orientación de la Resistencia y Principios de Flujo de Corriente</h2>
                 <p>
                     Después de preparar la resistencia para su conexión, es natural tener algunas dudas esenciales que
-                    requieren aclaración inmediata. Una de las preguntas más comunes es si la orientación de la
-                    resistencia afecta su función, es decir, si existe una manera correcta de conectarla. La respuesta
-                    es simple: no importa la dirección en la que se coloque la resistencia, su efecto será el mismo en
-                    cualquier sentido.
+                    requieren aclaración inmediata. Una de las preguntas más comunes es si la <strong>orientación de la
+                        resistencia</strong> afecta su función, es decir, si existe una manera correcta de conectarla.
+                    La respuesta es simple: no importa la dirección en la que se coloque la resistencia, su efecto será
+                    el mismo en cualquier sentido.
                 </p>
                 <p>
-                    Una segunda interrogante, quizás menos evidente, concierne al punto de conexión de la resistencia.
-                    Podría parecer lógico suponer que se debe conectar en el lado positivo, donde se origina la
-                    corriente y el voltaje, para regular precisamente estos valores antes de que lleguen al LED. Sin
-                    embargo, este razonamiento es parcialmente erróneo. Sea que conectemos la resistencia al lado
-                    positivo o al negativo (GND), el resultado sobre el LED será idéntico. La clave está en comprender
-                    el flujo de la corriente: un componente solo conduce cuando se completa el circuito, es decir,
-                    cuando se conecta tanto al polo positivo como al negativo.
+                    Una segunda interrogante, quizás menos evidente, concierne al <strong>punto de conexión de la
+                        resistencia</strong>. Podría parecer lógico suponer que se debe conectar en el lado positivo,
+                    donde se origina la corriente y el voltaje, para regular precisamente estos valores antes de que
+                    lleguen al LED. Sin embargo, este razonamiento es parcialmente erróneo. Sea que conectemos la
+                    resistencia al lado positivo o al negativo (GND), el resultado sobre el LED será idéntico. La clave
+                    está en comprender el <strong>flujo de la corriente</strong>: un componente solo conduce cuando se
+                    completa el circuito, es decir, cuando se conecta tanto al polo positivo como al negativo.
                 </p>
                 <p>
                     Un ejemplo práctico muy ilustrativo lo encontramos en los electricistas que, aparentemente de forma
@@ -366,21 +367,56 @@
                 </div>
 
                 <p>
-                    Como habrás notado en la imagen anterior, además de la resistencia, he incluido un multímetro para
-                    que puedas observar el voltaje que recibe el LED, el cual es precisamente el valor que determinamos
-                    que debería tener, 2V. No obstante, mi intención al colocar el multímetro no fue solo para que
-                    visualizaras el voltaje en el LED, sino también para anticiparte que en la siguiente entrada del
-                    blog aprenderemos a manejar esta herramienta. Profundizaremos en cómo medir tanto el voltaje como la
-                    corriente (amperios). Además, no solo nos centraremos en cómo utilizar el multímetro, sino que
-                    exploraremos conceptos sobre circuitos paralelos y en serie, así como el amperaje máximo que debe
-                    fluir a través de cada pin del microcontrolador para no comprometer su integridad y, así, prolongar
-                    su vida útil.
+                    Como habrás notado en la imagen anterior, además de la resistencia, he incluido un
+                    <strong>multímetro</strong> para que puedas observar el <strong>voltaje</strong> que recibe el LED,
+                    el cual es precisamente el valor que determinamos que debería tener, <strong>2V</strong>. No
+                    obstante, mi intención al colocar el multímetro no fue solo para que visualizaras el voltaje en el
+                    LED, sino también para anticiparte que en la siguiente entrada del blog aprenderemos a manejar esta
+                    herramienta. Profundizaremos en cómo medir tanto el <strong>voltaje como la corriente
+                        (amperios)</strong>. Además, no solo nos centraremos en cómo utilizar el multímetro, sino que
+                    exploraremos conceptos sobre <strong>circuitos paralelos y en serie</strong>, así como el
+                    <strong>amperaje máximo</strong> que debe fluir a través de cada pin del microcontrolador para no
+                    comprometer su integridad y, así, prolongar su vida útil.
                 </p>
+
+                <h2>Repasando lo que hemos Aprendido</h2>
+
+                <p>
+                    ¡Aquí estamos, <strong>Arduino-Lovers</strong>, dando otro emocionante paso en nuestro viaje con
+                    <strong>Arduino</strong>! Esta vez, nos zambullimos en las aguas profundas de la <strong>electrónica
+                        práctica</strong>. Hemos jugado con los conceptos básicos y ahora es el momento de conectar un
+                    brillante <strong>LED externo</strong> y domar la corriente con la mágica <strong>Ley de
+                        Ohm</strong>. ¿Listos para unir la teoría con la práctica y encender nuestros proyectos con
+                    conocimiento? ¡Prepárate para una aventura electrificante mientras desglosamos estos conceptos
+                    esenciales de una manera super amena y fácil de entender! Aquí tienes un resumen jugoso de los
+                    puntos clave que hemos explorado hoy.
+                </p>
+
+
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Electrónica y Arduino</h3>
+                    <ol>
+                        <li><strong>Conectar un LED Externo:</strong> Importancia de la resistencia y la Ley de Ohm para
+                            la conexión segura de un LED a Arduino.</li>
+                        <li><strong>Desentrañando la Ley de Ohm:</strong> Comprender la relación entre voltaje,
+                            corriente y resistencia para aplicarla en circuitos con LEDs.</li>
+                        <li><strong>Comprendiendo las Resistencias:</strong> Uso de resistencias para controlar la
+                            corriente y proteger los LEDs de daños por sobrecorriente.</li>
+                        <li><strong>Voltaje y Corriente para LEDs:</strong> Necesidades específicas de voltaje y
+                            corriente según el tipo y color de los LEDs.</li>
+                        <li><strong>Calculando la Resistencia Ideal:</strong> Método para calcular la resistencia óptima
+                            para un LED, asegurando su funcionamiento sin riesgos.</li>
+                    </ol>
+                </div>
+
                 <p>
                     Con esto, llegamos al final de este artículo. Espero sinceramente que hayas aprendido algo nuevo y
                     que hayas disfrutado el proceso. Recuerda que puedes enviarme un mensaje en cualquier momento a
                     través del enlace en la pestaña de contacto. Ya sea que tengas alguna duda o solo quieras saludar,
-                    estaré encantado de recibir tu mensaje. ¡Hasta la próxima, amante de Arduino!
+                    estaré encantado de recibir tu mensaje. ¡Hasta la próxima, Arduino-Lover!
+                </p>
+                <p>
+                    ¡<strong>Un Abrazo</strong>, Braulio de <strong>AprendeCode</strong>!
                 </p>
 
             </div>
