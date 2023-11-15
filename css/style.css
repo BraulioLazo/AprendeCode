@@ -1656,5 +1656,80 @@ button {
     max-width: 250px;
   }
 }
+.animation-main-container {
+  background-color: #ECECEC;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  transition: var(--transition-short);
+  z-index: 999;
+}
+.animation-main-container .logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--color-primary);
+  transition: 0.3s ease-in;
+}
+.animation-main-container .logo-container img {
+  margin-top: -50px;
+  margin-right: -55px;
+  width: 98%;
+}
+.animation-main-container .logo-container-shadow {
+  box-shadow: 0 0 10px var(--color-primary);
+  box-shadow: 0 0 20px var(--color-primary);
+  box-shadow: 0 0 30px var(--color-primary);
+  box-shadow: 0 0 40px var(--color-primary);
+  box-shadow: 0 0 50px var(--color-primary);
+  box-shadow: 0 0 60px var(--color-primary);
+  box-shadow: 0 0 70px var(--color-primary);
+  box-shadow: 0 0 80px var(--color-primary);
+  box-shadow: 0 0 90px var(--color-primary);
+  box-shadow: 0 0 100px var(--color-primary);
+}
+.animation-main-container .loading-animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+.animation-main-container .loading-animation-container .progress-bar-container {
+  width: 100%;
+  max-width: 450px;
+  height: 28px;
+  border: 6px solid #ECECEC;
+  box-shadow: -6px -6px 10px white, 4px 4px 8px #cecece, inset -4px -4px 8px white, inset 4px 4px 8px #cecece;
+  border-radius: 20px;
+}
+.animation-main-container .loading-animation-container .progress-bar-container .progress-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 20px;
+  background-image: -webkit-linear-gradient(left, var(--color-primary), var(--color-primary-half));
+  transition: var(--transition-short);
+}
+.animation-main-container .loading-animation-container .loading-number {
+  display: flex;
+  justify-content: space-between;
+  width: 45px;
+  margin-right: -5%;
+}
+.animation-main-container .loading-animation-container .loading-number .percent-sign {
+  width: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */

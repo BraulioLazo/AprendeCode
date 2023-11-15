@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.9';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.10';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -512,6 +512,8 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheName).then((cache) => {
             return cache.addAll(cachingResources);
+        }).then(()=>{
+            return self.skipWaiting();
         })
     );
 });
@@ -529,10 +531,17 @@ self.addEventListener('activate', event => {
                 })
             );
         }).then(() => {
-            return self.clients.claim();
+            self.clients.claim();
+            // Enviar mensaje a los clientes después de tomar el control
+            self.clients.matchAll().then(clients => {
+                clients.forEach(client => {
+                    client.postMessage({ action: 'swActivated' });
+                });
+            });
         })
     );
 });
+
 
 self.addEventListener('fetch', event => {
     event.respondWith(
