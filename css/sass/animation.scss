@@ -46,12 +46,18 @@
         box-shadow: 0 0 100px var(--color-primary);
     }
 
+    h3{
+        width: 100%;
+        text-align: center;
+    }
+
     .loading-animation-container {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 15px;
         width: 100%;
+        padding: 0 20px;
 
         .progress-bar-container {
             width: 100%;
@@ -72,17 +78,5 @@
                 transition: var(--transition-short);
             }
         }
-
-        .loading-number {
-            display: flex;
-            justify-content: space-between;
-            width: 45px;
-            margin-right: -5%;
-
-            .percent-sign {
-                width: 25px;
-            }
-        }
-
     }
 }

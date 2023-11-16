@@ -29,14 +29,12 @@ const updateBody = (body) => {
                  <img src="/assets/logo/android-chrome-512x512.webp" alt="AprendeCode Logo">
              </div>
 
+             <h3>Almacenando recursos en caché...</h3>
+
              <div class="loading-animation-container">
                  <div class="progress-bar-container">
                      <div class="progress-bar"></div>
                  </div>
-                 <span class="loading-number">
-                     <span class="number-display"></span>
-                     <span class="percent-sign">%</span>
-                 </span>
              </div>
          </div>
         `);
@@ -48,8 +46,7 @@ function animateLoading() {
 
     const body = document.querySelector('body');
     updateBody(body);
-
-    const numberDisplay = document.querySelector(".number-display");
+    body.classList.add('no-scroll');
     const progressBar = document.querySelector('.progress-bar');
     const logoContainer = document.querySelector('.logo-container');
     const animationMainContainer = document.querySelector('.animation-main-container');
@@ -63,7 +60,6 @@ function animateLoading() {
 
     function updateProgress() {
 
-        numberDisplay.textContent = currentProgress;
         progressBar.style.width = `${currentProgress}%`;
 
         if (currentProgress < maxProgress) {
@@ -82,10 +78,13 @@ function animateLoading() {
             setTimeout(() => {
                 logoContainer.classList.remove('logo-container-shadow');
                 animationMainContainer.style.opacity = '0';
+
+                setTimeout(() => {
+                    animationMainContainer.style.display = 'none';
+                    body.classList.remove('no-scroll');
+                }, 300);
             }, 300);
-            setTimeout(() => {
-                animationMainContainer.style.display = 'none';
-            }, 300);
+
         }
     }
 

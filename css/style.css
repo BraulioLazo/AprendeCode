@@ -85,6 +85,10 @@ a {
   background: var(--color-secondary);
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -1700,12 +1704,17 @@ button {
   box-shadow: 0 0 90px var(--color-primary);
   box-shadow: 0 0 100px var(--color-primary);
 }
+.animation-main-container h3 {
+  width: 100%;
+  text-align: center;
+}
 .animation-main-container .loading-animation-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   width: 100%;
+  padding: 0 20px;
 }
 .animation-main-container .loading-animation-container .progress-bar-container {
   width: 100%;
@@ -1721,15 +1730,6 @@ button {
   border-radius: 20px;
   background-image: -webkit-linear-gradient(left, var(--color-primary), var(--color-primary-half));
   transition: var(--transition-short);
-}
-.animation-main-container .loading-animation-container .loading-number {
-  display: flex;
-  justify-content: space-between;
-  width: 45px;
-  margin-right: -5%;
-}
-.animation-main-container .loading-animation-container .loading-number .percent-sign {
-  width: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

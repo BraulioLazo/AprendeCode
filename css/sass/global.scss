@@ -93,6 +93,10 @@ a {
     background: var(--color-secondary);
 }
 
+.no-scroll{
+    overflow: hidden;
+}
+
 section {
     display: flex;
     justify-content: center;
