@@ -14,40 +14,52 @@
    B. Asegurarse de que la página externa también tenga el mismo script y el elemento con el ID correspondiente.
 */
 
-document.querySelectorAll("[data-target]").forEach(btn => {
-    btn.addEventListener("click", function (e) {
-        const targetSelector = btn.getAttribute('data-target');
-        const targetElement = document.querySelector(targetSelector);
+const initializeInPageScrolling = () => {
+    document.querySelectorAll("[data-target]").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const targetSelector = btn.getAttribute('data-target');
+            const targetElement = document.querySelector(targetSelector);
+            try {
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
 
-        if (targetElement) {
-            e.preventDefault();
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-        }
-
-        else {
-            const destinationUrl = btn.getAttribute('href');
-            if (destinationUrl) {
-                e.preventDefault();
-                window.location.href = destinationUrl + "?target=" + targetSelector.substring(1);
+                else {
+                    const destinationUrl = btn.getAttribute('href');
+                    if (destinationUrl) {
+                        e.preventDefault();
+                        window.location.href = destinationUrl + "?target=" + targetSelector.substring(1);
+                    }
+                }
+            } catch (error) {
+                console.error(`Error al intentar hacer scroll al elemento con data-target="${targetSelector}": ${error}`);
             }
-        }
+        });
     });
-});
+};
 
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
+const handleOtherPageScrolling = () => {
         const urlParams = new URLSearchParams(window.location.search);
         const target = urlParams.get("target");
-        if (target) {
-            const elemento = document.querySelector("#" + target);
-            if (elemento) {
-                elemento.scrollIntoView({ behavior: 'smooth' });
-                history.replaceState({}, document.title, window.location.pathname);
-            }
-        }
-    }, 100);
-});
 
+        try {
+            if (target) {
+                const elemento = document.querySelector("#" + target);
+                if (elemento) {
+                    elemento.scrollIntoView({ behavior: 'smooth' });
+                    history.replaceState({}, document.title, window.location.pathname);
+                }
+            }
+        } catch (error) {
+            console.error(`Error al intentar hacer scroll al elemento con data-target="${target}": ${error}`);
+        }
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+    initializeInPageScrolling();
+    handleOtherPageScrolling();
+})
