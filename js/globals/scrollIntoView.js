@@ -43,6 +43,7 @@ const initializeInPageScrolling = () => {
 };
 
 const handleOtherPageScrolling = () => {
+    setTimeout(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const target = urlParams.get("target");
 
@@ -50,16 +51,20 @@ const handleOtherPageScrolling = () => {
             if (target) {
                 const elemento = document.querySelector("#" + target);
                 if (elemento) {
-                    elemento.scrollIntoView({ behavior: 'smooth' });
+                    elemento.scrollIntoView({
+                        behavior: 'smooth',
+                    });
                     history.replaceState({}, document.title, window.location.pathname);
                 }
             }
         } catch (error) {
             console.error(`Error al intentar hacer scroll al elemento con data-target="${target}": ${error}`);
         }
+    }, 100);
+
 };
 
 window.addEventListener("DOMContentLoaded", () => {
     initializeInPageScrolling();
     handleOtherPageScrolling();
-})
+});

@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.12';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.13';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -509,8 +509,6 @@ const mainResources = [
     '/js/components/menu.js',
     '/js/components/footer.js',
     '/css/style.css',
-    '/js/globals/scrollIntoView.js',
-    '/js/globals/registerServiceWorkers.js',
     '/js/node_modules/lunr/lunr.js',
     '/js/search-lunar.js',
     '/js/ajaxFormSubmit.js',
