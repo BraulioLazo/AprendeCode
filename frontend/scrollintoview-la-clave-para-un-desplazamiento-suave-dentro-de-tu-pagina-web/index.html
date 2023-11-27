@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <meta name="description" content="Aprende a implementar scrollIntoView para un desplazamiento suave en tu página web, manteniendo una URL limpia y mejorando la navegación.">
+   <meta name="keywords" content="scrollIntoView, desplazamiento suave, navegación en página, JavaScript, URL limpia, transiciones suaves, desarrollo web, programación frontend, experiencia de usuario">
+   <meta name="author" content="Braulio de AprendeCode">
+
+   <meta property="og:title" content="ScrollIntoView: La Clave para un Desplazamiento Suave Dentro de Tu Página Web">
+   <meta property="og:description" content="Descubre cómo usar scrollIntoView en JavaScript para mejorar la navegación en tu sitio web con un smooth scroll, manteniendo la URL limpia y optimizando la experiencia del usuario.">
+   <meta property="og:image" content="/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/images/scrollIntoView-misma-pagina.webp">
+   <meta property="og:url" content="https://www.aprendecode.com/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/">
+   <meta property="og:type" content="article">
+
+   <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+   <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+   <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+   <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+   <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <link rel="stylesheet" href="/css/style.css">
+
+   <title>ScrollIntoView: La Clave para un Desplazamiento Suave Dentro de Tu Página Web</title>
+</head>
+
+<body>
+   <my-menu></my-menu>
+   <main>
+      <section class="header-section header-blog-entry-section">
+         <div class="header-container section-container">
+            <h1 class="header-title">
+               ScrollIntoView: La Clave para un Desplazamiento Suave Dentro de Tu Página Web
+            </h1>
+         </div>
+      </section>
+
+      <section class="blog-content-section">
+         <div class="blog-content-section-container section-container">
+
+            <h2>Introducción al Método scrollIntoView</h2>
+
+            <p>
+               ¡Hola <strong>Código-Lover</strong>! Hoy vamos a explorar una característica increíblemente útil en el
+               desarrollo web: el método <strong>scrollIntoView</strong>. Este método es una joya para crear una
+               experiencia de usuario fluida y atractiva. Imagina que estás en un sitio web y haces clic en un botón. En
+               lugar de un cambio abrupto, la página se desplaza suavemente hasta una nueva sección, revelando más
+               contenido. Precisamente eso es lo que vamos a aprender a implementar hoy.
+            </p>
+
+            <p>
+               Ahora, podríamos optar por la técnica tradicional de crear un ancla con el <strong>ID de la
+                  sección</strong> a la que deseamos desplazarnos. Sin embargo, esta aproximación tiene un par de
+               inconvenientes que personalmente no me agradan. En primer lugar, al utilizar un ancla, la <strong>URL se
+                  modifica</strong>, y francamente, eso puede dar una apariencia un tanto desordenada a nuestro sitio.
+               En segundo lugar, el cambio de sección suele ser brusco y poco elegante. Aunque, es cierto que podemos
+               suavizar este efecto con la propiedad <strong>scroll-behavior: smooth</strong> en CSS, aún podemos
+               mejorar más la experiencia.
+            </p>
+
+            <p>
+               Por eso, hoy nos enfocaremos en cómo <strong>scrollIntoView</strong> puede ser una herramienta clave para
+               mantener una <strong>URL limpia</strong> y ofrecer una <strong>transición suave y profesional</strong> en
+               tus proyectos web. Pero antes de sumergirnos en los detalles, tengo algo especial para ti. Para que
+               puedas seguir este tutorial de manera más efectiva, he preparado un <strong>código de partida</strong>
+               que incluye HTML y CSS. Te invito a copiar este código inicial que te dejo a continuación. Así tendrás
+               una base sólida sobre la cual trabajar y podrás ver los cambios en tiempo real a medida que avanzamos
+               juntos en este tutorial.
+            </p>
+
+
+            <div class="snippets">
+               <div class="snippet">
+                  <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                  <pre>
+                       <code id="snippet1" class="language-html">
+            
+                       </code>
+                    </pre>
+               </div>
+               <div class="snippet">
+                  <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                  <pre>
+                       <code id="snippet2" class="language-css"> </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h2>La Elegancia de lo Simple: Sintaxis Básica de scrollIntoView en Acción</h2>
+            <p>
+               Ahora, adentrémonos en la simplicidad y la elegancia de la sintaxis de <strong>scrollIntoView</strong>.
+               Este método es bastante sencillo de utilizar. Básicamente, lo aplicamos así:
+               <code>elemento.scrollIntoView()</code>. Pero, ¿qué pasa si queremos que se active al hacer clic en un
+               botón específico? Eso también es fácil y lo vamos a ver paso a paso. Primero, definiremos una función
+               llamada <strong>goToTarget</strong>. Esta función será la encargada de manejar nuestro desplazamiento.
+               Luego, seleccionaremos el botón que desencadenará la acción. Por ejemplo, si queremos que el
+               desplazamiento ocurra al hacer clic en un botón que lleva a la sección 3, escribiremos algo así:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                  <pre>
+                       <code id="snippet3" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <p>
+               Dentro de la función <strong>goToTarget</strong> es donde la magia de <code>scrollIntoView()</code> se
+               pone en acción. Aquí definimos hacia qué elemento queremos desplazarnos. En nuestro caso, queremos ir a
+               la <strong>sección 3</strong>, así que lo expresamos de esta forma:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                  <pre>
+                       <code id="snippet4" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+            <p>
+               Al probar esto, notarás que, al hacer clic, la página se desplaza hacia la sección deseada. Un punto a
+               favor es que esto ocurre sin modificar la <strong>URL</strong>, manteniendo así la estética de nuestro
+               sitio. Sin embargo, te habrás dado cuenta de que el movimiento es todavía un poco brusco. No te
+               preocupes, eso lo vamos a mejorar en el <strong>siguiente paso</strong>.
+            </p>
+
+            <h2>Verdadero o Falso: Usando Booleanos en scrollIntoView</h2>
+            <p>
+               Ahora, profundicemos en la versatilidad del método <strong>scrollIntoView</strong>. Este método es
+               bastante flexible y acepta argumentos de dos formas distintas. Lo interesante es que estos argumentos son
+               opcionales; incluso sin asignar ninguno, <code>scrollIntoView</code> ejecuta un desplazamiento por
+               defecto. Pero, ¿qué opciones tenemos exactamente? La primera opción es pasar un valor booleano. Es muy
+               sencillo: si pasamos <strong>true</strong>, el desplazamiento se detiene en la parte superior del
+               elemento destino, y con <strong>false</strong>, en la parte inferior. Te invito a hacer una prueba para
+               ver la diferencia entre estas dos opciones. Notarás que cada una afecta ligeramente la forma en que la
+               página se desplaza hasta el elemento. A continuación, encontrarás el código ya preparado con el valor
+               <strong>true</strong>. Te invito a copiarlo, modificarlo y explorar su comportamiento.
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                  <pre>
+                       <code id="snippet5" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h2>Control Total: Usando Objetos como Argumentos en scrollIntoView</h2>
+            <p>
+               Aunque esto nos ofrece cierto grado de control, tal vez busques algo más ajustado a tus necesidades
+               específicas. Aquí es donde entra en juego la opción de pasar un objeto como argumento. Esta sintaxis nos
+               permite un nivel de control mucho más detallado. ¿Cómo lo hacemos? Simplemente abrimos y cerramos llaves
+               y, dentro, especificamos distintas propiedades. La primera propiedad que vamos a explorar es
+               <strong>behavior</strong>. Esta propiedad nos permite especificar cómo deseamos que se realice el
+               desplazamiento, y ofrece tres valores posibles: <strong>auto</strong>, <strong>smooth</strong>, y
+               <strong>instant</strong>. Para lograr un efecto de desplazamiento suave y agradable, utilizamos el valor
+               <strong>smooth</strong>.
+            </p>
+            <p>
+               Esto crea una transición agradable a la vista, pero por defecto, <code>scrollIntoView</code> se detiene
+               en la parte superior del elemento. En este punto, la propiedad <strong>block</strong> entra en juego,
+               otorgándonos control sobre este aspecto del comportamiento de desplazamiento. Con <strong>block</strong>,
+               tenemos cuatro valores entre los que podemos elegir: <strong>start</strong>, <strong>center</strong>,
+               <strong>end</strong>, y <strong>nearest</strong>. Por defecto, se utiliza <strong>start</strong>, lo que
+               significa que el elemento se alineará en la parte superior del área visible. Personalmente, tengo
+               preferencia por <strong>start</strong> y <strong>center</strong>, pero cada valor tiene su utilidad
+               dependiendo del contexto y el efecto deseado en tu sitio web.
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                  <pre>
+                       <code id="snippet6" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+            <p>
+               Finalmente, exploramos la propiedad <strong>inline</strong>, esencial para controlar el desplazamiento
+               horizontal. Esta característica es particularmente valiosa en sitios con navegación horizontal, donde
+               buscamos ofrecer una experiencia de usuario más sofisticada y fluida. Vamos a profundizar en esta
+               propiedad en la <strong>siguiente sección</strong>, donde podrás entenderla con mayor detalle. Por ahora,
+               te animo a que copies el código que te proporciono a continuación. Experimenta con él para estudiar el
+               comportamiento de <code>scrollIntoView</code>. Te sugiero que modifiques los valores de las propiedades
+               para obtener una comprensión más profunda y práctica. Este enfoque interactivo te permitirá apreciar de
+               primera mano cómo estas pequeñas alteraciones pueden impactar significativamente no solo la experiencia
+               del usuario en tu sitio web sino también, en tu aprendizaje.
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                  <pre>
+                       <code id="snippet7" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h2>Descifrando la Navegación Horizontal: El Poder de inline en scrollIntoView</h2>
+            <p>
+               En nuestra tercera sección de la plantilla, nos enfrentamos a un interesante desafío: un elemento con
+               barra de desplazamiento horizontal. Aquí, la propiedad <strong>inline</strong> de
+               <code>scrollIntoView</code> se vuelve crucial. Esta propiedad nos permite especificar el alineamiento
+               horizontal durante el desplazamiento, con opciones tales como <strong>start</strong>,
+               <strong>center</strong>, <strong>end</strong>, y <strong>nearest</strong>. Por defecto,
+               <code>scrollIntoView</code> utiliza el valor <strong>nearest</strong> para la propiedad
+               <strong>inline</strong>, lo que significa que el elemento se alineará en la posición más cercana posible
+               dentro del contenedor visible, manteniendo su ubicación actual en relación con la barra de
+               desplazamiento. A primera vista, podrías pensar que seleccionar directamente el contenedor con la barra
+               de scroll es la solución. Sin embargo, descubrirás que el enfoque requiere un poco más de reflexión.
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                  <pre>
+                       <code id="snippet8" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+            <p>
+               Cuando intentamos esto, nos damos cuenta de que algo no funciona como esperábamos. Este momento es clave
+               para entender mejor cómo funciona <code>scrollIntoView</code>. En lugar de seleccionar el contenedor de
+               scroll, lo que realmente necesitamos es enfocarnos en un elemento específico dentro de este.
+            </p>
+
+            <p>
+               Te muestro cómo abordar este escenario: en nuestro HTML, hay una tarjeta central con el ID
+               '<strong>center-option</strong>'. Esta es la que seleccionamos para nuestro experimento. Al reemplazar el
+               ID <strong>#section3</strong> en nuestro código por <strong>center-option</strong> y actualizar,
+               observamos que la función ahora funciona correctamente. Este es un claro ejemplo de cómo, en ocasiones,
+               debemos ajustar nuestro enfoque para alcanzar el efecto deseado. A continuación, te proporciono el código
+               modificado para que puedas experimentar con él y explorar sus posibilidades.
+            </p>
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                  <pre>
+                       <code id="snippet9" class="language-javascript">
+                       
+                       </code>
+                  </pre>
+               </div>
+            </div>
+            <p>
+               Quiero compartir contigo un detalle curioso que descubrí sobre el valor <strong>start</strong> en el
+               contexto del desplazamiento horizontal. Contrariamente a lo que se podría esperar, este valor no alinea
+               el elemento a la izquierda del contenedor. En cambio, he observado que lo alinea a la derecha. A pesar de
+               buscar una explicación para esto, no encontré una clara en la documentación oficial. Aunque esto no es un
+               problema en sí mismo, definitivamente es un comportamiento que podría sorprenderte. Este caso es un
+               recordatorio de que en el mundo de la programación, las cosas no siempre son tan intuitivas como
+               podríamos pensar.
+            </p>
+
+
+            <h2>Resumen sobre el Método scrollIntoView en JavaScript</h2>
+            <p>
+               El método <strong>scrollIntoView</strong> en JavaScript es una herramienta poderosa para mejorar la
+               navegación y la experiencia del usuario en una página web. Permite desplazamientos suaves y controlados
+               entre secciones del sitio, manteniendo una <strong>URL limpia</strong> y ofreciendo una navegación
+               intuitiva.
+            </p>
+
+            <div class="custom-list-container">
+               <h3>🚀 Resumen Rápido: Dominando scrollIntoView</h3>
+               <ol>
+                  <li><strong>Argumentos de scrollIntoView:</strong> Acepta dos tipos de argumentos: un valor booleano y
+                     un objeto para mayor control.</li>
+                  <li><strong>Uso del Valor Booleano:</strong> Con `true` o `false`, controla si el desplazamiento se
+                     detiene al inicio o al final del elemento.</li>
+                  <li><strong>El Objeto como Argumento:</strong> Ofrece control detallado sobre el comportamiento del
+                     desplazamiento.</li>
+                  <li><strong>Propiedades del Objeto:</strong> Incluyen `behavior`, `block` e `inline`, cada una con
+                     valores específicos para refinar el desplazamiento.</li>
+                  <li><strong>Valores de Behavior:</strong> `smooth`, `instant`, `auto` con `smooth` para un efecto
+                     suave.</li>
+                  <li><strong>Valores de Block:</strong> `start`, `center`, `end`, `nearest`, con `start` como valor por
+                     defecto para alinear verticalmente.</li>
+                  <li><strong>Valores de Inline:</strong> `start`, `center`, `end`, `nearest`, con `nearest` como valor
+                     por defecto para alinear horizontalmente.</li>
+                  <li><strong>Navegación Horizontal:</strong> Requiere seleccionar un elemento específico dentro de un
+                     contenedor con barra de desplazamiento horizontal.</li>
+                  <li><strong>Curiosidad sobre Start en Horizontal:</strong> Contrario a la intuición, `start` no alinea
+                     a la izquierda, lo que puede resultar en comportamientos inesperados.</li>
+               </ol>
+            </div>
+
+            <h2>¡Hasta la Próxima, Código-Lover!</h2>
+            <p>
+               Y así llegamos al final de este tutorial sobre cómo utilizar el método <strong>scrollIntoView</strong>!
+               Hemos cubierto todo lo esencial, y espero que te haya sido tan útil como interesante. Pero no creas que
+               esto es todo: en mi próximo blog, tengo preparado algo que, a mi parecer, desafía la lógica convencional
+               de JavaScript, y estoy emocionado de compartirlo contigo. ¿De qué se trata? Vamos a explorar cómo
+               realizar un <strong>smooth scroll entre páginas diferentes</strong>. Sí, has leído bien: un
+               desplazamiento suave que cruza los límites de una sola página. No solo es completamente factible, sino
+               que también logramos mantener la <strong>URL limpia</strong>, un detalle que, personalmente, valoro
+               muchísimo para enriquecer la experiencia del usuario. Así que, si estás intrigado y deseas aprender esta
+               técnica sorprendente, ¡asegúrate de no perderte mi siguiente publicación!
+            </p>
+         </div>
+      </section>
+   </main>
+
+   <my-footer></my-footer>
+
+   <script src="/js/components/menu.js"></script>
+   <script src="/js/components/footer.js"></script>
+   <script src="/js/codeSnippetLoader.js"></script>
+   <script>
+      const folder = 'frontend';
+      const entryName = 'scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web';
+      const totalSnippets = 9;
+      fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
+   </script>
+</body>
+
+</html>

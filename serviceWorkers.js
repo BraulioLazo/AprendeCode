@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.11';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.12';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -177,7 +177,9 @@ const frontendImages = [
 
     '/frontend/como-utilizar-la-api-wake-lock-con-javascript/images/api-wake-lock-javascript.webp',
 
-    '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/images/automatizar-pie-de-pagina-con-javascript.webp'
+    '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/images/automatizar-pie-de-pagina-con-javascript.webp',
+
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/images/scrollIntoView-misma-pagina.webp'
 ];
 
 const snippetsFrontend = [
@@ -479,6 +481,16 @@ const snippetsFrontend = [
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet1.txt',
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet2.txt',
     '/frontend/automatiza-el-ano-de-tu-pie-de-pagina-con-javascript/snippets/snippet3.txt',
+
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet1.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet2.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet3.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet4.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet5.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet6.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet7.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet8.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet9.txt',
 ];
 
 const snippetsArduino = [
@@ -504,7 +516,6 @@ const mainResources = [
     '/js/ajaxFormSubmit.js',
     'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js'
-
 ];
 
 const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];

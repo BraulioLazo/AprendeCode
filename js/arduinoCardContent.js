@@ -4,7 +4,7 @@ const arduinoCardContent = [
         title: "Luz a la Obra: Conectando tu Primer LED Externo al Microcontrolador",
         description: "Aventúrate en el práctico aprendizaje de conectar un LED externo a tu microcontrolador en esta entrada. Cubriremos la aplicación de la Ley de Ohm, la selección de la resistencia adecuada y los pasos detallados para crear un circuito luminoso. ",
         imageUrl: "/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/images/Encender-LED-Externo-Arduino.webp",
-        imageAlt: "",
+        imageAlt: "Mano conectando un LED externo a una placa Arduino y probando su funcionamiento",
         link: "/arduino/luz-a-la-obra-conectando-tu-primer-led-externo-al-microcontrolador/",
     },
     {

@@ -1,5 +1,13 @@
 const frontendCardContent = [
     {
+        keywords: "scrollIntoView, desplazamiento, suave, navegación, en, página, JavaScript, URL, limpia, transiciones, suaves, experiencia, usuario, interactividad, web, código, scroll, métodos JavaScript, prácticas, programación, mejora, sitio, web",
+        title: "ScrollIntoView: La Clave para un Desplazamiento Suave Dentro de Tu Página Web",
+        description: "Descubre cómo implementar un smooth scroll en tu página web con scrollIntoView. Aprende a crear transiciones suaves y mantener una URL limpia, mejorando significativamente la experiencia del usuario...",
+        imageUrl: "/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/images/scrollIntoView-misma-pagina.webp",
+        imageAlt: "Una desarrolladora sonriente, concentrada en hacer testing del método scrollIntoView en su tablet.",
+        link: "/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/",
+    },
+    {
         keywords: "JavaScript, automatización, pie de página, año, actualizar, código, Date, modificarFecha, Event Listener, load, querySelector, getFullYear, sitio web, tutorial, truco",
         title: "Automatiza el año de tu pie de página con JavaScript",
         description: "¿Cansado de cambiar manualmente el año en el pie de página cada enero? Descubre cómo automatizar esta tarea y olvídate de esa molestia anual. ¡Dale un respiro a tu rutina y ahorra tiempo con este sencillo truco de JavaScript!",
