@@ -1,0 +1,4 @@
+{
+    behavior: 'smooth', // Opciones: 'smooth', 'instant', 'auto'
+    block: 'start',     // Opciones: 'start', 'center', 'end', 'nearest'
+}
