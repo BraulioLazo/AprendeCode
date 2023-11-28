@@ -14,8 +14,8 @@ function getStorageKeyPrefix() {
 
 function getEntriesByURL() {
     let pathName = window.location.pathname.split("/").filter(part => part !== "");
-    
-    if(pathName[pathName.length - 1] === "index.html") {
+
+    if (pathName[pathName.length - 1] === "index.html") {
         pathName.pop();
     }
 
@@ -137,10 +137,10 @@ function loadInitialCards() {
             shouldStoreScrollPosition = false; // Desactivar almacenamiento temporalmente
             setTimeout(() => {
                 shouldStoreScrollPosition = true; // Reactivar almacenamiento después de 2 segundos
-            }, 3000);
-        }, 200);
+            }, 5000);
+        }, 300);
     }
-    
+
 }
 
 function loadMoreCards() {
@@ -174,5 +174,13 @@ window.addEventListener('scroll', () => {
         sessionStorage.setItem(getStorageKeyPrefix() + 'userScroll', window.scrollY);
     }
 });
+
+
+
+
+
+
+
+
 
 

@@ -40,9 +40,9 @@ const lastEntriesArduino = [
     {
         title: "Explorando el Corazón de Arduino: Un Recorrido por sus Componentes Esenciales",
         description: "¡Da tus primeros pasos en el emocionante mundo de la electrónica y la programación! Explora los componentes esenciales, aprende sobre los pines digitales y analógicos, y abre un mundo lleno de posibilidades.",
-        imageUrl: "/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Componentes-Placa-Arduino-UNO.webp",
+        imageUrl: "/arduino/explorando-el-corazon-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Componentes-Placa-Arduino-UNO.webp",
         imageAlt: "Joven creando un proyecto con la placa Arduino UNO",
-        link: "/arduino/explorando-el-corazón-de-arduino-un-recorrido-por-sus-componentes-esenciales/",
+        link: "/arduino/explorando-el-corazon-de-arduino-un-recorrido-por-sus-componentes-esenciales/",
     },
 ];
 

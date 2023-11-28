@@ -43,7 +43,6 @@ const initializeInPageScrolling = () => {
 };
 
 const handleOtherPageScrolling = () => {
-    setTimeout(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const target = urlParams.get("target");
 
@@ -60,11 +59,10 @@ const handleOtherPageScrolling = () => {
         } catch (error) {
             console.error(`Error al intentar hacer scroll al elemento con data-target="${target}": ${error}`);
         }
-    }, 100);
 
 };
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
     initializeInPageScrolling();
     handleOtherPageScrolling();
 });

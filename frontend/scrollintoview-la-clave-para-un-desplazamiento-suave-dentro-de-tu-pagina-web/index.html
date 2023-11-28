@@ -223,7 +223,7 @@
                <strong>center</strong>, <strong>end</strong>, y <strong>nearest</strong>. Por defecto,
                <code>scrollIntoView</code> utiliza el valor <strong>nearest</strong> para la propiedad
                <strong>inline</strong>, lo que significa que el elemento se alineará en la posición más cercana posible
-               dentro del contenedor visible, manteniendo su ubicación actual en relación con la barra de
+               dentro del contenedor, manteniendo su ubicación actual en relación con la barra de
                desplazamiento. A primera vista, podrías pensar que seleccionar directamente el contenedor con la barra
                de scroll es la solución. Sin embargo, descubrirás que el enfoque requiere un poco más de reflexión.
             </p>
@@ -262,17 +262,7 @@
                   </pre>
                </div>
             </div>
-            <p>
-               Quiero compartir contigo un detalle curioso que descubrí sobre el valor <strong>start</strong> en el
-               contexto del desplazamiento horizontal. Contrariamente a lo que se podría esperar, este valor no alinea
-               el elemento a la izquierda del contenedor. En cambio, he observado que lo alinea a la derecha. A pesar de
-               buscar una explicación para esto, no encontré una clara en la documentación oficial. Aunque esto no es un
-               problema en sí mismo, definitivamente es un comportamiento que podría sorprenderte. Este caso es un
-               recordatorio de que en el mundo de la programación, las cosas no siempre son tan intuitivas como
-               podríamos pensar.
-            </p>
-
-
+          
             <h2>Resumen sobre el Método scrollIntoView en JavaScript</h2>
             <p>
                El método <strong>scrollIntoView</strong> en JavaScript es una herramienta poderosa para mejorar la
@@ -300,8 +290,6 @@
                      por defecto para alinear horizontalmente.</li>
                   <li><strong>Navegación Horizontal:</strong> Requiere seleccionar un elemento específico dentro de un
                      contenedor con barra de desplazamiento horizontal.</li>
-                  <li><strong>Curiosidad sobre Start en Horizontal:</strong> Contrario a la intuición, `start` no alinea
-                     a la izquierda, lo que puede resultar en comportamientos inesperados.</li>
                </ol>
             </div>
 
