@@ -5,14 +5,19 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <meta name="description" content="Aprende a implementar scrollIntoView para un desplazamiento suave en tu página web, manteniendo una URL limpia y mejorando la navegación.">
-   <meta name="keywords" content="scrollIntoView, desplazamiento suave, navegación en página, JavaScript, URL limpia, transiciones suaves, desarrollo web, programación frontend, experiencia de usuario">
+   <meta name="description"
+      content="Aprende a implementar scrollIntoView para un desplazamiento suave en tu página web, manteniendo una URL limpia y mejorando la navegación.">
+   <meta name="keywords"
+      content="scrollIntoView, desplazamiento suave, navegación en página, JavaScript, URL limpia, transiciones suaves, desarrollo web, programación frontend, experiencia de usuario">
    <meta name="author" content="Braulio de AprendeCode">
 
    <meta property="og:title" content="ScrollIntoView: La Clave para un Desplazamiento Suave Dentro de Tu Página Web">
-   <meta property="og:description" content="Descubre cómo usar scrollIntoView en JavaScript para mejorar la navegación en tu sitio web con un smooth scroll, manteniendo la URL limpia y optimizando la experiencia del usuario.">
-   <meta property="og:image" content="/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/images/scrollIntoView-misma-pagina.webp">
-   <meta property="og:url" content="https://www.aprendecode.com/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/">
+   <meta property="og:description"
+      content="Descubre cómo usar scrollIntoView en JavaScript para mejorar la navegación en tu sitio web con un smooth scroll, manteniendo la URL limpia y optimizando la experiencia del usuario.">
+   <meta property="og:image"
+      content="/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/images/scrollIntoView-misma-pagina.webp">
+   <meta property="og:url"
+      content="https://www.aprendecode.com/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/">
    <meta property="og:type" content="article">
 
    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
@@ -262,7 +267,145 @@
                   </pre>
                </div>
             </div>
-          
+
+            <h2>Eficiencia: Construyendo un ScrollIntoView Reutilizable</h2>
+
+            <p>
+               Comprender cómo funciona scrollIntoView y aplicarlo de manera práctica es verdaderamente fascinante. Sin
+               embargo, hay un aspecto que considero esencial: convertir este código en una herramienta reutilizable. La
+               meta es desarrollar una función que podamos emplear a lo largo de toda nuestra página web. Así que, sin
+               más preámbulos, ¡vayamos directamente al código!
+            </p>
+
+            <p>
+               Una técnica común y efectiva para lograr esto implica añadir un atributo data- a los botones o enlaces en
+               los que haremos clic. Este atributo llevará el identificador del ID del elemento al que deseamos
+               deslizarnos. Por ejemplo, en este caso, usar el atributo data-target me parece lo más adecuado. Dentro de
+               las comillas de este atributo, colocaremos el nombre del ID del elemento destino. Recordemos nuestro
+               ejemplo anterior con el ID center-option, que es precisamente el que vamos a utilizar. En mi
+               implementación personal, prefiero incluir también el signo de hash (#) en el valor. Aunque no es
+               obligatorio, esta elección influirá en cómo desarrollamos el JavaScript, así que para este ejemplo, te
+               pido que lo incluyas. Ahora, ya podemos eliminar el ID del enlace en nuestro HTML, ya que no lo
+               necesitaremos en el JavaScript. A continuación, te muestro cómo debería quedar nuestro elemento en el
+               HTML:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                  <pre>
+                       <code id="snippet10" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h3>Iniciando la Reutilización de Código con JavaScript</h3>
+            <p>
+               Ahora que hemos adaptado nuestro HTML, es momento de darle vida al JavaScript para hacer nuestro código
+               de desplazamiento suave completamente reutilizable. Lo primero que haremos es una limpieza en nuestra
+               función goToTarget. Vamos a eliminar lo que ya no necesitamos y a centrarnos en una nueva estrategia: en
+               lugar de apuntar a un solo elemento, vamos a seleccionar todos aquellos que tienen el atributo
+               data-target. Para cada uno de estos elementos, que llamaré btn, aplicaremos una función utilizando el
+               método forEach.
+            </p>
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet11">Copiar</button>
+                  <pre>
+                      <code id="snippet11" class="language-javascript">
+                      
+                      </code>
+                   </pre>
+               </div>
+            </div>
+
+            <h3>Añadiendo Dinamismo con Event Listeners</h3>
+            <p>
+               Ahora que hemos seleccionado nuestros botones, el siguiente paso es inyectarles algo de dinamismo. ¿Cómo?
+               Muy sencillo: vamos a agregar un Event Listener a cada uno. Este Event Listener estará atento al clic en
+               cada botón, y al detectarlo, activará otra función que definiremos en breve. Este enfoque nos permite
+               reaccionar específicamente a cada acción del usuario, dando vida a nuestros botones. Vamos a ver cómo se
+               ve esto en el código:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet12">Copiar</button>
+                  <pre>
+                       <code id="snippet12" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h3>Capturando el Destino con Data-Target</h3>
+            <p>
+               Dentro de nuestra función activada por el clic, el primer paso es capturar la información crucial: ¿a
+               dónde queremos desplazarnos? Esta información la tenemos guardada en el atributo data-target, que es, en
+               esencia, el ID de la sección destino. Así que, lo primero que haremos es almacenar este ID en una
+               variable. Luego, con esta variable en mano, buscamos en nuestro documento el elemento correspondiente a
+               ese ID. Para hacerte este proceso más claro y transparente, he añadido un par de console.log(). Estos nos
+               permitirán ver en la consola exactamente qué estamos capturando y a qué elemento nos estamos refiriendo.
+               Aquí te muestro cómo se ve este paso en acción:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet13">Copiar</button>
+                  <pre>
+                       <code id="snippet13" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h3>Ejecutando el Smooth Scroll de Manera Segura</h3>
+            <p>
+               Ahora que hemos identificado con éxito el elemento al que queremos desplazarnos, es hora de poner en
+               marcha la magia del scrollIntoView. Pero, antes de eso, vamos a ser precavidos. Queremos asegurarnos de
+               que el elemento realmente exista antes de intentar desplazarnos hacia él. Para ello, vamos a implementar
+               una sencilla verificación: si el elemento existe, ejecutaremos scrollIntoView; si no, mostraremos un
+               mensaje en la consola indicando que el elemento deseado no se encuentra. Esto no solo previene errores,
+               sino que también nos ayuda a depurar nuestro código en caso de que algo no funcione como esperamos.
+               Echemos un vistazo a cómo queda esto en nuestro código:
+            </p>
+
+            <div class="snippets">
+               <div class="snippet snippet-alone">
+                  <button class="copy-button" data-copy-target="#snippet14">Copiar</button>
+                  <pre>
+                       <code id="snippet14" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+               </div>
+            </div>
+
+            <h3>La Culminación: Aplicando scrollIntoView</h3>
+            <p>
+               Y llegamos al gran final de nuestro script! Una vez que hemos confirmado que el elemento objetivo existe,
+               es hora de aplicar el método scrollIntoView. Esta es la parte donde todo cobra vida. Vamos a hacer que
+               nuestro elemento se desplace suavemente hasta el centro de la pantalla, lo que proporciona una
+               experiencia de usuario muy agradable y fluida. Esta parte del código, aunque esencial, es algo que ya
+               hemos manejado anteriormente, así que la aplicaremos directamente sin mayores complicaciones. Aquí está
+               cómo lo hacemos:
+            </p>
+
+            <div class="snippets">
+                <div class="snippet snippet-alone">
+                    <button class="copy-button" data-copy-target="#snippet15">Copiar</button>
+                    <pre>
+                       <code id="snippet15" class="language-javascript">
+                       
+                       </code>
+                    </pre>
+                </div>
+            </div>
+
             <h2>Resumen sobre el Método scrollIntoView en JavaScript</h2>
             <p>
                El método <strong>scrollIntoView</strong> en JavaScript es una herramienta poderosa para mejorar la
@@ -317,7 +460,7 @@
    <script>
       const folder = 'frontend';
       const entryName = 'scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web';
-      const totalSnippets = 9;
+      const totalSnippets = 15;
       fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
    </script>
 </body>

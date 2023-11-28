@@ -1,0 +1,15 @@
+function goToTarget() {
+    document.querySelectorAll('[data-target]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetSelector = btn.getAttribute('data-target');
+            const targetElement = document.querySelector(targetSelector);
+
+            if (targetElement) {
+                // Aquí irá el código de scrollIntoView
+            } else {
+                console.error(`El elemento con el selector ${targetSelector}, no existe`);
+            }
+        });
+    });
+}
+window.addEventListener('DOMContentLoaded', goToTarget);

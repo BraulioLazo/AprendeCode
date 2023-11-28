@@ -1,0 +1,8 @@
+function goToTarget() {
+    document.querySelectorAll('[data-target]').forEach(btn => {
+        btn.addEventListener('click', () => { 
+            // Aquí viene la magia del scroll
+        });
+    });
+}
+window.addEventListener('DOMContentLoaded', goToTarget);

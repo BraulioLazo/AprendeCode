@@ -1,0 +1,6 @@
+function goToTarget() {
+    document.querySelectorAll('[data-target]').forEach(btn => {
+        // Aquí continuaremos con el desarrollo
+    });
+}
+window.addEventListener('DOMContentLoaded', goToTarget);
