@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.3';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.4';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -491,6 +491,12 @@ const snippetsFrontend = [
     '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet7.txt',
     '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet8.txt',
     '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet9.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet10.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet11.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet12.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet13.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet14.txt',
+    '/frontend/scrollintoview-la-clave-para-un-desplazamiento-suave-dentro-de-tu-pagina-web/snippets/snippet15.txt',
 ];
 
 const snippetsArduino = [

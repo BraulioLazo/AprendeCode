@@ -5,8 +5,9 @@ function goToTarget() {
             console.log(`Este es el selector que tiene el atributo data-target: ${targetSelector}`);
 
             const targetElement = document.querySelector(targetSelector);
-            console.log('Este es el elemento con este data-target: ', targetElement);
+            console.log('Este es el elemento con este selector: ', targetElement);
         });
     });
 }
-window.addEventListener('DOMContentLoaded', goToTarget);
+window.addEventListener('load', goToTarget);
+

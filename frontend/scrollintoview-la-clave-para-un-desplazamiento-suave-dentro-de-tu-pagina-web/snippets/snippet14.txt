@@ -12,4 +12,5 @@ function goToTarget() {
         });
     });
 }
-window.addEventListener('DOMContentLoaded', goToTarget);
+window.addEventListener('load', goToTarget);
+
