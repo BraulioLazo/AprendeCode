@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.6';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.1';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -522,7 +522,7 @@ const mainResources = [
     'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js'
 ];
 
-const cachingResources = [...arduinoImages, ...globalImages, ...frontendImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];
+const cachingResources = [...mainResources];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
