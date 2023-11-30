@@ -1,7 +1,0 @@
-var letras = ["A", "B", "C", "D"];
-
-function PintarElementos()
-  {
-     console.log(letras);
-  }
-PintarElementos();

@@ -1,5 +1,0 @@
-function eliminarContacto(key)
-{
-   var transaccion = bd.transaction(["Contactos"], "readwrite");
-   var almacen = transaccion.objectStore("Contactos");
-}

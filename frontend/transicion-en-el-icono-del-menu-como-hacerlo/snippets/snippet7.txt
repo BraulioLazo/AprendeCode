@@ -1,1 +1,0 @@
-lineaUno.classList.toggle("rotar_linea_uno");

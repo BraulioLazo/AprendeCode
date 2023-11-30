@@ -1,8 +1,0 @@
-void setup() {
-  // Esta función se ejecuta una vez al iniciar el programa
-}
-
-void loop() {
-  // Esta función se ejecuta continuamente después del setup
-}
-

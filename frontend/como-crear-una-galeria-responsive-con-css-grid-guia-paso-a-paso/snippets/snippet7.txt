@@ -1,3 +1,0 @@
-@media screen and (max-width: 1024px) {
-  /* Aquí vamos a ajustar el layout para tabletas */
-}

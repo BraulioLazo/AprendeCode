@@ -1,1 +1,0 @@
-var almacen = transaccion.objectStore("Contactos");

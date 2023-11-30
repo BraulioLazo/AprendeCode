@@ -1,3 +1,0 @@
-.caja_padre {
-  grid-template-columns: 1fr;
-}

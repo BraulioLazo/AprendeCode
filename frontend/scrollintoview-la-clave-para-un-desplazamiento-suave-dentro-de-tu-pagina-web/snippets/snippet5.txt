@@ -1,4 +1,0 @@
-function goToTarget() {
-    document.querySelector('#section3').scrollIntoView(true);
-}
-document.querySelector('#goToSection3').addEventListener('click', goToTarget);

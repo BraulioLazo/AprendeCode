@@ -1,3 +1,0 @@
-var lineaUno = document.querySelector(".desplegable_linea_uno");
-var lineaDos = document.querySelector(".desplegable_linea_dos");
-var lineaTres = document.querySelector(".desplegable_linea_tres");

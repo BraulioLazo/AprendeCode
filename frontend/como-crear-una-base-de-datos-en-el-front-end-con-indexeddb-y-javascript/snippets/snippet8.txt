@@ -1,4 +1,0 @@
-function CrearAlmacen(evento) {
-    var basededatos = evento.target.result;
-    var almacen = basededatos.createObjectStore("Contactos", {keyPath: "id"});
-}

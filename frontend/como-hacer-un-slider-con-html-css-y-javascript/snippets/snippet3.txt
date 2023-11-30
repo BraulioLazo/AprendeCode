@@ -1,8 +1,0 @@
-var IconoDerecho = document.querySelector(".icono-derecho");
-Contador = 0;
-
-function MoverDerecha()
-  {
-
-  }
-IconoDerecho.addEventListener("click", MoverDerecha);

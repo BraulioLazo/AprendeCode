@@ -1,3 +1,0 @@
-{
-    inline: 'center', // Opciones: 'start', 'center', 'end', 'nearest'. Por defecto: 'nearest'
-}

@@ -1,5 +1,0 @@
-window.onscroll = function()
-{
-    var menu = document.querySelector(".menu");
-    menu.classList.toggle("cambiar-fondo", window.scrollY > 0);
-}

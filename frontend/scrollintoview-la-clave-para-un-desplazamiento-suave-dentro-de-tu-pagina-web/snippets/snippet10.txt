@@ -1,4 +1,0 @@
-<div class="actions">
-    <a href="#section2" class="action-btn primary-btn">Sección 2</a>
-    <a class="action-btn secondary-btn" data-target="#center-option">Sección 3</a> <!-- Eliminamos el ID y agregamos el atributo data-target="#center-option" -->
-</div>

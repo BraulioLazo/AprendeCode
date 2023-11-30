@@ -1,7 +1,0 @@
-var bd;
-
-function IniciarBaseDatos()
-  {
-    indexedDB.open("Datos-De-Contactos");
-  }
-window.addEventListener("load", IniciarBaseDatos);

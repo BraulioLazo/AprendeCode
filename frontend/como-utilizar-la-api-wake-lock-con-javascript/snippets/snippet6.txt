@@ -1,9 +1,0 @@
-// Función para comprobar la COMPATIBILIDAD
-
-function comprobarCompatibilidad(){
-    if("wakeLock" in navigator){
-        solicitarBloqueoPantalla();
-    } else {
-        console.log("Lo siento, su navegador no es compatible con el API Wake Lock");
-    }
-}

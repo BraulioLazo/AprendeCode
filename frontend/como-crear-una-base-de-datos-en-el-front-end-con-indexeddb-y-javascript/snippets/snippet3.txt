@@ -1,6 +1,0 @@
-var bd;
-
-function IniciarBaseDatos()
-  {
-  }
-window.addEventListener("load", IniciarBaseDatos);

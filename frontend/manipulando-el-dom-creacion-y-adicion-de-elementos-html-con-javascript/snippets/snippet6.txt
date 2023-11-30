@@ -1,1 +1,0 @@
-cajaHijo.innerHTML = <div class="caja-hijo"> H </div>;

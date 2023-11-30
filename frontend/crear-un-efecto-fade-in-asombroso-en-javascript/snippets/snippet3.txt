@@ -1,1 +1,0 @@
-var elemento = document.querySelector(".elemento-oculto");

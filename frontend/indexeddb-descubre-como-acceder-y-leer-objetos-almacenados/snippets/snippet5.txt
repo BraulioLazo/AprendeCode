@@ -1,7 +1,0 @@
-function Mostrar()
-{
-   cajaContactos.innerHTML = "";
-
-   var transaccion = bd.transaction(["Contactos"]);
-   var almacen = transaccion.objectStore("Contactos");
-}
