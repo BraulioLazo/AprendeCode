@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.3';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.4';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
