@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende a ocultar y mostrar contenido en una página web utilizando JavaScript. Este tutorial completo te guiará desde el HTML y CSS básico hasta el uso avanzado de Event Listeners y condiciones if-else.">
+    <meta name="keywords" content="JavaScript, ocultar contenido, mostrar contenido, HTML, CSS, Event Listeners, NodeList, querySelectorAll, forEach, Toggle de clases, experiencia de usuario, optimización, if-else, tutorial, ejemplo de código">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="¿Cómo ocultar y mostrar contenido con JavaScript?">
+    <meta property="og:description" content="Descubre cómo implementar funciones de ocultar y mostrar contenido en tu sitio web usando JavaScript. Desde los fundamentos de HTML y CSS hasta el uso de Event Listeners y condicionales if-else.">
+    <meta property="og:image" content="/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/mujer-entendiendo-codigo-para-ocultar-mostrar-contenido-javascript.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-ocultar-y-mostrar-contenido-con-javascript">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>¿Cómo ocultar y mostrar contenido con JavaScript?</title>
+</head>
+
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¿Cómo ocultar y mostrar contenido con JavaScript?
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    ¿Será complicado <strong>ocultar y mostrar contenido en JavaScript</strong>? En realidad, no lo es
+                    en
+                    absoluto. Incluso si posees un conocimiento muy básico de JavaScript, podrás lograrlo. ¡Y si estás
+                    comenzando desde cero, no te preocupes! Al finalizar esta entrada, te garantizo que tendrás las
+                    <strong>bases suficientes</strong> para llevar a cabo esta tarea con éxito. Ahora, justo después de
+                    esta breve introducción, te proporcionaré el <strong>código HTML y CSS</strong> que servirá como
+                    punto de partida. No me detendré demasiado en explicar en detalle los estilos aplicados a las cajas,
+                    ya que son el resultado de mi estilo personal. En lugar de ello, me centraré en describir los
+                    <strong>contenedores necesarios</strong> y las <strong>clases asignadas</strong> a cada uno. Estas
+                    clases no solo se utilizarán en CSS para aplicar los estilos, sino también para lograr su
+                    funcionalidad en JavaScript.
+                </p>
+
+                <h2>Configurando Contenedores y Clases para Ocultar y Mostrar Comentarios</h2>
+                <p>
+                    He ideado este ejemplo considerando una situación en la que tengamos una <strong>sección de
+                        testimonios</strong> en nuestro sitio web, algunos de los cuales son extensos y necesitamos
+                    ocultar parte de ellos. En este escenario, he creado un <strong>contenedor principal</strong> con el
+                    identificador "caja_padre", y tres elementos hijos con la clase "comentario". Cada uno de estos
+                    elementos contiene dos párrafos: uno visible en todo momento y otro con la clase "no_mostrar", que
+                    permanecerá oculto hasta que el usuario haga clic en el <strong>botón "Ver Más"</strong>
+                    correspondiente al comentario. A continuación, te proporciono el <strong>código HTML y CSS</strong>,
+                    así como una imagen que ilustra cómo se debería ver en el navegador al ejecutar el código.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/como-ocultar-y-mostrar-contenido-con-javascript/images/ocultar-mostrar-contenido-javascript.webp"
+                        alt="Captura de pantalla del código de partida para el ejemplo de cómo ocultar y mostrar contenido con JavaScript"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Si examinas el <strong>código CSS</strong>, notarás que al párrafo con la clase "no_mostrar" le he
+                    asignado la propiedad "<strong>display: none</strong>" para ocultarlo. Además, he aplicado algunos
+                    estilos a una clase llamada "mostrar_comentario", aunque aún no la hemos utilizado. En realidad,
+                    solo le he asignado la propiedad "<strong>display: block</strong>". El objetivo es lograr que,
+                    cuando un usuario haga clic en el <strong>botón "Ver Más"</strong>, el contenido adicional del
+                    comentario se muestre. Para ello, necesitamos agregar la clase "mostrar_comentario" a la etiqueta
+                    del párrafo que tiene la clase "no_mostrar", y esto debe ocurrir en el momento preciso en que el
+                    navegador detecta el <strong>evento de clic</strong> en el botón "Ver Más".
+                </p>
+
+                <p>
+                    Con esta <strong>comprensión clara</strong> de lo que deseamos lograr, dirijámonos a nuestra
+                    <strong>hoja de JavaScript</strong> y comencemos. El primer paso es crear dos variables: una para
+                    capturar los elementos con la clase "<strong>boton</strong>" y otra para capturar los elementos con
+                    la clase "no_mostrar". La variable para los botones se definiría así
+                    (<code><strong>var boton = document. querySelectorAll(".boton")</strong></code>), y para los
+                    elementos a mostrar, así
+                    (<code><strong>var mostrarComentario = document .querySelectorAll(".no_mostrar")</strong></code>).
+                </p>
+                
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Cómo Utilizar NodeList para Manejar Varios Elementos en JavaScript</h2>
+                <p>
+                    ¿Por qué hemos optado por utilizar <strong>querySelectorAll</strong>? La razón es que deseamos que
+                    la
+                    variable contenga todas las clases que comparten el mismo nombre, creando así una <strong>lista de
+                        nodos</strong>. Si colocas un console.log y escribes el nombre de esta variable, verás cómo en
+                    la consola se despliega automáticamente un <strong>NodeList</strong> (lista de nodos) y al lado de
+                    cada nodo aparece su posición en la lista. La <strong>posición</strong> es crucial, ya que todas las
+                    clases son idénticas y, sin ella, JavaScript no podría distinguir en qué elemento el usuario ha
+                    hecho clic.
+                </p>
+
+                <p>
+                    Ahora, nuestro objetivo es <strong>recorrer esa lista de nodos</strong> (NodeList), y esto se logra
+                    con el método <strong>forEach()</strong>. Este método se encarga de ejecutar una acción para cada
+                    uno de los elementos contenidos en la lista de nodos (también podemos usarlo en arrays). Para
+                    recorrer la lista, simplemente escribimos el nombre de la variable de la lista seguido de un punto y
+                    el método forEach(). A medida que avanzamos en el <strong>código</strong>, te invito a echar un
+                    vistazo continuo para observar la <strong>sintaxis</strong> y aclarar cualquier duda. Dentro de este
+                    método, crearemos una función anónima que se encargará de recoger el elemento y su posición en la
+                    lista. Hasta este punto, el código luciría así
+                    (<code>boton.forEach(function(elemento, indice))</code>{}). El nombre que le demos a los parámetros
+                    de la función para recoger el elemento y el índice puede ser similar al que usaríamos al crear una
+                    clase, y funcionará sin problemas. Básicamente, con este código, le indicamos a JavaScript que, por
+                    cada elemento en la lista de nodos, ejecute lo que le diremos dentro de las llaves de la función.
+                    Creo que será beneficioso detenernos aquí por ahora para que asimiles mejor el contenido. En la
+                    parte inferior, encontrarás el <strong>código</strong> hasta este punto.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Añadiendo Event Listeners para Manejar Clics del Usuario</h2>
+                <p>
+                    En primer lugar, quisiera recordarte que tanto el <strong>código HTML</strong> como el
+                    <strong>CSS</strong> permanecen inalterados. Una vez que hemos incorporado el <strong>método
+                        forEach()</strong>, es el momento de crear la función. Dentro de las llaves de esta función,
+                    agregaremos un <strong>Event Listener</strong> al botón. Sin embargo, no podemos asignarlo
+                    directamente a la variable "boton", ya que JavaScript no sería capaz de identificar en cuál de los
+                    botones estamos haciendo clic. Por tanto, el Event Listener se agregará al <strong>elemento
+                        específico</strong>, de la siguiente manera:
+                    (<code>elemento. addEventListener("click", function(){})</code>). Ahora, en el interior de esa
+                    función particular, necesitamos que se añada la clase "<strong>mostrar_comentario</strong>" a la
+                    etiqueta de párrafo que ya contiene la clase "no_mostrar" desde el principio.
+                </p>
+
+                <p>
+                    Recuerda que ya habíamos almacenado otra <strong>lista de nodos</strong> en la variable
+                    "mostrarComentario". Sin embargo, si le agregáramos directamente la clase, nos encontraríamos con el
+                    mismo inconveniente que explicaba anteriormente: JavaScript no sabría en qué elemento ejecutar la
+                    función. Para garantizar que la clase se añada al <strong>elemento correcto</strong>, vamos a
+                    utilizar el <strong>índice</strong> de la variable para que JavaScript pueda identificar la posición
+                    precisa. Esto se logra así:
+                    (<code>mostrarComentario[indice] .classList.toggle ("mostrar_comentario")</code>).
+                </p>
+
+                <p>
+                    A continuación, te proporciono el <strong>código JavaScript</strong> hasta este punto. Si lo copias
+                    en tu editor, verás que ya funciona a la perfección. Sin embargo, más adelante te explicaré un
+                    detalle más que podemos mejorar para obtener un <strong>resultado aún más óptimo</strong>.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Optimiza la Experiencia de Usuario con Instrucciones 'if-else' en JavaScript</h2>
+                <p>
+                    Si has copiado el <strong>código</strong> en tu editor y estás probando su
+                    <strong>funcionalidad</strong>, es posible que hayas notado que aún podemos realizar una corrección
+                    para que el comportamiento sea aún más coherente. Me refiero al <strong>contenido del propio
+                        botón</strong>. Como podrás observar, a pesar de que ya se muestre todo el comentario, el botón
+                    sigue diciendo "Ver Más". Sin embargo, con una <strong>estructura condicional</strong> en
+                    JavaScript, podemos modificar el contenido del botón para que, cuando la caja esté completamente
+                    desplegada, se lea "Ver Menos".
+                </p>
+
+                <p>
+                    Para establecer esta <strong>condición</strong>, emplearemos las instrucciones <strong>"if"</strong>
+                    y <strong>"else"</strong>. Al utilizar solo "if", estaríamos abarcando únicamente uno de los estados
+                    posibles de dicha condición, específicamente el estado verdadero. Por ejemplo:
+                    <code>if (mostrarComentario[indice] .classList.contains ("mostrar_comentario")) { elemento.innerHTML = "Ver Menos";}</code>
+                </p>
+
+                <p>
+                    Como ya mencioné, mediante "if" solo estamos contemplando el <strong>estado verdadero</strong> de la
+                    condición. Esto significa que si la caja se expande automáticamente, el contenido del botón se
+                    cambiará a "Ver Menos". Pero, ¿qué sucede cuando la caja vuelve a su tamaño original? Aquí radica la
+                    importancia de abordar también el <strong>estado falso</strong> de la condición. Para resolver este
+                    aspecto, simplemente necesitamos añadir "else", seguido de la última llave de "if". La estructura
+                    completa se vería así: <code>else {elemento.innerHTML = "Ver Más";}</code> A continuación,
+                    proporciono el <strong>código completo</strong> para que lo examines y puedas apreciar cómo funciona
+                    en su totalidad.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Consejos Finales y Resumen</h2>
+                <p>
+                    Espero que este tutorial te haya proporcionado una visión detallada de cómo ocultar y mostrar
+                    contenido en una página web usando JavaScript. Antes de cerrar, me gustaría ofrecerte un resumen de
+                    los conceptos y pasos clave que hemos discutido hoy. Esto te ayudará a consolidar lo aprendido y te
+                    servirá como un práctico punto de referencia para futuros proyectos.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <ol>
+                        <li><strong>Introducción:</strong> Planteamos el problema de cómo ocultar y mostrar contenido,
+                            especialmente en el contexto de una sección de comentarios o testimonios.</li>
+                        <li><strong>HTML y CSS de Partida:</strong> Explicamos cómo preparar el código HTML y CSS,
+                            incluyendo contenedores y clases específicas que jugarán un rol fundamental en la
+                            funcionalidad de JavaScript.</li>
+                        <li><strong>NodeList y querySelectorAll:</strong> Introducimos el concepto de NodeList y cómo
+                            utilizar <code>querySelectorAll</code> para seleccionar múltiples elementos del DOM.</li>
+                        <li><strong>El método forEach():</strong> Mostramos cómo utilizar el método
+                            <code>forEach()</code> para iterar sobre una lista de nodos y aplicarles un conjunto de
+                            instrucciones.
+                        </li>
+                        <li><strong>Event Listeners:</strong> Aprendemos cómo agregar Event Listeners para manejar los
+                            clics del usuario en los botones de "Ver Más".</li>
+                        <li><strong>Toggle de clases con JavaScript:</strong> Implementamos la funcionalidad que alterna
+                            la visibilidad de los comentarios utilizando el método <code>classList.toggle()</code>.</li>
+                        <li><strong>Optimización con if-else:</strong> Finalmente, añadimos instrucciones condicionales
+                            para cambiar el texto del botón según el estado del comentario (oculto/mostrado).</li>
+                    </ol>
+                </div>
+
+
+                <p>
+                    Al inicio de este <strong>artículo</strong>, te mencioné que incluso si no tenías mucha experiencia
+                    con <strong>JavaScript</strong>, al concluir su lectura estarías capacitado para ocultar y mostrar
+                    contenido en este lenguaje de programación. Me complace decirte que he cumplido con esa
+                    <strong>promesa</strong>. Ha llegado el momento de despedirnos. Sinceramente espero que hayas
+                    disfrutado de este artículo y que no te vayas sin haber adquirido <strong>nuevos
+                        conocimientos</strong>. Recuerda que tienes la opción de dejar un <strong>mensaje</strong>
+                    en la pestaña contacto para cualquier consulta o, simplemente, para saludar. Si lo haces,
+                     recibiré la notificación en mi dispositivo móvil y podré responderte lo más pronto
+                    posible. Dicho esto, me despido por ahora, pero antes recuerda que soy <strong>Braulio</strong> y
+                    que esto es <strong>AprendeCode</strong>. ¡Un Abrazo!
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'como-ocultar-y-mostrar-contenido-con-javascript';
+        const totalSnippets = 5;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
+    </script>
+
+</body>
+
+</html>

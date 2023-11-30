@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Estilos.css">
+    </head>
+
+    <body>
+
+         <div id="caja_padre">
+             <div class="entrada ent_1"> Entrada 1 </div>
+             <div class="entrada ent_2"> Entrada 2 </div>
+             <div class="entrada ent_3"> Entrada 3 </div>
+             <div class="entrada ent_4"> Entrada 4 </div>
+             <div class="entrada ent_5"> Entrada 5 </div>
+             <div class="entrada ent_6"> Entrada 6 </div>
+             <div class="entrada ent_7"> Entrada 7 </div>
+             <div class="entrada ent_8"> Entrada 8 </div>
+         </div>
+
+    </body>
+</html>

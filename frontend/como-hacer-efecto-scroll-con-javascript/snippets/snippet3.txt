@@ -1,0 +1,3 @@
+window.onscroll = function() {
+    // Aquí irá el código para cambiar el color del menú
+};

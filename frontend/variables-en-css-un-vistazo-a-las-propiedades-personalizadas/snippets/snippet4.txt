@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*----------------  Declarando las Variables  ---------------------*/
+
+:root{
+      --sombra: 0px 0px 15px rgba(0,0,0,0.6);
+      --radius: 25px;
+}
+
+/*----------------  Declarando las Variables  ---------------------*/
+
+body{
+   padding: 0 30px;
+}
+
+#contenedor_principal{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    max-width: 1400px;
+    height: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    font-size: 18px;
+
+    /*----------------------  Propiedades Cambiadas  -----------------------*/
+
+    box-shadow: var(--sombra);
+    border-radius: var(--radius);
+
+    /*----------------------  Propiedades Cambiadas  -----------------------*/
+}
+
+#caja_1{
+   width: 300px;
+   height: 420px;
+   margin-right: 40px;
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+
+    box-shadow: var(--sombra);
+    border-radius: var(--radius);
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+}
+
+#caja_2{
+   width: 300px;
+   height: 420px;
+   margin-top: 80px;
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+
+    box-shadow: var(--sombra);
+    border-radius: var(--radius);
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+}
+
+#caja_3{
+   width: 300px;
+   height: 420px;
+   margin-left: 40px;
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+
+    box-shadow: var(--sombra);
+    border-radius: var(--radius);
+
+   /*----------------------  Propiedades Cambiadas  -----------------------*/
+}

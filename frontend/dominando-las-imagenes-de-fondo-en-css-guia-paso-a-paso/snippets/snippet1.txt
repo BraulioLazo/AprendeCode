@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Etilos.css">
+    <title> ¿Cómo INSERTAR una imagen de fondo en CSS? </title>
+</head>
+<body>
+
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                AprendeCode
+            </div>
+            <ul>
+                <li>Inicio</li>
+                <li>Blog</li>
+                <li>Contacto</li>
+                <li>Preguntas Frecuentes</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="seccion-uno">
+        <h1>
+            AprendeCode
+        </h1>
+        <h3>
+            UNIVERSO DIGITAL
+        </h3>
+
+        <button class="btn-uno">
+            Canal De YouTube
+        </button>
+
+        <button class="btn-dos">
+            AprendeCode Blog
+        </button>
+    </section>
+
+    <section class="seccion-dos">
+
+        <div class="caja-padre">
+
+            <div class="caja-hijo hijo-uno">
+                <h2>
+                    +497
+                </h2>
+
+                <p>
+                    Cafés Consumidos
+                </p>
+            </div>
+
+            <div class="caja-hijo hijo-dos">
+                <h2>
+                    22
+                </h2>
+                <p>
+                    Blogs
+                </p>
+            </div>
+
+            <div class="caja-hijo hijo-tres">
+                <h2>
+                    16
+                </h2>
+                <p>
+                    Videos En Youtube
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="seccion-tres"> </section>
+
+</body>
+</html>

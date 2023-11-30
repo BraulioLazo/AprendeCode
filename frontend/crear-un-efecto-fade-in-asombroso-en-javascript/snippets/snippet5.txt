@@ -1,0 +1,7 @@
+var elemento = document.querySelector(".elemento-oculto");
+
+function AparecerElemento()
+  {
+    // Código para ejecutar el efecto aquí
+  }
+window.addEventListener("scroll", AparecerElemento);

@@ -1,0 +1,82 @@
+var bd;
+var cajaContactos;
+
+
+function IniciarBaseDatos()
+  {
+    cajaContactos = document.querySelector(".caja-contactos");
+    var BtnGuardar = document.querySelector("#btn-guardar");
+    BtnGuardar.addEventListener("click", AlmacenarContacto);
+
+    var solicitud = indexedDB.open("Datos-De-Contactos");
+
+    solicitud.addEventListener("error", MostrarError);
+    solicitud.addEventListener("success", Comenzar);
+    solicitud.addEventListener("upgradeneeded", CrearAlmacen);
+  }
+
+function MostrarError(evento) 
+  {
+      var error = evento.target.error;
+      alert("Tenemos un ERROR: " + error.code + " / " + error.message);
+  }
+
+function Comenzar(evento)
+  {
+      bd = evento.target.result;
+      Mostrar();
+  }
+
+function CrearAlmacen(evento)
+  {
+      var basededatos = evento.target.result;
+      var almacen = basededatos.createObjectStore("Contactos", {keyPath: "id"});
+      almacen.createIndex("BuscarNombre", "nombre", {unique: false});
+  }
+
+function AlmacenarContacto()
+  {
+    var N = document.querySelector("#nombre").value;
+    var I = document.querySelector("#id").value;
+    var E = document.querySelector("#edad").value;
+
+    var transaccion = bd.transaction(["Contactos"], "readwrite");
+    var almacen = transaccion.objectStore("Contactos");
+    transaccion.addEventListener("complete", Mostrar)
+
+    almacen.add({
+                 nombre: N,
+                 id: I,
+                 edad: E
+               });
+
+    document.querySelector("#nombre").value = "";
+    document.querySelector("#id").value = "";
+    document.querySelector("#edad").value = "";
+  }
+
+function Mostrar()
+  {
+     cajaContactos.innerHTML = "";
+
+     var transaccion = bd.transaction(["Contactos"]);
+     var almacen = transaccion.objectStore("Contactos");
+
+     var puntero = almacen.openCursor();
+     puntero.addEventListener("success", MostrarContactos);
+  }
+
+function MostrarContactos(evento)
+  {
+     var puntero = evento.target.result;
+     if(puntero)
+       {
+         cajaContactos.innerHTML += "<div>" +
+                                           puntero.value.nombre + " / " +
+                                           puntero.value.id + " / " +
+                                           puntero.value.edad +
+                                    "</div>";
+         puntero.continue();
+       }
+  }
+window.addEventListener("load", IniciarBaseDatos);

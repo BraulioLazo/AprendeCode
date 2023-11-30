@@ -1,0 +1,5 @@
+function LimpiarStorage()
+  {
+
+  }
+BorrarDatos.addEventListener("click", LimpiarStorage);

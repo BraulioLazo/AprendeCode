@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende cómo utilizar CSS Grid para crear diseños web adaptables sin necesidad de Media Queries. Una guía completa desde cero para principiantes.">
+    <meta name="keywords" content="CSS Grid, Diseño Web, Adaptable, Responsive Design, Media Queries, AprendeCode, Tutoriales">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries.">
+    <meta property="og:description" content="Aprende cómo utilizar CSS Grid para crear diseños web adaptables sin la ayuda de Media Queries. Sumérgete en una guía completa que te llevará desde lo básico hasta técnicas avanzadas.">
+    <meta property="og:image" content="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/desarrollando-layout-css-grid.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries.</title>
+</head>
+
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    CSS Grid desde Cero: Diseños Adaptables Sin Necesidad de Media Queries
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    ¿Es posible crear un <strong>layout responsive</strong> sin recurrir a <strong>media
+                        queries</strong>? ¡Por supuesto que sí, Código-Lover! Y para lograrlo, entra en escena
+                    <strong>CSS Grid</strong>. En este blog, vamos a partir desde cero para construir un layout
+                    utilizando CSS Grid y llevarlo hasta su versión responsive. No te preocupes si esta es tu primera
+                    incursión en el tema, voy a guiarte paso a paso para que no te quedes con ninguna pregunta sin
+                    respuesta. Lo primero que necesitas hacer para comenzar a establecer tu <strong>sistema
+                        grid</strong> es declarar un <strong>contenedor (caja padre)</strong> junto con las
+                    <strong>cajas hijos</strong> en tu hoja de HTML. En esta ocasión, solo utilizaremos ocho cajas hijo.
+                    Asignaré un <strong>id</strong> al contenedor y dos clases a las cajas hijo. La primera clase se
+                    llamará '<strong>entrada</strong>', que será igual para todas. La segunda clase se nombrará
+                    '<strong>ent_</strong>' seguido del número correspondiente a cada una. Esto nos permitirá trabajar
+                    con cajas específicas si llegamos a necesitarlo.
+
+                </p>
+                <p>
+                    Ahora que hemos definido las <strong>cajas en HTML</strong>, es momento de dirigirnos a
+                    <strong>CSS</strong> para darles estilo. El <strong>contenedor padre</strong> tendrá un ancho del
+                    90% (<strong>width</strong>), un margen de 40px tanto arriba como abajo, márgenes automáticos a los
+                    lados para mantenerlo centrado, un padding, una sombra y un fondo blanco. En cuanto a las
+                    <strong>cajas hijo</strong>, simplemente les añadiré un fondo blanco, texto centrado, <strong>bordes
+                        redondeados (border-radius)</strong> y padding. Estos son estilos que se utilizan comúnmente,
+                    así que no me detendré a explicarlos uno por uno. A partir de este código que te proporcionaré a
+                    continuación, comenzaremos a dar forma al <strong>layout con CSS Grid</strong>. También adjuntaré
+                    una imagen para que puedas echar un vistazo, incluso si no estás frente a tu ordenador.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-layout.webp"
+                        alt="Diseño de la retícula con CSS Grid" loading="lazy" decoding="async">
+                </div>
+
+                <h2>Primeros Pasos con CSS Grid: Construyendo tu Layout</h2>
+                <p>
+                    Antes de adentrarnos en el fascinante mundo de los <strong>layouts con CSS Grid</strong>, quiero
+                    aclarar un detalle importante. En el código que vas a ver, he utilizado <strong>variables</strong>
+                    porque me encanta trabajar con ellas. Si aún no estás familiarizado con el concepto de
+                    <strong>Variables en CSS</strong>, te invito a echar un vistazo a este blog: 
+                    <a href="/frontend/variables-en-css-un-vistazo-a-las-propiedades-personalizadas/" target="_blank">Variables en CSS:
+                    Un Vistazo a las Propiedades Personalizadas.</a> Te prometo que comprender su funcionamiento es
+                    realmente sencillo,
+                    ¡vale la pena descubrirlo!
+                </p>
+                <p>
+                    Ahora sí, vamos de lleno a explorar el emocionante mundo del <strong>layout con CSS Grid</strong>.
+                    Lo primero que debes hacer es declarar el <strong>contenedor</strong>, también conocido como la caja
+                    padre. Para ello, utiliza la propiedad '<strong>display</strong>' con el valor
+                    '<strong>grid</strong>'. A partir de este punto, comenzamos a construir la estructura de nuestra
+                    <strong>retícula</strong>. Ten presente que CSS Grid se basa en <strong>filas y columnas</strong>.
+                    Para diseñar tu retícula, define cuántas columnas y filas deseas en tu layout. Por ejemplo, en este
+                    caso he optado por 4 columnas y 2 filas. Para establecer las columnas, emplea la propiedad
+                    '<strong>grid-template-columns</strong>'; mientras que para las filas, usa
+                    '<strong>grid-template-rows</strong>'. Dentro de estas propiedades, declara las medidas de cada
+                    columna o fila que necesites. Si, por ejemplo, deseas que haya 4 columnas con un ancho del 25% cada
+                    una, la declaración sería así: 'grid-template-columns: 25% 25% 25% 25%'. El proceso es idéntico para
+                    las filas. Dado que tenemos 8 cajas en total, solo necesitamos definir dos filas, lo que quedaría
+                    así: 'grid-template-rows: 200px 200px'. Además, puedes combinar estas dos propiedades en una sola
+                    utilizando '<strong>grid-template</strong>'. Al hacerlo, primero especifica las filas necesarias y
+                    luego, separadas por una barra diagonal, las columnas deseadas. Si copias y pegas los valores de las
+                    propiedades anteriores, obtendrás exactamente el mismo resultado en tu diseño.
+
+                </p>
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+                <h2>¿Cómo Funciona 'gap'? Distancias y Margenes en CSS Grid.</h2>
+                <p>
+                    Con las filas y columnas definidas, es hora de darles un poco de espacio. Por defecto, estas se
+                    encuentran <strong>completamente ajustadas</strong>, pero vamos a solucionarlo utilizando la
+                    propiedad <strong>'gap'</strong>. (Cabe mencionar que anteriormente se empleaba
+                    <strong>'grid-gap'</strong>, pero ha quedado en desuso. Si deseas profundizar en este tema, te
+                    recomiendo este tutorial:  <a href="https://youtu.be/3rv3FLUL7Ek?si=Un4eZUCrqGOQBh1H" target="_blank" rel="noopener noreferrer">
+                    CSS Grid: ¿Cómo declarar filas y columnas?</a>) Esta propiedad admite
+                    <strong>dos valores</strong>: el primero determina el <strong>margen horizontal</strong> y el
+                    segundo el <strong>margen vertical</strong>. Si proporcionas solo un valor, este será aplicado en
+                    ambos lados. Personalmente, he decidido asignar un margen de 20px. Ahora, es importante detenernos
+                    aquí para que puedas comprender qué ocurre cuando aplicamos este margen. Verás que surge un
+                    <strong>pequeño inconveniente</strong> en nuestro diseño. En el código que te proporcionaré más
+                    adelante, encontrarás ejemplos de cómo declarar filas y columnas, lo que te ayudará a entender mejor
+                    la <strong>sintaxis y la dinámica</strong> de este proceso.
+
+                </p>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-gap.webp"
+                        alt="Ajuste de espacio con la propiedad gap en CSS Grid" loading="lazy" decoding="async">
+                </div>
+
+                <p>
+                    Primero, quiero señalarte que en el código te proporcioné un <strong>comentario</strong> para que
+                    puedas comprender de manera clara los dos ejemplos. Si así lo deseas, puedes eliminar sin
+                    preocupación las dos primeras líneas, y notarás que la estructura se mantiene inalterada. Ahora
+                    bien, como has observado en la imagen o en tu propia pestaña del navegador si copiaste el código,
+                    las <strong>cajas hijas sobresalen del contenedor padre</strong>. Este fenómeno ocurrió después de
+                    agregar el <strong>"gap"</strong>. ¿A qué se debe este comportamiento? Resulta que, aunque
+                    estemos familiarizados con el uso de porcentajes para que la estructura se ajuste a distintos
+                    tamaños de ventana, en <strong>CSS Grid</strong> las cosas funcionan de manera diferente. En
+                    realidad, el "gap" de 20px se suma al 25% de cada caja. Esto implica que al final superamos el
+                    <strong>100% de ancho total</strong>, lo que resulta en que la última caja se
+                    <strong>desborde</strong> del contenedor.
+                </p>
+
+                <h2>La Revolucionaria Unidad "fr": Entendiendo las Fracciones en CSS Grid</h2>
+                <p>
+                    Para trabajar con <strong>CSS Grid</strong>, contamos con una unidad que presenta similitudes con la
+                    propiedad <strong>"flex"</strong> en las cajas flexibles. Esta unidad se denomina
+                    <strong>"fr"</strong> (fracción). En lugar de especificar que cada columna ocupe un 25%, emplearemos
+                    "<strong>1fr</strong>". En términos más simples, esto implica que cada columna ocupará una fracción
+                    del espacio disponible. En este contexto, obtendremos el mismo resultado que cuando usamos
+                    porcentajes, pero <strong>evitando el problema</strong> que enfrentamos anteriormente. Si te surge
+                    alguna pregunta respecto a cómo se declara, puedes revisar el código que te proporciono después
+                    del siguiente párrafo y luego proseguir con la lectura.
+                </p>
+
+                <h2>¿Repitiendo Columnas y Filas? Conoce la Función "repeat"</h2>
+                <p>
+                    ¡Bien! Ahora que hemos <strong>establecido las filas y las columnas</strong>, y resuelto el
+                    problema, quiero presentarte una forma más concisa para declararlas. En lugar de agregar columnas
+                    una por una, como hicimos en ejemplos anteriores, podemos emplear la función
+                    <strong>"repeat()"</strong>. Esta función acepta dos parámetros: el primero indica cuántas veces
+                    deseamos repetir y el segundo, separado por una coma, establece el valor a repetir. Para las
+                    columnas, podríamos utilizar "<strong>repeat(4, 1fr)</strong>", mientras que para las filas, sería
+                    "<strong>repeat(2, 200px)</strong>". Además, es relevante saber que el segundo parámetro, es decir,
+                    el valor a repetir, puede contener varios valores. Por ejemplo, podríamos indicar que se repita dos
+                    veces una columna de 200px y luego otra de 1fr, obteniendo un total de cuatro columnas: dos de cada
+                    tipo. A continuación, encontrarás ejemplos que ilustran todas estas posibilidades.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-repeat.webp"
+                        alt="Uso de la función repeat() en CSS Grid para declarar filas y columnas de manera concisa"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Maestría en Posicionamiento: Alineando Elementos con CSS Grid</h2>
+                <p>
+                    Ahora que hemos establecido la estructura básica, es momento de <strong>adentrarnos en el
+                        posicionamiento de las cajas</strong>. En este ejemplo, vamos a tratar con cajas de igual
+                    tamaño. Sin embargo, antes de sumergirnos en el posicionamiento en sí, hay un <strong>concepto
+                        crucial</strong> que necesitas comprender. Te lo ilustro en la siguiente imagen. Para lograr un
+                    posicionamiento preciso de las cajas, es fundamental entender cómo funcionan las <strong>líneas en
+                        la cuadrícula</strong>. En la imagen, observarás que cada línea que divide las cajas está
+                    numerada. Si nos enfocamos en las columnas, notaremos que comienzan con el número 1 desde la
+                    izquierda y avanzan hasta la última línea, marcada como 5. Lo mismo sucede con las filas: en la
+                    parte superior e izquierda, encontramos la línea 1, mientras que en la esquina inferior izquierda,
+                    aparece la línea 3. Así es también desde la perspectiva opuesta, aunque en este caso los números son
+                    negativos. No te preocupes por los <strong>valores negativos</strong>, te explicaré su uso más
+                    adelante para que todo quede claro.
+
+                </p>
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-lineas.webp"
+                        alt="Concepto de líneas en la cuadrícula de CSS Grid para lograr un posicionamiento preciso de las cajas"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>"grid-column": Una Herramienta Esencial para Manejar Columnas</h2>
+                <p>
+                    Ahora que tenemos en mente los números que representan las líneas, podemos empezar a desplazar la
+                    <strong>"entrada 1"</strong> hacia la posición de la <strong>"entrada 2"</strong>. Para lograr esto,
+                    utilizaremos la propiedad <strong>"grid-column-start"</strong>. Para modificar específicamente la
+                    posición de la "entrada 1", utilizaremos la segunda clase que habíamos definido anteriormente, es
+                    decir, <strong>"ent_1"</strong>. En esta clase, añadiremos la propiedad mencionada y asignaremos el
+                    número de la línea desde donde deseamos que inicie, en este caso, el número 2. La declaración se
+                    vería así: <strong>"grid-column-start: 2;"</strong>. Con este ajuste, notarás cómo la "entrada 1" se
+                    desplaza a la posición de la "entrada 2". Sin embargo, esto es solo el comienzo.
+                </p>
+                <p>
+                    También tenemos la posibilidad de indicar que la caja ocupe más de un espacio. Para lograrlo,
+                    debemos utilizar dos propiedades: la primera, que ya te he mostrado, determina dónde comienza la
+                    caja; la segunda es <strong>"grid-column-end"</strong>, que especifica dónde termina. En este caso,
+                    para que la "entrada 1" ocupe dos espacios, debería finalizar en la línea 4. Así que el valor que
+                    emplearemos en la segunda propiedad será <strong>"grid-column-end: 4;"</strong>. Es importante saber
+                    que estas dos propiedades pueden abreviarse en una sola, utilizando <strong>"grid-column"</strong>.
+                    El primer valor indicará el inicio, el segundo el final y se separan por una barra diagonal. Puedes
+                    observar este código en el comentario que he dejado en el código fuente. Si lo deseas, échale un
+                    vistazo y continúa con la lectura.
+                </p>
+
+                <h2>
+                    "grid-row": Diseño Vertical en CSS Grid.
+                </h2>
+                <p>
+                    Hasta ahora, hemos logrado mover la caja de posición y hacer que ocupe más espacio en las columnas.
+                    Ahora, vamos a expandirla verticalmente, es decir, que abarque más de una fila. Aunque las
+                    propiedades a utilizar son diferentes, la sintaxis es exactamente la misma. Para definir dónde
+                    comienza nuestra caja en términos de filas, usaremos la propiedad <strong>"grid-row-start"</strong>.
+                    Por otro lado, para indicar dónde termina, recurrimos a <strong>"grid-row-end"</strong>. Estas dos
+                    propiedades pueden ser combinadas en <strong>"grid-row"</strong>, que sigue la misma estructura que
+                    las propiedades de columnas. Es importante señalar que la sintaxis es idéntica a las propiedades de
+                    columnas, aunque con el enfoque en filas. Todos estos conceptos están ilustrados en los ejemplos de
+                    código que te proporciono a continuación, separados por comentarios para que no quede ninguna duda.
+                    Primero, encontrarás los ejemplos y las imágenes; después, resolveremos un pequeño problema que
+                    notarás en la siguiente imagen.
+
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-row-column.webp"
+                        alt="Ilustración de las propiedades de filas y columnas en CSS Grid para definir el posicionamiento de las cajas en la cuadrícula"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2> Creando Filas Dinámicas con "grid-auto-rows" </h2>
+                <p>
+                    Ahora, quiero aprovechar la oportunidad para abordar el tema de los <strong>números
+                        negativos</strong> en las líneas, ya que te he explicado cómo posicionar elementos utilizando
+                    números positivos. De hecho, cuando trabajamos con números positivos o negativos, en última
+                    instancia, la metodología es la misma. Simplemente es crucial estar atentos a qué número corresponde
+                    a la línea de inicio de tu elemento y cuál se asigna a su línea final. Más allá de esta distinción,
+                    no existe ninguna diferencia en su aplicación.
+                </p>
+                <p>
+                    Hasta ahora, hemos logrado cambiar la posición de una de las cajas e incluso ampliar su ocupación a
+                    lo largo de 4 espacios. Sin embargo, al hacer que una caja abarque 4 espacios, las demás cajas se
+                    ven obligadas a ajustarse, lo que a menudo puede resultar en la creación de una nueva fila. Este es
+                    un comportamiento predeterminado de <strong>CSS Grid</strong>. Sin embargo, tenemos la capacidad de
+                    modificar este comportamiento mediante la propiedad <strong>"grid-auto-flow"</strong>. Por defecto,
+                    su valor es <strong>"row"</strong> (filas). Aunque técnicamente puedes cambiarlo para que en lugar
+                    de crear filas, se generen columnas de manera automática, personalmente, encuentro que esta opción
+                    no es muy útil. Después de todo, tenemos un límite de ancho en la pantalla, mientras que en la
+                    dirección vertical, prácticamente no hay restricciones de espacio.
+                </p>
+                <p>
+                    Adicionalmente, contamos con la propiedad <strong>"grid-auto-rows"</strong> que nos permite ajustar
+                    la altura de estas filas automáticas. Dado que hemos asignado una altura de 200px a las filas, ese
+                    mismo valor se utilizará en esta nueva propiedad. Esto resuelve eficazmente el problema que habíamos
+                    enfrentado. Vale la pena destacar que <strong>"grid-auto-rows"</strong> debe aplicarse en el
+                    contenedor padre, ya que es este el que define la estructura de la retícula.
+                </p>
+
+                <h2>El Arte del Posicionamiento: Cómo Utilizar el Comando "span"</h2>
+                <p>
+                    Permíteme retroceder un paso y retomar el tema del <strong>posicionamiento</strong>. En el contexto
+                    de <strong>CSS Grid</strong>, una herramienta valiosa es la palabra clave <strong>"span"</strong>,
+                    la cual hace referencia a la extensión de espacio. Permíteme explicarte cómo funciona: en nuestra
+                    retícula actual, hemos posicionado la "entrada 1" para que se inicie en la línea 2 y concluya en la
+                    línea 4 en términos de columnas. En lugar de hacerlo de esta manera, podríamos utilizar la palabra
+                    <strong>"span"</strong> para lograr el mismo resultado. Es decir, podríamos decirle a la "entrada 1"
+                    que comience en la línea 2 y que abarque dos <strong>"span" (span 2)</strong>. Como puedes ver,
+                    dentro de los paréntesis, escribimos primero la palabra "span" y luego el número de espacios que
+                    deseamos ocupar. Alternativamente, podríamos indicar dónde queremos que termine, como en la línea 4,
+                    y que ocupe dos espacios previos a dicha línea. A continuación, en el código que te proporciono,
+                    encontrarás ejemplos de ambos casos. Uno define dónde inicia en términos de columnas y luego ocupa
+                    dos "span". El segundo ejemplo hace referencia a las filas; aquí, primero le decimos que ocupe dos
+                    <strong>"span"</strong> y luego que finalice en la línea 3. Te invito a revisar el código y la
+                    imagen para comprender las propiedades finales que harán que este diseño sea <strong>completamente
+                        responsive</strong> sin la necesidad de utilizar <strong>Media Queries</strong>.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-span.webp"
+                        alt="Ilustración de cómo utilizar la palabra clave 'span' para definir el posicionamiento y extensión de cajas en CSS Grid"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Máxima Flexibilidad con Auto-Fill: La Magia de las Dimensiones en CSS Grid</h2>
+                <p>
+                    En este ejemplo, he optado por declarar todas las cajas con <strong>dimensiones idénticas</strong>.
+                    Las filas mantendrán una altura de 200px, mientras que las columnas adoptarán un enfoque diferente.
+                    Utilizaré nuevamente la función <strong>"repeat()"</strong> para definir cuatro columnas, pero en
+                    esta ocasión, en lugar de asignar una fracción (1fr) a cada una, estableceré un <strong>ancho fijo
+                        de 300px</strong>. Como podrás intuir, al llevar a cabo esta acción, la estructura adquirirá una
+                    <strong>rigidez absoluta</strong>. Al modificar el tamaño de la ventana del navegador, notarás que
+                    el contenedor principal se contrae o expande, pero las cajas hijas conservan sus <strong>dimensiones
+                        inmutables</strong>.
+                </p>
+                <p>
+                    No obstante, cuando nos enfocamos en desarrollar una <strong>estructura responsive</strong>, la
+                    situación cambia radicalmente, ya que nuestro objetivo es permitir que las cajas se ajusten
+                    automáticamente y, en algunos casos, se apilen una encima de otra. Para lograrlo, reemplazaremos el
+                    primer parámetro de la función <strong>"repeat()"</strong> con el valor
+                    <strong>"auto-fill"</strong>. Tan solo al implementar este ajuste, observarás cómo las cajas adoptan
+                    un comportamiento similar al de los elementos flotantes cuando les indicamos que floten hacia la
+                    izquierda. Sin embargo, a pesar de este cambio, las dimensiones de las cajas permanecen invariables,
+                    manteniéndose en 300px.
+                </p>
+                <p>
+                    Si deseamos <strong>flexibilidad</strong> en las dimensiones, será necesario un enfoque diferente,
+                    el cual abordaremos en las siguientes secciones para lograr un <strong>diseño verdaderamente
+                        adaptable</strong>.
+                </p>
+
+                <h2>Minmax(): Dominando las Dimensiones Dinámicas en Grid</h2>
+                <p>
+                    Finalmente, para lograr la <strong>autorredimensión</strong> de estas cajas, solo falta un pequeño
+                    ajuste. Es el momento de introducir una nueva función: <strong>"minmax()"</strong>. Esta función
+                    reemplazará el segundo parámetro de la función <strong>"repeat()"</strong>. Si alguna duda persiste,
+                    no dudes en revisar el código que se encuentra a continuación para obtener más claridad. La función
+                    <strong>"minmax()"</strong>, como su nombre sugiere, implica "mínimo" y "máximo". Por ende, el
+                    primer parámetro establece el <strong>ancho mínimo</strong> que nuestras cajas mantendrán, mientras
+                    que el segundo parámetro dicta el <strong>ancho máximo</strong>. Para este caso, especificaré un
+                    ancho mínimo de 300px y un ancho máximo de 1fr. Con esta configuración, permitiremos que las cajas
+                    crezcan hasta ocupar todo el espacio disponible en función de las limitaciones que establecimos.
+                    Como siempre, te invito a revisar el código y la imagen para visualizar cómo se manifiesta esta
+                    <strong>retícula</strong> en la práctica.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet11">Copiar</button>
+                        <pre>
+                           <code id="snippet11" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet12">Copiar</button>
+                        <pre>
+                           <code id="snippet12" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries/images/css-grid-minmax.webp"
+                        alt="Representación gráfica de la función 'minmax()' en CSS Grid, permitiendo la autorredimensión de cajas dentro de la cuadrícula."
+                        loading="lazy" decoding="async">
+                </div>
+                <p>
+                    Antes de llegar al final, he sintetizado todo lo que hemos abordado en este extenso artículo sobre
+                    <strong>CSS Grid</strong> en un breve resumen. Si alguna vez necesitas refrescar tu memoria sobre un
+                    concepto específico, aquí tendrás un <strong>recordatorio rápido y conciso</strong>:
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>Resumen de lo que hemos cubierto hoy:</h3>
+                    <ol>
+                        <li><strong>Concepto Básico:</strong> Introducción a las líneas del Grid y cómo definir áreas
+                            con nombres.</li>
+                        <li><strong>Posicionamiento con Span:</strong> Aprende a utilizar la palabra clave "span" para
+                            controlar la extensión y posicionamiento de tus elementos dentro de la retícula.</li>
+                        <li><strong>Valor Auto-Fill:</strong> Un enfoque para crear diseños adaptables en los que los
+                            elementos se ajustan automáticamente según el espacio disponible, sin necesidad de Media
+                            Queries.</li>
+                        <li><strong>Función Minmax():</strong> Una herramienta poderosa que te permite definir
+                            dimensiones dinámicas, estableciendo valores mínimos y máximos para un adaptativo óptimo.
+                        </li>
+                        <li><strong>Diseño Responsivo:</strong> Observación de cómo estas técnicas hacen que el diseño
+                            sea completamente adaptable, sin depender de Media Queries.</li>
+                    </ol>
+                </div>
+
+                <h2>Hasta la Próxima, Código-Lovers: Un Vistazo Final al Viaje de CSS Grid</h2>
+                <p>
+                    Si copias el código anterior en tu editor, con toda confianza achica la pestaña del navegador y
+                    verás como la estructura es totalmente <strong>responsive</strong>. Las cajas nunca tienen menos de
+                    300px, se redimensionarán y colocarán en bloque cuando sea necesario. Así que sin más, hasta aquí ha
+                    llegado este blog. Aún hay mucho más que aprender de <strong>CSS Grid</strong> pero realmente está
+                    sumamente largo este blog, así que eso quedará para los siguientes. Espero de corazón que lo hayas
+                    disfrutado y no te vayas sin haber aprendido algo. Bueno pues sin más, recuerda que mi nombre es
+                    <strong>Braulio</strong> y que esto es <strong>AprendeCode</strong>. ¡Un Abrazo!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'css-grid-desde-cero-disenos-adaptables-sin-necesidad-de-media-queries';
+        const totalSnippets = 12;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

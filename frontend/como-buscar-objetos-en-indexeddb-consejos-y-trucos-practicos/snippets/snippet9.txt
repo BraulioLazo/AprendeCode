@@ -1,0 +1,14 @@
+function mostrarBusqueda(evento) {
+  var resultadoBusqueda = document.querySelector(".resultado-busqueda");
+
+  var puntero = evento.target.result;
+  if(puntero)
+  {
+    resultadoBusqueda.innerHTML += "<div>" +
+                                      puntero.value.nombre + " / " +
+                                      puntero.value.id + " / " +
+                                      puntero.value.edad +
+                                   "</div>";
+    puntero.continue();
+  }
+}

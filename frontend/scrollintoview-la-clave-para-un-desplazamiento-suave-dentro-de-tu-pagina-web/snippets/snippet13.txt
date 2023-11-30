@@ -1,0 +1,13 @@
+function goToTarget() {
+    document.querySelectorAll('[data-target]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetSelector = btn.getAttribute('data-target');
+            console.log(`Este es el selector que tiene el atributo data-target: ${targetSelector}`);
+
+            const targetElement = document.querySelector(targetSelector);
+            console.log('Este es el elemento con este selector: ', targetElement);
+        });
+    });
+}
+window.addEventListener('load', goToTarget);
+

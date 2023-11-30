@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Aprende a acceder y leer objetos almacenados en IndexedDB. Descubre cómo la función MostrarContacto puede ayudarte a visualizar tus datos y cómo editar la información de los contactos en futuras actualizaciones.">
+    <meta name="keywords"
+        content="IndexedDB, leer objetos, almacenamiento, función MostrarContacto, puntero, almacén, cajaContactos, puntero.value, editar objetos, método continue(), base de datos, almacén de objetos, puntero.target, editar información, lista de contactos, mostrar contactos, actualizar lista">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="IndexedDB: Descubre cómo acceder y leer OBJETOS almacenados">
+    <meta property="og:description"
+        content="Aprende a acceder y leer objetos almacenados en IndexedDB. Descubre cómo la función MostrarContacto puede ayudarte a visualizar tus datos y cómo editar la información de los contactos en futuras actualizaciones.">
+    <meta property="og:image"
+        content="/frontend/indexeddb-descubre-como-acceder-y-leer-objetos-almacenados/images/Desarrolladores-asombrados-indexeddb.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/indexeddb-descubre-como-acceder-y-leer-objetos-almacenados/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>IndexedDB: Descubre cómo acceder y leer OBJETOS almacenados</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    IndexedDB: Descubre cómo acceder y leer OBJETOS almacenados
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    En <strong>blogs anteriores</strong>, hemos explorado la apertura de la <strong>Base de
+                        Datos</strong> y cómo comenzar a almacenar objetos, en este caso, contactos. Sin embargo, en
+                    esta ocasión, nos enfocaremos en cómo <strong>acceder a los datos almacenados</strong>. En el
+                    ejemplo que estamos desarrollando, una lista de contactos, deseamos mostrar en pantalla la
+                    <strong>lista de contactos almacenados</strong>. Este proceso se llevará a cabo de manera que, cada
+                    vez que se agregue un nuevo contacto, se muestre automáticamente en la lista, así como al cargar la
+                    ventana del navegador.
+                </p>
+
+                <h2>¿Qué son los Cursores en la API IndexedDB?</h2>
+                <p>
+                    Para acceder a la información almacenada en la <strong>Base de Datos</strong>, es esencial
+                    comprender el concepto de "<strong>cursores</strong>". Un cursor es la herramienta que nos permite
+                    navegar a través de la información almacenada en la Base de Datos. Para una analogía simple,
+                    podríamos compararlo con el <strong>puntero de un mouse</strong>. Al igual que el puntero nos
+                    permite navegar por la web y seleccionar elementos específicos para hacer clic, el cursor en
+                    <strong>IndexedDB</strong> lee los objetos dentro del almacén y genera un puntero. Este puntero
+                    apunta a un objeto a la vez, lo que nos permite mostrar, editar o realizar cualquier acción
+                    necesaria en ese objeto en particular.
+                </p>
+                <p>
+                    Si esta explicación aún no está del todo clara, no te preocupes, ya que iremos <strong>adentrándonos
+                        en los detalles</strong> más adelante. Por ahora, aquí tienes el <strong>código de
+                        partida</strong>. Incluso si has estado siguiendo el orden de los blogs anteriores, necesitas
+                    copiar este código inicial, ya que he realizado algunos cambios en el <strong>HTML</strong> y el
+                    <strong>CSS</strong>.
+                </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Código de partida: HTML y CSS</h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código de partida: JavaScript</h2>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Configuración Inicial y Contexto</h2>
+                <p>
+                    Antes de continuar quería decirte que este blog está disponible pero en formato video en nuestro
+                    canal de YouTube y te lo dejo por
+                    <a href="https://youtu.be/Qyb-JsSruPU?si=VSCvjVMWT-0zG4ft" target="_blank"
+                        rel="noopener noreferrer">AQUÍ</a>.
+                </p>
+                <p>
+                    Dentro del <strong>código JavaScript</strong>, lo primero que haremos es almacenar en una variable
+                    el
+                    contenedor donde mostraremos la <strong>lista de contactos</strong>. Declaramos esta variable en el
+                    ámbito global con el nombre de "<strong>cajaContactos</strong>", pero la asignamos dentro de la
+                    función "<strong>IniciarBaseDatos</strong>". Este contenedor está identificado con la clase
+                    "<strong>caja-contactos</strong>", y puedes ver esta modificación en el código a continuación. No es
+                    necesario entrar en detalles en este momento, pero es importante estar al tanto de los
+                    <strong>cambios que realizamos en el código</strong>.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="" loading="lazy" decoding="async" alt="">
+                </div>
+
+                <h2>Creando y Configurando la Función "Mostrar"</h2>
+                <p>
+                    Ya estamos listos para comenzar a trabajar en la función que mostrará la <strong>lista de
+                        contactos</strong>. Dirígete al final del código y declara la función
+                    "<strong>Mostrar</strong>". En esta función, lo primero que haremos es borrar el contenido de la
+                    <strong>caja de contactos</strong>, ya que por defecto contiene un mensaje que indica que aún no hay
+                    contactos.
+                </p>
+                <p>
+                    Ahora, como aprendimos en el blog anterior, todas las acciones que involucran información de la
+                    <strong>Base de Datos</strong> se consideran <strong>transacciones</strong>. Por lo tanto,
+                    necesitamos indicar en qué almacén realizaremos la transacción, especificar el tipo de transacción y
+                    abrir el almacén para acceder a los <strong>datos almacenados</strong>. No es necesario explicar
+                    cada paso, ya que es igual a lo que vimos en el blog anterior. La única diferencia es que, al ser
+                    una transacción de solo lectura (<strong>readonly</strong>), no es necesario especificar este tipo,
+                    ya que se tomará como el tipo de transacción predeterminado. Si tienes alguna duda sobre cómo
+                    realizar una transacción, puedes consultar este
+                    <a href="/frontend/indexeddb-y-el-arte-de-almacenar-objetos-todo-lo-que-necesitas-saber/"
+                        target="_blank"> enlace</a>. Además, a continuación, te dejo la función hasta este punto.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Apertura y Uso del Cursor con openCursor()</h2>
+                <p>
+                    Como mencioné anteriormente, para poder navegar a través de los datos almacenados en la <strong>Base
+                        de Datos</strong>, necesitamos abrir un <strong>cursor</strong>. Aquí es donde comenzamos a
+                    trabajar con el método "<strong>openCursor()</strong>". Pero, ¿cómo lo abrimos? En primer lugar,
+                    declaramos una variable llamada "<strong>puntero</strong>" (var puntero =). Luego, mencionamos la
+                    variable "<strong>almacén</strong>", ya que queremos abrir el cursor dentro de ese almacén
+                    específico, y finalmente, le pasamos el método mencionado anteriormente. Esto se vería de la
+                    siguiente manera: "var puntero = almacen.openCursor()". Ahora tenemos el cursor abierto y estamos
+                    listos para mostrar la información almacenada en la Base de Datos.
+                </p>
+                <p>
+                    Sin embargo, para lograr esto, necesitamos agregar un <strong>Event Listener</strong> a la variable
+                    "puntero" que responda al evento "<strong>SUCCESS</strong>" y que luego ejecute una función llamada
+                    "<strong>MostrarContactos</strong>". Esto se logra de la siguiente manera:
+                    "puntero.addEventListener('success', MostrarContactos)". Con esta línea de código, le indicamos que,
+                    en cuanto tengamos éxito en la apertura del cursor, se ejecute la función "MostrarContactos". A
+                    continuación, te dejo la función completa hasta este punto, y continuaremos más adelante.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Accediendo a la Información: Leer Objetos Almacenados</h2>
+                <p>
+                    La función <strong>MostrarContacto</strong> es más sencilla de lo que parece. Comenzamos declarando
+                    la función y, una vez dentro, nos aseguramos de recoger el <strong>evento</strong>, ya que todo lo
+                    que hagamos aquí estará relacionado con él. Hasta ahora, nuestra función luce así: (function
+                    MostrarContacto(evento){}). A continuación, lo primero que hacemos es almacenar el evento en una
+                    variable, que en este caso llamaremos '<strong>puntero</strong>'. Para hacerlo, simplemente
+                    utilizamos la misma técnica que hemos empleado en funciones anteriores, como la función
+                    <strong>Comenzar</strong>. Así es como se ve hasta ahora: var puntero = evento.target.result.
+                </p>
+                <p>
+                    El segundo y último paso en esta función implica abrir una condición que verifique si el puntero
+                    existe dentro del <strong>almacén</strong>. Si existe, procedemos a mostrar los contactos en el
+                    contenedor <strong>cajaContactos</strong>. Te dejo el código hasta este punto a continuación. Pero
+                    antes, déjame aclarar un detalle: cuando modificamos el contenido de cajaContactos, utilizamos el
+                    operador <strong>+=</strong>. Esto se debe a que, si utilizamos simplemente el signo de igual, cada
+                    vez que actualizamos el <strong>DOM</strong> para mostrar un nuevo contacto, eliminaríamos el
+                    anterior. Esto daría como resultado que, en lugar de tener una lista de contactos, solo veríamos el
+                    último de la lista. Ahora, aquí tienes el código para revisar y continuar más abajo.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Extracción de Valores desde el Puntero</h2>
+                <p>
+                    Como mencioné antes, el <strong>puntero</strong> solo apunta a un objeto a la vez. Imagina que el
+                    primer contacto es <strong>Braulio</strong>, con un <strong>ID de 101</strong> y una <strong>edad de
+                        31 años</strong>. Cada uno de estos valores se almacena en una propiedad específica, como vimos
+                    en el blog anterior. Acceder a estos valores es realmente sencillo. Permíteme explicarlo con el
+                    ejemplo del nombre. Supongamos que deseas conocer el nombre del contacto en la posición actual del
+                    puntero. Aquí tienes la sintaxis y una explicación detallada:
+                    (<strong>puntero.value.nombre</strong>).
+                </p>
+                <p>
+                    Primero, mencionamos el <strong>puntero</strong>. Segundo, accedemos a la propiedad
+                    '<strong>value</strong>'. Por último, especificamos la propiedad en la que se encuentra almacenado
+                    el valor que deseamos conocer, en este caso, '<strong>nombre</strong>'. Para simplificar, esta línea
+                    de código significa: "Quiero saber el valor almacenado en la propiedad 'nombre' en la posición
+                    actual del puntero". Creo que con este ejemplo es suficiente; no es necesario explicar cómo acceder
+                    a los otros dos valores, ya que el proceso es idéntico al del nombre, solo que cambia la última
+                    propiedad. Puedes encontrar el código hasta este punto a continuación.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Puntos de Activación de la Función Mostrar</h2>
+                <p>
+                    Antes de continuar, necesito hacer una pausa y explicarte algo importante. Hasta ahora, todo parece
+                    ir muy bien, pero para que se muestre la <strong>lista de contactos</strong>, debemos invocar la
+                    función <strong>Mostrar</strong> en algún punto de este código. En este caso, la llamaremos desde
+                    dos ubicaciones diferentes. La primera opción es la más sencilla. Dado que la función
+                    <strong>Comenzar</strong> se ejecuta cada vez que se abre una base de datos existente o cuando se
+                    crea una nueva, vamos a llamar a la función Mostrar desde esa función. Esto garantizará que cada vez
+                    que se abra la página o se actualice, se muestren los contactos almacenados.
+                </p>
+                <p>
+                    Sin embargo, no se actualizará automáticamente cada vez que se agregue un nuevo contacto. Para
+                    resolver este problema, llamaremos a la función Mostrar desde la función
+                    <strong>AlmacenarContacto</strong>. Para que esto funcione correctamente, debemos agregar un
+                    <strong>Event Listener</strong> a la variable 'transaccion' que responda al evento 'complete'. De
+                    esta manera, cada vez que se complete el almacenamiento de un nuevo contacto, se actualizará la
+                    lista sin necesidad de actualizar la ventana. A continuación, te muestro las funciones con estos
+                    cambios implementados, para que puedas revisar la sintaxis y aclarar cualquier duda que puedas tener
+                    al respecto.
+                </p>
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>El Poder del Método continue() en IndexedDB</h2>
+                <p>
+                    Ahora, si ya has realizado todos estos cambios en tu <strong>editor de código</strong>, notarás que
+                    comenzarán a mostrarse los <strong>contactos almacenados</strong>, pero solo el primero. Si todavía
+                    tienes solo un contacto almacenado, te invito a que hagas una prueba y observes cómo, a pesar de que
+                    la lista contiene más de un contacto, solo se muestra el primero. Esto se debe a que, como mencioné
+                    unas líneas atrás, el <strong>puntero</strong> solo apunta a un elemento a la vez y comienza desde
+                    el primero.
+                </p>
+                <p>
+                    No obstante, podemos mostrar la <strong>lista completa de contactos</strong> en una sola función.
+                    Para lograrlo, utilizamos el método <strong>continue()</strong>, que recorre todo el almacén de
+                    objetos, comenzando desde el primero y deteniéndose cuando ya no hay más objetos que recorrer. La
+                    sintaxis de este método es bastante sencilla, y te la muestro a continuación: (puntero.continue()).
+                    Si colocas esta línea de código después de cerrar la etiqueta DIV, verás cómo se muestran todos los
+                    contactos de la lista.
+                </p>
+                <p>
+                    A continuación, te proporciono el <strong>código completo</strong> de la Base de Datos hasta este
+                    punto para que puedas copiarlo y observar su funcionamiento.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet10">Copiar</button>
+                        <pre>
+                           <code id="snippet10" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Repasando lo Aprendido</h2>
+                <p>
+                    A lo largo de este blog, exploramos en profundidad la visualización de contactos desde una Base de
+                    Datos utilizando IndexedDB. Dedicamos tiempo para comprender cómo acceder, navegar y presentar la
+                    información almacenada. A continuación, te presento un resumen de los puntos más cruciales, para que
+                    cuentes con una revisión directa y clara de lo discutido.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Visualizando Contactos con IndexedDB</h3>
+                    <ol>
+                        <li><strong>Declaración de la función Mostrar:</strong> Se introdujo cómo declarar la función
+                            "Mostrar" para visualizar la lista de contactos.</li>
+                        <li><strong>Uso del cursor:</strong> Explicamos cómo abrir un cursor usando el método
+                            "openCursor()" y cómo navegar a través de los datos con este.</li>
+                        <li><strong>Evento "SUCCESS" y función MostrarContactos:</strong> Se destacó la importancia de
+                            agregar un Event Listener que responda al evento "SUCCESS" y ejecuta la función
+                            "MostrarContactos".</li>
+                        <li><strong>Función MostrarContacto:</strong> Se describió cómo se estructura esta función y
+                            cómo verifica si el puntero tiene contenido para mostrar.</li>
+                        <li><strong>Acceso a valores de un objeto:</strong> Se enseñó la sintaxis para acceder a valores
+                            específicos de un objeto en la posición actual del puntero.</li>
+                        <li><strong>Importancia de invocar la función Mostrar:</strong> Aprendimos la necesidad de
+                            invocar la función Mostrar desde distintos puntos para asegurar una visualización
+                            actualizada.</li>
+                        <li><strong>Método continue():</strong> Se introdujo el uso del método "continue()" para
+                            recorrer todos los objetos en el almacén y mostrarlos.</li>
+                    </ol>
+                </div>
+
+
+                <h2>Conclusión y Proyección a Futuros Blogs</h2>
+                <p>
+                    Hasta este punto, todo está funcionando <strong>perfectamente</strong>. Sin embargo, es importante
+                    considerar que en el futuro, es posible que algunos <strong>contactos modifiquen su
+                        información</strong>, como cambiar su número de teléfono, por mencionar un ejemplo. Por esta
+                    razón, es esencial tener una forma de <strong>editar la información almacenada</strong> en estos
+                    objetos. Por lo tanto, el próximo blog se centrará en <strong>cómo editar objetos</strong>. Ahora
+                    que hemos llegado al final de este blog, espero que hayas aprendido algo nuevo y que hayas
+                    disfrutado del contenido. ¡Nos leemos en el siguiente!<br>
+                    <br>
+                    ¡<strong>Un Abrazo</strong>! Braulio de <strong>AprendeCode</strong>.
+                </p>
+
+
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'indexeddb-descubre-como-acceder-y-leer-objetos-almacenados';
+        const totalSnippets = 10;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
+    </script>
+</body>
+
+</html>

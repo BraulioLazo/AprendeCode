@@ -1,0 +1,9 @@
+function goToTarget() {
+    document.querySelector('#goToSection3').addEventListener('click', () => {
+        document.querySelector("#section3").scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    });
+}
+window.addEventListener('load', goToTarget);

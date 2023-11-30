@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root{
+    --sombra: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    --fondo: white;
+    --radio: 12px;
+}
+
+#caja_padre{
+    display: grid;
+    grid-template: repeat(2, 200px) / repeat(4, 1fr);
+    gap: 20px;
+    grid-auto-rows: 200px; /*----- Esta propiedad modifica las filas que se crean por defecto -----*/
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
+
+.entrada{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
+
+.ent_1{
+    box-shadow: 0px 0px 15px #751fff;
+    grid-column: 2 / span 2;  /*----- Un ejemplo utilizando span -----*/
+    grid-row: span 2 / 3;    /*----- Otro ejemplo de span -----*/
+}

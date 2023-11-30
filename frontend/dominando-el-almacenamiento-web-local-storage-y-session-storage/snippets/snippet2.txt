@@ -1,0 +1,174 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    color: rgba(255, 255, 255, 0.897);
+    font-style: italic;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    background-image: url(Imagenes/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #0D1C9A;
+}
+
+p
+{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1
+{
+    margin-bottom: 25px;
+}
+
+h1, h2
+{
+    text-align: center;
+}
+
+.sesiones
+{
+   position: absolute;
+   top: 25px;
+   left: 25px;
+}
+
+.borrar-datos
+{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.253);
+    box-shadow: inset 2px 2px 4px white,
+                inset -2px -2px 4px black,
+                       2px 2px 4px black;
+    cursor: pointer;
+}
+
+.cont-padre
+{
+   width: 800px;
+   height: 800px;
+}
+
+.circulo
+{
+    width: 100%;
+    height: 100%;
+    padding: 80PX;
+    border: 3px solid rgba(2, 183, 255, 0.1);
+    border-radius: 50%;
+}
+
+.circulo-dos
+{
+    border: 3px solid rgba(2, 183, 255, 0.4);
+
+}
+
+.circulo-tres
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80PX;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 900;
+    font-style: italic;
+    border: 3px solid rgba(2, 183, 255, 0.90);
+}
+
+.bienvenida
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 0%;
+    overflow: hidden;
+    transition: backdrop-filter 0.5s ease;
+}
+
+.caja-padre
+{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.caja-padre, .caja-mostrar
+{
+    width: 800px;
+    padding: 20px;
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.caja-padre, .caja-mostrar, .btn-mostrar, .btn-nomostrar
+{
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.644),
+    inset -2px -2px 5px black,
+           5px 5px 15px black;
+}
+
+.cont-btn
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.caja-mostrar
+{
+    width: 400px;
+    margin: 30px auto;
+}
+
+.btn-mostrar, .btn-nomostrar
+{
+    width: 70px;
+    font-size: 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(0, 255, 21, 0.664);
+    transition: all 0.3s ease;
+}
+
+.btn-nomostrar
+{
+    background-color: rgba(255, 0, 0, 0.733);
+}
+
+.caja-mostrar button:hover
+{
+    transform: scale(1.1, 1.1);
+}
+
+.desplegar-bienvenida
+{
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.visible
+{
+    opacity: 1;
+}

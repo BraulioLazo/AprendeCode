@@ -1,0 +1,1 @@
+var transaccion = bd.transaction(["Contactos"], "readwrite");

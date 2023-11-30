@@ -1,0 +1,11 @@
+function IniciarBaseDatos()
+{
+  var BtnGuardar = document.querySelector("#btn-guardar");
+  BtnGuardar.addEventListener("click", AlmacenarContacto);
+
+  var solicitud = indexedDB.open("Datos-De-Contactos");
+
+  solicitud.addEventListener("error", MostrarError);
+  solicitud.addEventListener("success", Comenzar);
+  solicitud.addEventListener("upgradeneeded", CrearAlmacen);
+}

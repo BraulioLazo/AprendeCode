@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+
+    <!-- Importación de la fuente Oswald desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    
+    <title> Creación de un Menú Web: Guía Completa para Principiantes </title>
+</head>
+
+<body>
+    <!-- Encabezado Principal -->
+    <header class="menu">
+        <!-- Nombre del Sitio Web -->
+        <div class="nombre-web">AprendeCode</div>
+        
+        <!-- Navegación Principal -->
+        <nav>
+            <ul class="navegacion">
+                <li class="opcion-menu"><a href="index.html">Inicio</a></li>
+                <li class="opcion-menu"><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li class="opcion-menu"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Sección de Redes Sociales con Iconos -->
+        <div class="redes-sociales">
+            <a href="#"><img src="Imagenes/Facebook.png" alt="Icono de Facebook" class="icono-red-social"></a>
+            <a href="#"><img src="Imagenes/Instagram.png" alt="Icono de Instagram" class="icono-red-social"></a>
+        </div>
+    </header>
+</body>
+
+</html>

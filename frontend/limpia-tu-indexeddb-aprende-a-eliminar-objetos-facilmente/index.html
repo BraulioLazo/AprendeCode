@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende a eliminar objetos almacenados en IndexedDB de manera efectiva. Un tutorial paso a paso sobre cómo gestionar la eliminación de datos en tu base de datos local con IndexedDB.">
+    <meta name="keywords" content="IndexedDB, Eliminación, Objetos almacenados, Método delete, Transacción, Base de datos, Borrar, Llave del objeto, Almacén, Solicitud">
+    <meta name="author" content="Braulio de AprendeCode">
+    
+    <meta property="og:title" content="¡Limpia tu IndexedDB! Aprende a Eliminar Objetos Fácilmente">
+    <meta property="og:description" content="Descubre cómo eliminar objetos almacenados en IndexedDB. Nuestra guía detallada te llevará a través del proceso de limpieza de tu base de datos local paso a paso.">
+    <meta property="og:image" content="/frontend/limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente/images/eliminar-objetos-indexeddb.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>¡Limpia tu IndexedDB! Aprende a Eliminar Objetos Fácilmente</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¡Limpia tu IndexedDB! Aprende a Eliminar Objetos Fácilmente
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Ya tenemos todos nuestros <strong>objetos almacenados</strong>, pero... ¿Qué pasa si necesito
+                    <strong>eliminar</strong> alguno de ellos? Es completamente lógico que, en cualquier <strong>base de
+                        datos</strong>, en algún momento surja la necesidad de eliminar información almacenada, es
+                    decir, objetos. Por eso, el tema del blog de hoy es: <strong> ¿Cómo eliminar objetos
+                        almacenados?</strong>
+                </p>
+                <p>
+                    Este será un blog bastante conciso, ya que para eliminar un objeto solo se necesita el
+                    <strong>método
+                        delete()</strong>. Por supuesto, como siempre, tenemos un <strong>código de inicio</strong> que
+                    es el resultado de los blogs anteriores. Así que, sin más preámbulos, aquí te dejo el código y
+                    seguimos a continuación.
+                </p>
+
+
+                <h2>Código de partida: HTML y CSS</h2>
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código de partida: JavaScript</h2>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Creación del Botón "BORRAR" en IndexedDB</h2>
+                <p>
+                    El <strong>primer paso</strong> que debemos tomar una vez que hayas copiado el <strong>código de
+                        inicio</strong> es crear un <strong>botón</strong> que nos permita <strong>eliminar</strong> los
+                    objetos deseados, en nuestro caso, los contactos. Para este ejemplo, simplemente vamos a crear el
+                    botón <strong>BORRAR</strong> al mostrar la lista de contactos almacenados, es decir, en la
+                    función <strong>MostrarContactos()</strong>. Después de generar el botón
+                    <strong>EDITAR</strong>, vamos a crear este nuevo botón <strong>BORRAR</strong>. Para ello, solo
+                    necesitamos duplicarlo y realizar algunos pequeños cambios. Le asignamos la clase
+                    <strong>btn-borrar</strong>, el valor <strong>Borrar</strong> y en el evento
+                    <strong>click</strong>, queremos que se ejecute la función <strong>eliminarContacto()</strong>.
+                    Es crucial pasar la <strong>llave del objeto</strong> como parámetro. Si estás duplicando el botón y
+                    haciendo los cambios automáticamente, la llave ya se pasa como parámetro, pero si lo estás creando
+                    manualmente, es esencial hacerlo para que funcione correctamente. A continuación, te presento esta
+                    función con ese cambio implementado.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Implementando la Función "eliminarContacto" en IndexedDB</h2>
+                <p>
+                    Una vez que tengamos el <strong>botón listo</strong>, necesitamos declarar la
+                    <strong>función</strong> que se ejecutará cuando se haga clic en él. En nuestro caso, se trata de
+                    <strong>eliminarContacto()</strong>. Recordemos que le estamos pasando la <strong>llave del
+                        objeto</strong> como parámetro, por lo que la función se verá así: (<strong>function
+                        eliminarContacto(key){}</strong>). Dentro de la función, el <strong>primer paso</strong> es
+                    iniciar una transacción. Hemos repasado este proceso en varios blogs anteriores, por lo que no
+                    profundizaré en cada paso. Básicamente, esto se logra utilizando el método
+                    <strong>transaction()</strong>. Dentro de este método, especificamos el almacén en el que
+                    realizaremos la transacción y el tipo de transacción que queremos. Esta línea de código se vería
+                    así: (<strong>var transaccion = bd.transaction(["Contactos"], "readwrite")</strong>). El segundo
+                    paso en cada transacción es abrir el almacén para poder trabajar con los objetos almacenados. Esto
+                    se logra utilizando el método <strong>objectStore()</strong>. Dentro de este método, solo
+                    necesitamos especificar el almacén y listo. La línea de código se vería así: (<strong>var almacen =
+                        transaccion.objectStore("Contactos")</strong>). A continuación, te presento estos pasos con
+                    mayor claridad.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Usando el Método "delete()" en IndexedDB</h2>
+                <p>
+                    Una vez que todo está preparado para realizar la <strong>transacción</strong>, solo nos queda
+                    indicar
+                    cuál será la <strong>solicitud</strong>, que en este caso es <strong>eliminar el objeto
+                        (contacto)</strong>. Como mencioné al principio de este blog, para eliminar un objeto solo
+                    necesitamos especificar qué objeto deseamos borrar utilizando el método <strong>delete()</strong>.
+                    Vamos a ello. Primero, declaramos la variable <strong>solicitud</strong>, luego mencionamos el
+                    almacén y, por último, utilizamos el método <strong>delete()</strong> y dentro de este método,
+                    especificamos la <strong>llave del objeto</strong>. Recordemos que nombramos la llave como
+                    <strong>key</strong>, por lo que quedaría de la siguiente manera: (<strong>var solicitud =
+                        almacen.delete(key)</strong>). A continuación, te proporciono la función con esta mejora
+                    implementada para que la copies en tu editor de código y veas cómo funciona.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Actualización Automática con el Evento "complete"</h2>
+                <p>
+                    Si copiaste esta <strong>función</strong> en tu editor, actualizaste e intentaste eliminar algún
+                    contacto, habrás notado que aparentemente no se borra de inmediato. Sin embargo, si actualizas la
+                    ventana, verás que efectivamente, el <strong>objeto ya no existe</strong>. Para que la lista de
+                    contactos se actualice automáticamente al borrar un objeto, necesitamos agregar un <strong>Event
+                        Listener</strong> a la transacción que responda al evento "<strong>complete</strong>" y que
+                    luego ejecute la función "<strong>Mostrar()</strong>". Recuerda que ya habíamos implementado esto en
+                    la función "<strong>AlmacenarContacto()</strong>" para que cada vez que se almacenara un objeto
+                    nuevo, la lista se actualizara. A continuación, te muestro cómo se realiza esta línea de código, que
+                    no es nueva para nosotros: (<strong>transaccion.addEventListener("complete", Mostrar)</strong>).
+                </p>
+                <p>
+                    A continuación, te dejo la función completa para que simplemente la copies en tu editor y observes
+                    cómo funciona.
+                </p>
+
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Repasando lo Aprendido</h2>
+                <p>
+                    Durante este blog, nos adentramos en la gestión y eliminación de objetos en IndexedDB.
+                    A continuación, te presento un resumen de los puntos clave para que tengas una visión clara y rápida
+                    de todo lo discutido.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Eliminando Objetos en IndexedDB</h3>
+                    <ol>
+                        <li><strong>Creación del Botón "BORRAR":</strong> Un botón que permite eliminar contactos
+                            almacenados, integrado en la función "MostrarContactos()".</li>
+                        <li><strong>Función eliminarContacto(key):</strong> Esta función se encarga de la eliminación
+                            del objeto, usando la llave proporcionada.</li>
+                        <li><strong>Iniciar una Transacción:</strong> El proceso inicial en la eliminación del objeto,
+                            utilizando el método transaction().</li>
+                        <li><strong>Abrir el Almacén:</strong> Usando el método objectStore() para acceder y trabajar
+                            con los objetos almacenados.</li>
+                        <li><strong>Eliminar Objetos Específicos:</strong> Especificar qué objeto se desea borrar usando
+                            la llave del objeto con el método delete().</li>
+                        <li><strong>Actualización Automática:</strong> Para que la lista de contactos se refresque
+                            automáticamente después de borrar un objeto.</li>
+                    </ol>
+                </div>
+
+
+                <h2>¡Gracias por Acompañarme!</h2>
+                <p>
+                    Pues bien, <strong>Coder</strong>, si has copiado el código en tu editor, seguramente habrás notado
+                    que todo funciona perfectamente. Ahora, simplemente te pido que, si has disfrutado de este blog, me
+                    lo hagas saber a través de la pestaña <strong>Contacto</strong> en la parte superior de la página.
+                    Tus <strong>comentarios y retroalimentación</strong> son muy valiosos para mí. Así que, sin más que
+                    agregar, espero que hayas aprendido algo nuevo, que hayas disfrutado del contenido y nos leemos en el
+                    <strong>siguiente</strong>.
+                </p>
+                <p> ¡<strong>Un Abrazo</strong>! Braulio de <strong>AprendeCode</strong>.</p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'limpia-tu-indexeddb-aprende-a-eliminar-objetos-facilmente';
+        const totalSnippets = 7;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
+    </script>
+</body>
+
+</html>

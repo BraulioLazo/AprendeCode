@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos.css">
+    <title> Creación de un Menú Web: Guía Completa para Principiantes </title>
+</head>
+
+<body>
+    <!-- Encabezado del sitio -->
+    <header class="menu">
+        <!-- Navegación principal -->
+        <nav>
+            <ul class="navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre Mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

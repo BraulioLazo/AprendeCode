@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Descubre cómo crear contenedores y elementos flexibles con Flexbox. Aprende a organizar y distribuir el contenido de manera flexible para lograr diseños adaptativos y responsivos. Expande tus habilidades en diseño web con este tutorial sobre Flexbox y contenido flexible.">
+    <meta name="keywords"
+        content="Flexbox, contenido flexible, diseño web, diseños adaptativos, responsivos, tutorial, CSS, diseño responsivo">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="Convierte tu Web en un Espacio Dinámico con Flexbox!">
+    <meta property="og:description"
+        content="Descubre cómo crear contenedores y elementos flexibles con Flexbox. Aprende a organizar y distribuir el contenido de manera flexible para lograr diseños adaptativos y responsivos. Expande tus habilidades en diseño web con este tutorial sobre Flexbox y contenido flexible.">
+    <meta property="og:image"
+        content="/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/Flexbox-Maquetado-Responsivo.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+
+    <title>¡Convierte tu Web en un Espacio Dinámico con Flexbox!</title>
+</head>
+
+
+<body>
+
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¡Convierte tu Web en un Espacio Dinámico con Flexbox!
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+
+                <p>
+                    Todos sabemos que una página web se construye a partir de cajas, estas son el esqueleto que da
+                    estructura a nuestro diseño. En la creación de esta estructura, tenemos a nuestra disposición varias
+                    herramientas. Hoy te mostraré cómo trabajar con las <strong>cajas flexibles</strong> para construir
+                    eficientemente
+                    tu diseño. Pero antes de sumergirnos en eso, permíteme mostrarte algunos ejemplos de otras técnicas
+                    para que puedas apreciar la gran diferencia entre ellas.
+                </p>
+
+                <p class="pad-top">
+                    La <strong>propiedad position</strong> es muy conocida para estructurar nuestras cajas. Con
+                    position: relative en la
+                    caja padre y position: absolute en las cajas hijo, todas las cajas hijo quedan ubicadas dentro del
+                    contenedor padre. Pero, <strong>¿qué sucede cuando reducimos el tamaño de la ventana del
+                        navegador?</strong> Verás
+                    que nuestra estructura cuidadosamente construida se derrumba. Aquí te dejo un ejemplo de código para
+                    que puedas experimentar por ti mismo lo que sucede.
+                </p>
+
+                <div class="image-container">
+                    <img src="/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/estructura-cajas-position.webp"
+                        loading="lazy" decoding="async"
+                        alt="Ejemplo visual de estructuración de cajas usando position: relative y position: absolute, mostrando problemas al reducir el tamaño de la ventana del navegador.">
+                </div>
+
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>
+                    ¿Cómo declarar la caja padre Flexible?
+                </h2>
+
+                <p>
+                    Para evitar el colapso que acabas de observar, vamos a utilizar el <strong>valor flex</strong>. Con
+                    flex, las cajas
+                    se colocan automáticamente una al lado de la otra, de manera sencilla. En este ejemplo, cambiaré un
+                    poco las dimensiones en comparación con el ejemplo anterior, pero recuerda, estas son solo
+                    sugerencias. A continuación, te dejo el código para que puedas seguir con mayor facilidad.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Para empezar con <strong>Flexbox</strong>, debemos establecer el <strong>contenedor
+                        principal</strong>, también conocido como <strong>caja padre</strong>, asignándole
+                    <strong>display: flex;</strong>. De no hacerlo, las <strong>cajas hijo</strong> se mostrarían en una
+                    pila vertical, como es típico en la visualización estándar del navegador. Posteriormente, al aplicar
+                    <strong>justify-content: center;</strong>, conseguimos alinear las cajas hijo horizontalmente al
+                    centro del contenedor padre. Es impresionante cómo con solo estas dos propiedades podemos lograr tal
+                    estructura.
+                </p>
+
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>
+                    ¿Cómo hacer que las Cajas hijos también sean Flexibles?
+                </h2>
+
+                <p>
+                    Quiero mostrarte otro ejemplo con las cajas flexibles. Esta vez, no solo ajustaremos el contenedor,
+                    sino que también permitiremos que el contenido se redimensione a medida que cambiamos el tamaño de
+                    la ventana del navegador. Aquí te dejo el código y te lo explico mientras lo revisas.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/cajas-flex-1-ejemplo.webp"
+                        loading="lazy"
+                        alt="Ejemplo visual de cajas utilizando la propiedad flex con valor 1, redimensionando igualmente de acuerdo al espacio disponible.">
+                </div>
+
+                <p>
+                    Como puedes observar en la imagen de arriba, el único cambio en el código CSS con respecto al
+                    ejemplo anterior, es que a las cajas hijo no le hemos asignado un valor para el ancho (width). En su
+                    lugar, utilizamos la <strong>propiedad flex</strong>. Esta propiedad es la que permite que las cajas
+                    hijo se
+                    redimensionen de acuerdo con el espacio disponible.
+                    Ahora, ¿qué pasa si quisieras que la caja del medio tenga el doble de ancho que las otras? Ahí es
+                    donde flex: 2; entra en juego. Ajustar el valor de flex permite controlar la proporción del espacio
+                    que cada caja hijo debe ocupar.
+                </p>
+
+                <p>
+                    Si sumamos los valores de flex de las tres cajas, obtenemos un total de cuatro. Para calcular el
+                    ancho de la caja-1 y caja-3, sería 100% (con respecto a la caja padre) dividido entre 1/4, lo que da
+                    como resultado 25%. Para la
+                    caja-2, calculamos 100% dividido entre 2/4 (ya que le asignamos dos de las cuatro partes
+                    existentes),
+                    lo que da como resultado 50%. No quería sobrecargar este blog con código, pero te dejaré este
+                    ejemplo final para que puedas experimentar por ti mismo.
+                </p>
+
+                <div class="image-container">
+                    <img src="/frontend/convierte-tu-web-en-un-espacio-dinamico-con-flexbox/images/cajas-flex-2-centro-ejemplo.webp"
+                        loading="lazy"
+                        alt="Ejemplo visual donde la caja central tiene flex: 2, ocupando el doble de ancho en comparación con las cajas adyacentes.">
+                </div>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Repasando lo Aprendido</h2>
+                <p>
+                    En este artículo, exploramos las maravillas del Flexbox y su capacidad para estructurar y
+                    redimensionar cajas en diseño web. A continuación, he preparado un resumen que destaca los puntos
+                    más importantes que discutimos, facilitando una revisión rápida y efectiva de los conceptos clave.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Desentrañando el Flexbox</h3>
+                    <ol>
+                        <li><strong>La naturaleza de las páginas web:</strong> Las cajas son el esqueleto de nuestra
+                            página, y el Flexbox ofrece una herramienta versátil para manipularlas.</li>
+                        <li><strong>Propiedad position:</strong> Se discutió cómo las cajas hijo quedan ubicadas dentro
+                            del contenedor padre y los problemas que surgen al reducir el tamaño de la ventana.</li>
+                        <li><strong>Declaración del contenedor Flex:</strong> Aprendimos que con la propiedad `display:
+                            flex;` en la caja padre, las cajas hijo se organizan automáticamente de forma horizontal.
+                        </li>
+                        <li><strong>Centrar elementos con Flexbox:</strong> Utilizamos `justify-content: center;` para
+                            centrar las cajas hijo dentro del contenedor padre.</li>
+                        <li><strong>Cajas hijo flexibles:</strong> Introdujimos el concepto de cajas hijo
+                            redimensionables, que se adaptan según el espacio disponible con la propiedad `flex`.</li>
+                        <li><strong>Controlar proporciones con flex:</strong> A través del valor `flex`, podemos
+                            controlar el espacio que cada caja hijo ocupa, logrando un diseño más dinámico y adaptable.
+                        </li>
+                        <li><strong>Calculando el ancho de las cajas:</strong> Vimos cómo el valor `flex` determina la
+                            proporción del espacio que cada caja ocupa dentro del contenedor padre.</li>
+                    </ol>
+                </div>
+
+                <h2>Despedida</h2>
+
+                <p>
+                    Y con esto, hemos llegado al final de este SuperBlog. Ha sido una lectura larga, pero esencial para
+                    abarcar todos los aspectos de las cajas flexibles. Por ahora, te dejo con un ciber-abrazo. Recuerda,
+                    mi nombre es Braulio y estás leyendo AprendeCode. Espero que te hayas sentido inspirado para probar
+                    estos conceptos por ti mismo. No dudes en dejar tus comentarios y preguntas en la pestaña <a
+                        href="/contacto/index.html">Contacto</a>, ¡estoy aquí para
+                    ayudarte en tu camino hacia el dominio del front-end!
+                </p>
+
+                <h2>💌 Una Nota Personal</h2>
+                <p>
+                    ¡Hola, Código-Lover! Quiero contarte que esta fue la <strong>primera entrada</strong> que escribí
+                    cuando apenas comenzaba mi aventura en el mundo del <strong>frontend</strong>. En aquel entonces,
+                    cada <strong>concepto y técnica</strong> que descubría me llenaba de emoción, y no podía esperar
+                    para compartirlo contigo. Mi deseo era <strong>simplificar y transmitir</strong> todo ese
+                    aprendizaje, esperando aligerar un poco tu camino. Esta entrada es, en esencia, un acto de
+                    <strong>generosidad</strong> y <strong>amor</strong> hacia ti y hacia la comunidad.
+                </p>
+                <p>
+                    Como en toda aventura, <strong>he crecido y evolucionado</strong>. He sumado <strong>nuevos
+                        conocimientos y perspectivas</strong>, y siento que ha llegado el momento de renovar este
+                    contenido. Así que, ¡prepárate! Pronto verás cambios en esta entrada. Seguirá teniendo la misma
+                    esencia, pero desde una <strong>perspectiva más madura y actualizada</strong>.
+                </p>
+                <p>¡Gracias por acompañarme en este viaje!</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'convierte-tu-web-en-un-espacio-dinamico-con-flexbox';
+        const totalSnippets = 8;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
+    </script>
+
+</body>
+
+</html>

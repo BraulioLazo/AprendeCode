@@ -1,0 +1,14 @@
+function DarBienvenida()
+{
+      if(localStorage.getItem("No-Mostrar"))
+        {
+          localStorage.setItem("No-Mostrar", "No");
+        } else {
+                  setTimeout(() =>
+                     {
+                        Bienvenida.classList.add("desplegar-bienvenida");
+                        Bienvenida.style.backdropFilter = "blur(10px)";
+                        CajaPadre.classList.add("visible");
+                     }, 500);
+               }
+}

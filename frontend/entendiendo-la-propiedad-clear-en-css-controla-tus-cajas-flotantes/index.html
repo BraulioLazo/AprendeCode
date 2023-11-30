@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explora la función vital de la propiedad clear en las cajas flotantes en CSS. Aprende a controlar tus diseños y evitar que las cajas hijas excedan los límites de la caja padre.">
+    <meta name="keywords"
+        content="CSS, propiedad clear, cajas flotantes, diseño web, desarrollo web, responsive design">
+
+    <meta property="og:title" content="Entendiendo la Propiedad Clear en CSS: Controla Tus Cajas Flotantes">
+    <meta property="og:description"
+        content="Explora la función vital de la propiedad clear en las cajas flotantes en CSS. Aprende a controlar tus diseños y evitar que las cajas hijas excedan los límites de la caja padre.">
+    <meta property="og:image"
+        content="/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/desarrolladores-discusion-propiedad-clear.webp">
+    <meta property="og:url"
+        content="https://www.aprendecode.com/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <title>Entendiendo la Propiedad Clear en CSS: Controla Tus Cajas Flotantes</title>
+</head>
+
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Entendiendo la Propiedad Clear en CSS: Controla Tus Cajas Flotantes
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <h2>El Desafío de las Cajas Flotantes</h2>
+                <p>
+                <p>
+                    Dentro de este artículo, exploraremos la función vital de la propiedad <strong>clear</strong> en las
+                    cajas flotantes.
+                    Aunque el tema parezca conciso, su relevancia es innegable. En más de una ocasión, mientras
+                    trabajaba con <strong>cajas flotantes</strong>, encontré que las cajas hijas excedían los límites de
+                    la caja padre,
+                    lo cual era frustrante. Si te encuentras aquí, quizás hayas experimentado algo similar o simplemente
+                    deseas prevenir dichos escenarios. Estos desafíos son más <strong>frecuentes</strong> de lo que se
+                    podría pensar, en
+                    especial cuando uno se forma de manera <strong>autodidacta</strong>. A menudo, algunos
+                    <strong>cursos en línea</strong> omiten
+                    detalles que, aunque puedan parecer menores, son críticos. Ahora, regresando a las <strong>cajas
+                        flotantes</strong>,
+                    cuando instruimos a las <strong>cajas hijas</strong> para que <strong>floten</strong> (ya sea a la
+                    izquierda o a la derecha), la caja
+                    padre pierde la capacidad de calcular su altura a partir de su contenido, ya que carece de una
+                    referencia. Las <strong>cajas hijas</strong>, al <strong>flotar</strong>, no tienen una posición
+                    definida en el navegador. Es aquí
+                    donde la propiedad <strong>Clear</strong> con el valor <strong>Both</strong> juega un papel crucial.
+                    Antes de adentrarnos en la
+                    solución, veamos un <strong>ejemplo práctico</strong> para entender el problema a fondo.
+                </p>
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/cajas-hijas-sin-propiedad-clear.webp"
+                        alt="Cajas flotantes: caja padre y cajas hijas. Sin usar la propiedad clear, las cajas hijas exceden los límites de la caja padre, causando desorden en el diseño."
+                        loading="lazy" decoding="async">
+                </div>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>La Solución: Introduciendo la Propiedad Clear</h2>
+                <p>
+                    Al observar el código y su resultado, notarás que la <strong>caja padre</strong> no
+                    consigue definir adecuadamente su
+                    altura, y las <strong>cajas hijas</strong> sobresalen. Aunque podríamos tentarnos a establecer una
+                    altura fija para
+                    la caja padre, al ajustar el tamaño de la ventana del navegador,
+                    el problema persiste. Aquí es donde
+                    la propiedad <strong>clear</strong> con el valor <strong>both</strong> entra en acción. Esta
+                    propiedad permite que el siguiente
+                    elemento retome su flujo normal dentro del documento. Simplemente necesitas añadir otro
+                    <strong>div</strong> al final
+                    de las <strong>cajas hijas</strong> y asignarle una <strong>clase</strong>, digamos
+                    <strong>restaurar</strong>. Luego, en tu hoja de estilos, a esta
+                    clase se le asigna la propiedad <strong>clear</strong> con el valor <strong>both</strong>. Te
+                    recomiendo que, mientras lees, pruebes
+                    el código para entenderlo mejor. Si copiaste el código en tu
+                    editor, te habrás dado cuenta de la <strong>notable diferencia</strong> que hace la
+                    propiedad <strong>Clear</strong> en la presentación de <strong>cajas flotantes</strong>. Es un
+                    aspecto fundamental en <strong>CSS</strong>,
+                    especialmente cuando trabajamos con <strong>diseño responsive</strong>.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes/images/cajas-hijas-con-propiedad-clear.webp"
+                        alt="Cajas flotantes: caja padre y cajas hijas. Con el uso de la propiedad clear, las cajas hijas retoman su flujo normal y el diseño se mantiene limpio y organizado"
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Resumen sobre la Propiedad Clear en Cajas Flotantes</h2>
+
+                <p>
+                    En el diseño web, enfrentar desafíos con las cajas flotantes es común, en especial cuando las cajas
+                    hijas exceden los límites de la caja padre. La propiedad 'clear' juega un papel esencial en la
+                    resolución de estos problemas, asegurando una presentación adecuada en diversos dispositivos.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Dominando las Cajas Flotantes con 'Clear'</h3>
+                    <ol>
+                        <li><strong>Problema con Cajas Flotantes:</strong> Las cajas hijas pueden exceder los límites de
+                            la caja padre, especialmente cuando flotan.</li>
+                        <li><strong>Origen del Problema:</strong> Al hacer flotar cajas hijas, la caja padre pierde
+                            referencia de su altura debido a la falta de posición definida de las hijas en el navegador.
+                        </li>
+                        <li><strong>La Propiedad Clear:</strong> Con el valor 'both' permite que el siguiente elemento
+                            retome su flujo normal. Una solución es añadir un div al final de las cajas hijas con una
+                            clase (por ejemplo, 'restaurar') y asignarle esta propiedad.</li>
+                        <li><strong>Importancia en Diseño Responsive:</strong> La propiedad 'Clear' es fundamental
+                            cuando se trabaja con diseño adaptable a diferentes dispositivos.</li>
+                    </ol>
+                </div>
+
+
+                <h2>Conclusión y Recomendaciones</h2>
+                <p>
+                    Como <strong>consejo final</strong>, te recomendaría siempre <strong>experimentar</strong> y
+                    <strong>probar tu código</strong> en diferentes dispositivos y <strong>tamaños de pantalla</strong>.
+                    Esto te permitirá identificar rápidamente
+                    problemas como el que resolvimos hoy con la propiedad '<strong>Clear</strong>'.
+                    ¿Tienes algún otro truco o recomendación sobre
+                    CSS que quieras compartir? ¡<strong>Me encantaría
+                        escucharlo</strong>!
+                    No dudes en dejarme un mensaje a través del <strong>botón de contacto</strong> en el menú. Estoy
+                    aquí para ayudar y
+                    aprender juntos.
+                    Y recuerda, cada detalle cuenta cuando se trata de diseño web y
+                    desarrollo. Continúa aprendiendo y
+                    experimentando. ¡Hasta la próxima! Mi nombre es <strong>Braulio</strong> y esto es
+                    <strong>AprendeCode</strong>. ¡Un abrazo y sigue codificando!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'entendiendo-la-propiedad-clear-en-css-controla-tus-cajas-flotantes';
+        const totalSnippets = 4;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
+    </script>
+
+</body>
+
+</html>

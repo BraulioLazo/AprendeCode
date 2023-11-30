@@ -1,0 +1,3 @@
+@media screen and (max-width: 768px) {
+  /* Aquí vamos a ajustar el layout para dispositivos móviles */
+}

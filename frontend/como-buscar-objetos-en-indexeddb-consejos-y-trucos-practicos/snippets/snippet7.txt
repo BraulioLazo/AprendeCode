@@ -1,0 +1,11 @@
+function buscarContacto(evento)
+{
+  evento.preventDefault();
+  var buscar = document.querySelector("#buscar-nombre").value;
+
+  var transaccion = bd.transaction(["Contactos"]);
+  var almacen = transaccion.objectStore("Contactos");
+
+  var indice = almacen.index("BuscarNombre"); //- Elegir Índice
+  var rango = IDBKeyRange.only(buscar); //------- Elegir Rango
+}

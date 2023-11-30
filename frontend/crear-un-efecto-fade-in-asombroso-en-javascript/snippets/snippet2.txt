@@ -1,0 +1,92 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*------------- CABECERA -------------*/
+
+.cabecera
+{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgb(250, 5, 217);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    backdrop-filter: blur(12px);
+    z-index: 999;
+}
+
+/*------------------------------------  CUERPO ------------------------------------*/
+
+.seccion-uno
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    background-image: -webkit-linear-gradient(top, rgb(97, 97, 97), black);
+}
+
+.seccion-uno h1
+{
+    font-size: 4rem;
+    color: rgb(250, 5, 217);
+}
+
+.seccion-dos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+
+.texto
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(250, 5, 217);
+}
+
+.elemento-oculto
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.295);
+    border-right: 1px solid rgba(255, 255, 255, 0.295);
+    box-shadow: 0px 0px 100px greenyellow;
+    backdrop-filter: blur(7px);
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s linear 0s;
+}
+
+.visible
+{
+    opacity: 1;
+}

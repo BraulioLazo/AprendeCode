@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre cómo incorporar y personalizar videos en HTML eficazmente. Desde formatos hasta controles, esta guía te lleva paso a paso hacia una experiencia web óptima.">
+    <meta name="keywords" content="HTML, videos, incorporar, personalizar, guía, experiencia web, AprendeCode, Braulio, controles de video, formato de video">
+    <meta name="author" content="Braulio de AprendeCode">
+    
+    <meta property="og:title" content="Incorporando y Personalizando Videos en HTML: Una Guía Completa">
+    <meta property="og:description" content="Descubre cómo incorporar y personalizar videos en HTML eficazmente. Una guía paso a paso para mejorar la experiencia de tus usuarios.">
+    <meta property="og:image" content="/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/images/equipo-desarrolladores-aplicacion-web.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Incorporando y Personalizando Videos en HTML: Una Guía Completa</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    Incorporando y Personalizando Videos en HTML: Una Guía Completa
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+
+                <h2>Introducción a la Inserción de Videos en HTML</h2>
+                <p>
+                    Para incorporar un <strong>video</strong> en tu página <strong>HTML</strong>, simplemente necesitas
+                    utilizar el <strong>elemento de video</strong>. Este elemento se compone de una etiqueta de apertura
+                    y una de cierre. Dentro de la etiqueta de apertura, se utiliza el atributo <strong>SRC</strong>
+                    para especificar la dirección URL del video que deseas cargar. No obstante, esta acción por sí sola
+                    no es suficiente para tener un video listo para reproducir. De hecho, solo hará que el video
+                    aparezca en el documento, manteniendo su tamaño original y potencialmente desorganizando la
+                    estructura del resto de la página. Es similar a lo que sucede cuando insertas una
+                    <strong>imagen</strong> sin aplicar ningún <strong>estilo CSS</strong>. A lo largo de este blog,
+                    aprenderás no solo cómo <strong>insertar un video</strong>, sino también cómo
+                    <strong>personalizarlo</strong> y agregar todos los <strong>controles de reproducción</strong>
+                    necesarios.
+                </p>
+                <p>
+                    Como de costumbre, te proporcionamos un <strong>código inicial</strong> sobre el cual construirás
+                    gradualmente en este blog. Lo encontrarás a continuación y lo explicaremos en detalle más adelante.
+                    Si eres un <strong>amante del código</strong>, copia y pega esto en tu editor para seguir el proceso
+                    junto con nosotros.
+
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Entendiendo el Código Base: Primeros Pasos para Insertar Videos</h2>
+                <p>
+                    Si depuras el <strong>código</strong> en tu editor, notarás que tiene un pequeño <strong>diseño
+                        preestablecido</strong>, esto se hizo para darle un aspecto más estético. Ahora, en el
+                    <strong>HTML</strong>, verás algunos <strong>comentarios</strong> que son el lugar donde
+                    insertaremos los videos. Los <strong>estilos necesarios</strong> ya se encuentran definidos en el
+                    <strong>CSS</strong>, por lo que no tenemos que realizar ningún cambio adicional en esa sección;
+                    todo está listo tal como está. Además, los videos, una vez insertados, serán totalmente
+                    <strong>adaptables al tamaño de la pantalla</strong>, lo que significa que serán completamente
+                    <strong>responsivos</strong>. Entonces, nos centraremos exclusivamente en trabajar con el
+                    <strong>HTML</strong>. Ahora que hemos repasado estos detalles, es hora de <strong>poner manos a la
+                        obra</strong> y comenzar a colocar los videos en su lugar correspondiente.
+                </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Inserción Básica de Videos: Tu Primer Video en HTML</h2>
+                <p>
+                    Antes de insertar el video, quiero recordarte que, aunque copies el <strong>código</strong> tal como
+                    está, deberás <strong>cargar tus propios videos</strong> para que todo funcione correctamente.
+                    Además, ten en cuenta que los videos que utilizo están alojados en una carpeta llamada
+                    "<strong>Medios</strong>". Te lo menciono para que lo tengas en cuenta y asegurarte de que todos los
+                    <strong>archivos estén ubicados correctamente</strong> para que el código funcione sin problemas.
+                </p>
+                <p>
+                    Como mencioné al principio de este blog, todo comienza con el <strong>elemento de video</strong>,
+                    que está compuesto por una etiqueta de apertura y cierre <strong>&lt;video&gt;
+                        &lt;/video&gt;</strong>. Luego, dentro de la
+                    etiqueta de apertura, agregamos el <strong>atributo SRC</strong>, y dentro de este atributo,
+                    colocamos la dirección del archivo que deseamos cargar. Por ejemplo: <strong>
+                        &lt;video src="Medios/Video-Uno.mp4"&gt; &lt;/video&gt;</strong>. Ahora que sabemos cómo
+                    <strong>cargar un video</strong>,
+                    vamos a insertar los cuatro videos y, poco a poco, iremos añadiendo otros atributos, como los
+                    <strong>controles</strong>. A continuación, te proporciono el <strong>código listo</strong> y una
+                    imagen de cómo se ve el diseño hasta este punto, aunque, por supuesto, en tu navegador se verá
+                    diferente según los videos que cargues.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <img src="/frontend/incorporando-y-personalizando-videos-en-html-una-guia-completa/images/codigo-inicial-videos-html.webp"
+                        alt="Captura de pantalla del código inicial de la inserción de videos en HTML mostrado en un navegador."
+                        loading="lazy" decoding="async">
+                </div>
+
+                <h2>Usando el Elemento 'source': Adaptabilidad para Varios Formatos de Video</h2>
+                <p>
+                    Ahora, me gustaría hacer una pausa para explorar otro <strong>método de carga de videos</strong> que
+                    permite al navegador <strong>elegir el formato adecuado</strong>. Aunque en la actualidad es poco
+                    probable que encuentres un navegador que no sea compatible con el <strong>formato MP4</strong>, en
+                    el pasado esto era una preocupación válida. Para evitar problemas cuando los usuarios ingresaran
+                    desde navegadores que no admitieran este formato de video, se creó el elemento
+                    <strong>source</strong>. Este elemento es muy sencillo y consta solo de una etiqueta de apertura.
+                    ¿Cómo funciona exactamente este elemento? En lugar de utilizar el atributo SRC dentro de la
+                    etiqueta de apertura del elemento video, debemos emplear la etiqueta <strong>source</strong>
+                    entre las etiquetas de apertura y cierre del elemento video. A continuación, te proporciono un
+                    pequeño ejemplo para que puedas comprender mejor cómo se implementa.
+                </p>
+                <p>
+                    Para cargar varios <strong>formatos de video</strong>, necesitamos usar un elemento
+                    <strong>source</strong> diferente para cada formato. Cada uno de estos elementos debe incluir el
+                    atributo <strong>SRC</strong> para indicar la dirección (URL) del video que deseamos cargar. En el
+                    ejemplo que te proporciono a continuación, encontrarás <strong>dos formatos diferentes</strong> del
+                    mismo video. El navegador <strong>seleccionará automáticamente</strong> el formato que sea
+                    compatible.
+
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¿Quieres que tu Video Inicie Solo? Conoce el Atributo 'autoplay'</h2>
+                <p>
+                    El primer video que he incorporado al documento sería esencialmente la <strong>imagen de la
+                        web</strong>. Por lo tanto, lo lógico sería que este video se <strong>reproduzca</strong> tan
+                    pronto como el usuario entre en la web. Comencemos por ahí. Para lograr que el video se reproduzca
+                    automáticamente cuando un usuario accede a la web, tenemos a nuestra disposición el atributo
+                    <strong>autoplay</strong>. Sin embargo, si agregas este atributo a la etiqueta de apertura y
+                    guardas los cambios, es posible que notes que no funciona como esperabas.
+                </p>
+                <p>
+                    Ahora, es posible que te estés haciendo una pregunta muy válida: ¿Entonces, para qué sirve el
+                    atributo <strong>autoplay</strong>? Bueno, querido Código-Lover, resulta que en algunos
+                    navegadores, el video solo se reproduce automáticamente si está en <strong>silencio</strong>. Al
+                    menos, en los dos navegadores que utilizo, este es el caso. Para solucionar este problema,
+                    simplemente agrega el atributo <strong>muted</strong> inmediatamente después del atributo
+                    autoplay. De esta manera, una vez que el navegador haya cargado el video, se reproducirá
+                    automáticamente sin problemas.
+                </p>
+
+                <h2>Deja tu Video en Bucle Infinito con el Atributo 'loop'</h2>
+                <p>
+                    Ya sabemos cómo reproducir el video de forma automática sin problemas. Sin embargo, ahora nos
+                    encontramos con el siguiente inconveniente: en algún momento, este video llegará a su final y,
+                    lógicamente, se detendrá. Pero dado que este video es la <strong>imagen de la web</strong>,
+                    necesitamos que se reproduzca una y otra vez, incluso cuando llegue a su fin. Afortunadamente,
+                    podemos lograr esto gracias al atributo <strong>loop</strong>. No importa cuántas veces llegue al
+                    final, el video se reproducirá una y otra vez en un <strong>bucle infinito</strong>. A continuación,
+                    te dejo el código hasta este punto para que puedas echarle un vistazo y familiarizarte más con él.
+
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Dando el Control al Usuario: Introduciendo el Atributo 'controls'</h2>
+                <p>
+                    Ya sabemos cómo reproducir un video de manera automática, lo cual es muy útil para los
+                    <strong>videos de presentación</strong> de una página web. Pero, ¿qué pasa cuando queremos que el
+                    usuario decida cuándo reproducirlo? En ese caso, necesitamos agregar <strong>controles</strong> al
+                    video. Esto también es muy sencillo: solo necesitamos agregar el atributo
+                    <strong>controls</strong> al video al que deseamos añadir los controles de reproducción. En mi
+                    caso, voy a agregar este atributo a los tres últimos videos.
+                </p>
+                <p>
+                    Cuando añades este atributo al elemento de video, los <strong>controles de reproducción</strong>
+                    aparecerán automáticamente en la parte inferior del video. Estos controles incluyen una barra de
+                    reproducción, un botón de reproducción, controles de volumen, la opción de pantalla completa y una
+                    pestaña para configurar la velocidad del video. También hay una opción para reproducir el video como
+                    una miniatura. Con esta opción, puedes minimizar la ventana del video y seguir viéndolo como una
+                    miniatura que puedes mover por la pantalla (ten en cuenta que esto puede variar según el navegador
+                    que utilices). A continuación, te dejo el código hasta este punto.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet8">Copiar</button>
+                        <pre>
+                           <code id="snippet8" class="language-html">
+   
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet9">Copiar</button>
+                        <pre>
+                           <code id="snippet9" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Personalizando la Miniatura de Tu Video con el Atributo 'poster'</h2>
+                <p>
+                    Una vez que hemos añadido los <strong>controles de reproducción</strong>, también podemos cambiar la
+                    imagen que se muestra antes de reproducir el video. Esto es similar a las
+                    <strong>miniaturas</strong> que ves en los canales de <strong>YouTube</strong>. Subes el video y
+                    luego seleccionas una imagen que representa el contenido del video. El atributo que utilizamos para
+                    esto es similar al atributo <strong>SRC</strong>. Simplemente agregas el atributo
+                    <strong>poster</strong>, seguido del signo igual y entre comillas, la dirección de la imagen que
+                    deseas que se muestre como miniatura para el video. Ejemplo:
+                    <strong>poster="Medios/Imagen-Uno.jpg"</strong>.
+                </p>
+
+                <h2>Optimizando la Carga de Videos con el Atributo 'preload'</h2>
+                <p>
+                    Por último, me gustaría mencionarte el atributo <strong>preload</strong>. Con este atributo,
+                    puedes definir si deseas que el video comience a cargarse tan pronto como se abre el navegador o si
+                    prefieres que no lo haga. Este atributo acepta tres valores: El primero es <strong>none</strong>,
+                    que se utiliza para minimizar el tráfico web. El segundo valor es <strong>metadata</strong>, el
+                    cual le indica al navegador que descargue información sobre el video, como su duración, dimensiones
+                    y otros detalles necesarios para que, cuando el usuario decida reproducirlo, la reproducción sea
+                    fluida. El tercer valor es <strong>auto</strong>, que indica al navegador que descargue el archivo
+                    de video tan pronto como sea posible. Este valor es el predeterminado para el atributo "preload".
+                </p>
+
+                <h2>Antes de Despedirnos, Un Vistazo Atrás</h2>
+                <p>
+                    Ahora que hemos navegado a través de los diversos aspectos y atributos para trabajar con videos en
+                    HTML, sería útil echar un vistazo rápido a todo lo que hemos cubierto. A continuación, te presento
+                    un resumen de los puntos clave discutidos, para que sirva como guía de referencia y recordatorio.
+                </p>
+
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Guía para trabajar con videos en HTML</h3>
+                    <ol>
+                        <li><strong>Introducción al elemento de video:</strong> Aprendimos cómo insertar un video
+                            utilizando el elemento de video y el atributo "SRC". Además, se discutió la importancia de
+                            estilizarlo adecuadamente para mantener la estructura de la página.</li>
+                        <li><strong>Metodología de Carga:</strong> Se exploró cómo insertar videos en el HTML
+                            preestablecido. Se destacó la adaptabilidad de los videos al tamaño de pantalla y la
+                            importancia de trabajar con el HTML.</li>
+                        <li><strong>Elemento "source":</strong> Se introdujo este elemento para gestionar la
+                            compatibilidad de formatos de video en distintos navegadores, permitiendo que el navegador
+                            elija el formato adecuado para la reproducción.</li>
+                        <li><strong>Reproducción Automática:</strong> Aprendimos a usar el atributo "autoplay" y su
+                            interacción con el atributo "muted" para asegurar la reproducción automática de videos en
+                            diversos navegadores.</li>
+                        <li><strong>Reproducción en Bucle:</strong> Se discutió el uso del atributo "loop" para hacer
+                            que un video se reproduzca indefinidamente.</li>
+                        <li><strong>Controles de Reproducción:</strong> Se abordó cómo agregar controles al video usando
+                            el atributo "controls", lo que otorga al usuario el poder de controlar la reproducción del
+                            video.</li>
+                        <li><strong>Imagen Previa del Video:</strong> Aprendimos sobre el atributo "poster" para
+                            seleccionar una imagen que se mostrará antes de que el video se reproduzca.</li>
+                        <li><strong>Atributo "preload":</strong> Se discutió cómo definir la carga inicial de un video
+                            en el navegador, y se presentaron sus tres valores posibles: "none", "metadata" y "auto".
+                        </li>
+                        <li><strong>Conclusión:</strong> Se enfatizó la importancia de tener en cuenta todos estos
+                            detalles al trabajar con videos en páginas web para ofrecer una experiencia de usuario
+                            óptima.</li>
+                    </ol>
+                </div>
+
+                <p>
+                    Y así concluimos este blog, mi apreciado <strong>Código-Lover</strong>. Espero que hayas aprendido
+                    algo nuevo y que hayas disfrutado tanto leyendo este blog como yo escribiéndolo. No quiero irme sin
+                    recordarte que mi nombre es <strong>Braulio</strong> y que esto es <strong>AprendeCode</strong>.
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/codeSnippetLoader.js"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'incorporando-y-personalizando-videos-en-html-una-guia-completa';
+        const totalSnippets = 9;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Aprende a utilizar la API Wake Lock con JavaScript para evitar que la pantalla del dispositivo se duerma mientras tu aplicación está en uso. Ideal para aplicaciones de mapas, lectores de libros digitales y más.">
+    <meta name="keywords" content="API Wake Lock, JavaScript, evitar pantalla dormida, aplicación, programación, desarrollo web">
+    <meta name="author" content="Braulio de AprendeCode">
+
+    <meta property="og:title" content="¿Cómo utilizar la API Wake Lock con JavaScript?">
+    <meta property="og:description" content="Descubre cómo emplear la API Wake Lock con JavaScript para mantener activa la pantalla de tu dispositivo durante el uso de tu aplicación. Una guía completa desde la solicitud de bloqueo hasta la compatibilidad con navegadores.">
+    <meta property="og:image" content="/frontend/como-utilizar-la-api-wake-lock-con-javascript/images/api-wake-lock-javascript.webp">
+    <meta property="og:url" content="https://www.aprendecode.com/frontend/como-utilizar-la-api-wake-lock-con-javascript/">
+    <meta property="og:type" content="article">
+
+    <link rel="android-chrome" href="/assets/logo/android-chrome-192x192.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/logo/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo/favicon-16x16.webp">
+    <link rel="manifest" href="/assets/logo/site.webmanifest">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>¿Cómo utilizar la API Wake Lock con JavaScript?</title>
+</head>
+
+<body>
+    <my-menu></my-menu>
+
+    <main>
+        <section class="header-section header-blog-entry-section">
+            <div class="header-container section-container">
+                <h1 class="header-title">
+                    ¿Cómo utilizar la API Wake Lock con JavaScript?
+                </h1>
+            </div>
+        </section>
+
+        <section class="blog-content-section">
+            <div class="blog-content-section-container section-container">
+                <p>
+                    Excelente título para el blog, pero… ¿Qué es el <strong>API Wake Lock</strong>? Bueno, con esta API
+                    podemos evitar que la pantalla del dispositivo se duerma mientras nuestra aplicación está en uso.
+                    Pongamos ejemplos de su uso: una aplicación de mapas, por ejemplo, mientras el usuario sigue la ruta
+                    se bloquea la pantalla para evitar que se oscurezca. Otros dos ejemplos serían un lector de libro
+                    digital y una <strong>aplicación de Pomodoro</strong>. Y este último es el ejemplo que veremos en
+                    este blog. A continuación, te proporcionamos el código de partida para que puedas copiarlo en tu
+                    editor, comprobarlo y seguir los pasos junto conmigo.
+                </p>
+
+                <h2>Código de Partida: HTML y CSS</h2>
+
+                <div class="snippets">
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet1">Copiar</button>
+                        <pre>
+                           <code id="snippet1" class="language-html">
+                
+                           </code>
+                        </pre>
+                    </div>
+                    <div class="snippet">
+                        <button class="copy-button" data-copy-target="#snippet2">Copiar</button>
+                        <pre>
+                           <code id="snippet2" class="language-css"> </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Código de Partida: JavaScript</h2>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet3">Copiar</button>
+                        <pre>
+                           <code id="snippet3" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¡Explicando el código!</h2>
+                <p>
+                    Ahora, explicando un poquito el código, en el HTML y el CSS no creo que sea necesario explicar nada,
+                    ya que son estilos comunes. En el <strong>JavaScript</strong> ya tenemos preparado un
+                    <strong>temporizador con 5 segundos</strong> por defecto. Lo que estamos haciendo es que al hacer
+                    clic en el botón <strong>Start</strong> (comenzar), se activa el temporizador y cada vez que llega a
+                    cero, se detiene y se reinicia.
+                </p>
+                <p>
+                    En realidad, no hay mucho más que explicar. Sin embargo, antes de utilizar esta
+                    <strong>API</strong>, es importante tener en cuenta que mantener el dispositivo despierto en todo
+                    momento mientras se utiliza nuestra aplicación, afecta el <strong>consumo de la batería</strong>.
+                    Por lo tanto, es recomendable utilizarlo solo cuando sea necesario. En este caso, vamos a hacer uso
+                    de esta API siempre y cuando esté activado el temporizador. Así que el primer paso es declarar la
+                    función encargada de hacer la <strong>petición de bloqueo</strong>.
+                </p>
+
+                <a href="https://www.youtube.com/channel/UC1330s8WAxasTltrD-vKg8Q" target="_blank" rel="noopener noreferrer">
+                    <div class="image-container">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="/assets/global/aprendecode-youtube-canal.webp">
+                            <img src="/assets/global/aprendecode-canal-youtube.webp"
+                                alt="Imagen con enlace al canal de YouTube de AprendeCode" class="img-youtube-link"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </a>
+
+                <h2>Petición de bloqueo de pantalla - API Wake Lock</h2>
+                <p>
+                    Primero, voy a declarar una <strong>variable</strong> en el ámbito global que utilizaré tanto para
+                    bloquear como para desbloquear la pantalla. La llamaré igual que esta API, es decir,
+                    <strong>wakeLock</strong> y le asignaré un valor nulo (let wakeLock = null). Luego, declararemos la
+                    función encargada de hacer la petición de bloqueo que llamaremos
+                    <strong>solicitarBloqueoPantalla()</strong>. Es importante tener en cuenta que esta función debe ser
+                    <strong>asíncrona</strong> ya que necesitamos hacer una petición al navegador, pero es necesario
+                    esperar por su respuesta antes de continuar. Para declarar la función como asíncrona, solo
+                    necesitamos utilizar la palabra clave <strong>async</strong> antes de la declaración. Antes de hacer
+                    la petición de bloqueo, utilizaremos la palabra clave <strong>await</strong> que, traducida al
+                    español, significa esperar. De este modo, le estamos diciendo al programa que es necesario esperar
+                    por la respuesta del navegador antes de continuar. Es importante tener en cuenta que esto se puede
+                    ver en el código que se encuentra debajo.
+                </p>
+                <p>
+                    Antes de continuar quería dejarte saber que ya tenemos listo el tutorial sobre el API Wake Lock en
+                    nuestro canal de YouTube y te lo dejo por 👉👉
+                    <a href="https://www.youtube.com/watch?v=Lz5zTIOnzrc" target="_blank"
+                        rel="noopener noreferrer">AQUÍ</a> 👈👈
+                </p>
+
+                <h2>Captura de errores en la petición</h2>
+                <p>
+                    Ahora, dentro vamos a utilizar un <strong>try catch</strong> por si tenemos algún error poder
+                    capturarlo. Entonces, vamos a hacer la petición en el bloque <strong>try</strong>. Sería:
+                    <strong>wakeLock = await navigator.wakeLock.request(‘screen’)</strong>. Primero que todo ponemos la
+                    palabra clave <strong>await</strong>, después mencionamos el objeto <strong>navigator</strong>
+                    (navegador) luego, la propiedad <strong>wakeLock</strong> dentro de este objeto y por último,
+                    hacemos uso del método <strong>request()</strong> pasándole el valor <strong>screen</strong>, ya que
+                    es este el cual solicita el bloqueo de la pantalla. Agregamos un <strong>console.log</strong> que
+                    diga que la pantalla se ha bloqueado y otro para mostrar en consola la variable wakeLock porque
+                    luego quiero mostrarte algo. Y en la parte del <strong>catch</strong> hacemos
+                    <strong>console.error</strong> que diga que tenemos un error y le pasamos el error que se ha
+                    capturado. Ahora, ¿Desde dónde voy a llamar esta función? Pues cuando se activa el temporizador,
+                    vamos a hacerlo después de inicializar las variables. Aquí abajo te voy a dejar el código completo
+                    con este cambio implementado. Primero la función <strong>comenzarTemporizador</strong> y de segunda
+                    la función que se encarga de hacer la petición de bloqueo
+                    (<strong>solicitarBloqueoPantalla()</strong>).
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet4">Copiar</button>
+                        <pre>
+                           <code id="snippet4" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>¿Cómo desbloquear la pantalla?</h2>
+                <p>
+                    Si haces clic en el botón <strong>Start</strong> y no tenemos ningún <strong>bug</strong> (error)
+                    por ahí escondido, debería hacer la petición de bloqueo perfectamente. Como te mencioné
+                    anteriormente, esto afecta la duración de la batería del dispositivo, así que en cuanto se detenga
+                    el temporizador, necesitamos hacer la petición de desbloqueo. Ahora, necesito que vayas a la
+                    <strong>consola</strong> y verás que en cuanto se hace la petición de bloqueo, sale un mensaje
+                    diciendo que la pantalla ha sido bloqueada y además, la variable <strong>wakeLock</strong> que ahora
+                    mismo almacena el objeto devuelto en la petición de bloqueo. Dentro de ella, notarás que hay una
+                    propiedad llamada <strong>released</strong> con el valor <strong>false</strong>. Pues esta propiedad
+                    es la que indica si la pantalla está bloqueada o no. <strong>Released</strong> en español significa
+                    liberado, o sea que si su valor es <strong>false</strong> como es en este caso, eso indica que la
+                    pantalla está bloqueada. Para desbloquear la pantalla, vamos a utilizar el método
+                    <strong>release()</strong>, ya que este modifica el valor inicial de la propiedad
+                    <strong>released</strong> a <strong>true</strong>, indicando que ahora está desbloqueada (liberada).
+                </p>
+
+                <h2>Método release() - API Wake Lock</h2>
+                <p>
+                    Ahora vamos a declarar la función para desbloquear la pantalla y esta también es
+                    <strong>asíncrona</strong>. Vamos a llamarla <strong>desbloquearPantalla()</strong> y puedes ver el
+                    código completo abajo mientras lees para que te sea más fácil de entender. Dentro, otra vez
+                    utilizaremos un <strong>try catch</strong> para capturar y manejar adecuadamente los errores. En el
+                    bloque <strong>try</strong>, lo primero que hacemos es hacer la petición de desbloqueo de este modo
+                    <strong>await wakeLock.release()</strong>. Luego pasamos un mensaje por la consola indicando que la
+                    pantalla se ha desbloqueado, también pasamos por la consola la variable <strong>wakeLock</strong>
+                    para que puedas ver cómo se modifica el valor inicial de la propiedad <strong>released</strong> de
+                    false a true. Por último, devolvemos a la variable <strong>wakeLock</strong> su valor inicial de
+                    null. En el bloque <strong>catch</strong> solo agregamos un <strong>console.error</strong> y pasamos
+                    un mensaje especificando el error. Esta función la llamaremos dentro del <strong>if</strong> donde
+                    se limpia el intervalo. El código completo hasta este punto está a continuación. Recuerda que la
+                    función <strong>desbloquearPantalla()</strong> es la última en el código.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet5">Copiar</button>
+                        <pre>
+                           <code id="snippet5" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Comprobar Compatibilidad - API Wake Lock</h2>
+                <p>
+                    Realmente ya estará funcionando perfectamente el bloqueo y desbloqueo, pero siempre es sumamente
+                    importante comprobar la <strong>compatibilidad</strong> de esta API en el navegador en el cual se va
+                    a utilizar. Realmente, el único navegador que no es compatible con esta API (hasta el momento) es
+                    <strong>Firefox</strong>. Pero bueno, nosotros estamos conscientes del navegador que utilizamos en
+                    nuestro ordenador, pero no del que utiliza el usuario. Así que siempre es necesario comprobar la
+                    compatibilidad antes de hacer cualquier petición. Esto lo he dejado para el final porque es la parte
+                    más sencilla de implementar a nuestro código. Para este ejemplo, vamos a declarar una función
+                    llamada <strong>comprobarCompatibilidad()</strong> y dentro colocamos una condición que diga
+                    <strong>if (‘wakeLock’ in navigator)</strong>, que siempre que el navegador sea compatible con el
+                    <strong>API Wake Lock</strong>, entonces que haga la petición de bloqueo. En la parte falsa, es
+                    decir, en caso de que no sea compatible, mostramos un mensaje por la consola diciendo que el
+                    navegador no es compatible con esta API. Aquí abajo puedes ver esta función terminada.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet6">Copiar</button>
+                        <pre>
+                           <code id="snippet6" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <p>
+                    Ahora solo tenemos que hacer un <strong>pequeño cambio</strong>. A la hora de hacer la petición de
+                    bloqueo, en vez de llamar directamente a la función encargada de hacer dicha petición
+                    (<strong>solicitarBloqueoPantalla</strong>), llamamos a la función que verifica la compatibilidad.
+                    Entonces, esta se encargará de llamar a la función encargada de hacer la solicitud, pero siempre y
+                    cuando el navegador sea compatible con esta API. Aquí abajo te voy a dejar el <strong>código
+                        completo</strong> hasta este punto para que lo copies, lo pruebes en tu propio editor y veas su
+                    funcionamiento.
+                </p>
+
+                <div class="snippets">
+                    <div class="snippet snippet-alone">
+                        <button class="copy-button" data-copy-target="#snippet7">Copiar</button>
+                        <pre>
+                           <code id="snippet7" class="language-javascript">
+                           
+                           </code>
+                        </pre>
+                    </div>
+                </div>
+
+                <h2>Repasando lo Aprendido</h2>
+                <p>
+                    Durante este blog, exploramos la funcionalidad y aplicación del API Wake Lock para controlar el
+                    comportamiento de bloqueo de la pantalla del dispositivo. Aquí te dejo un resumen de los puntos
+                    clave para refrescar rápidamente lo discutido.
+                </p>
+                <div class="custom-list-container">
+                    <h3>🚀 Resumen Rápido: Usando el API Wake Lock</h3>
+                    <ol>
+                        <li><strong>API Wake Lock:</strong> Permite evitar que la pantalla del dispositivo se duerma
+                            mientras nuestra aplicación está en uso.</li>
+                        <li><strong>Uso en la Vida Real:</strong> Ejemplos como aplicaciones de mapas, lectores de
+                            libros digitales y aplicaciones de Pomodoro.</li>
+                        <li><strong>Consumo de Batería:</strong> Es importante considerar el impacto en la batería del
+                            dispositivo y usarlo solo cuando sea necesario.</li>
+                        <li><strong>Declaración y Uso:</strong> Creación de funciones asíncronas para hacer peticiones
+                            de bloqueo y desbloqueo, con la ayuda de `async` y `await`.</li>
+                        <li><strong>Manejo de Errores:</strong> Uso de bloques try-catch para manejar errores durante
+                            las peticiones.</li>
+                        <li><strong>Compatibilidad del Navegador:</strong> Comprobación de la compatibilidad de la API
+                            en diferentes navegadores antes de hacer peticiones.</li>
+                    </ol>
+                </div>
+
+
+                <h2>Despedida</h2>
+                <p>
+                    ¡Eso es todo por hoy, <strong>queridos coders</strong> y <strong>codigo-lovers</strong>! Espero que
+                    hayan disfrutado de este blog y que hayan aprendido algo valioso sobre el <strong>API Wake
+                        Lock</strong>. Si tienen alguna duda o necesitan ayuda adicional, no duden en ponerse en
+                    contacto conmigo. Siempre estoy aquí para ayudarles en todo lo que necesiten. Muchas gracias por
+                    leer y seguir mi contenido en este blog, y espero verlos pronto en próximas publicaciones. ¡Hasta la
+                    próxima! Nos leemos en el siguiente.
+                </p>
+                <p>¡<strong>Un Abrazo</strong>! Braulio de <strong>AprendeCode</strong></p>
+
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+
+    <script src="/js/components/menu.js"></script>
+    <script rel="preload" src="/js/components/footer.js" as="script"></script>
+    <script rel="preload" src="/js/codeSnippetLoader.js" as="script"></script>
+    <script>
+        const folder = 'frontend';
+        const entryName = 'como-utilizar-la-api-wake-lock-con-javascript';
+        const totalSnippets = 7;
+        fetchAndDisplayCodeSnippets(folder, entryName, totalSnippets);
+    </script>
+</body>
+
+</html>

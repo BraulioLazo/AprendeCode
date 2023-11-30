@@ -1,0 +1,10 @@
+function goToTarget() {
+    document.querySelector('#goToSection3').addEventListener('click', () => {
+        document.querySelector("#center-option").scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+        });
+    });
+}
+window.addEventListener('load', goToTarget);

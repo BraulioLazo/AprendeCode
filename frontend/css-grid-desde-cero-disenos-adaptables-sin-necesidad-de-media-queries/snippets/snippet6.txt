@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root{
+    --sombra: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    --fondo: white;
+    --radio: 12px;
+}
+
+#caja_padre{
+    display: grid;
+
+/*----------------- Aqui están los ejemplos -----------------*/
+
+/*  grid-template-columns: 1fr 1fr 1fr 1fr;  ---- Este es el ejemplo de cuatro columnas iguales declaradas con la Unidad fr(fracción) */
+
+grid-template: repeat(2, 200px) / repeat(2, 200px 1fr);   /*--- ejemplo de la función repeat() ---*/
+
+/*----------------- Aqui están los ejemplos -----------------*/
+
+    gap: 20px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
+
+.entrada{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}

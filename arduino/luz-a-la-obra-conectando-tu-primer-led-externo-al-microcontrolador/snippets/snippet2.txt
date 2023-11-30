@@ -1,0 +1,10 @@
+void setup()
+{
+  // Configura el pin 2 como salida (OUTPUT)
+  pinMode(2, OUTPUT);
+}
+
+void loop()
+{
+    // Esta función se ejecuta continuamente después del setup
+}

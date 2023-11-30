@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+:root{
+    --sombra: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    --fondo: white;
+    --radio: 12px;
+}
+
+#caja_padre{
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
+
+.entrada{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fondo);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+}
