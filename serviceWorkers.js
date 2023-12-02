@@ -1,4 +1,4 @@
-const cacheName = 'APRENDECODE_CACHE_VERSION_0.3';
+const cacheName = 'APRENDECODE_CACHE_VERSION_0.5';
 
 const globalImages = [
     '/assets/hero/presentation-image.webp',
@@ -45,7 +45,7 @@ const arduinoImages = [
     '/arduino/explorando-el-corazon-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Pines-Alimentacion-Arduino.webp',
     '/arduino/explorando-el-corazon-de-arduino-un-recorrido-por-sus-componentes-esenciales/images/Puerto-USB-Boton-Reset-Arduino-UNO.webp',
 
-    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Encender-LED-Incorporado-Arduino.webp',
+    '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/encender-led-incorporado.webp',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Interfaz-Nuevo-Proyecto.webp',
     '/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/Tinkercad-Comenzar-Simulacion.jpg',
 
@@ -522,7 +522,7 @@ const mainResources = [
     'https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js'
 ];
 
-const cachingResources = [...globalImages, ...frontendImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];
+const cachingResources = [...globalImages, ...frontendImages,...arduinoImages, ...snippetsFrontend, ...snippetsArduino, ...mainResources];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
