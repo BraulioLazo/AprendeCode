@@ -11,7 +11,7 @@ const arduinoCardContent = [
         keywords: "Arduino, LED, parpadeo, digitalRead, digitalWrite, setup, loop, pinMode, INPUT, OUTPUT, HIGH, LOW, delay, función, código, Tinkercad, simulación, proyecto Arduino, microcontrolador",
         title: "Un Guiño Luminoso: Aprendiendo a Hacer Parpadear un LED con Arduino",
         description: "En esta entrada, damos nuestros primeros pasos haciendo parpadear un LED. Es simple, divertido y el comienzo de un fascinante viaje. ¡Acompáñame!",
-        imageUrl: "/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/encender-led-incorporado-arduino.webp",
+        imageUrl: "/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/images/encender-led-incorporado.webp",
         imageAlt: "LED encendido junto a una placa Arduino",
         link: "/arduino/un-guino-luminoso-aprendiendo-a-hacer-parpadear-un-led-con-arduino/",
     },
