@@ -146,14 +146,15 @@ input[type="text"]:focus {
   box-shadow: none;
 }
 
-.cont-boton label {
+.cont-boton .cont-hijo
+{
   border-radius: 50%;
-  box-shadow: 10px 10px 20px var(--Sombra-Oscura),
-    -10px -10px 20px var(--Sombra-Clara);
-
+  box-shadow:  10px 10px 20px var(--Sombra-Oscura),
+               -10px -10px 20px var(--Sombra-Clara);
 }
 
-.cont-boton label div {
+.cont-boton .cont-hijo .padre-boton
+{
   padding: 7px;
   border-radius: 50%;
   background-color: #341968;
@@ -168,7 +169,6 @@ input[type="text"]:focus {
   border-radius: 50%;
   box-shadow: inset 3px 3px 5px var(--Sombra-Oscura),
     inset -3px -3px 5px var(--Sombra-Clara);
-
 }
 
 .cont-lista-contactos {

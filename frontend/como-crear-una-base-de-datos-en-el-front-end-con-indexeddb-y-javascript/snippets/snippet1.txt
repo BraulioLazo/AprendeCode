@@ -33,36 +33,16 @@
             </div>
 
             <div class="cont-boton">
-                <label for="Guardar">
+                <div class="cont-hijo">
                     <div class="padre-boton">
                         <input type="button" id="btn-guardar" value="Guardar">
                     </div>
-                </label>
-
+                </div>
             </div>
 
         </div>
     </section>
 
-
     <script src="BaseDeDatos.js"></script>
-
-    <script>
-        var Boton = document.querySelector("#btn-guardar");
-        var PadreBoton = document.querySelector(".padre-boton");
-
-        function Animacion()
-          {
-             Boton.classList.add("animacion");
-             PadreBoton.classList.add("color");
-
-             setTimeout(() => {
-                Boton.classList.remove("animacion");
-                PadreBoton.classList.remove("color")
-            }, 600);
-          }
-        Boton.addEventListener("click", Animacion);
-    </script>
-
 </body>
 </html>

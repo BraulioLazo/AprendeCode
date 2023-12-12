@@ -149,7 +149,7 @@ body section
    box-shadow: none;
 }
 
-.cont-boton label
+.cont-boton .cont-hijo
 {
   border-radius: 50%;
   box-shadow:  10px 10px 20px var(--Sombra-Oscura),
@@ -157,7 +157,7 @@ body section
 
 }
 
-.cont-boton label div
+.cont-boton .cont-hijo .padre-boton
 {
   padding: 7px;
   border-radius: 50%;
@@ -174,21 +174,4 @@ body section
   box-shadow: inset 3px 3px 5px var(--Sombra-Oscura),
               inset -3px -3px 5px var(--Sombra-Clara);
 
-}
-
-.animacion
-{
-  animation: achicar .6s ease-in 1;
-}
-
-.cont-boton label div.color
-{
-  background-color: #DF12F4;
-}
-
-@keyframes achicar {
-  50%
-    {
-       transform: scale(0.98, 0.98);
-    }
 }

@@ -32,13 +32,12 @@
                  </form>
             </div>
 
-            <div class="cont-boton">
-                <label for="Guardar">
+           <div class="cont-boton">
+                <div class="cont-hijo">
                     <div class="padre-boton">
                         <input type="button" id="btn-guardar" value="Guardar">
                     </div>
-                </label>
-
+                </div>
             </div>
 
         </div>
